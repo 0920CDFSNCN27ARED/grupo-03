@@ -3,6 +3,10 @@
 ## Cala Cosmetics
 
 1. Descripcion de **productos/servicios**
+ En Cala creemos que un mundo  mas sustentable, inclusivo y  libre de crueldad animal 
+es posible.
+Por esto es que decidimos crear una gama de productos cosmeticos  ecolóligos, con ingredientes naturales,aceites esenciales, libres de parabenos o fragancias sinteticas, biodegradables y  de produccion local. Tambien utilizando materiales para su envase  biodegradables,renovables y reciclables. Y como estamos compremetidas a ser libres de crueldad animal, en nuestros productos no se realizaran pruebas en animales en ninguna etapa de su desarollo. 
+
 
 2. Descripcion **publico objetivo**
 Nuestro publico objetivo son mujeres de entre 25-35 anios con conciencia econologia y sustento economico propio. De nivel socio-cultural alto. 
@@ -18,5 +22,6 @@ Les gusta meditar y las actividades al aire libre.
     -https://www.weleda.cl/
     -https://www.naturasiberica.com.ar/
     -https://ongteprotejo.org/ar/marcas-cruelty-free/
-    -
+    -https://milaborit.com/
+
 
