@@ -1,5 +1,5 @@
 # grupo-03-Cala-Cosmetics
-![Cala Cosmetic Logo](/Desing/logoCala.png)
+![Cala Cosmetic Logo](Desing/logoCala.png)
 ## Cala Cosmetics
 
 1. Descripción de **productos/servicios**
