@@ -20,7 +20,7 @@ Cala Cosmetic es el resultado de una mágica fusión de pasiones, deseos y sueñ
 Cada producto está hecho a mano, con el cuidado y la dedicación que solo lo artesanal puede brindarte. Atentos a cada detalle, desde las fórmulas, hasta el embalaje está pensado para respetar nuestra filosofía y lleva una parte de nuestra historia.
 Queremos invitarte a dar los primeros pasos hacia un estilo de vida más saludable.
 
-4. Inspiracion
+4. Inspiración
     -https://www.weleda.cl/
     -https://www.naturasiberica.com.ar/
     -https://ongteprotejo.org/ar/marcas-cruelty-free/
@@ -28,6 +28,6 @@ Queremos invitarte a dar los primeros pasos hacia un estilo de vida más saludab
     -https://www.naturacosmeticos.com.ar/
 
 5. Referentes de mercado
-Dentro de la cosmética natural, con ingredientes naturales y que no utiliza animales en sus testeos, siendo así libre de crueldad animal, nos encontramos con la marca Natura, gran referente del mercado actual en belleza, comenzo en Brasil en el año 1969 en una pequeña tienda, luego paso a ser la primera empreza de cosmeticos de Latinoamerica  y hoy en dia es el cuarto referente de belleza en el mundo, Y todo esto se logró siendo écologica, sustentable, cruelty free,con verdadera  conciencia ambiental y utilizando el metodo de venta directo.
+Dentro de la cosmética natural, con ingredientes naturales y que no utiliza animales en sus testeos, siendo así libre de crueldad animal, nos encontramos con la marca Natura, gran referente del mercado actual en belleza, comenzó en Brasil en el año 1969 en una pequeña tienda, luego paso a ser la primera empreza de cosméticos de Latinoamérica  y hoy en dia es el cuarto referente de belleza en el mundo, Y todo esto se logró siendo écologica, sustentable, cruelty free,con verdadera  conciencia ambiental y utilizando el metodo de venta directo.
 Natura fue, en muchas oportunidades, pionera en el mundo al lanzar productos con envolturas reutilizables y desarrolló una tabla ambiental que mostró a sus clientes cómo eran hechas las envolturas de sus productos y su compromiso con el medio ambiente y la sostenibilidad. Por esto y mucho mas creemos que Natura se lleva el premio mayor en cuanto a referentes de mercado.
-Luego tenemos empresas a nivel nacional comprometidas de igual manera que nosotras y empresas del talle de Natura, las cuales nos sirven de referente quizás aún más, por el hecho de la magnituid de recursos que maneja Natura y que nosotras como principiantes todavía vemos muy lejos y estás empresas como: Milaborit, Mies cosmetica, Shiri natural y quizá en algunos aspectos Sri Sri tattva, nos sirven de ejemplo y de guia para lograr nuestros objetivos como marca.
+Luego tenemos empresas a nivel nacional comprometidas de igual manera que nosotras y empresas del talle de Natura, las cuales nos sirven de referente quizás aún más, por el hecho de la magnituid de recursos que maneja Natura y que nosotras como principiantes todavía vemos muy lejos y estás empresas como: Milaborit, Mies cosmetica, Shiri natural y quizá en algunos aspectos Sri Sri tattva, nos sirven de ejemplo y de guía para lograr nuestros objetivos como marca.
