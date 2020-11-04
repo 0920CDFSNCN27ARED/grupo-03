@@ -1,0 +1,22 @@
+{
+  "name": "grupo-03",
+  "version": "1.0.0",
+  "description": "![Cala Cosmetic Logo](Design/logoCala.png)\r ## Cala Cosmetics",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0920CDFSNCN27ARED/grupo-03.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0920CDFSNCN27ARED/grupo-03/issues"
+  },
+  "homepage": "https://github.com/0920CDFSNCN27ARED/grupo-03#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
