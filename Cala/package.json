@@ -18,5 +18,8 @@
   "homepage": "https://github.com/0920CDFSNCN27ARED/grupo-03#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
 }
