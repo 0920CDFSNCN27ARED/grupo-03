@@ -26,40 +26,172 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <header>
-      <form action="/products" method="POST" class="serch" align="center">
-        <input
-          type="search"
-          name="serch"
-          placeholder="🔍 Busca tus productos"
-        />
-      </form>
-      <div class="center">
+      <div>
         <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
       </div>
 
-      <nav class="icons">
-        <i class="fab fa-twitter-square color1"></i>
-        <i class="fab fa-facebook-square color1"></i>
-        <i class="fab fa-instagram color1"></i>
-        <i class="fas fa-share-alt color1"></i>
-      </nav>
+      <div>
+        <input type="text" placeholder="Busca tus productos" />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+
+      <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
+        cada uno con un enlace aun no determinado-->
+      <div>
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-twitter-square color1"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-facebook-square color1"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram color1"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-share-alt color1"></i></a>
+          </li>
+        </ul>
+      </div>
     </header>
+
+    <!--Creo una section para los menu-->
+    <section>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/products">Productos</a></li>
+        <li><a href="#">Sobre Nosotras</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </section>
+
+    <!--Creo otra section para iconos login y carrito-->
+    <section>
+      <ul>
+        <li><a href="/login">Mi cuenta</a></li>
+        <li><a href="#">Favoritos</a></li>
+        <li><a href="/cart">Mi compra</a></li>
+      </ul>
+    </section>
     <main>
-      <img
-        src="images/shampooSolido.jpg"
-        alt="shampoo solido"
-        class="shampoo"
-      />
+      <!--Agrego la imagen central con dos parrafos que van al costado-->
+      <section>
+        <img src="images/imagen-central.jpg" alt="Cosmetica Natural" />
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit magna,
+            vestibulum velit auctor mauris sociosqu vel dis pharetra, aenean
+            duis mi leo interdum eu in. Quisque mattis habitant ac rhoncus
+            inceptos imperdiet ultrices parturient aptent porta, donec aliquam
+            vulputate montes pretium praesent ut faucibus at sapien.
+          </p>
+        </div>
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipiscing elit magna,
+            vestibulum velit auctor mauris sociosqu vel dis pharetra, aenean
+            duis mi leo interdum eu in.
+          </p>
+        </div>
+      </section>
+
+      <!--Creo section para poner adentro los articulos destacados-->
+
+      <section>
+        <h3><strong>Articulos destacados</strong></h3>
+
+        <article>
+          <p>Shampoo solido</p>
+          <img
+            src="images/shampooSolido.jpg"
+            alt="shampoo solido"
+            class="shampoo"
+          />
+          <p>Lorem ipsum dolor sit amet consectetur</p>
+        </article>
+
+        <article>
+          <p>Cepillo dental de Bambu</p>
+          <img
+            src="images/cepillo-bambu.jpg"
+            alt="cepillo bambu"
+            class="cepillo"
+          />
+          <p>Lorem ipsum dolor sit amet consectetur</p>
+        </article>
+
+        <article>
+          <p>Manteca de Cacao</p>
+          <img
+            src="images/manteca-cacao.jpg"
+            alt="manteca cacao"
+            class="manteca"
+          />
+          <p>Lorem ipsum dolor sit amet consectetur</p>
+        </article>
+      </section>
+
+      <!--Creo section para la parte de las certificaciones-->
+      <section>
+        <h2>
+          <strong><p>Nuestras certificaciones</p></strong>
+        </h2>
+        <ul>
+          <li>
+            <a href="https://www.vegansociety.com/"
+              ><img src="images/vegan-society.png" alt="vegan society"
+            /></a>
+          </li>
+          <li>
+            <a href="https://crueltyfree.peta.org/"
+              ><img src="images/cruelty-free.jpg" alt="cruelty free"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.leapingbunny.org/"
+              ><img
+                src="images/leaping-bunny.png"
+                alt="libre de maltrato animal"
+            /></a>
+          </li>
+        </ul>
+      </section>
     </main>
+
     <footer>
-      <nav class="icons2">
-        <h4 class="color1">Sumate al cambio</h4>
-        <i class="fas fa-recycle color1"><br /></i>
-        <i class="far fa-heart color1"><br /></i>
-        <i class="far fa-smile color1"><br /></i>
-      </nav>
+      <section>
+        <nav class="icons2">
+          <h4 class="color1">Sumate al cambio</h4>
+          <i class="fas fa-recycle color1"><br /></i>
+          <i class="far fa-heart color1"><br /></i>
+          <i class="far fa-smile color1"><br /></i>
+        </nav>
+      </section>
+
+      <section>
+        <h4>Informacion</h4>
+        <nav>
+          <ul>
+            <li><a href="#">Formas de pago</a></li>
+            <li><a href="#">Metodos de envio</a></li>
+            <li><a href="#">Quienes somos</a></li>
+            <li><a href="#">Preguntas frecuentes</a></li>
+          </ul>
+        </nav>
+      </section>
+
+      <div>
+        <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
+      </div>
+
+      <div>
+        <p>Suscribite a nuestro newsletter</p>
+        <input type="text" placeholder="Ingresa tu email" />
+        <button type="submit">Enviar</button>
+      </div>
     </footer>
   </body>
 </html>
