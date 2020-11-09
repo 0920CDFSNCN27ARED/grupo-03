@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cala Home</title>
+    <title>Productos</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
@@ -28,8 +28,62 @@
   </head>
   <body>
     <header>
-      <img src="images/logoCala.png" class="logo" alt="Logo Cala" />
+      <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
+      <div>
+        <input type="text" placeholder="Busca tus productos" />
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </div>
+
+      <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
+        cada uno con un enlace aun no determinado-->
+      <div>
+        <ul>
+          <li>
+            <a href="#"><i class="fab fa-twitter-square color1"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-facebook-square color1"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram color1"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-share-alt color1"></i></a>
+          </li>
+        </ul>
+      </div>
     </header>
+    <!--mantengo el estilo de section para los menu-->
+    <section>
+      <ul class="">
+        <li><a href="/">Inicio |</a></li>
+        <li><a href="#">Productos |</a></li>
+        <li><a href="#">Sobre Nosotras |</a></li>
+        <li><a href="#">Contacto |</a></li>
+      </ul>
+    </section>
+    <!--mantengo la otra section para iconos login y carrito-->
+    <section>
+      <ul>
+        <li><a href="/login">Mi cuenta</a></li>
+        <li><a href="#">Favoritos</a></li>
+        <li><a href="/cart">Mi compra</a></li>
+      </ul>
+    </section>
+    <section>
+      <h3>Productos</h3>
+      <ul>
+        <li><a href="#">Shampoo Sólido</a></li>
+        <li><a href="#">Acondicionador Sólido</a></li>
+        <li><a href="#">Pasta Dental</a></li>
+        <li><a href="#">Cremas</a></li>
+        <li><a href="#">Desodorantes</a></li>
+        <li><a href="#">Accesorios</a></li>
+        <li><a href="#">Jabones</a></li>
+        <li><a href="#">Kits</a></li>
+      </ul>
+    </section>
+
     <main></main>
     <footer></footer>
   </body>

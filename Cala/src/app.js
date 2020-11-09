@@ -20,9 +20,9 @@ app.all("/login", (req, res) => {
 });
 
 app.all("/products", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "../views/products.html"));
+  res.sendFile(path.resolve(__dirname, "../views/products.html"));
 });
 
 app.all("/cart", (req, res) => {
-  res.sendFile(path.resolve(__dirname + "../views/cart.html"));
+  res.sendFile(path.resolve(__dirname, "../views/cart.html"));
 });
