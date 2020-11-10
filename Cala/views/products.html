@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cala Productos</title>
+    <title>Cala Home</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
@@ -26,9 +26,13 @@
     />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
     <header>
-      <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
+      <div>
+        <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
+      </div>
+
       <div>
         <input type="text" placeholder="Busca tus productos" />
         <button type="submit"><i class="fas fa-search"></i></button>
@@ -53,6 +57,25 @@
         </ul>
       </div>
     </header>
+
+    <!--Creo una section para los menu-->
+    <section>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/products">Productos</a></li>
+        <li><a href="/about">Sobre Nosotras</a></li>
+        <li><a href="/contact">Contacto</a></li>
+      </ul>
+    </section>
+
+    <!--Creo otra section para iconos login y carrito-->
+    <section>
+      <ul>
+        <li><a href="/login">Mi cuenta</a></li>
+        <li><a href="/favs">Favoritos</a></li>
+        <li><a href="/cart">Mi compra</a></li>
+      </ul>
+    </section>
     <!--mantengo el estilo de section para los menu-->
     <main>
       <section>
@@ -145,9 +168,15 @@
       <section>
         <nav class="icons2">
           <h4 class="color1">Sumate al cambio</h4>
-          <i class="fas fa-recycle color1"><br /></i>
-          <i class="far fa-heart color1"><br /></i>
-          <i class="far fa-smile color1"><br /></i>
+          <a href="https://www.dondereciclo.org.ar/"
+            ><i class="fas fa-recycle color1"></i
+          ></a>
+          <a href="https://www.quieroayudar.org/Donar"
+            ><i class="far fa-heart color1"></i
+          ></a>
+          <a href="https://www.quieroayudar.org/SerVoluntario"
+            ><i class="far fa-smile color1"></i
+          ></a>
         </nav>
       </section>
 
@@ -155,10 +184,9 @@
         <h4>Informacion</h4>
         <nav>
           <ul>
-            <li><a href="#">Formas de pago</a></li>
-            <li><a href="#">Metodos de envio</a></li>
-            <li><a href="#">Quienes somos</a></li>
-            <li><a href="#">Preguntas frecuentes</a></li>
+            <li><a href="/info">Formas de pago</a></li>
+            <li><a href="/info">Metodos de envio</a></li>
+            <li><a href="/faq">Preguntas frecuentes</a></li>
           </ul>
         </nav>
       </section>
@@ -169,7 +197,7 @@
 
       <div>
         <p>Suscribite a nuestro newsletter</p>
-        <input type="text" placeholder="Ingresa tu email" />
+        <input type="text" />
         <button type="submit">Enviar</button>
       </div>
     </footer>
