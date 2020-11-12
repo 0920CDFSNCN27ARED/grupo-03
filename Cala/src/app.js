@@ -46,3 +46,7 @@ app.all("/faq", (req, res) => {
 app.all("/favs", (req, res) => {
   res.sendFile(path.resolve(__dirname, "../views/favs.html"));
 });
+
+app.all("/details", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../views/details.html"));
+});
