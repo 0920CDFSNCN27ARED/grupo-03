@@ -82,38 +82,82 @@
         </div>
         <section>
           <article>
-            <img
-              src="images/crema-hidra.jpg"
-              alt="Crema Hidratante para pieles secas"
-            />
-            <h3>Crema Karite</h3>
-            <p>Crema hidratante para pieles secas</p>
-            <button type="button" name="mas">+</button>
-            <p>1</p>
-            <button type="button" name="mas">-</button>
             <div>
-              <button type="reset"><i class="fas fa-trash-alt"></i></button>
-              <p>$500</p>
+              <img
+                src="images/crema-hidra.jpg"
+                alt="Crema Hidratante para pieles secas"
+              />
+              <h3>Crema Karite</h3>
+              <p>Crema hidratante para pieles secas</p>
+              <div>
+                <button type="button" name="mas">
+                  <i class="fas fa-plus-square"></i>
+                </button>
+                <span>1</span>
+                <button type="button" name="menos">
+                  <i class="fas fa-minus-square"></i>
+                </button>
+              </div>
+              <div>
+                <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                <p>$500</p>
+              </div>
             </div>
           </article>
         </section>
         <section>
           <article>
-            <img
-              src="images/jabon-cafe.jpg"
-              alt="Jabon Natural Cafe y Canela"
-            />
-            <h3>Jabon Natural</h3>
-            <p>Jabon Natural Cafe y Canela</p>
-            <button type="button" name="mas">+</button>
-            <p>1</p>
-            <button type="button" name="menos">-</button>
             <div>
-              <button type="reset"><i class="fas fa-trash-alt"></i></button>
-              <p>$250</p>
+              <img
+                src="images/jabon-cafe.jpg"
+                alt="Jabon Natural Cafe y Canela"
+              />
+              <h3>Jabon Natural</h3>
+              <p>Jabon Natural Cafe y Canela</p>
+              <div>
+                <button type="button" name="mas">
+                  <i class="fas fa-plus-square"></i>
+                </button>
+                <span>1</span>
+                <button type="button" name="menos">
+                  <i class="fas fa-minus-square"></i>
+                </button>
+              </div>
+              <div>
+                <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                <p>$250</p>
+              </div>
             </div>
           </article>
         </section>
+        <section>
+          <h3>Subtotal</h3>
+          <p>$750</p>
+        </section>
+        <section>
+          <div>
+            <span>Calculá el costo de envío</span>
+            <button type="button"><i class="fas fa-angle-up"></i></button>
+          </div>
+          <div>
+            <input
+              type="number"
+              name="codigo-postal"
+              placeholder="Código Postal"
+            />
+            <input type="text" name="calcular" placeholder="Calcular" />
+          </div>
+        </section>
+        <section>
+          <h3>Total</h3>
+          <p>$750</p>
+        </section>
+        <div>
+          <input type="submit" value="Finalizar" />
+        </div>
+        <div>
+          <a href="/products">Seguir comprando</a>
+        </div>
       </form>
     </main>
     <footer>
