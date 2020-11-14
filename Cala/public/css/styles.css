@@ -1,5 +1,13 @@
-* {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
+.background-ligth {
+  background-color: #e7e7e7;
+}
+.icons-color {
+  color: #5a6186;
+}
+.menu-botton {
+  display: flex;
+  order: -1;
+  align-self: flex-end;
+  margin-right: 15px;
+  margin-top: 5px;
 }
