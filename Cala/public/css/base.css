@@ -80,3 +80,19 @@ a {
   border-radius: 5px;
   border: solid 1px #344659;
 }
+
+.index-products {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.certs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.width-30 {
+  width: 30%;
+}
