@@ -85,6 +85,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
 }
 
 .certs {
@@ -92,6 +93,7 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .radius-5 {
   border-radius: 5px;
 }
@@ -123,4 +125,32 @@ a {
 .price-details {
   display: inline;
   margin-left: 5px;
+}
+
+/*HTML FORMULARIOS*/
+.form-container {
+  border: solid 5px #344659;
+  border-radius: 5px;
+  padding: 5px;
+  width: 80%;
+  text-align: center;
+  margin: 5px;
+}
+
+.main-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }

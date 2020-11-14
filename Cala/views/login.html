@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
       rel="stylesheet"
@@ -24,68 +25,72 @@
       href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body>
-    <header>
+  <body class="background-ligth">
+    <header class="header-container background-ligth">
       <div>
         <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
       </div>
 
-      <div>
+      <div class="search-container">
         <input type="text" placeholder="Busca tus productos" />
         <button type="submit"><i class="fas fa-search"></i></button>
       </div>
 
       <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
         cada uno con un enlace aun no determinado-->
-      <div>
+      <div class="nets-container">
         <ul>
           <li>
-            <a href="#"><i class="fab fa-twitter-square color1"></i></a>
+            <a href="#"><i class="fab fa-twitter-square icons-color"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-facebook-square color1"></i></a>
+            <a href="#"><i class="fab fa-facebook-square icons-color"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-instagram color1"></i></a>
+            <a href="#"><i class="fab fa-instagram icons-color"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-share-alt color1"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons-color"></i></a>
           </li>
         </ul>
       </div>
-
+      <div class="menu-botton icons-color">
+        <i class="fas fa-bars"></i>
+      </div>
       <!--Creo una section para los menu-->
-      <section>
+      <nav class="hidden">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/products">Productos</a></li>
           <li><a href="/about">Sobre Nosotras</a></li>
           <li><a href="/contact">Contacto</a></li>
         </ul>
-      </section>
+      </nav>
 
       <!--Creo otra section para iconos login y carrito-->
-      <section>
+      <nav class="hidden">
         <ul>
           <li><a href="/login">Mi cuenta</a></li>
           <li><a href="/favs">Favoritos</a></li>
           <li><a href="/cart">Mi compra</a></li>
         </ul>
-      </section>
+      </nav>
     </header>
 
     <!--Creo main con dos section una para el login y otra para register.
     Consultar si el placeholder en los input va en el html o el css.
     Consultar como se hace el captcha-->
-    <main>
-      <section>
-        <h3><strong>INGRESA CON TU MAIL Y CLAVE</strong></h3>
-        <form action="#" method="POST">
-          <p>
-            <label for="email">Ingresa tu email</label>
+    <main class="background-ligth main-form-container">
+      <section class="form-container">
+        <h3 class="font-arimo">Ingresa a tu cuenta</h3>
+        <form action="#" method="POST" class="flex-column">
+          <p class="font-jura-form flex-column">
+            <label for="email">Mail</label>
             <input
               type="email"
               name="email"
@@ -93,21 +98,31 @@
               placeholder="mariaperez@mail.com"
             />
           </p>
-          <p>
-            <label for="password">Ingresa tu clave</label>
+          <p class="font-jura-form flex-column">
+            <label for="password">Contraseña</label>
             <input type="password" name="password" id="password" />
           </p>
-          <button type="submit">Ingresar</button>
+          <button type="submit font-jura-form">Ingresar</button>
         </form>
+        <div class="checkbox-form">
+          <p><label for="remember">Recordar usuario </label></p>
+          <input
+            type="checkbox"
+            name="remember"
+            value="yes"
+            class="font-jura-form"
+            checked
+          />
+        </div>
         <div>
-          <a href="#">Recuperar contraseña</a>
+          <a href="#" class="font-jura-form">Recuperar contraseña</a>
         </div>
       </section>
 
-      <section>
-        <h3><strong>REGISTRATE</strong></h3>
-        <form action="#" method="POST">
-          <p>
+      <section class="form-container">
+        <h3 class="font-arimo">Registrate</h3>
+        <form action="#" method="POST" class="flex-column">
+          <p class="font-jura-form flex-column">
             <label for="name">Ingresa tu Nombre y Apellido</label>
             <input
               type="text"
@@ -116,7 +131,7 @@
               placeholder="Maria Perez"
             />
           </p>
-          <p>
+          <p class="font-jura-form flex-column">
             <label for="email">Ingresa tu email</label>
             <input
               type="email"
@@ -125,7 +140,7 @@
               placeholder="mariaperez@mail.com"
             />
           </p>
-          <p>
+          <p class="font-jura-form flex-column">
             <label for="password">Crea una clave</label>
             <input
               type="password"
@@ -134,55 +149,62 @@
               placeholder="minimo 8 caracteres"
             />
           </p>
-          <p>
+          <p class="font-jura-form flex-column">
             <label for="password">Confirma tu clave</label>
             <input type="password" name="password" id="password" />
           </p>
-          <input
-            type="checkbox"
-            name="remember"
-            value="Recordar Usuario"
-          />Recordar Usuario <br />
-          <button type="submit">Registrarme</button>
+          <button type="submit" class="font-jura-form">Registrarme</button>
         </form>
       </section>
     </main>
 
-    <footer>
-      <section>
-        <nav class="icons2">
-          <h4 class="color1">Sumate al cambio</h4>
-          <a href="https://www.dondereciclo.org.ar/"
-            ><i class="fas fa-recycle color1"></i
-          ></a>
-          <a href="https://www.quieroayudar.org/Donar"
-            ><i class="far fa-heart color1"></i
-          ></a>
-          <a href="https://www.quieroayudar.org/SerVoluntario"
-            ><i class="far fa-smile color1"></i
-          ></a>
-        </nav>
-      </section>
+    <footer class="footer-container background-ligth">
+      <div class="center-text">
+        <section>
+          <nav>
+            <h4>Sumate al cambio</h4>
+            <div class="icons-footer">
+              <a href="https://www.dondereciclo.org.ar/"
+                ><i class="fas fa-recycle icons-color"></i
+              ></a>
+              <a href="https://www.quieroayudar.org/Donar"
+                ><i class="far fa-heart icons-color"></i
+              ></a>
+              <a href="https://www.quieroayudar.org/SerVoluntario"
+                ><i class="far fa-smile icons-color"></i
+              ></a>
+            </div>
+          </nav>
+        </section>
 
-      <section>
-        <h4>Informacion</h4>
-        <nav>
-          <ul>
-            <li><a href="/info">Formas de pago</a></li>
-            <li><a href="/info">Metodos de envio</a></li>
-            <li><a href="/faq">Preguntas frecuentes</a></li>
-          </ul>
-        </nav>
-      </section>
-
-      <div>
-        <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
+        <section>
+          <h4>Informacion</h4>
+          <nav>
+            <ul>
+              <li><a href="/info" class="icons-color">Formas de pago</a></li>
+              <li><a href="/info" class="icons-color">Metodos de envio</a></li>
+              <li>
+                <a href="/faq" class="icons-color">Preguntas frecuentes</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
       </div>
 
-      <div>
-        <p>Suscribite a nuestro newsletter</p>
-        <input type="text" />
-        <button type="submit">Enviar</button>
+      <div class="center-text">
+        <div>
+          <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
+        </div>
+
+        <div>
+          <p>Suscribite a nuestro newsletter</p>
+          <div>
+            <input type="text" id="footer-input" />
+            <button type="submit" class="no-border">
+              <i class="fas fa-paper-plane icons-color"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
