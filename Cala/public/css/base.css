@@ -92,7 +92,35 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
+.radius-5 {
+  border-radius: 5px;
+}
 .width-30 {
   width: 30%;
+}
+/*contenedores de detail*/
+.details-menu {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  right: 105px;
+}
+.details-form {
+  display: flex;
+  justify-content: space-around;
+  padding: 5px;
+  width: 52%;
+  position: relative;
+  left: 160px;
+  top: -23px;
+}
+.text-detail-container {
+  display: block;
+  padding: 5px;
+  position: relative;
+  top: -25px;
+}
+.price-details {
+  display: inline;
+  margin-left: 5px;
 }
