@@ -95,6 +95,7 @@ li {
 .radius-5 {
   border-radius: 5px;
 }
+
 .width-30 {
   width: 30%;
 }
@@ -108,21 +109,14 @@ li {
 .details-form {
   display: flex;
   justify-content: space-around;
-  padding: 5px;
-  width: 52%;
-  position: relative;
-  left: 160px;
-  top: -23px;
+  padding: 18px;
+  width: 100%;
 }
-.text-detail-container {
+.text-details-container {
   display: block;
-  padding: 5px;
+  padding: 13px;
   position: relative;
-  top: -25px;
-}
-.price-details {
-  display: inline;
-  margin-left: 5px;
+  top: 2px;
 }
 
 /*HTML FORMULARIOS*/

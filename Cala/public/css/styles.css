@@ -40,7 +40,24 @@
 .product-article img {
   width: 70%;
 }
-
+.product-article-details {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(173, 154, 172, 0.5);
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  align-items: center;
+  margin: 16px;
+}
+.product-article-details img {
+  width: 77%;
+  margin-top: 20px;
+}
+.product-article-details h4 {
+  align-self: self-start;
+  margin-left: 16px;
+}
 .font-bellefair {
   font-family: bellefair;
 }
@@ -58,4 +75,10 @@
   font-family: Arimo;
   font-weight: normal;
   color: #344659;
+}
+.delivery-container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 13px;
+  margin-left: 9px;
 }
