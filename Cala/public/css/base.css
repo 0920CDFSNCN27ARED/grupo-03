@@ -103,6 +103,16 @@ li {
   width: 30%;
 }
 /*contenedores de detail*/
+.seccion-details-conteiner {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 10px whitesmoke;
+}
+.seccion-details-conteiner h4 {
+  align-self: center;
+  margin-top: 5px;
+  color: #344659;
+}
 .details-menu {
   display: flex;
   flex-wrap: wrap;
@@ -111,15 +121,44 @@ li {
 }
 .details-form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 18px;
   width: 100%;
+  border-top: solid 10px whitesmoke;
 }
 .text-details-container {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 13px;
-  position: relative;
-  top: 2px;
+}
+.text-details-container p {
+  font-size: 13px;
+  margin: 10px 0px;
+}
+.text-details-container > ol > li {
+  font-size: 13px;
+  margin: 10px 0px;
+}
+#cant {
+  width: 19%;
+  height: 5vh;
+  border-radius: 3px;
+}
+.details-form button {
+  width: 84vw;
+  height: 5vh;
+  border-radius: 3px;
+  margin-top: 16px;
+  background-color: #344659;
+  color: #e7e7e7;
+}
+.details-form label {
+  width: 30%;
+  text-align: center;
+  font-size: 18px;
+  color: #344659;
+  align-self: center;
 }
 
 /*HTML FORMULARIOS*/
@@ -156,6 +195,7 @@ a:active {
   text-decoration: none;
   color: #000;
 }
+/*contenedores de Cart*/
 
 #title-cart {
   width: 100%;
@@ -187,7 +227,9 @@ a:active {
   padding-left: 5px;
   align-items: stretch;
 }
-
+.margin-rigth-13 {
+  margin-right: 13px;
+}
 .margin-3 {
   margin: 3px 0px;
 }
