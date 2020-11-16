@@ -40,6 +40,8 @@
 .product-article img {
   width: 70%;
 }
+/*DETAILS*/
+
 .product-article-details {
   display: flex;
   flex-direction: column;
@@ -53,10 +55,17 @@
 .product-article-details img {
   width: 77%;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 .product-article-details h4 {
-  align-self: self-start;
-  margin-left: 16px;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  color: #344659;
+}
+.product-article-details h3 {
+  color: #344659;
+  font-size: 18px;
 }
 .font-bellefair {
   font-family: bellefair;
@@ -82,8 +91,9 @@
 .delivery-container {
   display: flex;
   flex-wrap: wrap;
-  font-size: 13px;
-  margin-left: 9px;
+  font-size: 12px;
+  border-bottom: solid 10px whitesmoke;
+  padding: 12px;
 }
 
 .font-size-14 {

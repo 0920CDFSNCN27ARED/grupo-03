@@ -57,6 +57,9 @@ li {
 .width-100 {
   width: 100%;
 }
+.width-50 {
+  width: 50%;
+}
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -100,6 +103,16 @@ li {
   width: 30%;
 }
 /*contenedores de detail*/
+.seccion-details-conteiner {
+  display: flex;
+  flex-direction: column;
+  border-top: solid 10px whitesmoke;
+}
+.seccion-details-conteiner h4 {
+  align-self: center;
+  margin-top: 5px;
+  color: #344659;
+}
 .details-menu {
   display: flex;
   flex-wrap: wrap;
@@ -108,15 +121,44 @@ li {
 }
 .details-form {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   padding: 18px;
   width: 100%;
+  border-top: solid 10px whitesmoke;
 }
 .text-details-container {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 13px;
-  position: relative;
-  top: 2px;
+}
+.text-details-container p {
+  font-size: 13px;
+  margin: 10px 0px;
+}
+.text-details-container > ol > li {
+  font-size: 13px;
+  margin: 10px 0px;
+}
+#cant {
+  width: 19%;
+  height: 5vh;
+  border-radius: 3px;
+}
+.details-form button {
+  width: 84vw;
+  height: 5vh;
+  border-radius: 3px;
+  margin-top: 16px;
+  background-color: #344659;
+  color: #e7e7e7;
+}
+.details-form label {
+  width: 30%;
+  text-align: center;
+  font-size: 18px;
+  color: #344659;
+  align-self: center;
 }
 
 /*HTML FORMULARIOS*/
@@ -152,4 +194,56 @@ a:visited,
 a:active {
   text-decoration: none;
   color: #000;
+}
+/*contenedores de Cart*/
+
+#title-cart {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.button-close {
+  align-self: flex-start;
+  order: 1;
+  border: none;
+  color: gray;
+  font-size: 20px;
+  background-color: #e7e7e7;
+}
+
+.product-cart-images {
+  width: 130px;
+  height: 130px;
+  border: solid 10px rgba(173, 154, 172, 0.5);
+}
+
+.description-cart {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  align-items: stretch;
+}
+.margin-rigth-13 {
+  margin-right: 13px;
+}
+.margin-3 {
+  margin: 3px 0px;
+}
+
+.precio-cart {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 2%;
+  width: 20%;
+}
+
+.articulo-cart {
+  margin: 10px 0px;
+  width: 100%;
 }
