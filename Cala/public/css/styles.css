@@ -63,15 +63,18 @@
 }
 
 .index-products h3,
-.certifications h3 {
+.certifications h3,
+.about-us h2 {
   font-family: Jura;
   font-size: 30px;
   font-weight: bold;
-  color: #5a6186;
-  opacity: 0, 8;
+  color: #ad9aac;
+  opacity: 0, 5;
 }
 
-.product-article h4 {
+.product-article h4,
+.about-us p,
+.about-us h6 {
   font-family: Arimo;
   font-weight: normal;
   color: #344659;
@@ -81,4 +84,12 @@
   flex-wrap: wrap;
   font-size: 13px;
   margin-left: 9px;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
 }
