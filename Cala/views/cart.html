@@ -83,11 +83,11 @@
     <main class="main-container">
       <img src="images/banner3.jpg" alt="Cosmetica Natural" class="width-100" />
       <form action="/" method="Post" class="width-100">
-        <div class="main-container" id="title-cart">
+        <div class="main-container border-button" id="title-cart">
           <h3>Mi carrito de compras</h3>
           <input class="button-close" type="button" name="boton" value="X" />
         </div>
-        <section>
+        <section class="border-button">
           <article class="articulo-cart">
             <div class="main-container">
               <img
@@ -110,7 +110,7 @@
                   </button>
                 </div>
               </div>
-              <div class="precio-cart">
+              <div class="price-cart">
                 <div>
                   <button type="reset"><i class="fas fa-trash-alt"></i></button>
                 </div>
@@ -119,7 +119,7 @@
             </div>
           </article>
         </section>
-        <section>
+        <section class="border-button">
           <article class="articulo-cart">
             <div class="main-container">
               <div class="main-container">
@@ -143,7 +143,7 @@
                   </div>
                 </div>
               </div>
-              <div class="precio-cart">
+              <div class="price-cart">
                 <div>
                   <button type="reset"><i class="fas fa-trash-alt"></i></button>
                 </div>
@@ -152,26 +152,32 @@
             </div>
           </article>
         </section>
-        <section>
-          <h3>Subtotal</h3>
+        <section class="border-button main-container total-cart">
+          <p>Subtotal</p>
           <p>$750</p>
         </section>
         <section>
-          <div>
-            <span>Calculá el costo de envío</span>
+          <div class="main-container total-cart">
+            <p>Calculá el costo de envío</p>
             <button type="button"><i class="fas fa-angle-up"></i></button>
           </div>
-          <div>
+          <div class="main-container">
             <input
+              class="shipping-cart"
               type="number"
               name="codigo-postal"
               placeholder="Código Postal"
             />
-            <input type="text" name="calcular" placeholder="Calcular" />
+            <input
+              class="shipping-cart"
+              type="text"
+              name="calcular"
+              placeholder="Calcular"
+            />
           </div>
         </section>
-        <section>
-          <h3>Total</h3>
+        <section class="main-container total-cart">
+          <p>Total</p>
           <p>$750</p>
         </section>
         <div>
@@ -209,10 +215,6 @@
       </div>
 
       <div class="center-text">
-        <div>
-          <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
-        </div>
-
         <div>
           <p>Suscribite a nuestro newsletter</p>
           <div>
