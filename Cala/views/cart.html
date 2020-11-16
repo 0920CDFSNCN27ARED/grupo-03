@@ -24,107 +24,129 @@
       href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body>
-    <header>
+  <body class="background-ligth">
+    <header class="header-container background-ligth">
       <div>
         <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
       </div>
 
-      <div>
+      <div class="search-container">
         <input type="text" placeholder="Busca tus productos" />
         <button type="submit"><i class="fas fa-search"></i></button>
       </div>
 
       <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
         cada uno con un enlace aun no determinado-->
-      <div>
+      <div class="nets-container">
         <ul>
           <li>
-            <a href="#"><i class="fab fa-twitter-square color1"></i></a>
+            <a href="#"><i class="fab fa-twitter-square icons-color"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-facebook-square color1"></i></a>
+            <a href="#"><i class="fab fa-facebook-square icons-color"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-instagram color1"></i></a>
+            <a href="#"><i class="fab fa-instagram icons-color"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-share-alt color1"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons-color"></i></a>
           </li>
         </ul>
       </div>
+      <div class="menu-botton icons-color">
+        <i class="fas fa-bars"></i>
+      </div>
       <!--Creo una section para los menu-->
-      <section>
+      <nav class="hidden">
         <ul>
           <li><a href="/">Inicio</a></li>
           <li><a href="/products">Productos</a></li>
           <li><a href="/about">Sobre Nosotras</a></li>
           <li><a href="/contact">Contacto</a></li>
         </ul>
-      </section>
+      </nav>
+
       <!--Creo otra section para iconos login y carrito-->
-      <section>
+      <nav class="hidden">
         <ul>
           <li><a href="/login">Mi cuenta</a></li>
           <li><a href="/favs">Favoritos</a></li>
           <li><a href="/cart">Mi compra</a></li>
         </ul>
-      </section>
+      </nav>
     </header>
-    <main>
-      <form action="/" method="Post">
-        <div>
+    <main class="main-container">
+      <img src="images/banner3.jpg" alt="Cosmetica Natural" class="width-100" />
+      <form action="/" method="Post" class="width-100">
+        <div class="main-container" id="title-cart">
           <h3>Mi carrito de compras</h3>
-          <input type="button" name="boton" value="X" />
+          <input class="button-close" type="button" name="boton" value="X" />
         </div>
         <section>
-          <article>
-            <div>
+          <article class="articulo-cart">
+            <div class="main-container">
               <img
+                class="product-cart-images"
                 src="images/crema-hidra.jpg"
                 alt="Crema Hidratante para pieles secas"
               />
-              <h3>Crema Karite</h3>
-              <p>Crema hidratante para pieles secas</p>
-              <div>
-                <button type="button" name="mas">
-                  <i class="fas fa-plus-square"></i>
-                </button>
-                <span>1</span>
-                <button type="button" name="menos">
-                  <i class="fas fa-minus-square"></i>
-                </button>
+              <div class="flex-column description-cart">
+                <h3 class="margin-3">Crema Karite</h3>
+                <p class="margin-3">Crema hidratante</p>
+                <p class="margin-3">para pieles secas</p>
+
+                <div class="margin-3">
+                  <button type="button" name="mas">
+                    <i class="fas fa-plus-square"></i>
+                  </button>
+                  <span>1</span>
+                  <button type="button" name="menos">
+                    <i class="fas fa-minus-square"></i>
+                  </button>
+                </div>
               </div>
-              <div>
-                <button type="reset"><i class="fas fa-trash-alt"></i></button>
+              <div class="precio-cart">
+                <div>
+                  <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                </div>
                 <p>$500</p>
               </div>
             </div>
           </article>
         </section>
         <section>
-          <article>
-            <div>
-              <img
-                src="images/jabon-cafe.jpg"
-                alt="Jabon Natural Cafe y Canela"
-              />
-              <h3>Jabon Natural</h3>
-              <p>Jabon Natural Cafe y Canela</p>
-              <div>
-                <button type="button" name="mas">
-                  <i class="fas fa-plus-square"></i>
-                </button>
-                <span>1</span>
-                <button type="button" name="menos">
-                  <i class="fas fa-minus-square"></i>
-                </button>
+          <article class="articulo-cart">
+            <div class="main-container">
+              <div class="main-container">
+                <img
+                  class="product-cart-images"
+                  src="images/jabon-cafe.jpg"
+                  alt="Jabon Natural Cafe y Canela"
+                />
+                <div class="flex-column description-cart">
+                  <h3 class="margin-3">Jabon Natural</h3>
+                  <p class="margin-3">Jabon Natural</p>
+                  <p class="margin-3">Cafe y Canela</p>
+                  <div class="margin-3">
+                    <button type="button" name="mas">
+                      <i class="fas fa-plus-square"></i>
+                    </button>
+                    <span>1</span>
+                    <button type="button" name="menos">
+                      <i class="fas fa-minus-square"></i>
+                    </button>
+                  </div>
+                </div>
               </div>
-              <div>
-                <button type="reset"><i class="fas fa-trash-alt"></i></button>
+              <div class="precio-cart">
+                <div>
+                  <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                </div>
                 <p>$250</p>
               </div>
             </div>
@@ -160,41 +182,53 @@
         </div>
       </form>
     </main>
-    <footer>
-      <section>
-        <nav class="icons2">
-          <h4 class="color1">Sumate al cambio</h4>
-          <a href="https://www.dondereciclo.org.ar/"
-            ><i class="fas fa-recycle color1"></i
-          ></a>
-          <a href="https://www.quieroayudar.org/Donar"
-            ><i class="far fa-heart color1"></i
-          ></a>
-          <a href="https://www.quieroayudar.org/SerVoluntario"
-            ><i class="far fa-smile color1"></i
-          ></a>
-        </nav>
-      </section>
+    <footer class="footer-container background-ligth">
+      <div class="center-text">
+        <section>
+          <nav>
+            <h4>Sumate al cambio</h4>
+            <div class="icons-footer">
+              <a href="https://www.dondereciclo.org.ar/"
+                ><i class="fas fa-recycle icons-color"></i
+              ></a>
+              <a href="https://www.quieroayudar.org/Donar"
+                ><i class="far fa-heart icons-color"></i
+              ></a>
+              <a href="https://www.quieroayudar.org/SerVoluntario"
+                ><i class="far fa-smile icons-color"></i
+              ></a>
+            </div>
+          </nav>
+        </section>
 
-      <section>
-        <h4>Informacion</h4>
-        <nav>
-          <ul>
-            <li><a href="/info">Formas de pago</a></li>
-            <li><a href="/info">Metodos de envio</a></li>
-            <li><a href="/faq">Preguntas frecuentes</a></li>
-          </ul>
-        </nav>
-      </section>
-
-      <div>
-        <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
+        <section>
+          <h4>Informacion</h4>
+          <nav>
+            <ul>
+              <li><a href="/info" class="icons-color">Formas de pago</a></li>
+              <li><a href="/info" class="icons-color">Metodos de envio</a></li>
+              <li>
+                <a href="/faq" class="icons-color">Preguntas frecuentes</a>
+              </li>
+            </ul>
+          </nav>
+        </section>
       </div>
 
-      <div>
-        <p>Suscribite a nuestro newsletter</p>
-        <input type="text" />
-        <button type="submit">Enviar</button>
+      <div class="center-text">
+        <div>
+          <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
+        </div>
+
+        <div>
+          <p>Suscribite a nuestro newsletter</p>
+          <div>
+            <input type="text" id="footer-input" />
+            <button type="submit" class="no-border">
+              <i class="fas fa-paper-plane icons-color"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
