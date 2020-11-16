@@ -67,6 +67,17 @@
   color: #344659;
   font-size: 18px;
 }
+.banner-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0px;
+}
+.banner-container img {
+  width: 100%;
+}
+
 .font-bellefair {
   font-family: bellefair;
 }
