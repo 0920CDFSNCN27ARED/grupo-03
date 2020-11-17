@@ -114,3 +114,43 @@
 .font-size-16 {
   font-size: 16px;
 }
+/* CART */
+
+.button-close {
+  align-self: flex-start;
+  border: none;
+  color: gray;
+  font-size: 20px;
+  background-color: #e7e7e7;
+}
+
+.finalize-cart-button {
+  width: 100%;
+  height: 7vh;
+  background-color: #826d8e;
+  color: white;
+  font-size: 16px;
+  border: solid 1px black;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.cant-button-cart {
+  border: none;
+  background-color: grey;
+  width: 25%;
+  height: 5vh;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-trash {
+  border: none;
+  font-size: 20px;
+}
+
+.price-cart > p {
+  position: relative;
+  bottom: 12px;
+  font-size: 15px;
+}

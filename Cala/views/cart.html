@@ -83,83 +83,90 @@
     <main class="main-container">
       <img src="images/banner3.jpg" alt="Cosmetica Natural" class="width-100" />
       <form action="/" method="Post" class="width-100">
-        <div class="main-container border-button" id="title-cart">
+        <div class="main-container border-bottom" id="title-cart">
           <h3>Mi carrito de compras</h3>
           <input class="button-close" type="button" name="boton" value="X" />
         </div>
-        <section class="border-button">
+        <section class="border-bottom">
           <article class="articulo-cart">
-            <div class="main-container">
-              <img
-                class="product-cart-images"
-                src="images/crema-hidra.jpg"
-                alt="Crema Hidratante para pieles secas"
-              />
-              <div class="flex-column description-cart">
-                <h3 class="margin-3">Crema Karite</h3>
-                <p class="margin-3">Crema hidratante</p>
-                <p class="margin-3">para pieles secas</p>
-
-                <div class="margin-3">
-                  <button type="button" name="mas">
-                    <i class="fas fa-plus-square"></i>
-                  </button>
-                  <span>1</span>
-                  <button type="button" name="menos">
-                    <i class="fas fa-minus-square"></i>
-                  </button>
-                </div>
-              </div>
-              <div class="price-cart">
-                <div>
-                  <button type="reset"><i class="fas fa-trash-alt"></i></button>
-                </div>
-                <p>$500</p>
-              </div>
-            </div>
-          </article>
-        </section>
-        <section class="border-button">
-          <article class="articulo-cart">
-            <div class="main-container">
+            <div class="main-container" id="justify">
               <div class="main-container">
                 <img
                   class="product-cart-images"
-                  src="images/jabon-cafe.jpg"
-                  alt="Jabon Natural Cafe y Canela"
+                  src="images/crema-hidra.jpg"
+                  alt="Crema Hidratante para pieles secas"
                 />
-                <div class="flex-column description-cart">
-                  <h3 class="margin-3">Jabon Natural</h3>
-                  <p class="margin-3">Jabon Natural</p>
-                  <p class="margin-3">Cafe y Canela</p>
+                <div class="description-cart">
+                  <h3 class="margin-3">Crema Karite</h3>
+                  <p class="margin-3">Crema hidratante</p>
+                  <p class="margin-3">para pieles secas</p>
                   <div class="margin-3">
-                    <button type="button" name="mas">
-                      <i class="fas fa-plus-square"></i>
+                    <button class="cant-button-cart" type="button" name="menos">
+                      -
                     </button>
-                    <span>1</span>
-                    <button type="button" name="menos">
-                      <i class="fas fa-minus-square"></i>
+                    <span class="margin-10">1</span>
+                    <button class="cant-button-cart" type="button" name="mas">
+                      +
                     </button>
                   </div>
                 </div>
               </div>
               <div class="price-cart">
                 <div>
-                  <button type="reset"><i class="fas fa-trash-alt"></i></button>
+                  <button class="icon-trash" type="reset">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+                </div>
+                <p>$500</p>
+              </div>
+            </div>
+          </article>
+        </section>
+        <section class="border-bottom">
+          <article class="articulo-cart">
+            <div class="main-container" id="justify">
+              <div class="main-container">
+                <img
+                  class="product-cart-images"
+                  src="images/jabon-cafe.jpg"
+                  alt="Jabon Natural Cafe y Canela"
+                />
+                <div class="description-cart">
+                  <h3 class="margin-3">Jabon Natural</h3>
+                  <p class="margin-3">Jabon Natural</p>
+                  <p class="margin-3">Cafe y Canela</p>
+                  <div class="margin-3">
+                    <button class="cant-button-cart" type="button" name="menos">
+                      -
+                    </button>
+                    <span class="margin-10">1</span>
+                    <button class="cant-button-cart" type="button" name="mas">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="price-cart">
+                <div>
+                  <button class="icon-trash" type="reset">
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
                 </div>
                 <p>$250</p>
               </div>
             </div>
           </article>
         </section>
-        <section class="border-button main-container total-cart">
+        <section class="border-bottom main-container total-cart">
           <p>Subtotal</p>
           <p>$750</p>
         </section>
         <section>
           <div class="main-container total-cart">
             <p>Calculá el costo de envío</p>
-            <button type="button"><i class="fas fa-angle-up"></i></button>
+            <button class="button-close" type="button">
+              <i class="fas fa-angle-up"></i>
+            </button>
           </div>
           <div class="main-container">
             <input
@@ -180,10 +187,14 @@
           <p>Total</p>
           <p>$750</p>
         </section>
-        <div>
-          <input type="submit" value="Finalizar" />
+        <div class="margin-10">
+          <input
+            class="finalize-cart-button"
+            type="submit"
+            value="FINALIZAR COMPRA"
+          />
         </div>
-        <div>
+        <div id="buying" class="border-bottom">
           <a href="/products">Seguir comprando</a>
         </div>
       </form>
