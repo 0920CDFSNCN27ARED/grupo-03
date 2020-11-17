@@ -82,6 +82,10 @@ li {
 .no-border {
   border: none;
 }
+
+.border-1 {
+  border: solid 1px #344659;
+}
 #footer-input {
   border-radius: 5px;
   border: solid 1px #344659;

@@ -29,8 +29,8 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
 
-  <body class="background-ligth">
-    <header class="header-container background-ligth">
+  <body class="background-ligth font-arimo border-1">
+    <header class="header-container background-ligth hidden">
       <div>
         <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
       </div>
@@ -81,7 +81,11 @@
       </nav>
     </header>
     <main class="main-container">
-      <img src="images/banner3.jpg" alt="Cosmetica Natural" class="width-100" />
+      <img
+        src="images/banner3.jpg"
+        alt="Cosmetica Natural"
+        class="width-100 hidden"
+      />
       <form action="/" method="Post" class="width-100">
         <div class="main-container border-bottom" id="title-cart">
           <h3>Mi carrito de compras</h3>
@@ -97,15 +101,23 @@
                   alt="Crema Hidratante para pieles secas"
                 />
                 <div class="description-cart">
-                  <h3 class="margin-3">Crema Karite</h3>
+                  <h3 class="margin-3 opacity-08">Crema Karite</h3>
                   <p class="margin-3">Crema hidratante</p>
                   <p class="margin-3">para pieles secas</p>
                   <div class="margin-3">
-                    <button class="cant-button-cart" type="button" name="menos">
+                    <button
+                      class="cant-button-cart opacity-08"
+                      type="button"
+                      name="menos"
+                    >
                       -
                     </button>
                     <span class="margin-10">1</span>
-                    <button class="cant-button-cart" type="button" name="mas">
+                    <button
+                      class="cant-button-cart opacity-08"
+                      type="button"
+                      name="mas"
+                    >
                       +
                     </button>
                   </div>
@@ -113,7 +125,7 @@
               </div>
               <div class="price-cart">
                 <div>
-                  <button class="icon-trash" type="reset">
+                  <button class="icon-trash icons-color" type="reset">
                     <i class="fas fa-trash-alt"></i>
                   </button>
                 </div>
@@ -132,15 +144,23 @@
                   alt="Jabon Natural Cafe y Canela"
                 />
                 <div class="description-cart">
-                  <h3 class="margin-3">Jabon Natural</h3>
+                  <h3 class="margin-3 opacity-08">Jabon Natural</h3>
                   <p class="margin-3">Jabon Natural</p>
                   <p class="margin-3">Cafe y Canela</p>
                   <div class="margin-3">
-                    <button class="cant-button-cart" type="button" name="menos">
+                    <button
+                      class="cant-button-cart opacity-08"
+                      type="button"
+                      name="menos"
+                    >
                       -
                     </button>
                     <span class="margin-10">1</span>
-                    <button class="cant-button-cart" type="button" name="mas">
+                    <button
+                      class="cant-button-cart opacity-08"
+                      type="button"
+                      name="mas"
+                    >
                       +
                     </button>
                   </div>
@@ -149,7 +169,7 @@
               <div class="price-cart">
                 <div>
                   <button class="icon-trash" type="reset">
-                    <i class="fas fa-trash-alt"></i>
+                    <i class="fas fa-trash-alt icons-color"></i>
                   </button>
                 </div>
                 <p>$250</p>
@@ -194,48 +214,10 @@
             value="FINALIZAR COMPRA"
           />
         </div>
-        <div id="buying" class="border-bottom">
+        <div id="buying">
           <a href="/products">Seguir comprando</a>
         </div>
       </form>
     </main>
-    <footer class="footer-container background-ligth">
-      <div class="center-text">
-        <section>
-          <nav>
-            <h4>Sumate al cambio</h4>
-            <div class="icons-footer">
-              <a href="https://www.dondereciclo.org.ar/"
-                ><i class="fas fa-recycle icons-color"></i
-              ></a>
-              <a href="https://www.quieroayudar.org/Donar"
-                ><i class="far fa-heart icons-color"></i
-              ></a>
-              <a href="https://www.quieroayudar.org/SerVoluntario"
-                ><i class="far fa-smile icons-color"></i
-              ></a>
-            </div>
-          </nav>
-        </section>
-
-        <section>
-          <nav>
-            <a href="/faq" class="icons-color">Preguntas frecuentes</a>
-          </nav>
-        </section>
-      </div>
-
-      <div class="center-text">
-        <div>
-          <p>Suscribite a nuestro newsletter</p>
-          <div>
-            <input type="text" id="footer-input" />
-            <button type="submit" class="no-border">
-              <i class="fas fa-paper-plane icons-color"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </footer>
   </body>
 </html>
