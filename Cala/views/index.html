@@ -31,7 +31,15 @@
 
   <body class="background-ligth">
     <header class="header-container background-ligth">
-      <div>
+      <nav class="menu-fixed background-ligth">
+        <i class="fas fa-bars icons-color"></i>
+        <div>
+          <a href="/login"> <i class="fas fa-sign-in-alt icons-color"></i></a>
+
+          <a href="/cart"> <i class="fas fa-shopping-cart icons-color"></i></a>
+        </div>
+      </nav>
+      <div class="margin-top-20">
         <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
       </div>
 
@@ -68,22 +76,11 @@
           </ul>
         </nav>
       </div>
-      <div class="menu-botton icons-color">
-        <i class="fas fa-bars"></i>
-
-        <a href="/login" id="login-position">
-          <i class="fas fa-sign-in-alt icons-color"></i
-        ></a>
-
-        <a href="/cart" id="cart-position">
-          <i class="fas fa-shopping-cart icons-color"></i
-        ></a>
-      </div>
     </header>
     <main class="main-container">
       <!--Agrego la imagen central con dos parrafos que van al costado.
       Agrego texto real a los parrafos e incluyo etiquetas semanticas-->
-      <section>
+      <section class="main-container width-100">
         <img
           src="images/banner3.jpg"
           alt="Cosmetica Natural"
@@ -146,7 +143,7 @@
         <h3>Productos destacados</h3>
 
         <article class="product-article">
-          <h4>Jabon Corporal</h4>
+          <a href="/details"><h4>Jabon Corporal</h4></a>
           <img
             src="/images/jabon-corpo.jpg"
             alt="jabon corporal"

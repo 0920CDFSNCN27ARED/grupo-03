@@ -301,3 +301,7 @@ a:active {
   background-color: transparent;
   font-weight: bold;
 }
+
+.margin-top-20 {
+  margin-top: 20px;
+}

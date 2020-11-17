@@ -8,13 +8,10 @@
   color: #5a6186;
 }
 .menu-botton {
-  display: flex;
   order: -1;
   margin-left: 15px;
   margin-top: 5px;
   width: 100%;
-  justify-content: flex-start;
-  align-items: flex-start;
 }
 
 .font-arimo {
@@ -165,21 +162,18 @@
   display: flex;
 }
 
-#login-position {
-  position: relative;
-  left: 285px;
-}
-
-#cart-position {
-  position: fixed;
-  left: 330px;
-  top: 5px;
-}
-
 .padding-10 {
   padding: 10px;
 }
 
 .padding-bottom-5 {
   padding-bottom: 5px;
+}
+
+.menu-fixed {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 7px;
+  position: fixed;
 }
