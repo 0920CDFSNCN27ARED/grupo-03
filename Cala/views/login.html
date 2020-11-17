@@ -89,34 +89,35 @@
       <section class="form-container">
         <h3 class="font-arimo">Ingresa a tu cuenta</h3>
         <form action="#" method="POST" class="flex-column">
-          <p class="font-jura-form flex-column">
-            <label for="email">Mail</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="mariaperez@mail.com"
-            />
-          </p>
-          <p class="font-jura-form flex-column">
-            <label for="password">Contraseña</label>
-            <input type="password" name="password" id="password" />
-          </p>
-          <button type="submit font-jura-form">Ingresar</button>
-        </form>
-        <div class="checkbox-form">
-          <p><label for="remember">Recordar usuario </label></p>
           <input
-            type="checkbox"
-            name="remember"
-            value="yes"
-            class="font-jura-form"
-            checked
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email o Nombre de usuario"
           />
-        </div>
-        <div>
-          <a href="#" class="font-jura-form">Recuperar contraseña</a>
-        </div>
+
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Contrasena"
+          />
+
+          <button type="submit" class="font-jura-form">Ingresar</button>
+          <div class="checkbox-form font-jura-form">
+            <p><label for="remember">Recordar usuario </label></p>
+            <input
+              type="checkbox"
+              name="remember"
+              value="yes"
+              class="font-jura-form width-10"
+              checked
+            />
+          </div>
+          <div>
+            <a href="#" class="font-jura-form">Recuperar contraseña</a>
+          </div>
+        </form>
       </section>
 
       <section class="form-container">

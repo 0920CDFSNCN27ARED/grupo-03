@@ -57,27 +57,28 @@
             <a href="#"><i class="fas fa-share-alt icons-color"></i></a>
           </li>
         </ul>
+
+        <!--Creo una section para los menu-->
+        <nav class="hidden">
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/products">Productos</a></li>
+            <li><a href="/about">Sobre Nosotras</a></li>
+            <li><a href="/contact">Contacto</a></li>
+          </ul>
+        </nav>
       </div>
       <div class="menu-botton icons-color">
         <i class="fas fa-bars"></i>
-      </div>
-      <!--Creo una section para los menu-->
-      <nav class="hidden">
-        <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/products">Productos</a></li>
-          <li><a href="/about">Sobre Nosotras</a></li>
-          <li><a href="/contact">Contacto</a></li>
-        </ul>
-      </nav>
 
-      <!--Creo otra section para iconos login y carrito-->
-      <nav class="hidden">
-        <ul>
-          <li><a href="/login">Mi cuenta</a></li>
-          <li><a href="/cart">Mi compra</a></li>
-        </ul>
-      </nav>
+        <a href="/login" id="login-position">
+          <i class="fas fa-sign-in-alt icons-color"></i
+        ></a>
+
+        <a href="/cart" id="cart-position">
+          <i class="fas fa-shopping-cart icons-color"></i
+        ></a>
+      </div>
     </header>
     <main class="main-container">
       <!--Agrego la imagen central con dos parrafos que van al costado.
@@ -142,7 +143,7 @@
       <!--Creo section para poner adentro los articulos destacados-->
 
       <section class="index-products">
-        <h3>Articulos destacados</h3>
+        <h3>Productos destacados</h3>
 
         <article class="product-article">
           <h4>Jabon Corporal</h4>
@@ -171,9 +172,7 @@
             alt="cepillo bambu"
             class="width-100"
           />
-          <p class="font-bellefair">
-            Cepillo de dientes con mango biodegradable.
-          </p>
+          <p class="font-bellefair">Cepillo dental con mango biodegradable.</p>
         </article>
       </section>
       <!--Creo section para la parte de las certificaciones-->
@@ -192,7 +191,7 @@
             <li class="width-30">
               <a href="https://crueltyfree.peta.org/"
                 ><img
-                  src="images/cruelty-free.jpg"
+                  src="images/cruelty-free.png"
                   alt="cruelty free"
                   class="width-100"
               /></a>

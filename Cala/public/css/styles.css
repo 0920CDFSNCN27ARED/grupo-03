@@ -10,9 +10,11 @@
 .menu-botton {
   display: flex;
   order: -1;
-  align-self: flex-end;
-  margin-right: 15px;
+  margin-left: 15px;
   margin-top: 5px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .font-arimo {
@@ -86,7 +88,7 @@
 .certifications h3,
 .about-us h2 {
   font-family: Jura;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   color: #ad9aac;
   opacity: 0, 5;
@@ -153,4 +155,31 @@
   position: relative;
   bottom: 12px;
   font-size: 15px;
+}
+
+.background-white {
+  background-color: white;
+}
+
+.d-flex {
+  display: flex;
+}
+
+#login-position {
+  position: relative;
+  left: 285px;
+}
+
+#cart-position {
+  position: fixed;
+  left: 330px;
+  top: 5px;
+}
+
+.padding-10 {
+  padding: 10px;
+}
+
+.padding-bottom-5 {
+  padding-bottom: 5px;
 }

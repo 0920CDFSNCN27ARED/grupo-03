@@ -60,11 +60,16 @@ li {
 .width-50 {
   width: 50%;
 }
+
+.width-10 {
+  width: 10%;
+}
 .footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  border-top: solid 1px #344659;
 }
 .icons-footer {
   display: flex;
@@ -276,4 +281,23 @@ a:active {
   justify-content: center;
   padding-bottom: 10px;
   margin-bottom: 10px;
+}
+
+.form-container input {
+  border: none;
+  border-radius: 5px;
+  border-bottom: solid 1px #344659;
+  width: 80%;
+  text-align: center;
+  align-self: center;
+  font-family: bellefair;
+}
+
+.form-container button {
+  border: none;
+  width: 80%;
+  text-align: center;
+  align-self: center;
+  background-color: transparent;
+  font-weight: bold;
 }
