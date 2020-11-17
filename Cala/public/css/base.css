@@ -152,12 +152,11 @@ li {
 #cant {
   width: 19%;
   height: 5vh;
-  border-radius: 3px;
 }
 .details-form button {
   width: 84vw;
   height: 5vh;
-  border-radius: 3px;
+
   margin-top: 16px;
   background-color: #344659;
   color: #e7e7e7;

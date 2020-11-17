@@ -31,7 +31,15 @@
 
   <body>
     <header class="header-container background-ligth">
-      <div>
+      <nav class="menu-fixed background-ligth">
+        <i class="fas fa-bars icons-color"></i>
+        <div>
+          <a href="/login"> <i class="fas fa-sign-in-alt icons-color"></i></a>
+
+          <a href="/cart"> <i class="fas fa-shopping-cart icons-color"></i></a>
+        </div>
+      </nav>
+      <div class="margin-top-20">
         <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
       </div>
 
@@ -57,28 +65,17 @@
             <a href="#"><i class="fas fa-share-alt icons-color"></i></a>
           </li>
         </ul>
-      </div>
-      <div class="menu-botton icons-color">
-        <i class="fas fa-bars"></i>
-      </div>
-      <!--Creo una section para los menu-->
-      <nav>
-        <ul class="details-menu icons-color">
-          <li><a href="/">Inicio |</a></li>
-          <li><a href="/products">| Productos</a></li>
-          <li><a href="/about" class="hidden">Sobre Nosotras</a></li>
-          <li><a href="/contact" class="hidden">Contacto</a></li>
-        </ul>
-      </nav>
 
-      <!--Creo otra section para iconos login y carrito-->
-      <nav class="hidden">
-        <ul>
-          <li><a href="/login">Mi cuenta</a></li>
-          <li><a href="/favs">Favoritos</a></li>
-          <li><a href="/cart">Mi compra</a></li>
-        </ul>
-      </nav>
+        <!--Creo una section para los menu-->
+        <nav class="hidden">
+          <ul>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/products">Productos</a></li>
+            <li><a href="/about">Sobre Nosotras</a></li>
+            <li><a href="/contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main-container">
       <section class="seccion-details-conteiner background-ligth">
@@ -99,8 +96,10 @@
           <form action="" method="POST">
             <div class="details-form">
               <label for="cant">CANTIDAD</label>
-              <input type="number" id="cant" name="cant" />
-              <button type="submit">AGREGAR AL CARRITO</button>
+              <input type="number" id="cant" class="radius-5" name="cant" />
+              <button type="submit" class="radius-5 border-1">
+                AGREGAR AL CARRITO
+              </button>
             </div>
           </form>
           <div class="delivery-container font-arimo">
@@ -180,7 +179,7 @@
       </section>
     </main>
 
-    <footer class="footer-container background-ligth">
+    <footer class="footer-container background-ligth padding-10">
       <div class="center-text">
         <section>
           <nav>
