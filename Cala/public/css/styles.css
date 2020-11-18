@@ -179,7 +179,9 @@
 .padding-bottom-5 {
   padding-bottom: 5px;
 }
-
+.padding-7 {
+  padding: 7px;
+}
 .menu-fixed {
   display: flex;
   width: 100%;
