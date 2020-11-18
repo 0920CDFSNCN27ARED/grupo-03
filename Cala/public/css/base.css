@@ -3,54 +3,6 @@
   padding: 0px;
   box-sizing: border-box;
 }
-a:link,
-a:visited,
-a:active {
-  text-decoration: none;
-  color: #5a6186;
-}
-.header-container {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.search-container {
-  width: fit-content;
-  display: flex;
-  justify-content: center;
-  background-color: white;
-  border: solid 1px #344659;
-  border-radius: 5px;
-  justify-content: space-between;
-  padding: 5px;
-}
-
-.search-container > input {
-  width: 75%;
-  background-color: transparent;
-  border: none;
-}
-.search-container > button {
-  width: 10%;
-  background-color: transparent;
-  border: none;
-}
-.nets-container {
-  width: 50%;
-  padding: 0px 12px;
-}
-
-.header-menus {
-  justify-content: space-around;
-  margin: 10px 0px;
-}
-li {
-  text-decoration: none;
-  list-style-type: none;
-}
-
 .hidden {
   display: none;
 }
@@ -68,6 +20,69 @@ li {
 .width-10 {
   width: 10%;
 }
+.center-text {
+  text-align: center;
+}
+.no-border {
+  border: none;
+}
+.radius-5 {
+  border-radius: 5px;
+}
+
+.width-30 {
+  width: 30%;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+#justify {
+  justify-content: space-between;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #5a6186;
+}
+.header-container {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search-container {
+  width: fit-content;
+  justify-content: center;
+  background-color: white;
+  border: solid 1px #344659;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.search-container > input {
+  width: 75%;
+  background-color: transparent;
+}
+.search-container > button {
+  background-color: transparent;
+}
+.nets-container {
+  padding: 0px 12px;
+}
+
+.header-menus {
+  justify-content: space-around;
+  margin: 10px 0px;
+}
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+
 .footer-container {
   display: flex;
   flex-wrap: wrap;
@@ -79,12 +94,6 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
-.center-text {
-  text-align: center;
-}
-.no-border {
-  border: none;
 }
 
 .border-1 {
@@ -108,24 +117,15 @@ li {
   justify-content: space-around;
 }
 
-.radius-5 {
-  border-radius: 5px;
-}
-
-.width-30 {
-  width: 30%;
-}
 /*contenedores de detail*/
 .seccion-details-conteiner {
-  display: flex;
-  flex-direction: column;
   border-top: solid 10px whitesmoke;
 }
 .seccion-details-conteiner h4 {
   align-self: center;
   margin-top: 5px;
-  color: #344659;
 }
+
 .details-menu {
   display: flex;
   flex-wrap: wrap;
@@ -133,24 +133,16 @@ li {
   right: 105px;
 }
 .details-form {
-  display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 18px;
-  width: 100%;
   border-top: solid 10px whitesmoke;
 }
 .text-details-container {
-  display: flex;
-  flex-direction: column;
   padding: 13px;
 }
-.text-details-container p {
-  font-size: 13px;
-  margin: 10px 0px;
-}
+.text-details-container p,
 .text-details-container > ol > li {
-  font-size: 13px;
   margin: 10px 0px;
 }
 #cant {
@@ -160,7 +152,6 @@ li {
 .details-form button {
   width: 84vw;
   height: 5vh;
-
   margin-top: 16px;
   background-color: #344659;
   color: #e7e7e7;
@@ -168,37 +159,7 @@ li {
 .details-form label {
   width: 30%;
   text-align: center;
-  font-size: 18px;
-  color: #344659;
   align-self: center;
-}
-
-/*HTML FORMULARIOS*/
-.form-container {
-  border: solid 5px #344659;
-  border-radius: 5px;
-  padding: 5px;
-  width: 80%;
-  text-align: center;
-  margin: 5px;
-}
-
-.main-form-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-}
-
-.flex-column {
-  display: flex;
-  flex-direction: column;
-}
-
-.checkbox-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 /*contenedores de Cart*/
@@ -272,35 +233,12 @@ li {
   border: solid 1px lightgrey;
 }
 
-#justify {
-  justify-content: space-between;
-}
-
 #buying {
   display: flex;
   text-decoration: underline;
   justify-content: center;
   padding-bottom: 10px;
   margin-bottom: 10px;
-}
-
-.form-container input {
-  border: none;
-  border-radius: 5px;
-  border-bottom: solid 1px #344659;
-  width: 80%;
-  text-align: center;
-  align-self: center;
-  font-family: bellefair;
-}
-
-.form-container button {
-  border: none;
-  width: 80%;
-  text-align: center;
-  align-self: center;
-  background-color: transparent;
-  font-weight: bold;
 }
 
 .margin-top-20 {

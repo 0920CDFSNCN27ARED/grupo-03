@@ -40,110 +40,118 @@
   </head>
 
   <body>
-    <header class="header-container background-ligth">
-      <nav class="menu-fixed background-ligth justify-flex-end">
-        <i class="fas fa-bars icons-color hidden-md"></i>
+    <header class="header-container flex-column background-main">
+      <nav class="menu-fixed d-flex width-100 background-main justify-flex-end">
+        <i class="fas fa-bars color-primary hidden-md"></i>
         <div>
-          <a href="/login"> <i class="fas fa-sign-in-alt icons-color"></i></a>
+          <a href="/login"> <i class="fas fa-sign-in-alt color-primary"></i></a>
 
-          <a href="/cart"> <i class="fas fa-shopping-cart icons-color"></i></a>
+          <a href="/cart">
+            <i class="fas fa-shopping-cart color-primary"></i
+          ></a>
         </div>
       </nav>
       <div class="margin-top-20">
         <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
       </div>
 
-      <div class="search-container">
-        <input type="text" placeholder="Busca tus productos" />
-        <button type="submit"><i class="fas fa-search"></i></button>
+      <div class="search-container d-flex radius-5">
+        <input
+          class="no-border"
+          type="text"
+          placeholder="Busca tus productos"
+        />
+        <button class="no-border width-10" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
       </div>
 
       <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
         cada uno con un enlace aun no determinado-->
-      <div class="nets-container">
+      <div class="nets-container width-50">
         <ul class="header-menus main-container">
           <li>
-            <a href="#"><i class="fab fa-twitter-square icons-color"></i></a>
+            <a href="#"><i class="fab fa-twitter-square color-primary"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-facebook-square icons-color"></i></a>
+            <a href="#"><i class="fab fa-facebook-square color-primary"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-instagram icons-color"></i></a>
+            <a href="#"><i class="fab fa-instagram color-primary"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-share-alt icons-color"></i></a>
+            <a href="#"><i class="fas fa-share-alt color-primary"></i></a>
           </li>
         </ul>
       </div>
       <div class="width-100">
         <!--Creo una section para los menu-->
         <nav class="hidden show">
-          <ul class="header-menus main-container icons-color font-arimo">
-            <li><a class="icons-color" href="/">Inicio</a></li>
-            <li><a class="icons-color" href="/products">Productos</a></li>
-            <li><a class="icons-color" href="/about">Sobre Nosotras</a></li>
-            <li><a class="icons-color" href="/contact">Contacto</a></li>
+          <ul class="header-menus main-container color-primary font-arimo">
+            <li><a class="color-primary" href="/">Inicio</a></li>
+            <li><a class="color-primary" href="/products">Productos</a></li>
+            <li><a class="color-primary" href="/about">Sobre Nosotras</a></li>
+            <li><a class="color-primary" href="/contact">Contacto</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="main-container">
-      <section class="seccion-details-conteiner background-ligth">
-        <div class="banner-container">
-          <img src="/images/bannerXdetails.png" alt="" />
+      <section class="seccion-details-conteiner flex-column background-main">
+        <div class="banner-container d-flex width-100">
+          <img  class="width-100" src="/images/bannerXdetails.png" alt="" />
         </div>
         <div class="padding-7 hidden-md">
-          <a href="/"><i class="fas fa-home icons-color"></i></a>
+          <a href="/"><i class="fas fa-home color-primary"></i></a>
         </div>
-        <h4 class="font-arimo">Jabón Corporal Natural</h4>
-        <article class="product-article-details">
+        <h4 class="font-arimo color-secondary">Jabón Corporal Natural</h4>
+        <article class="product-article-details flex-column no-border radius-5 ">
           <img
             src="/images/jabon-corpo.jpg"
             alt="Jabon-Corporal"
             class="width-77"
           />
-          <h3 class="font-arimo">JABÓN CORPORAL NATURAL</h3>
-          <h4 class="font-arimo">$350</h4>
+          <h3 class="font-arimo font-size-18 color-secondary">JABÓN CORPORAL NATURAL</h3>
+          <h4 class="font-arimo color-secondary">$350</h4>
         </article>
         <article>
           <form action="" method="POST">
-            <div class="details-form">
-              <label for="cant">CANTIDAD</label>
+            <div class="details-form d-flex width-100">
+              <label class="font-size-18 color-secondary" for="cant">CANTIDAD</label>
               <input type="number" id="cant" class="radius-5" name="cant" />
               <button type="submit" class="radius-5 border-1">
                 AGREGAR AL CARRITO
               </button>
             </div>
           </form>
-          <div class="delivery-container font-arimo">
-            <i class="fas fa-truck icons-color margin-rigth-13"></i>
+          <div class="delivery-container d-flex font-arimo">
+            <i class="fas fa-truck color-primary margin-rigth-13"></i>
             <p>
               Con tu compra mayor a 2000$,
               <strong>envío gratis!</strong>
             </p>
           </div>
         </article>
-        <article class="text-details-container font-arimo">
-          <p>
+        <article class="flex-column text-details-container font-arimo">
+          <p class="font-size-14">
             Jabon corporal natural para pieles que necesitan ser nutridas,
             hidratadas o para regalarte un placer. Esta crema corporal es una
             delícia. Es una obra de arte de cosmética casi comestible.
           </p>
           <ol type="none">
-            <li>
+            <li class="font-size-14">
               INDICACIONES
-              <p>
+              <p class="font-size-14">
                 Para todo tipo de piel. Sobretodo <strong>pieles secas.</strong>
               </p>
-            </li>
+            </li class="font-size-14">
             <li>
               PROPIEDADES
-              <p>Emoliente, suavizante y nutritiva.</p>
+              <p class="font-size-14">Emoliente, suavizante y nutritiva.</p>
             </li>
-            <li>
+            <li class="font-size-14">
               INGREDIENTES:
-              <p>
+              <p class="font-size-14">
                 Cera carnauba: es una cera vegetal que mantiene la hidratación
                 natural de la piel, la suaviza y protege de los agentes
                 externos. Se destaca por sus beneficios
@@ -159,14 +167,14 @@
                 hidratantes, suavizantes y regeneradoras. Su aplicación es buena
                 para proteger la piel de los daños ocasionados por los rayos UV.
               </p>
-            </li>
-            <li>
+            </li >
+            <li class="font-size-14">
               PESO Y DIMENSIONES
-              <p>70 gr aprox.</p>
+              <p class="font-size-14">70 gr aprox.</p>
             </li>
-            <li>
+            <li class="font-size-14">
               MODO DE EMPLEO
-              <p>
+              <p class="font-size-14">
                 Aplicar directamente sobre la piel. Ir deslizando la pastilla
                 sobre la piel para que, al contacto con el calor corporal, se
                 vaya deshaciendo y vaya dejando una película de producto.
@@ -177,10 +185,10 @@
                 la ducha, sobre la piel húmeda. Cuando el clima es frío la barra
                 se pone más sólida así que sugiero aplicar bajo la ducha.
               </p>
-            </li>
+            </li class="font-size-14">
             <li>
               CONSERVACIÓN
-              <p>
+              <p class="font-size-14">
                 Guardar en un lugar fresco y seco. Mantener alejado de fuentes
                 de calor, ya que puede deshacerse. Al contacto directo con el
                 sol y el calor fuerte puede reblandecerse, incluso volverse
@@ -194,20 +202,20 @@
       </section>
     </main>
 
-    <footer class="footer-container background-ligth padding-10">
+    <footer class="footer-container background-main padding-10">
       <div class="center-text">
         <section>
           <nav>
             <h4>Sumate al cambio</h4>
             <div class="icons-footer">
               <a href="https://www.dondereciclo.org.ar/"
-                ><i class="fas fa-recycle icons-color"></i
+                ><i class="fas fa-recycle color-primary"></i
               ></a>
               <a href="https://www.quieroayudar.org/Donar"
-                ><i class="far fa-heart icons-color"></i
+                ><i class="far fa-heart color-primary"></i
               ></a>
               <a href="https://www.quieroayudar.org/SerVoluntario"
-                ><i class="far fa-smile icons-color"></i
+                ><i class="far fa-smile color-primary"></i
               ></a>
             </div>
           </nav>
@@ -215,7 +223,7 @@
 
         <section>
           <nav>
-            <a href="/faq" class="icons-color">Preguntas frecuentes</a>
+            <a href="/faq" class="color-primary">Preguntas frecuentes</a>
           </nav>
         </section>
       </div>
@@ -226,7 +234,7 @@
           <div>
             <input type="text" id="footer-input" />
             <button type="submit" class="no-border">
-              <i class="fas fa-paper-plane icons-color"></i>
+              <i class="fas fa-paper-plane color-primary"></i>
             </button>
           </div>
         </div>

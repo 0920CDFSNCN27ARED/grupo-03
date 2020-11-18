@@ -1,0 +1,42 @@
+.background-main {
+  background-color: #e7e7e7;
+}
+.color-primary {
+  color: #5a6186;
+}
+.color-secondary {
+  color: #344659;
+}
+
+.font-arimo {
+  font-family: Arimo;
+  font-weight: lighter;
+}
+
+.font-jura {
+  font-family: Jura;
+  font-weight: lighter;
+}
+
+.font-bellefair {
+  font-family: bellefair;
+}
+
+.font-size-14 {
+  font-size: 14px;
+}
+
+.font-size-16 {
+  font-size: 16px;
+}
+.font-size-18 {
+  font-size: 18px;
+}
+
+.font-size-23 {
+  font-size: 23px;
+}
+
+.background-white {
+  background-color: white;
+}

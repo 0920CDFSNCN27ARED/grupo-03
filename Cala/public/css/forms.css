@@ -1,0 +1,27 @@
+.form-container {
+  border: solid 5px #344659;
+  padding: 5px;
+  width: 80%;
+  margin: 5px;
+}
+
+.main-form-container {
+  align-items: center;
+}
+
+.checkbox-form {
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.form-container input {
+  border-bottom: solid 1px #344659;
+  align-self: center;
+}
+
+.form-container button {
+  width: 80%;
+  align-self: center;
+  background-color: transparent;
+  font-weight: bold;
+}

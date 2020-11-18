@@ -1,36 +1,14 @@
-.background-ligth {
-  background-color: #e7e7e7;
-}
-.background-ligther {
-  background-color: #e7ecef;
-}
-.icons-color {
-  color: #5a6186;
-}
-.menu-botton {
-  order: -1;
-  margin-left: 15px;
-  margin-top: 5px;
-  width: 100%;
+.d-flex {
+  display: flex;
 }
 
-.font-arimo {
-  font-family: Arimo;
-  font-weight: lighter;
-}
-
-.font-jura-form {
-  font-family: Jura;
-  font-weight: lighter;
-  font-size: 14px;
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .product-article {
-  display: flex;
-  flex-direction: column;
   background-color: rgba(173, 154, 172, 0.5);
-  border: none;
-  border-radius: 5px;
   width: 90%;
   align-items: center;
   margin-bottom: 10px;
@@ -42,11 +20,7 @@
 /*DETAILS*/
 
 .product-article-details {
-  display: flex;
-  flex-direction: column;
   background-color: rgba(173, 154, 172, 0.5);
-  border: none;
-  border-radius: 5px;
   width: 90%;
   align-items: center;
   margin: 16px;
@@ -61,16 +35,6 @@
   align-self: center;
   margin-bottom: 5px;
   margin-top: 5px;
-  color: #344659;
-}
-.product-article-details h3 {
-  color: #344659;
-  font-size: 18px;
-}
-
-#title-cart h3 {
-  color: #344659;
-  font-size: 23px;
 }
 
 .opacity-08 {
@@ -78,52 +42,28 @@
 }
 
 .banner-container {
-  display: flex;
   flex-wrap: wrap;
-  width: 100%;
   box-sizing: border-box;
   margin: 10px 0px;
-}
-.banner-container img {
-  width: 100%;
-}
-
-.font-bellefair {
-  font-family: bellefair;
 }
 
 .index-products h3,
 .certifications h3,
 .about-us h2 {
-  font-family: Jura;
   font-size: 28px;
   font-weight: bold;
   color: #ad9aac;
   opacity: 0, 5;
 }
 
-.product-article h4,
-.about-us p,
-.about-us h6 {
-  font-family: Arimo;
-  font-weight: normal;
-  color: #344659;
-}
 .delivery-container {
-  display: flex;
   flex-wrap: wrap;
   font-size: 12px;
   border-bottom: solid 10px whitesmoke;
   padding: 12px;
+  justify-content: center;
 }
 
-.font-size-14 {
-  font-size: 14px;
-}
-
-.font-size-16 {
-  font-size: 16px;
-}
 /* CART */
 
 .button-close {
@@ -135,18 +75,14 @@
 }
 
 .finalize-cart-button {
-  width: 100%;
   height: 7vh;
   background-color: #826d8e;
   color: white;
-  font-size: 16px;
   border: solid 1px black;
-  border-radius: 5px;
   font-weight: bold;
 }
 
 .cant-button-cart {
-  border: none;
   background-color: #344659;
   width: 25%;
   height: 5vh;
@@ -155,7 +91,6 @@
 }
 
 .icon-trash {
-  border: none;
   font-size: 20px;
 }
 
@@ -163,14 +98,6 @@
   position: relative;
   bottom: 12px;
   font-size: 15px;
-}
-
-.background-white {
-  background-color: white;
-}
-
-.d-flex {
-  display: flex;
 }
 
 .padding-10 {
@@ -186,8 +113,6 @@
   padding: 7px;
 }
 .menu-fixed {
-  display: flex;
-  width: 100%;
   justify-content: space-between;
   padding: 7px;
   position: fixed;

@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link
       rel="stylesheet"
       href="css/styles-md.css"
@@ -40,51 +41,59 @@
     />
   </head>
 
-  <body class="background-ligth">
-    <header class="header-container background-ligth">
-      <nav class="menu-fixed background-ligth justify-flex-end">
-        <i class="fas fa-bars icons-color hidden-md"></i>
+  <body class="background-main">
+    <header class="header-container flex-column background-main">
+      <nav class="menu-fixed d-flex width-100 background-main justify-flex-end">
+        <i class="fas fa-bars color-primary hidden-md"></i>
         <div>
-          <a href="/login"> <i class="fas fa-sign-in-alt icons-color"></i></a>
+          <a href="/login"> <i class="fas fa-sign-in-alt color-primary"></i></a>
 
-          <a href="/cart"> <i class="fas fa-shopping-cart icons-color"></i></a>
+          <a href="/cart">
+            <i class="fas fa-shopping-cart color-primary"></i
+          ></a>
         </div>
       </nav>
       <div class="margin-top-20">
         <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
       </div>
 
-      <div class="search-container">
-        <input type="text" placeholder="Busca tus productos" />
-        <button type="submit"><i class="fas fa-search"></i></button>
+      <div class="search-container d-flex radius-5">
+        <input
+          class="no-border"
+          type="text"
+          placeholder="Busca tus productos"
+        />
+        <button class="no-border width-10" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
       </div>
 
       <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
         cada uno con un enlace aun no determinado-->
-      <div class="nets-container">
+      <div class="nets-container width-50">
         <ul class="header-menus main-container">
           <li>
-            <a href="#"><i class="fab fa-twitter-square icons-color"></i></a>
+            <a href="#"><i class="fab fa-twitter-square color-primary"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-facebook-square icons-color"></i></a>
+            <a href="#"><i class="fab fa-facebook-square color-primary"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-instagram icons-color"></i></a>
+            <a href="#"><i class="fab fa-instagram color-primary"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-share-alt icons-color"></i></a>
+            <a href="#"><i class="fas fa-share-alt color-primary"></i></a>
           </li>
         </ul>
       </div>
       <div class="width-100">
         <!--Creo una section para los menu-->
         <nav class="hidden show">
-          <ul class="header-menus main-container icons-color font-arimo">
-            <li><a class="icons-color" href="/">Inicio</a></li>
-            <li><a class="icons-color" href="/products">Productos</a></li>
-            <li><a class="icons-color" href="/about">Sobre Nosotras</a></li>
-            <li><a class="icons-color" href="/contact">Contacto</a></li>
+          <ul class="header-menus main-container color-primary font-arimo">
+            <li><a class="color-primary" href="/">Inicio</a></li>
+            <li><a class="color-primary" href="/products">Productos</a></li>
+            <li><a class="color-primary" href="/about">Sobre Nosotras</a></li>
+            <li><a class="color-primary" href="/contact">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -92,11 +101,12 @@
     <!--Creo main con dos section una para el login y otra para register.
     Consultar si el placeholder en los input va en el html o el css.
     Consultar como se hace el captcha-->
-    <main class="background-ligth main-form-container">
-      <section class="form-container">
+    <main class="background-main main-form-container flex-column wrap">
+      <section class="form-container center-text radius-5">
         <h3 class="font-arimo">Ingresa a tu cuenta</h3>
         <form action="#" method="POST" class="flex-column">
           <input
+            class="font-bellefair no-border radius-5 center-text"
             type="email"
             name="email"
             id="email"
@@ -104,82 +114,100 @@
           />
 
           <input
+            class="no-border radius-5 center-text font-bellefair"
             type="password"
             name="password"
             id="password"
             placeholder="Contrasena"
           />
 
-          <button type="submit" class="font-jura-form">Ingresar</button>
-          <div class="checkbox-form font-jura-form">
+          <button type="submit" class="no-border center-text font-jura">
+            Ingresar
+          </button>
+          <div
+            class="checkbox-form d-flex font-jura font-size-14 color-secondary"
+          >
             <p><label for="remember">Recordar usuario </label></p>
             <input
+              class="no-border radius-5 center-text width-10"
               type="checkbox"
               name="remember"
               value="yes"
-              class="font-jura-form width-10"
               checked
             />
           </div>
           <div>
-            <a href="#" class="font-jura-form">Recuperar contraseña</a>
+            <a href="#" class="font-jura font-size-14">Recuperar contraseña</a>
           </div>
         </form>
       </section>
 
-      <section class="form-container">
+      <section class="form-container form-container center-text radius-5">
         <h3 class="font-arimo">Registrate</h3>
         <form action="#" method="POST" class="flex-column">
-          <p class="font-jura-form flex-column">
+          <p class="font-jura font-size-14 flex-column">
             <label for="name">Ingresa tu Nombre y Apellido</label>
             <input
+              class="no-border radius-5 center-text font-bellefair"
               type="text"
               name="name"
               id="name"
               placeholder="Maria Perez"
             />
           </p>
-          <p class="font-jura-form flex-column">
+          <p class="font-jura font-size-14 flex-column">
             <label for="email">Ingresa tu email</label>
             <input
+              class="no-border radius-5 center-text font-bellefair"
               type="email"
               name="email"
               id="email"
               placeholder="mariaperez@mail.com"
             />
           </p>
-          <p class="font-jura-form flex-column">
+          <p class="font-jura font-size-14 flex-column">
             <label for="password">Crea una clave</label>
             <input
+              class="no-border radius-5 center-text font-bellefair"
               type="password"
               name="password"
               id="password"
               placeholder="minimo 8 caracteres"
             />
           </p>
-          <p class="font-jura-form flex-column">
+          <p class="font-jura font-size-14 flex-column">
             <label for="password">Confirma tu clave</label>
-            <input type="password" name="password" id="password" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="no-border radius-5 center-text font-bellefair"
+            />
           </p>
-          <button type="submit" class="font-jura-form">Registrarme</button>
+          <button
+            type="submit"
+            class="no-border center-text font-jura font-size-14"
+          >
+            Registrarme
+          </button>
         </form>
       </section>
     </main>
 
-    <footer class="footer-container background-ligth padding-10">
+    <footer class="footer-container background-main padding-10">
       <div class="center-text">
         <section>
           <nav>
             <h4>Sumate al cambio</h4>
             <div class="icons-footer">
               <a href="https://www.dondereciclo.org.ar/"
-                ><i class="fas fa-recycle icons-color"></i
+                ><i class="fas fa-recycle color-primary"></i
               ></a>
               <a href="https://www.quieroayudar.org/Donar"
-                ><i class="far fa-heart icons-color"></i
+                ><i class="far fa-heart color-primary"></i
               ></a>
               <a href="https://www.quieroayudar.org/SerVoluntario"
-                ><i class="far fa-smile icons-color"></i
+                ><i class="far fa-smile color-primary"></i
               ></a>
             </div>
           </nav>
@@ -187,7 +215,7 @@
 
         <section>
           <nav>
-            <a href="/faq" class="icons-color">Preguntas frecuentes</a>
+            <a href="/faq" class="color-primary">Preguntas frecuentes</a>
           </nav>
         </section>
       </div>
@@ -198,7 +226,7 @@
           <div>
             <input type="text" id="footer-input" />
             <button type="submit" class="no-border">
-              <i class="fas fa-paper-plane icons-color"></i>
+              <i class="fas fa-paper-plane color-primary"></i>
             </button>
           </div>
         </div>
