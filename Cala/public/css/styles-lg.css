@@ -44,7 +44,23 @@
   flex-direction: row;
   justify-content: space-around;
 }
-
+.header-lg {
+  display: flex;
+  align-items: baseline;
+  width: 100vw;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.flex-end-lg {
+  align-self: flex-end;
+}
+.justify-rigth-lg {
+  justify-content: right;
+}
+.padding-nets-15 {
+  padding: 0px 15px;
+}
 @media (min-width: 890px) {
   .font-size-25lg {
     font-size: 25px;
