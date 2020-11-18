@@ -27,6 +27,16 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="css/styles-md.css"
+      media="(min-width: 481px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/styles-lg.css"
+      media="(min-width: 769px)"
+    />
   </head>
 
   <body>
@@ -51,7 +61,7 @@
       <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
         cada uno con un enlace aun no determinado-->
       <div class="nets-container">
-        <ul>
+        <ul class="header-menus main-container">
           <li>
             <a href="#"><i class="fab fa-twitter-square icons-color"></i></a>
           </li>
@@ -65,14 +75,15 @@
             <a href="#"><i class="fas fa-share-alt icons-color"></i></a>
           </li>
         </ul>
-
+      </div>
+      <div class="width-100">
         <!--Creo una section para los menu-->
-        <nav class="hidden">
-          <ul>
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/products">Productos</a></li>
-            <li><a href="/about">Sobre Nosotras</a></li>
-            <li><a href="/contact">Contacto</a></li>
+        <nav class="hidden show">
+          <ul class="header-menus main-container icons-color font-arimo">
+            <li><a class="icons-color" href="/">Inicio</a></li>
+            <li><a class="icons-color" href="/products">Productos</a></li>
+            <li><a class="icons-color" href="/about">Sobre Nosotras</a></li>
+            <li><a class="icons-color" href="/contact">Contacto</a></li>
           </ul>
         </nav>
       </div>

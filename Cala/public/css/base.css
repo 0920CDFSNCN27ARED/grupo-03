@@ -3,6 +3,12 @@
   padding: 0px;
   box-sizing: border-box;
 }
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: #5a6186;
+}
 .header-container {
   display: flex;
   flex-wrap: nowrap;
@@ -36,9 +42,7 @@
   padding: 0px 12px;
 }
 
-.nets-container > ul {
-  display: flex;
-  flex-wrap: wrap;
+.header-menus {
   justify-content: space-around;
   margin: 10px 0px;
 }
@@ -197,12 +201,6 @@ li {
   justify-content: center;
 }
 
-a:link,
-a:visited,
-a:active {
-  text-decoration: none;
-  color: #000;
-}
 /*contenedores de Cart*/
 
 #title-cart {
