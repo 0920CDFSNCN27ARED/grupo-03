@@ -1,0 +1,23 @@
+.banner-lg {
+  height: 45vh;
+}
+
+.flex-column-lg {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-details-lg {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 60%;
+}
+
+.main-container-lg {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.width-40-lg {
+  width: 40%;
+}
