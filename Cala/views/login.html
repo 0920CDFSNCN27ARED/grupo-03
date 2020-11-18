@@ -101,97 +101,110 @@
     <!--Creo main con dos section una para el login y otra para register.
     Consultar si el placeholder en los input va en el html o el css.
     Consultar como se hace el captcha-->
-    <main class="background-main main-form-container flex-column wrap">
-      <section class="form-container center-text radius-5">
-        <h3 class="font-arimo">Ingresa a tu cuenta</h3>
-        <form action="#" method="POST" class="flex-column">
-          <input
-            class="font-bellefair no-border radius-5 center-text"
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email o Nombre de usuario"
-          />
-
-          <input
-            class="no-border radius-5 center-text font-bellefair"
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Contrasena"
-          />
-
-          <button type="submit" class="no-border center-text font-jura">
-            Ingresar
-          </button>
-          <div
-            class="checkbox-form d-flex font-jura font-size-14 color-secondary"
-          >
-            <p><label for="remember">Recordar usuario </label></p>
+    <main>
+      <div
+        class="background-main main-form-container flex-column wrap forms-lg"
+      >
+        <section class="form-container center-text radius-5 width-auto">
+          <h3 class="font-arimo font-size-25lg">Ingresa a tu cuenta</h3>
+          <form action="#" method="POST" class="flex-column">
             <input
-              class="no-border radius-5 center-text width-10"
-              type="checkbox"
-              name="remember"
-              value="yes"
-              checked
-            />
-          </div>
-          <div>
-            <a href="#" class="font-jura font-size-14">Recuperar contraseña</a>
-          </div>
-        </form>
-      </section>
-
-      <section class="form-container form-container center-text radius-5">
-        <h3 class="font-arimo">Registrate</h3>
-        <form action="#" method="POST" class="flex-column">
-          <p class="font-jura font-size-14 flex-column">
-            <label for="name">Ingresa tu Nombre y Apellido</label>
-            <input
-              class="no-border radius-5 center-text font-bellefair"
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Maria Perez"
-            />
-          </p>
-          <p class="font-jura font-size-14 flex-column">
-            <label for="email">Ingresa tu email</label>
-            <input
-              class="no-border radius-5 center-text font-bellefair"
+              class="font-bellefair no-border radius-5 center-text font-size-20lg"
               type="email"
               name="email"
               id="email"
-              placeholder="mariaperez@mail.com"
+              placeholder="Email o Nombre de usuario"
             />
-          </p>
-          <p class="font-jura font-size-14 flex-column">
-            <label for="password">Crea una clave</label>
+
             <input
-              class="no-border radius-5 center-text font-bellefair"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg"
               type="password"
               name="password"
               id="password"
-              placeholder="minimo 8 caracteres"
+              placeholder="Contrasena"
             />
-          </p>
-          <p class="font-jura font-size-14 flex-column">
-            <label for="password">Confirma tu clave</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              class="no-border radius-5 center-text font-bellefair"
-            />
-          </p>
-          <button
-            type="submit"
-            class="no-border center-text font-jura font-size-14"
-          >
-            Registrarme
-          </button>
-        </form>
-      </section>
+
+            <button
+              type="submit"
+              class="no-border center-text font-jura font-size-20lg"
+            >
+              Ingresar
+            </button>
+            <div
+              class="checkbox-form d-flex font-jura font-size-14 color-secondary"
+            >
+              <p class="font-size-20lg">
+                <label for="remember">Recordar usuario </label>
+              </p>
+              <input
+                class="no-border radius-5 center-text width-10 font-size-20lg"
+                type="checkbox"
+                name="remember"
+                value="yes"
+                checked
+              />
+            </div>
+            <div>
+              <a href="#" class="font-jura font-size-14 font-size-20lg"
+                >Recuperar contraseña</a
+              >
+            </div>
+          </form>
+        </section>
+
+        <section
+          class="form-container form-container center-text radius-5 width-auto"
+        >
+          <h3 class="font-arimo font-size-25lg">Registrate</h3>
+          <form action="#" method="POST" class="flex-column">
+            <p class="font-jura font-size-14 flex-column font-size-20lg">
+              <label for="name">Ingresa tu Nombre y Apellido</label>
+              <input
+                class="no-border radius-5 center-text font-bellefair font-size-20lg"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Maria Perez"
+              />
+            </p>
+            <p class="font-jura font-size-14 flex-column font-size-20lg">
+              <label for="email">Ingresa tu email</label>
+              <input
+                class="no-border radius-5 center-text font-bellefair font-size-20lg"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="mariaperez@mail.com"
+              />
+            </p>
+            <p class="font-jura font-size-14 flex-column font-size-20lg">
+              <label for="password">Crea una clave</label>
+              <input
+                class="no-border radius-5 center-text font-bellefair font-size-20lg"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="minimo 8 caracteres"
+              />
+            </p>
+            <p class="font-jura font-size-14 flex-column font-size-20lg">
+              <label for="password">Confirma tu clave</label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              />
+            </p>
+            <button
+              type="submit"
+              class="no-border center-text font-jura font-size-14 font-size-20lg"
+            >
+              Registrarme
+            </button>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="footer-container background-main padding-10">

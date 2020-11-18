@@ -40,3 +40,7 @@
 .background-white {
   background-color: white;
 }
+
+mark {
+  background-color: transparent;
+}
