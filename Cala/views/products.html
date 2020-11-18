@@ -27,58 +27,66 @@
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/theme.css" />
     <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/styles-md.css" media="min-width: 481px" />
-    <link rel="stylesheet" href="css/styles-lg.css" media="min-width: 769px" />
+    <link
+      rel="stylesheet"
+      href="css/styles-md.css"
+      media="(min-width: 481px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/styles-lg.css"
+      media="(min-width: 769px)"
+    />
   </head>
 
-  <body>
-    <header>
-      <div>
+  <body class="background-ligth">
+    <header class="header-container background-ligth">
+      <nav class="menu-fixed background-ligth justify-flex-end">
+        <i class="fas fa-bars icons-color hidden-md"></i>
+        <div>
+          <a href="/login"> <i class="fas fa-sign-in-alt icons-color"></i></a>
+
+          <a href="/cart"> <i class="fas fa-shopping-cart icons-color"></i></a>
+        </div>
+      </nav>
+      <div class="margin-top-20">
         <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
       </div>
 
-      <div>
+      <div class="search-container">
         <input type="text" placeholder="Busca tus productos" />
         <button type="submit"><i class="fas fa-search"></i></button>
       </div>
 
       <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
         cada uno con un enlace aun no determinado-->
-      <div>
-        <ul>
+      <div class="nets-container">
+        <ul class="header-menus main-container">
           <li>
-            <a href="#"><i class="fab fa-twitter-square color1"></i></a>
+            <a href="#"><i class="fab fa-twitter-square icons-color"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-facebook-square color1"></i></a>
+            <a href="#"><i class="fab fa-facebook-square icons-color"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fab fa-instagram color1"></i></a>
+            <a href="#"><i class="fab fa-instagram icons-color"></i></a>
           </li>
           <li>
-            <a href="#"><i class="fas fa-share-alt color1"></i></a>
+            <a href="#"><i class="fas fa-share-alt icons-color"></i></a>
           </li>
         </ul>
       </div>
-
-      <!--Creo una section para los menu-->
-      <section>
-        <ul>
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/products">Productos</a></li>
-          <li><a href="/about">Sobre Nosotras</a></li>
-          <li><a href="/contact">Contacto</a></li>
-        </ul>
-      </section>
-
-      <!--Creo otra section para iconos login y carrito-->
-      <section>
-        <ul>
-          <li><a href="/login">Mi cuenta</a></li>
-          <li><a href="/favs">Favoritos</a></li>
-          <li><a href="/cart">Mi compra</a></li>
-        </ul>
-      </section>
+      <div class="width-100">
+        <!--Creo una section para los menu-->
+        <nav class="hidden show">
+          <ul class="header-menus main-container icons-color font-arimo">
+            <li><a class="icons-color" href="/">Inicio</a></li>
+            <li><a class="icons-color" href="/products">Productos</a></li>
+            <li><a class="icons-color" href="/about">Sobre Nosotras</a></li>
+            <li><a class="icons-color" href="/contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <!--mantengo el estilo de section para los menu-->
     <main>

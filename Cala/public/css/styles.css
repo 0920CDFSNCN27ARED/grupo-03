@@ -50,6 +50,7 @@
   width: 90%;
   align-items: center;
   margin: 16px;
+  align-self: center;
 }
 .product-article-details img {
   width: 77%;

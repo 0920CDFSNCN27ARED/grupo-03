@@ -1,3 +1,11 @@
 .show {
   display: initial;
 }
+
+.hidden-md {
+  display: none;
+}
+
+.justify-flex-end {
+  justify-content: flex-end;
+}
