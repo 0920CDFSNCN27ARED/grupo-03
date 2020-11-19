@@ -39,69 +39,8 @@
     />
   </head>
 
-  <body class="background-main font-arimo border-1">
-    <header class="header-container flex-column background-main hidden">
-      <nav class="menu-fixed d-flex width-100 background-main justify-flex-end">
-        <i class="fas fa-bars color-primary hidden-md"></i>
-        <div>
-          <a href="/login"> <i class="fas fa-sign-in-alt color-primary"></i></a>
-
-          <a href="/cart">
-            <i class="fas fa-shopping-cart color-primary"></i
-          ></a>
-        </div>
-      </nav>
-      <div class="margin-top-20">
-        <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
-      </div>
-
-      <div class="search-container d-flex radius-5">
-        <input
-          class="no-border"
-          type="text"
-          placeholder="Busca tus productos"
-        />
-        <button class="no-border width-10" type="submit">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
-
-      <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
-        cada uno con un enlace aun no determinado-->
-      <div class="nets-container width-50">
-        <ul class="header-menus main-container">
-          <li>
-            <a href="#"><i class="fab fa-twitter-square color-primary"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-facebook-square color-primary"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fab fa-instagram color-primary"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-share-alt color-primary"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div class="width-100">
-        <!--Creo una section para los menu-->
-        <nav class="hidden show">
-          <ul class="header-menus main-container color-primary font-arimo">
-            <li><a class="color-primary" href="/">Inicio</a></li>
-            <li><a class="color-primary" href="/products">Productos</a></li>
-            <li><a class="color-primary" href="/about">Sobre Nosotras</a></li>
-            <li><a class="color-primary" href="/contact">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <body class="background-main font-arimo border-2">
     <main class="main-container">
-      <img
-        src="images/banner3.jpg"
-        alt="Cosmetica Natural"
-        class="width-100 hidden"
-      />
       <form action="/" method="Post" class="width-100">
         <div class="main-container border-bottom" id="title-cart">
           <h3 class="color-secondary font-size-23">Mi carrito de compras</h3>
@@ -113,16 +52,16 @@
               <div class="main-container">
                 <img
                   class="product-cart-images"
-                  src="images/crema-hidra.jpg"
-                  alt="Crema Hidratante para pieles secas"
+                  src="images/jabon-corpo.jpg"
+                  alt="Jabon Corporal Natural"
                 />
                 <div class="description-cart">
-                  <h3 class="margin-3 opacity-08">Crema Karite</h3>
-                  <p class="margin-3">Crema hidratante</p>
-                  <p class="margin-3">para pieles secas</p>
+                  <h3 class="margin-3 opacity-08">Jabón Corporal</h3>
+                  <p class="margin-3">Emoliente</p>
+                  <p class="margin-3">suavizante</p>
                   <div class="margin-3">
                     <button
-                      class="cant-button-cart opacity-08"
+                      class="cant-button-cart opacity-08 no-border"
                       type="button"
                       name="menos"
                     >
@@ -130,7 +69,7 @@
                     </button>
                     <span class="margin-10">1</span>
                     <button
-                      class="cant-button-cart opacity-08"
+                      class="cant-button-cart opacity-08 no-border"
                       type="button"
                       name="mas"
                     >
@@ -141,11 +80,11 @@
               </div>
               <div class="price-cart">
                 <div>
-                  <button class="icon-trash color-primary" type="reset">
-                    <i class="fas fa-trash-alt"></i>
+                  <button class="icon-trash no-border" type="reset">
+                    <i class="fas fa-trash-alt color-primary"></i>
                   </button>
                 </div>
-                <p>$500</p>
+                <p>$350</p>
               </div>
             </div>
           </article>
