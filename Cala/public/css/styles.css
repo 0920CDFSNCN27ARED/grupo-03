@@ -7,6 +7,11 @@
   flex-direction: column;
 }
 
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .product-article {
   background-color: rgba(173, 154, 172, 0.5);
   width: 90%;
@@ -42,7 +47,6 @@
 }
 
 .banner-container {
-  flex-wrap: wrap;
   box-sizing: border-box;
   margin: 10px 0px;
 }
@@ -57,7 +61,6 @@
 }
 
 .delivery-container {
-  flex-wrap: wrap;
   font-size: 12px;
   border-bottom: solid 10px whitesmoke;
   padding: 12px;
