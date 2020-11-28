@@ -2,11 +2,11 @@ const path = require("path");
 
 const controller = {
   //products: (req, res) => {
-  //  res.sendFile(path.resolve(__dirname, "../views/products.html"));
+  //  res.render("products"));
   //},
 
   details: function (req, res) {
-    res.sendFile(path.resolve(__dirname, "../views/details.html"));
+    res.render("details");
   },
 };
 

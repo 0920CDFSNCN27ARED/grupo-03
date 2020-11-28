@@ -8,6 +8,9 @@ const pathAPublic = path.resolve(__dirname, "public");
 const enrutadorEstaticos = express.static(pathAPublic);
 app.use(enrutadorEstaticos);
 
+app.set("view engine", "ejs");
+app.set(("views", __dirname + "/views"));
+
 app.listen(3001, () => {
   console.log("Servidor funcionando");
 });
@@ -19,17 +22,17 @@ app.use("/", mainRouter);
 app.all("/details", productsRouter);
 
 //app.all("/about", (req, res) => {
-//  res.sendFile(path.resolve(__dirname, "../views/about.html"));
+//  res.sendFile(path.resolve(__dirname, "../views/about.ejs"));
 //});
 
 //app.all("/contact", (req, res) => {
-//  res.sendFile(path.resolve(__dirname, "../views/contact.html"));
+//  res.sendFile(path.resolve(__dirname, "../views/contact.ejs"));
 //});
 
 //app.all("/info", (req, res) => {
-//  res.sendFile(path.resolve(__dirname, "../views/info.html"));
+//  res.sendFile(path.resolve(__dirname, "../views/info.ejs"));
 //});
 
 //app.all("/faq", (req, res) => {
-//  res.sendFile(path.resolve(__dirname, "../views/faq.html"));
+//  res.sendFile(path.resolve(__dirname, "../views/faq.ejs"));
 //});
