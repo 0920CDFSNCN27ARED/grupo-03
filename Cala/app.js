@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 
 const mainRouter = require(__dirname + "/routes/main-routes");
-
+const productsRouter = require(__dirname + "/routes/products-routes");
 const pathAPublic = path.resolve(__dirname, "public");
 const enrutadorEstaticos = express.static(pathAPublic);
 app.use(enrutadorEstaticos);
@@ -14,13 +14,9 @@ app.listen(3001, () => {
 
 app.use("/", mainRouter);
 
-//app.all("/products", (req, res) => {
-//  res.sendFile(path.resolve(__dirname, "../views/products.html"));
-//});
+//app.all("/products",productsRouter  );
 
-app.all("/details", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../views/details.html"));
-});
+app.all("/details", productsRouter);
 
 //app.all("/about", (req, res) => {
 //  res.sendFile(path.resolve(__dirname, "../views/about.html"));
