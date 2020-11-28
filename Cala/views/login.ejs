@@ -1,104 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cala Home</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jura&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Arimo&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/base.css" />
-    <link rel="stylesheet" href="css/theme.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/forms.css" />
-    <link
-      rel="stylesheet"
-      href="css/styles-md.css"
-      media="(min-width: 481px)"
-    />
-    <link
-      rel="stylesheet"
-      href="css/styles-lg.css"
-      media="(min-width: 769px)"
-    />
+    <%-include("partials/head-base",{title:"Login"}) %>
   </head>
 
   <body class="background-main">
-    <header class="header-container flex-column background-main">
-      <nav class="menu-fixed d-flex width-100 background-main justify-flex-end">
-        <i class="fas fa-bars color-primary hidden-md"></i>
-        <div>
-          <a href="/login"> <i class="fas fa-sign-in-alt color-primary"></i></a>
-
-          <a href="/cart">
-            <i class="fas fa-shopping-cart color-primary"></i
-          ></a>
-        </div>
-      </nav>
-      <div class="header-lg">
-        <div class="margin-top-20">
-          <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
-        </div>
-
-        <div class="search-container d-flex radius-5">
-          <input
-            class="no-border"
-            type="text"
-            placeholder="Busca tus productos"
-          />
-          <button class="no-border width-10" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-      <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
-        cada uno con un enlace aun no determinado-->
-      <div class="nets-container width-50 flex-end-lg">
-        <ul class="header-menus flex-wrap justify-rigth-lg">
-          <li class="padding-nets-15">
-            <a href="#"><i class="fab fa-twitter-square color-primary"></i></a>
-          </li>
-          <li class="padding-nets-15">
-            <a href="#"><i class="fab fa-facebook-square color-primary"></i></a>
-          </li>
-          <li class="padding-nets-15">
-            <a href="#"><i class="fab fa-instagram color-primary"></i></a>
-          </li>
-          <li class="padding-nets-15">
-            <a href="#"><i class="fas fa-share-alt color-primary"></i></a>
-          </li>
-        </ul>
-      </div>
-      <div class="width-100">
-        <!--Creo una section para los menu-->
-        <nav class="hidden show">
-          <ul class="header-menus flex-wrap color-primary font-arimo">
-            <li><a class="color-primary" href="/">Inicio</a></li>
-            <li><a class="color-primary" href="/products">Productos</a></li>
-            <li><a class="color-primary" href="/about">Sobre Nosotras</a></li>
-            <li><a class="color-primary" href="/contact">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%-include("partials/header") %>
     <!--Creo main con dos section una para el login y otra para register.
     Consultar si el placeholder en los input va en el html o el css.
     Consultar como se hace el captcha-->
@@ -208,43 +115,6 @@
       </div>
     </main>
 
-    <footer class="footer-container background-main padding-10">
-      <div class="center-text">
-        <section>
-          <nav>
-            <h4>Sumate al cambio</h4>
-            <div class="icons-footer">
-              <a href="https://www.dondereciclo.org.ar/"
-                ><i class="fas fa-recycle color-primary"></i
-              ></a>
-              <a href="https://www.quieroayudar.org/Donar"
-                ><i class="far fa-heart color-primary"></i
-              ></a>
-              <a href="https://www.quieroayudar.org/SerVoluntario"
-                ><i class="far fa-smile color-primary"></i
-              ></a>
-            </div>
-          </nav>
-        </section>
-
-        <section>
-          <nav>
-            <a href="/faq" class="color-primary">Preguntas frecuentes</a>
-          </nav>
-        </section>
-      </div>
-
-      <div class="center-text">
-        <div>
-          <p>Suscribite a nuestro newsletter</p>
-          <div>
-            <input type="text" id="footer-input" />
-            <button type="submit" class="no-border">
-              <i class="fas fa-paper-plane color-primary"></i>
-            </button>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <%-include("partials/footer") %>
   </body>
 </html>
