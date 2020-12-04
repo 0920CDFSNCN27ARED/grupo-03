@@ -8,8 +8,12 @@ function getProducts() {
 
 const controller = {
   home: function (req, res) {
-    res.render("index");
+    const products = getProducts();
+    
+    res.render("index", { products: products});
   },
+    
+  
 
   login: (req, res) => {
     res.render("login");

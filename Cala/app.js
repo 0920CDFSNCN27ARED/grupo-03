@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const app = express();
+const methodOverride = require("method-override");
 
 const mainRouter = require(__dirname + "/routes/main-routes");
 const productsRouter = require(__dirname + "/routes/products-routes");
@@ -16,6 +17,9 @@ app.listen(3001, () => {
 });
 
 app.use("/", mainRouter);
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 //app.all("/products",productsRouter  );
 

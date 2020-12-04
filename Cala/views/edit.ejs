@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("partials/head-base",{title:"Editar"}) %>
+  </head>
+
+  <body class="background-main">
+    <%-include("partials/header") %>
+    <!--Creo main con dos section una para el login y otra para register.
+    Consultar si el placeholder en los input va en el html o el css.
+    Consultar como se hace el captcha-->
+    <main>
+      <div
+        class="background-main main-form-container flex-column wrap forms-lg"
+      >
+         <section
+          class="form-container form-container center-text radius-5 width-auto"
+        >
+        <h3 class="products-title">Estás editando: <i><%= product.name %></i></h3>
+        <form action="/products/<%= product.id %>?_method=PUT" method="POST">
+            <p class="font-jura font-size-14 flex-column font-size-20lg">
+              <label for="name">Nombre del producto:</label>               
+                <input type="text" id="name" name="name" placeholder="Ej: crema hidratante"
+                class="no-border radius-5 center-text font-bellefair font-size-20lg" value="<%= product.name %>">
+            </p>
+            <p class="font-jura font-size-14 flex-column font-size-20lg">
+              <label for="email">Precio del producto:</label>
+                <input type="number" id="price" name="price" placeholder="Ej: 5678" class="no-border radius-5 center-text font-bellefair font-size-20lg"
+                                value="<%= product.price %>"
+              />
+            </p>
+            <p class="font-jura font-size-14 flex-column font-size-20lg">
+              <label for="discount">Descuento:</label>
+                <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="no-border radius-5 center-text font-bellefair font-size-20lg"
+                                value="<%= product.discount %>">
+              
+            </p>
+            <p class="font-jura font-size-14 flex-column font-size-20lg">
+              <label for="category">Categoría:</label>
+              <select name="category" id="category" class="no-border radius-5 center-text font-bellefair font-size-20lg">
+                <option value="">Elegí</option>
+                <option value="in-sale" <%= product.category == "in-sale" ? "selected" : "" %>>En oferta
+                </option>
+                <option value="visited" <%= product.category == "visited" ? "selected" : "" %>>Últimos
+                    agregados</option>
+              />
+            </p>
+            <p class="font-jura font-size-14 flex-column font-size-20lg">
+                <label for="description">Descripción:</label>
+                <textarea name="description" id="description"
+                                class="form-input"><%= product.description %></textarea>
+            <button
+              type="submit"
+              class="no-border center-text font-jura font-size-14 font-size-20lg"
+            >
+              Editar
+            </button>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <%-include("partials/footer") %>
+  </body>
+</html>
