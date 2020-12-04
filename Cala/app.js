@@ -19,7 +19,7 @@ app.use("/", mainRouter);
 
 //app.all("/products",productsRouter  );
 
-app.all("/details", productsRouter);
+app.use("/products", productsRouter);
 
 //app.all("/about", (req, res) => {
 //  res.sendFile(path.resolve(__dirname, "../views/about.ejs"));

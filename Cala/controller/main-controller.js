@@ -1,5 +1,11 @@
 const path = require("path");
 
+const fs = require("fs");
+function getProducts() {
+  const dbJson = fs.readFileSync(__dirname + "/../product-db.json");
+  return JSON.parse(dbJson);
+}
+
 const controller = {
   home: function (req, res) {
     res.render("index");

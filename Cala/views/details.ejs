@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%-include("partials/head-base",{title:"Detalle de producto"}) %>
+    <%-include("partials/head-base",{title:"Detalle de producto <%= product.name %>"}) %>
   </head>
 
   <body>
@@ -20,12 +20,12 @@
           <div class="width-50lg"> 
         <article class="product-article-details flex-column no-border radius-5 ">
           <img
-            src="/images/jabon-corpo.jpg"
+            src=<%= product.image %>
             alt="Jabon-Corporal"
             class="width-77"
           />
-          <h3 class="font-arimo font-size-18 color-secondary">JABÓN CORPORAL NATURAL</h3>
-          <h4 class="font-arimo color-secondary">$350</h4>
+          <h3 class="font-arimo font-size-18 color-secondary"><%= product.name %></h3>
+          <h4 class="font-arimo color-secondary">$ <%= product.price %></h4>
         </article>
        
         
@@ -55,9 +55,7 @@
           
         <article class="flex-column text-details-container font-arimo width-50lg">
           <p class="font-size-14">
-            Jabon corporal natural para pieles que necesitan ser nutridas,
-            hidratadas o para regalarte un placer. Esta crema corporal es una
-            delícia. Es una obra de arte de cosmética casi comestible.
+           <%= product.description %>
           </p>
           <ol type="none">
             <li class="font-size-14">
