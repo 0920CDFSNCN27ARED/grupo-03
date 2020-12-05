@@ -97,6 +97,26 @@ const controller = {
 
     res.redirect("/");
   },
+
+  delete: (req, res) => {
+    let products = getProducts();
+    let productDelete = products.filter((product) => {
+      return product.id == req.params.id;
+    });
+    let productsDeleted = productDelete;
+    productsDeletedJson = JSON.stringify(productsDeleted);
+    fs.writeFileSync("product-deleted.json", productsDeletedJson);
+
+    let productList = products.filter((product) => {
+      return product.id != req.params.id;
+    });
+    products = productList;
+    productsJson = JSON.stringify(products);
+    fs.writeFileSync("product-db.json", productsJson);
+
+    getProducts();
+    res.redirect("/");
+  },
 };
 
 module.exports = controller;

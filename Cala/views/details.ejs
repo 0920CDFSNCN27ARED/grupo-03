@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%-include("partials/head-base",{title:"Detalle de producto <%= product.name %>"}) %>
+    <%-include("partials/head-base", {title: product.name  }) %>
+    
   </head>
 
   <body>
@@ -39,6 +40,13 @@
               </button>
             </div>
           </form>
+          <div>
+              <a href="/products/<%= product.id  %>/edit "><button type="submit" class="radius-5 border-1">Editar </button></a>
+            </div>
+            <form action="/products/<%= product.id  %>?_method=DELETE" method="POST">
+              <button type="submit" class="radius-5 border-1">Borrar </button>
+            </form>
+
           <div class="delivery-container flex-wrap font-arimo no-border-lg">
             <i class="fas fa-truck color-primary margin-rigth-13"></i>
             <p>
@@ -119,6 +127,7 @@
           <a href="/products" id="buying">Ver más productos</a>
         </article>
         </div>
+
       </section>
     </main>
     <%-include("partials/footer") %>
