@@ -1,6 +1,8 @@
 const path = require("path");
 
 const fs = require("fs");
+
+const { stringify } = require("querystring"); //explicame esto después que no lo entiendo//
 function getProducts() {
   const dbJson = fs.readFileSync(__dirname + "/../product-db.json", {
     encoding: "utf-8",
@@ -42,7 +44,21 @@ const controller = {
   edit: (req, res) => {
     const message = "Product Edited: " + JSON.stringify(req.body);
     res.send(message);
-  },
+    //const products = getProducts();
+    
+   // for (  const productEdit of products) {
+     // if (products.id == req.params.id) {
+      //products.name = req.body.name,
+      //products.price = req.body.price,
+     // products.discount = req.body.discount,
+     // products.category = req.body.category,
+     // products.description = req.body.description
+     // };
+
+     
+   
+  
+    },
 
   showCreate: (req, res) => {
     res.render("create");
@@ -51,6 +67,20 @@ const controller = {
   create: (req, res) => {
     const message = "Producto Creado: " + JSON.stringify(req.body);
     res.send(message);
+     // const productCreate={
+      //name : req.body.name,
+      //price : req.body.price,
+      //discount : req.body.discount,
+      //category : req.body.category,
+      //description : req.body.description
+      //};
+
+     //const archivoProducto = fs.readFileSync("product-db.json", {encoding: "utf-8"});
+     //const productCreate= JSON.parse(archivoProducto);
+     //const productCreateJson = JSON.stringify(productCreate);
+     //fs.appendFileSync("product-db.json",productCreateJson);
+    
+     //res.redirect("/");
   },
 };
 
