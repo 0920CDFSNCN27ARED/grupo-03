@@ -120,3 +120,24 @@
   padding: 7px;
   position: fixed;
 }
+.error404{
+  align-items: center;
+  margin-top: 123px;
+
+}
+.error404  h1{
+  font-size: 42px;
+  margin-top: 40px;
+
+}
+.error404 h3{
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.error404 p{
+  font-size: 31px;
+}
+.a404{
+  color:red;
+} 
