@@ -42,45 +42,60 @@ const controller = {
   },
 
   edit: (req, res) => {
-    const message = "Product Edited: " + JSON.stringify(req.body);
-    res.send(message);
-    //const products = getProducts();
-    
-   // for (  const productEdit of products) {
-     // if (products.id == req.params.id) {
-      //products.name = req.body.name,
-      //products.price = req.body.price,
-     // products.discount = req.body.discount,
-     // products.category = req.body.category,
-     // products.description = req.body.description
-     // };
+    const products = getProducts();
+    let productEdit = {};
 
-     
-   
-  
-    },
+    for (let i = 0; i < products.length; i++) {
+      if (req.params.id == products[i].id) {
+        productEdit = products[i];
+      }
+    }
+    (productEdit.name = req.body.name),
+      (productEdit.price = req.body.price),
+      (productEdit.discount = req.body.discount),
+      (productEdit.category = req.body.category),
+      (productEdit.description = req.body.description);
+
+    const prodJson = JSON.stringify(products);
+    fs.writeFileSync("product-db.json", prodJson);
+
+    getProducts();
+    res.redirect("/products");
+  },
 
   showCreate: (req, res) => {
     res.render("create");
   },
 
   create: (req, res) => {
-    const message = "Producto Creado: " + JSON.stringify(req.body);
-    res.send(message);
-     // const productCreate={
-      //name : req.body.name,
-      //price : req.body.price,
-      //discount : req.body.discount,
-      //category : req.body.category,
-      //description : req.body.description
-      //};
+    const products = getProducts();
+    let Idmayor = products[0].id;
+    for (let i = 0; i < products.length; i++) {
+      if (products[i].id > Idmayor) {
+        Idmayor = products[i].id;
+      }
+    }
 
-     //const archivoProducto = fs.readFileSync("product-db.json", {encoding: "utf-8"});
-     //const productCreate= JSON.parse(archivoProducto);
-     //const productCreateJson = JSON.stringify(productCreate);
-     //fs.appendFileSync("product-db.json",productCreateJson);
-    
-     //res.redirect("/");
+    const productCreate = {
+      id: Idmayor + 1,
+      name: req.body.name,
+      price: req.body.price,
+      discount: req.body.discount,
+      category: req.body.category,
+      description: req.body.description,
+    };
+
+    archivoProducto = fs.readFileSync("product-db.json", {
+      encoding: "utf-8",
+    });
+    const productsFile = JSON.parse(archivoProducto);
+
+    productsFile.push(productCreate);
+    const productsJson = JSON.stringify(productsFile);
+    fs.writeFileSync("product-db.json", productsJson);
+    getProducts();
+
+    res.redirect("/");
   },
 };
 
