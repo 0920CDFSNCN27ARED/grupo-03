@@ -85,23 +85,11 @@
       <!--Creo section para poner adentro los articulos destacados-->
 
       <section class="index-products">
-       
-       <h3 class="font-jura">Productos destacados</h3>
-       <div class="d-flex-lg width-100vw">
-       <%   for (let i = 0; i < 3; i++) { %>
-             <%  let product = products[i]; %>
-             <article class="product-article flex-column no-border radius-5">
-              <a href="/products/details/<%= product.id %> "
-                ><h4 class="font-arimo color-secondary"><%= product.name %> </h4></a
-              >
-              <img
-                src= <%= product.image %> 
-                alt=<%= product.name %> 
-                class="width-100"
-              />
-              <p class="font-bellefair"><%= product.description %> </p>
-            </article>
-       <%   }  %>
+        <h3 class="font-jura">Productos destacados</h3>
+
+        <div class="d-flex-lg width-100vw justify-center">
+          <% for (let i = 0; i < 3; i++) { %> <% let product = products[i]; %>
+          <%-include('partials/product-card', {product:products[i]}) %> <% } %>
         </div>
       </section>
       <!--Creo section para la parte de las certificaciones-->

@@ -1,134 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%-include("partials/head-base", {title: product.name  }) %>
-    
+    <%-include("partials/head-base", {title: product.name }) %>
   </head>
 
   <body class="background-main">
     <%-include("partials/header") %>
     <main class="flex-wrap">
       <section class="seccion-details-conteiner flex-column background-main">
-
         <div class="padding-7 hidden-md">
           <a href="/"><i class="fas fa-home color-primary"></i></a>
         </div>
-       
-        
-          <div class="d-flex-lg width-100vw">
-          <div class="width-50lg"> 
-        <article class="product-article-details flex-column no-border radius-5 ">
-          <img
-            src=<%= product.image %>
-            alt= <%= product.name %> 
-            class="width-77"
-          />
-          <h3 class="font-arimo font-size-18 color-secondary"><%= product.name %></h3>
-          <h4 class="font-arimo color-secondary">$ <%= product.price %></h4>
-        </article>
-       
-        
-        <article>
-          <form action="" method="POST">
-            <div class="details-form d-flex width-100 no-border-lg">
-              <label class="font-size-18 color-secondary" for="cant">CANTIDAD</label>
-              <input type="number" id="cant" class="radius-5" name="cant" />
-              <button type="submit" class="radius-5 border-1">
-                AGREGAR AL CARRITO
-              </button>
-            </div>
-          </form>
-          <div>
-              <a href="/products/<%= product.id  %>/edit "><button type="submit" class="radius-5 border-1">Editar </button></a>
-            </div>
-            <form action="/products/<%= product.id  %>?_method=DELETE" method="POST">
-              <button type="submit" class="radius-5 border-1">Borrar </button>
-            </form>
 
-          <div class="delivery-container flex-wrap font-arimo no-border-lg">
-            <i class="fas fa-truck color-primary margin-rigth-13"></i>
-            <p>
-              Con tu compra mayor a 2000$,
-              <strong>envío gratis!</strong>
-            </p>
+        <div class="d-flex-lg width-100vw">
+          <div class="width-50lg">
+            <article
+              class="product-article-details flex-column no-border radius-5"
+            >
+              <img
+                src="<%= product.image %>"
+                alt="<%= product.name %>"
+                class="width-77"
+              />
+              <h3 class="font-arimo font-size-18 color-secondary center-text">
+                <%= product.name %>
+              </h3>
+              <h4 class="font-arimo color-secondary center-text">
+                $ <%= product.price %>
+              </h4>
+            </article>
+
+            <article>
+              <form action="/cart" method="GET">
+                <div class="details-form d-flex width-100 no-border-lg">
+                  <label class="font-size-18 color-secondary" for="cant"
+                    >CANTIDAD</label
+                  >
+                  <input type="number" id="cant" class="radius-5" name="cant" />
+                  <button type="submit" class="radius-5 border-1">
+                    AGREGAR AL CARRITO
+                  </button>
+                </div>
+              </form>
+
+              <a href="/products" id="buying">Ver más productos</a>
+              <div class="delivery-container flex-wrap font-arimo no-border-lg">
+                <i class="fas fa-truck color-primary margin-rigth-13"></i>
+                <p>
+                  Con tu compra mayor a 2000$,
+                  <strong>envío gratis!</strong>
+                </p>
+              </div>
+            </article>
           </div>
-        </article>
-          </div>
 
-
-
-
-          
-        <article class="flex-column text-details-container font-arimo width-50lg">
-          <p class="font-size-14">
-           <%= product.description %>
-          </p>
-          <ol type="none">
-            <li class="font-size-14">
-              INDICACIONES
-              <p class="font-size-14">
-                Para todo tipo de piel. Sobretodo <strong>pieles secas.</strong>
-              </p>
-            </li class="font-size-14">
-            <li>
-              PROPIEDADES
-              <p class="font-size-14">Emoliente, suavizante y nutritiva.</p>
-            </li>
-            <li class="font-size-14">
-              INGREDIENTES:
-              <p class="font-size-14">
-                Cera carnauba: es una cera vegetal que mantiene la hidratación
-                natural de la piel, la suaviza y protege de los agentes
-                externos. Se destaca por sus beneficios
-                <strong
-                  >anti-inflamatorios, anti-bacterianos y antioxidantes.</strong
+          <article
+            class="flex-column text-details-container font-arimo width-50lg"
+          >
+            <p class="font-size-14"><%= product.description %></p>
+            <div class="d-flex">
+              <div class="details-form d-flex width-100 no-border-lg">
+                <a href="/products/<%= product.id  %>/edit " class="width-100"
+                  ><button type="submit" class="radius-5 border-1">
+                    Editar
+                  </button></a
                 >
-                Manteca de cacao: es conocida como un excelente emoliente que
-                humecta la piel en profundidad y la mantiene suave y flexible.
-                Ayuda a reparar la piel evitando su envejecimiento prematuro. No
-                deja la piel grasa, le otorga elasticidad y brillo. Aceite de
-                coco: es de rápida absorción, previene la sequedad de la piel y
-                disminuye la aparición de arrugas. Tiene propiedades
-                hidratantes, suavizantes y regeneradoras. Su aplicación es buena
-                para proteger la piel de los daños ocasionados por los rayos UV.
-              </p>
-            </li >
-            <li class="font-size-14">
-              PESO Y DIMENSIONES
-              <p class="font-size-14">70 gr aprox.</p>
-            </li>
-            <li class="font-size-14">
-              MODO DE EMPLEO
-              <p class="font-size-14">
-                Aplicar directamente sobre la piel. Ir deslizando la pastilla
-                sobre la piel para que, al contacto con el calor corporal, se
-                vaya deshaciendo y vaya dejando una película de producto.
-                Extender uniformemente con las manos por toda la piel.En el
-                primer momento cuesta que se deslice con suavidad, a medida que
-                se va templando, se aplica con mayor comodidad.Para un mayor
-                deslizamiento de la pastilla sobre la piel, aplicar al salir de
-                la ducha, sobre la piel húmeda. Cuando el clima es frío la barra
-                se pone más sólida así que sugiero aplicar bajo la ducha.
-              </p>
-            </li class="font-size-14">
-            <li>
-              CONSERVACIÓN
-              <p class="font-size-14">
-                Guardar en un lugar fresco y seco. Mantener alejado de fuentes
-                de calor, ya que puede deshacerse. Al contacto directo con el
-                sol y el calor fuerte puede reblandecerse, incluso volverse
-                líquida. Si tenés que transportarla, recomendamos guardarla en
-                algún recipiente cerrado.
-              </p>
-            </li>
-          </ol>
-          <a href="/products" id="buying">Ver más productos</a>
-        </article>
+              </div>
+              <div class="details-form d-flex width-100 no-border-lg">
+                <form
+                  action="/products/<%= product.id  %>?_method=DELETE"
+                  method="POST"
+                  class="width-100"
+                >
+                  <button type="submit" class="radius-5 border-1">
+                    Borrar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </article>
         </div>
-
       </section>
     </main>
     <%-include("partials/footer") %>
-  
   </body>
 </html>

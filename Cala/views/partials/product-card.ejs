@@ -1,0 +1,16 @@
+<a
+  href="/products/details/<%= product.id %>"
+  class="d-flex justify-center width-30-lg"
+>
+  <article class="product-article flex-column no-border radius-5">
+    <h4 class="font-arimo color-secondary center-text"><%= product.name %></h4>
+    <img
+      src="<%= product.image %>"
+      alt="<%= product.name %> "
+      class="width-100 product-img-fit"
+    />
+    <p class="font-bellefair center-text color-secondary">
+      <%= product.description %>
+    </p>
+  </article>
+</a>

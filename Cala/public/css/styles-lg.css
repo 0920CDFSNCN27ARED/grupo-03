@@ -55,8 +55,21 @@
 .flex-end-lg {
   align-self: flex-end;
 }
+
+.width-30-lg {
+  width: 30%;
+}
+
 .justify-rigth-lg {
   justify-content: right;
+}
+.product-article img {
+  width: 150px;
+}
+
+.product-img-fit {
+  height: 150px;
+  object-fit: cover;
 }
 .padding-nets-15 {
   padding: 0px 15px;
