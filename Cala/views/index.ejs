@@ -91,7 +91,7 @@
        <%   for (let i = 0; i < 3; i++) { %>
              <%  let product = products[i]; %>
              <article class="product-article flex-column no-border radius-5">
-              <a href="/details"
+              <a href="/products/details/<%= product.id %> "
                 ><h4 class="font-arimo color-secondary"><%= product.name %> </h4></a
               >
               <img
