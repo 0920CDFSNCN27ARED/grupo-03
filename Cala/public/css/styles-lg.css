@@ -2,8 +2,8 @@
   display: flex;
 }
 
-.width-100vw {
-  width: 100vw;
+.width-100-lg {
+  width: 100%;
 }
 
 .width-50lg {
