@@ -23,49 +23,46 @@ const controller = {
   },
   autLogin: (req, res) => {
     res.send("logueado");
-    // const users = getUsers();
+    const users = getUsers();
 
-    //for (let i = 0; i < users.length; i++) {
-    // if (
-    //  users[i].user == req.body.user &&
-    // bcrypt.compareSync(req.body.password, users[i].password)
-    // ) {
-    //  res.send("te logueaste");
-    //} else {
-    // res.send("error");
-    //}
-    // }
+    for (let i = 0; i < users.length; i++) {
+      if (
+        users[i].user == req.body.user &&
+        bcrypt.compareSync(req.body.password, users[i].password)
+      ) {
+        res.send("te logueaste");
+      } else {
+        res.send("error");
+      }
+    }
   },
   register: (req, res) => {
     res.render("register");
   },
   autRegister: (req, res) => {
-    res.send("registrado");
-    //let newUser = {
-    // name: req.body.name,
-    // user: req.body.user,
-    //mail: req.body.email,
-    // password: bcrypt.hashSync(req.body.password, 10),
-    // };
+    let newUser = {
+      name: req.body.name,
+      user: req.body.user,
+      mail: req.body.email,
+      password: bcrypt.hashSync(req.body.password, 10),
+    };
 
-    //console.log(newUser);
+    let exist = fs.existsSync("allUsers.json", (exist) => {
+      return exist;
+    });
 
-    //    let exist = fs.existsSync("allUsers.json", (exist) => {
-    //    return exist;
-    // });
-
-    //if (exist) {
-    //let users = getUsers();
-    //users.push(newUser);
-    //let usersJson = JSON.stringify(users);
-    //fs.writeFileSync("allUsers.json", usersJson);
-    //} else {
-    // let usersArray = [];
-    //usersArray.push(newUser);
-    //let usersArrayJson = JSON.stringify(usersArray);
-    //fs.writeFileSync("allUsers.json", usersArrayJson);
-    // }
-    //res.redirect("/");
+    if (exist) {
+      let users = getUsers();
+      users.push(newUser);
+      let usersJson = JSON.stringify(users);
+      fs.writeFileSync("allUsers.json", usersJson);
+    } else {
+      let usersArray = [];
+      usersArray.push(newUser);
+      let usersArrayJson = JSON.stringify(usersArray);
+      fs.writeFileSync("allUsers.json", usersArrayJson);
+    }
+    res.redirect("/");
   },
   cart: (req, res) => {
     res.render("cart");
