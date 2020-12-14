@@ -53,12 +53,12 @@ const controller = {
     if (exist) {
       let users = getUsers();
       users.push(newUser);
-      let usersJson = JSON.stringify(users);
+      let usersJson = JSON.stringify(users, null, 4);
       fs.writeFileSync("allUsers.json", usersJson);
     } else {
       let usersArray = [];
       usersArray.push(newUser);
-      let usersArrayJson = JSON.stringify(usersArray);
+      let usersArrayJson = JSON.stringify(usersArray, null, 4);
       fs.writeFileSync("allUsers.json", usersArrayJson);
     }
     res.redirect("/");

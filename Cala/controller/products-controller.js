@@ -56,7 +56,7 @@ const controller = {
       productEdit.category = req.body.category;
       productEdit.description = req.body.description;
 
-    const prodJson = JSON.stringify(products);
+    const prodJson = JSON.stringify(products, null, 4);
     fs.writeFileSync("product-db.json", prodJson);
 
     getProducts();
@@ -91,7 +91,7 @@ const controller = {
     const productsFile = JSON.parse(archivoProducto);
 
     productsFile.push(productCreate);
-    const productsJson = JSON.stringify(productsFile);
+    const productsJson = JSON.stringify(productsFile, null, 4);
     fs.writeFileSync("product-db.json", productsJson);
     
 
@@ -104,14 +104,14 @@ const controller = {
       return product.id == req.params.id;
     });
     let productsDeleted = productDelete;
-    productsDeletedJson = JSON.stringify(productsDeleted);
+    productsDeletedJson = JSON.stringify(productsDeleted, null, 4);
     fs.writeFileSync("product-deleted.json", productsDeletedJson);
 
     let productList = products.filter((product) => {
       return product.id != req.params.id;
     });
     products = productList;
-    productsJson = JSON.stringify(products);
+    productsJson = JSON.stringify(products, null, 4);
     fs.writeFileSync("product-db.json", productsJson);
 
     
