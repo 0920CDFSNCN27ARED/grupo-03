@@ -22,7 +22,6 @@ const controller = {
     res.render("login");
   },
   autLogin: (req, res) => {
-    res.send("logueado");
     const users = getUsers();
 
     for (let i = 0; i < users.length; i++) {
@@ -30,9 +29,9 @@ const controller = {
         users[i].user == req.body.user &&
         bcrypt.compareSync(req.body.password, users[i].password)
       ) {
-        res.send("te logueaste");
+       return res.send("te logueaste");
       } else {
-        res.send("error");
+        return res.send("error");
       }
     }
   },
