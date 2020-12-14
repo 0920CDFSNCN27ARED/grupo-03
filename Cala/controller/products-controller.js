@@ -2,7 +2,7 @@ const path = require("path");
 
 const fs = require("fs");
 
-const { stringify } = require("querystring"); //explicame esto después que no lo entiendo//
+const { stringify } = require("querystring"); 
 function getProducts() {
   const dbJson = fs.readFileSync(__dirname + "/../product-db.json", {
     encoding: "utf-8",
@@ -50,11 +50,11 @@ const controller = {
         productEdit = products[i];
       }
     }
-    (productEdit.name = req.body.name),
-      (productEdit.price = req.body.price),
-      (productEdit.discount = req.body.discount),
-      (productEdit.category = req.body.category),
-      (productEdit.description = req.body.description);
+      productEdit.name = req.body.name;
+      productEdit.price = req.body.price;
+      productEdit.discount = req.body.discount;
+      productEdit.category = req.body.category;
+      productEdit.description = req.body.description;
 
     const prodJson = JSON.stringify(products);
     fs.writeFileSync("product-db.json", prodJson);
@@ -93,7 +93,7 @@ const controller = {
     productsFile.push(productCreate);
     const productsJson = JSON.stringify(productsFile);
     fs.writeFileSync("product-db.json", productsJson);
-    getProducts();
+    
 
     res.redirect("/");
   },
@@ -114,7 +114,7 @@ const controller = {
     productsJson = JSON.stringify(products);
     fs.writeFileSync("product-db.json", productsJson);
 
-    getProducts();
+    
     res.redirect("/");
   },
 };

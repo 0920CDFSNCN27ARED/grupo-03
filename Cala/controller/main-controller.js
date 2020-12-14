@@ -67,6 +67,13 @@ const controller = {
   cart: (req, res) => {
     res.render("cart");
   },
+  //purchaseCart:(req, res)=>{
+   //let products = getProducts();
+   //const i = products.findIndex((prod) => {
+    //return prod.id == req.params.id;
+  //});
+  
+ // }
 };
 
 module.exports = controller;
