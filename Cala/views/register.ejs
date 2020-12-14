@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("partials/head-base",{title:"Login"}) %>
+    <link rel="stylesheet" href="/css/forms.css" />
+  </head>
+
+  <body class="background-main">
+    <%-include("partials/header") %>
+    <!--Creo main con dos section una para el login y otra para register.
+    Consultar si el placeholder en los input va en el html o el css.
+    Consultar como se hace el captcha-->
+    <main>
+      <div
+        class="background-main main-form-container flex-column wrap forms-lg"
+      >
+        <section
+          class="form-container form-container center-text radius-5 width-auto"
+        >
+          <h3 class="font-arimo font-size-25lg">Registrate</h3>
+          <form action="/register" method="POST" class="flex-column" enctype="multipart/form-data">
+            <label
+              for="name"
+              class="font-jura font-size-14 flex-column font-size-20lg"
+              >Ingresa tu Nombre y Apellido</label
+            >
+            <input
+              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              type="text"
+              name="name"
+              placeholder="Maria Perez"
+            />
+
+            <label
+              for="user"
+              class="font-jura font-size-14 flex-column font-size-20lg"
+              >Crea un nombre de usuario</label
+            >
+            <input
+              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              type="text"
+              name="user"
+              id="user"
+              placeholder="mariaperez"
+            />
+
+            <label
+              for="email"
+              class="font-jura font-size-14 flex-column font-size-20lg"
+              >Ingresa tu email</label
+            >
+            <input
+              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="mariaperez@mail.com"
+            />
+
+            <label
+              for="password"
+              class="font-jura font-size-14 flex-column font-size-20lg"
+              >Crea una clave</label
+            >
+            <input
+              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              type="password"
+              name="password"
+              id="password"
+              placeholder="minimo 8 caracteres"
+            />
+
+            <label
+              for="password"
+              class="font-jura font-size-14 flex-column font-size-20lg"
+              >Confirma tu clave</label
+            >
+            <input
+              type="password"
+              name="password"
+              id="password"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+            />
+
+            <input
+              type="submit"
+              class="no-border center-text font-jura font-size-14 font-size-20lg"
+            >
+              Registrarme
+          </input>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <%-include("partials/footer") %>
+  </body>
+</html>

@@ -18,13 +18,13 @@ app.listen(3001, () => {
 
 app.use("/", mainRouter);
 app.use(methodOverride("_method"));
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //app.all("/products",productsRouter  );
 
 app.use("/products", productsRouter);
-app.use((req, res, next)=>{
+app.use((req, res, next) => {
   res.status(404).render("not-found");
 });
 //app.all("/about", (req, res) => {
