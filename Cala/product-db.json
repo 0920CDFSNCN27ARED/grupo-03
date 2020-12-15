@@ -1,74 +1,92 @@
 [
-  {
-    "id": 1,
-    "name": "JABÓN CORPORAL NATURAL",
-    "description": "Jabon corporal natural para pieles que necesitan ser nutridas, hidratadas o para regalarte un placer",
-    "price": 350,
-    "discount": 0,
-    "image": "/images/jabon-cafe.jpg",
-    "category": ""
-  },
-  {
-    "id": 2,
-    "name": "CEPILLO DE DIENTES DE BAMBU VEGANO",
-    "description": "Tanto el mango de los cepillos (97% del total del producto) como sus cajas son biodegradables.",
-    "price": 250,
-    "discount": 0,
-    "image": "/images/cepill1.jpg",
-    "category": ""
-  },
-  {
-    "id": 3,
-    "name": "PERFUME SÓLIDO",
-    "description": "Se trata de un perfume en crema que podrás llevar siempre en el bolso para retocarte a lo largo del día. Es una fórmula sin alcohol, perfecta para pieles sensibles.",
-    "price": 470,
-    "discount": 0,
-    "image": "/images/perfume-solido.jpeg",
-    "category": ""
-  },
-  {
-    "id": 4,
-    "name": "BÁLSAMO LABIAL LAVANDA",
-    "description": "Bálsamo labial nutritivo e hidratante.",
-    "price": 440,
-    "discount": 0,
-    "image": "/images/bals-labial.jpg",
-    "category": ""
-  },
-  {
-    "id": 5,
-    "name": "JABONERAS DE PINO AL NATURAL",
-    "description": "Son curadas con productos naturales evitando el uso de barnices tóxicos.",
-    "price": 340,
-    "discount": 0,
-    "image": "/images/jabonera.jpg",
-    "category": ""
-  },
-  {
-    "id": 6,
-    "name": "DESODORANTE EN CREMA",
-    "description": "Este desodorante en crema permite la natural y necesaria transpiración y la hace inolora gracias a sus ingredientes.",
-    "price": 570,
-    "discount": 0,
-    "image": "/images/desodorant2.jpg",
-    "category": ""
-  },
-  {
-    "id": 7,
-    "name": "SERUM CAPILAR",
-    "description": "Los aceites vegetales otorgan las propiedades necesarias para mantener el pelo hidratado, brilloso y con fuerza.",
-    "price": 610,
-    "discount": 0,
-    "image": "/images/serum.jpg",
-    "category": ""
-  },
-  {
-    "id": 8,
-    "name": "KIT AVANZADO",
-    "description": "INLCUYE: SHAMPOO A ELECCION, ACONDCIONADOR, DESODORANTE, BARRA CORPORAL SOLIDA, PERFUME A ELECCION, BALSAMO LABIAL",
-    "price": 3168,
-    "discount": 0,
-    "image": "/images/kit-inter.jpg",
-    "category": ""
-  }
+    {
+        "id": 1,
+        "name": "JABÓN CORPORAL NATURAL",
+        "description": "Jabon corporal natural para pieles que necesitan ser nutridas, hidratadas o para regalarte un placer",
+        "price": 350,
+        "discount": 0,
+        "image": "jabon-cafe.jpg",
+        "category": ""
+    },
+    {
+        "id": 2,
+        "name": "CEPILLO DE DIENTES DE BAMBU VEGANO",
+        "description": "Tanto el mango de los cepillos (97% del total del producto) como sus cajas son biodegradables.",
+        "price": 250,
+        "discount": 0,
+        "image": "cepill1.jpg",
+        "category": ""
+    },
+    {
+        "id": 3,
+        "name": "PERFUME SÓLIDO",
+        "description": "Se trata de un perfume en crema que podrás llevar siempre en el bolso para retocarte a lo largo del día. Es una fórmula sin alcohol, perfecta para pieles sensibles.",
+        "price": 470,
+        "discount": 0,
+        "image": "perfume-solido.jpeg",
+        "category": ""
+    },
+    {
+        "id": 4,
+        "name": "BÁLSAMO LABIAL LAVANDA",
+        "description": "Bálsamo labial nutritivo e hidratante.",
+        "price": 440,
+        "discount": 0,
+        "image": "bals-labial.jpg",
+        "category": ""
+    },
+    {
+        "id": 5,
+        "name": "JABONERAS DE PINO AL NATURAL",
+        "description": "Son curadas con productos naturales evitando el uso de barnices tóxicos.",
+        "price": 340,
+        "discount": 0,
+        "image": "jabonera.jpg",
+        "category": ""
+    },
+    {
+        "id": 6,
+        "name": "DESODORANTE EN CREMA",
+        "description": "Este desodorante en crema permite la natural y necesaria transpiración y la hace inolora gracias a sus ingredientes.",
+        "price": 570,
+        "discount": 0,
+        "image": "desodorant2.jpg",
+        "category": ""
+    },
+    {
+        "id": 7,
+        "name": "SERUM CAPILAR",
+        "description": "Los aceites vegetales otorgan las propiedades necesarias para mantener el pelo hidratado, brilloso y con fuerza.",
+        "price": 610,
+        "discount": 0,
+        "image": "serum.jpg",
+        "category": ""
+    },
+    {
+        "id": 8,
+        "name": "KIT AVANZADO",
+        "description": "INLCUYE: SHAMPOO A ELECCION, ACONDCIONADOR, DESODORANTE, BARRA CORPORAL SOLIDA, PERFUME A ELECCION, BALSAMO LABIAL",
+        "price": 3168,
+        "discount": 0,
+        "image": "kit-inter.jpg",
+        "category": ""
+    },
+    {
+        "id": 9,
+        "name": "crema",
+        "price": "12",
+        "discount": "1",
+        "category": "En oferta",
+        "description": "",
+        "image": "image-1607982838159.jpg"
+    },
+    {
+        "id": 10,
+        "name": "la crema",
+        "price": "15552",
+        "discount": "15",
+        "category": "visited",
+        "description": "soy una crema cara",
+        "image": "image-1607989725823.jpg"
+    }
 ]

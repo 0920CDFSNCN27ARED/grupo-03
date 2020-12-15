@@ -3,11 +3,12 @@ const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
 const bcrypt = require("bcrypt");
-const mainRouter = require(__dirname + "/routes/main-routes");
-const productsRouter = require(__dirname + "/routes/products-routes");
+
 const pathAPublic = path.resolve(__dirname, "public");
 const enrutadorEstaticos = express.static(pathAPublic);
 app.use(enrutadorEstaticos);
+//para subida de archivos
+const multer = require("multer");
 
 app.set("view engine", "ejs");
 app.set(("views", __dirname + "/views"));
@@ -20,8 +21,11 @@ app.use(methodOverride("_method"));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+const mainRouter = require(__dirname + "/routes/main-routes");
 app.use("/", mainRouter);
 
+const productsRouter = require(__dirname + "/routes/products-routes");
 app.use("/products", productsRouter);
 app.use((req, res, next) => {
   res.status(404).render("not-found");

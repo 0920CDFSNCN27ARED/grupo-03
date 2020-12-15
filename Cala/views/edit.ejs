@@ -13,7 +13,7 @@
           class="form-container center-text radius-5 width-auto"
         >
         <h3 class="margin-10 font-arimo font-size-25lg">Estás editando: <i><%=  product.name %></i></h3>
-        <form action="/products/<%= product.id %>?_method=PUT" method="POST">
+        <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data"> 
             <p class="font-jura font-size-14 flex-column font-size-20lg">
               <label for="name" class="font-weight-bold margin-5">Nombre del producto:</label>               
               <input type="text" id="name" name="name" placeholder="Ej: crema hidratante"
@@ -44,7 +44,9 @@
               <label for="description" class="font-weight-bold margin-5" >Descripción:</label>
               <textarea name="description" id="description"
               class="form-input margin-5 width-75 align-self-center"><%= product.description %></textarea>
-            </p>                    
+            </p>  
+            <p>Imagen actual <%= product.image %> </p>
+			<input type="file" name="image" id="image">                  
             <button
               type="submit"
               class="no-border center-text font-jura font-size-14 font-size-20lg margin-5"
