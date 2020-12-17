@@ -73,15 +73,18 @@ const controller = {
 
   create: (req, res) => {
     const products = getProducts();
-    let Idmayor = products[0].id;
-    for (let i = 0; i < products.length; i++) {
-      if (products[i].id > Idmayor) {
-        Idmayor = products[i].id;
-      }
-    }
+    //let Idmayor = products[0].id;
+    //for (let i = 0; i < products.length; i++) {
+    //  if (products[i].id > Idmayor) {
+    //    Idmayor = products[i].id;
+    //  }
+    //}
+
+    //products[products.length-1].id
 
     const productCreate = {
-      id: Idmayor + 1,
+      id: products[products.length - 1].id + 1,
+      //Idmayor + 1,
       // todos los req body seria lo mismo si ponemos ...req.body //
       name: req.body.name,
       price: req.body.price,
@@ -91,13 +94,13 @@ const controller = {
       image: req.files[0].filename,
     };
 
-    archivoProducto = fs.readFileSync("product-db.json", {
-      encoding: "utf-8",
-    });
-    const productsFile = JSON.parse(archivoProducto);
+    // archivoProducto = fs.readFileSync("product-db.json", {
+    //  encoding: "utf-8",
+    // });
+    // const productsFile = JSON.parse(archivoProducto);
 
-    productsFile.push(productCreate);
-    const productsJson = JSON.stringify(productsFile, null, 4);
+    products.push(productCreate);
+    const productsJson = JSON.stringify(products, null, 4);
     fs.writeFileSync("product-db.json", productsJson);
 
     res.redirect("/");
