@@ -2,12 +2,12 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 function getProducts() {
-  const dbJson = fs.readFileSync(__dirname + "/../product-db.json");
+  const dbJson = fs.readFileSync(__dirname + "/../data/product-db.json");
   return JSON.parse(dbJson);
 }
 
 function getUsers() {
-  const usersJson = fs.readFileSync(__dirname + "/../allUsers.json");
+  const usersJson = fs.readFileSync(__dirname + "/../data/allUsers.json");
   return JSON.parse(usersJson);
 }
 
@@ -29,7 +29,7 @@ const controller = {
         users[i].user == req.body.user &&
         bcrypt.compareSync(req.body.password, users[i].password)
       ) {
-       return res.send("te logueaste");
+        return res.send("te logueaste");
       } else {
         return res.send("error");
       }
@@ -46,7 +46,7 @@ const controller = {
       password: bcrypt.hashSync(req.body.password, 10),
     };
 
-    let exist = fs.existsSync("allUsers.json", (exist) => {
+    let exist = fs.existsSync("data/allUsers.json", (exist) => {
       return exist;
     });
 
@@ -54,12 +54,12 @@ const controller = {
       let users = getUsers();
       users.push(newUser);
       let usersJson = JSON.stringify(users, null, 4);
-      fs.writeFileSync("allUsers.json", usersJson);
+      fs.writeFileSync("data/allUsers.json", usersJson);
     } else {
       let usersArray = [];
       usersArray.push(newUser);
       let usersArrayJson = JSON.stringify(usersArray, null, 4);
-      fs.writeFileSync("allUsers.json", usersArrayJson);
+      fs.writeFileSync("data/allUsers.json", usersArrayJson);
     }
     res.redirect("/");
   },
@@ -67,12 +67,12 @@ const controller = {
     res.render("cart");
   },
   //purchaseCart:(req, res)=>{
-   //let products = getProducts();
-   //const i = products.findIndex((prod) => {
-    //return prod.id == req.params.id;
+  //let products = getProducts();
+  //const i = products.findIndex((prod) => {
+  //return prod.id == req.params.id;
   //});
-  
- // }
+
+  // }
 };
 
 module.exports = controller;

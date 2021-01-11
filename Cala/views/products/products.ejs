@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%-include("partials/head-base",{title:"Cala Home"}) %>
+    <%-include("../partials/head-base",{title:"Cala Home"}) %>
   </head>
 
   <body class="background-main">
-    <%-include("partials/header") %>
+    <%-include("../partials/header") %>
     <!--mantengo el estilo de section para los menu-->
     <main>
       <!--<section>
@@ -24,12 +24,12 @@
       <section>
         <div class="d-flex-lg width-100-lg index-products">
           <% for (let i = 0; i < products.length; i++) { %> <% let product =
-          products[i]; %> <%-include('partials/product-card',
+          products[i]; %> <%-include('../products/product-card',
           {product:products[i]}) %> <% } %>
         </div>
       </section>
     </main>
 
-    <%-include("partials/footer") %>
+    <%-include("../partials/footer") %>
   </body>
 </html>

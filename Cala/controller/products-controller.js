@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const { stringify } = require("querystring");
 function getProducts() {
-  const dbJson = fs.readFileSync(__dirname + "/../product-db.json", {
+  const dbJson = fs.readFileSync(__dirname + "/../data/product-db.json", {
     encoding: "utf-8",
   });
   return JSON.parse(dbJson);
@@ -14,7 +14,7 @@ const controller = {
   products: (req, res) => {
     const products = getProducts();
 
-    res.render("products", { products: products });
+    res.render("products/products", { products: products });
   },
 
   details: function (req, res) {
@@ -23,7 +23,7 @@ const controller = {
       return prod.id == req.params.id;
     });
 
-    res.render("details", { product: products[i] });
+    res.render("products/details", { product: products[i] });
   },
 
   showEdit: (req, res) => {
@@ -36,7 +36,7 @@ const controller = {
         .status(404)
         .send("404 not found. <br> ¡Lo siento, no tenemos ese producto!");
     }
-    res.render("edit", {
+    res.render("products/edit", {
       product: products[i],
     });
   },
@@ -61,14 +61,14 @@ const controller = {
     productEdit.image = filename;
 
     const prodJson = JSON.stringify(products, null, 4);
-    fs.writeFileSync("product-db.json", prodJson);
+    fs.writeFileSync("data/product-db.json", prodJson);
 
     getProducts();
-    res.redirect("/products");
+    res.redirect("/products/products");
   },
 
   showCreate: (req, res) => {
-    res.render("create");
+    res.render("products/create");
   },
 
   create: (req, res) => {
@@ -101,9 +101,9 @@ const controller = {
 
     products.push(productCreate);
     const productsJson = JSON.stringify(products, null, 4);
-    fs.writeFileSync("product-db.json", productsJson);
+    fs.writeFileSync("data/product-db.json", productsJson);
 
-    res.redirect("/");
+    res.redirect("/products");
   },
 
   delete: (req, res) => {
@@ -113,16 +113,16 @@ const controller = {
     });
     let productsDeleted = productDelete;
     productsDeletedJson = JSON.stringify(productsDeleted, null, 4);
-    fs.writeFileSync("product-deleted.json", productsDeletedJson);
+    fs.writeFileSync("data/product-deleted.json", productsDeletedJson);
 
     let productList = products.filter((product) => {
       return product.id != req.params.id;
     });
     products = productList;
     productsJson = JSON.stringify(products, null, 4);
-    fs.writeFileSync("product-db.json", productsJson);
+    fs.writeFileSync("data/product-db.json", productsJson);
 
-    res.redirect("/");
+    res.redirect("/products");
   },
 };
 
