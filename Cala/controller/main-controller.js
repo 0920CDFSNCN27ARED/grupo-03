@@ -2,7 +2,7 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 function getProducts() {
-  const dbJson = fs.readFileSync(__dirname + "/../data/product-db.json");
+  const dbJson = fs.readFileSync(__dirname + "/../data/product-database.json");
   return JSON.parse(dbJson);
 }
 
@@ -18,51 +18,6 @@ const controller = {
     res.render("index", { products: products });
   },
 
-  login: (req, res) => {
-    res.render("login");
-  },
-  autLogin: (req, res) => {
-    const users = getUsers();
-
-    for (let i = 0; i < users.length; i++) {
-      if (
-        users[i].user == req.body.user &&
-        bcrypt.compareSync(req.body.password, users[i].password)
-      ) {
-        return res.send("te logueaste");
-      } else {
-        return res.send("error");
-      }
-    }
-  },
-  register: (req, res) => {
-    res.render("register");
-  },
-  autRegister: (req, res) => {
-    let newUser = {
-      name: req.body.name,
-      user: req.body.user,
-      mail: req.body.email,
-      password: bcrypt.hashSync(req.body.password, 10),
-    };
-
-    let exist = fs.existsSync("data/allUsers.json", (exist) => {
-      return exist;
-    });
-
-    if (exist) {
-      let users = getUsers();
-      users.push(newUser);
-      let usersJson = JSON.stringify(users, null, 4);
-      fs.writeFileSync("data/allUsers.json", usersJson);
-    } else {
-      let usersArray = [];
-      usersArray.push(newUser);
-      let usersArrayJson = JSON.stringify(usersArray, null, 4);
-      fs.writeFileSync("data/allUsers.json", usersArrayJson);
-    }
-    res.redirect("/");
-  },
   cart: (req, res) => {
     res.render("cart");
   },

@@ -4,7 +4,7 @@ const fs = require("fs");
 
 const { stringify } = require("querystring");
 function getProducts() {
-  const dbJson = fs.readFileSync(__dirname + "/../data/product-db.json", {
+  const dbJson = fs.readFileSync(__dirname + "/../data/product-database.json", {
     encoding: "utf-8",
   });
   return JSON.parse(dbJson);
@@ -59,9 +59,10 @@ const controller = {
     productEdit.category = req.body.category;
     productEdit.description = req.body.description;
     productEdit.image = filename;
+    productEdit.color = req.body.color;
 
     const prodJson = JSON.stringify(products, null, 4);
-    fs.writeFileSync("data/product-db.json", prodJson);
+    fs.writeFileSync("data/product-database.json", prodJson);
 
     getProducts();
     res.redirect("/products/products");
@@ -92,6 +93,7 @@ const controller = {
       category: req.body.category,
       description: req.body.description,
       image: req.files[0].filename,
+      color: req.body.color,
     };
 
     // archivoProducto = fs.readFileSync("product-db.json", {
@@ -101,7 +103,7 @@ const controller = {
 
     products.push(productCreate);
     const productsJson = JSON.stringify(products, null, 4);
-    fs.writeFileSync("data/product-db.json", productsJson);
+    fs.writeFileSync("data/product-database.json", productsJson);
 
     res.redirect("/products");
   },
@@ -120,7 +122,7 @@ const controller = {
     });
     products = productList;
     productsJson = JSON.stringify(products, null, 4);
-    fs.writeFileSync("data/product-db.json", productsJson);
+    fs.writeFileSync("data/product-database.json", productsJson);
 
     res.redirect("/products");
   },

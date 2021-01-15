@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <%-include("partials/head-base",{title:"Login"}) %>
+    <%-include("../partials/head-base",{title:"Login"}) %>
     <link rel="stylesheet" href="/css/forms.css" />
   </head>
 
   <body class="background-main">
-    <%-include("partials/header") %>
+    <%-include("../partials/header") %>
     <!--Creo main con dos section una para el login y otra para register.
     Consultar si el placeholder en los input va en el html o el css.
     Consultar como se hace el captcha-->
@@ -18,19 +18,34 @@
           class="form-container form-container center-text radius-5 width-auto"
         >
           <h3 class="font-arimo font-size-25lg">Registrate</h3>
-          <form action="/register" method="POST" class="flex-column">
+          <form
+            action="/register"
+            method="POST"
+            class="flex-column"
+            enctype="multipart/form-data"
+          >
             <label
-              for="name"
+              for="first_name"
               class="font-jura font-size-14 flex-column font-size-20lg"
-              >Ingresa tu Nombre y Apellido</label
+              >Ingresa tu Nombre
+            </label>
+            <input
+              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              type="text"
+              name="first_name"
+              placeholder="Maria"
+            />
+            <label
+              for="last_name"
+              class="font-jura font-size-14 flex-column font-size-20lg"
+              >Ingresa tu Apellido</label
             >
             <input
               class="no-border radius-5 center-text font-bellefair font-size-20lg"
               type="text"
-              name="name"
-              placeholder="Maria Perez"
+              name="last_name"
+              placeholder="Perez"
             />
-
             <label
               for="user"
               class="font-jura font-size-14 flex-column font-size-20lg"
@@ -56,6 +71,8 @@
               id="email"
               placeholder="mariaperez@mail.com"
             />
+            <p>Imagen</p>
+            <input type="file" name="image" id="image" />
 
             <label
               for="password"
@@ -93,6 +110,6 @@
       </div>
     </main>
 
-    <%-include("partials/footer") %>
+    <%-include("../partials/footer") %>
   </body>
 </html>
