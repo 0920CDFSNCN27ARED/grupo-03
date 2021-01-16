@@ -1,15 +1,9 @@
 const path = require("path");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
-function getProducts() {
-  const dbJson = fs.readFileSync(__dirname + "/../data/product-database.json");
-  return JSON.parse(dbJson);
-}
 
-function getUsers() {
-  const usersJson = fs.readFileSync(__dirname + "/../data/allUsers.json");
-  return JSON.parse(usersJson);
-}
+const getProducts = require("../utils/get-products");
+const getUsers = require("../utils/get-users");
 
 const controller = {
   home: function (req, res) {

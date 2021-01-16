@@ -2,10 +2,10 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 
-function getUsers() {
-  const usersJson = fs.readFileSync(__dirname + "/../data/allUsersdb.json");
-  return JSON.parse(usersJson);
-}
+//const { check, validationResult, body } = require("express-validator");
+
+const getUsers = require("../utils/get-users");
+const saveUsers = require("../utils/save-users");
 
 const controller = {
   login: (req, res) => {
@@ -13,15 +13,14 @@ const controller = {
   },
   autLogin: (req, res) => {
     const users = getUsers();
-
     for (let i = 0; i < users.length; i++) {
       if (
         users[i].user == req.body.user &&
         bcrypt.compareSync(req.body.password, users[i].password)
       ) {
-        return res.send("te logueaste");
+        return res.render("users/register");
       } else {
-        return res.send("error");
+        return res.render("not-found");
       }
     }
   },
@@ -45,13 +44,11 @@ const controller = {
     if (exist) {
       let users = getUsers();
       users.push(newUser);
-      let usersJson = JSON.stringify(users, null, 4);
-      fs.writeFileSync("data/allUsersdb.json", usersJson);
+      saveUsers(users);
     } else {
       let usersArray = [];
       usersArray.push(newUser);
-      let usersArrayJson = JSON.stringify(usersArray, null, 4);
-      fs.writeFileSync("data/allUsersdb.json", usersArrayJson);
+      saveUsers(users);
     }
     res.redirect("/");
   },

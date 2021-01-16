@@ -3,12 +3,8 @@ const path = require("path");
 const fs = require("fs");
 
 const { stringify } = require("querystring");
-function getProducts() {
-  const dbJson = fs.readFileSync(__dirname + "/../data/product-database.json", {
-    encoding: "utf-8",
-  });
-  return JSON.parse(dbJson);
-}
+const getProducts = require("../utils/get-products");
+const saveProducts = require("../utils/save-products");
 
 const controller = {
   products: (req, res) => {
@@ -61,10 +57,8 @@ const controller = {
     productEdit.image = filename;
     productEdit.color = req.body.color;
 
-    const prodJson = JSON.stringify(products, null, 4);
-    fs.writeFileSync("data/product-database.json", prodJson);
+    saveProducts(products);
 
-    getProducts();
     res.redirect("/products/products");
   },
 
@@ -102,8 +96,7 @@ const controller = {
     // const productsFile = JSON.parse(archivoProducto);
 
     products.push(productCreate);
-    const productsJson = JSON.stringify(products, null, 4);
-    fs.writeFileSync("data/product-database.json", productsJson);
+    saveProducts(products);
 
     res.redirect("/products");
   },

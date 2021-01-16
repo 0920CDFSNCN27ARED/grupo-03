@@ -3006,5 +3006,29 @@
         "mail": "marinarvacatello@gmail.com",
         "image": "image-1610746490085.jpg",
         "password": "$2b$10$QJexLBq9B5Jw7P03VOFcUuJ.9sDuhX.TLf7y0nUHaz2xaq5IlE4Ke"
+    },
+    {
+        "first_name": "Martina",
+        "last_name": "Garavento",
+        "user": "marg",
+        "mail": "martina.garavento@hotmail.com",
+        "image": "image-1610819231790.png",
+        "password": "$2b$10$bwg.R50JKckGXYolNysvOuI3zikFKqhgW...gekmJ4BK9IuwkT94a"
+    },
+    {
+        "first_name": "marta",
+        "last_name": "gara",
+        "user": "martina",
+        "mail": "martina@gmail.com",
+        "image": "image-1610820907799.png",
+        "password": "$2b$10$BbI4r5isUt7N3omSy6BFHubnuPukEiQzmVd924GvZZV4cD2fn5SIG"
+    },
+    {
+        "first_name": "yo",
+        "last_name": "yo",
+        "user": "yo",
+        "mail": "yo@gmail.com",
+        "image": "image-1610821505970.png",
+        "password": "$2b$10$ATMvuCr5Od2WGyfmdDT/qOZXA42zzXc2hGr3EcS9LZlfE0DmLMNRG"
     }
 ]
