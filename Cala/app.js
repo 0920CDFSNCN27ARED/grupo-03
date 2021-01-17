@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
 const bcrypt = require("bcrypt");
+const session = require("express-session");
 
 const pathAPublic = path.resolve(__dirname, "public");
 const enrutadorEstaticos = express.static(pathAPublic);
@@ -21,6 +22,7 @@ app.use(methodOverride("_method"));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(session({ secret: "secreto Cala" }));
 
 const mainRouter = require(__dirname + "/routes/main-routes");
 app.use("/", mainRouter);

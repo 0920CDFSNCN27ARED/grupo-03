@@ -9,7 +9,7 @@ const controller = {
   home: function (req, res) {
     const products = getProducts();
 
-    res.render("index", { products: products });
+    res.render("index", { products: products, user: req.loggedUser });
   },
 
   cart: (req, res) => {

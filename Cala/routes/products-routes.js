@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const productController = require("../controller/products-controller");
 const path = require("path");
+const assertSignedIn = require("../middlewares/assert-signed-in");
 
 //inicio multer
 const multer = require("multer");
@@ -20,7 +21,7 @@ let upload = multer({ storage: storage });
 // fin multer
 
 router.get("/", productController.products);
-router.get("/details/:id", productController.details);
+router.get("/details/:id", assertSignedIn, productController.details);
 router.get("/:id/edit", productController.showEdit);
 router.get("/create", productController.showCreate);
 router.put("/:id", upload.any(), productController.edit);

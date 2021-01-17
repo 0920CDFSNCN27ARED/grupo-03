@@ -13,17 +13,27 @@ const controller = {
   },
   autLogin: (req, res) => {
     const users = getUsers();
-    for (let i = 0; i < users.length; i++) {
-      if (
-        users[i].user == req.body.user &&
-        bcrypt.compareSync(req.body.password, users[i].password)
-      ) {
-        return res.render("users/register");
-      } else {
-        return res.render("not-found");
-      }
+    const user = users.find((user) => {
+      return (
+        user.user == req.body.user &&
+        bcrypt.compareSync(req.body.password, user.password)
+      );
+    });
+    if (!user) {
+      return res.redirect("login");
     }
+    req.session.loggedUser = user.id;
+    return res.redirect("/");
+    // for (let i = 0; i < users.length; i++) {
+    // if (
+    // users[i].user == req.body.user &&
+    //bcrypt.compareSync(req.body.password, users[i].password)
+    //) {
+    //return res.render("users/register");
+    //} else {
+    // return res.render("not-found");
   },
+
   register: (req, res) => {
     res.render("users/register");
   },

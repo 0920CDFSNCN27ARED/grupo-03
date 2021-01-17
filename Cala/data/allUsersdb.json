@@ -3030,5 +3030,21 @@
         "mail": "yo@gmail.com",
         "image": "image-1610821505970.png",
         "password": "$2b$10$ATMvuCr5Od2WGyfmdDT/qOZXA42zzXc2hGr3EcS9LZlfE0DmLMNRG"
+    },
+    {
+        "first_name": "Barbara Maria",
+        "last_name": "Fuster",
+        "user": "Barbi",
+        "mail": "fbarbaram@gmail.com",
+        "image": "image-1610923597022.jpg",
+        "password": "$2b$10$nC31hpVVydDfl22snEyneOJHrYmFz.H6GPkZdPEQW1ua31mKdZ/2G"
+    },
+    {
+        "first_name": "Ignacio",
+        "last_name": "perez",
+        "user": "nacho",
+        "mail": "nachodiazarg@gmail.com",
+        "image": "image-1610926502578.png",
+        "password": "$2b$10$ToN86nwWzXd07iVLh7uBbO0FaDCMWrnx/jhnLZpfA2GIwqGBhYcsi"
     }
 ]
