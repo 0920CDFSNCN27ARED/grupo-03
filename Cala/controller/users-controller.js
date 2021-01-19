@@ -1,7 +1,7 @@
 const path = require("path");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
-
+const cookieParser = require("cookie-parser");
 //const { check, validationResult, body } = require("express-validator");
 
 const getUsers = require("../utils/get-users");
@@ -25,15 +25,15 @@ const controller = {
 
     req.session.loggedUserId = user.id;
 
+    //if (req.body.remember == "yes") {
+    //res.cookie("rememberMe", {
+    // user: req.body.user,
+    //password: req.body.password,
+    // });
+    // }
+    //console.log(req.cookies.rememberMe);
+
     return res.redirect("/");
-    // for (let i = 0; i < users.length; i++) {
-    // if (
-    // users[i].user == req.body.user &&
-    //bcrypt.compareSync(req.body.password, users[i].password)
-    //) {
-    //return res.render("users/register");
-    //} else {
-    // return res.render("not-found");
   },
 
   register: (req, res) => {

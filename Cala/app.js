@@ -4,6 +4,7 @@ const app = express();
 const methodOverride = require("method-override");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
+const cookieParser = require("cookie-parser");
 const authenticate = require("./middlewares/authenticate");
 
 const pathAPublic = path.resolve(__dirname, "public");
@@ -23,6 +24,7 @@ app.use(methodOverride("_method"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({ secret: "secreto Cala" }));
+app.use(cookieParser());
 
 app.locals.user = null;
 app.use(authenticate);
