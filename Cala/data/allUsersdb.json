@@ -3000,51 +3000,22 @@
         "category": "user"
     },
     {
-        "first_name": "maru",
-        "last_name": "rod",
-        "user": "marr",
-        "mail": "marinarvacatello@gmail.com",
-        "image": "image-1610746490085.jpg",
-        "password": "$2b$10$QJexLBq9B5Jw7P03VOFcUuJ.9sDuhX.TLf7y0nUHaz2xaq5IlE4Ke"
-    },
-    {
-        "first_name": "Martina",
-        "last_name": "Garavento",
-        "user": "marg",
-        "mail": "martina.garavento@hotmail.com",
-        "image": "image-1610819231790.png",
-        "password": "$2b$10$bwg.R50JKckGXYolNysvOuI3zikFKqhgW...gekmJ4BK9IuwkT94a"
-    },
-    {
-        "first_name": "marta",
-        "last_name": "gara",
-        "user": "martina",
-        "mail": "martina@gmail.com",
-        "image": "image-1610820907799.png",
-        "password": "$2b$10$BbI4r5isUt7N3omSy6BFHubnuPukEiQzmVd924GvZZV4cD2fn5SIG"
-    },
-    {
+        "id": 301,
         "first_name": "yo",
         "last_name": "yo",
         "user": "yo",
         "mail": "yo@gmail.com",
-        "image": "image-1610821505970.png",
-        "password": "$2b$10$ATMvuCr5Od2WGyfmdDT/qOZXA42zzXc2hGr3EcS9LZlfE0DmLMNRG"
+        "image": "image-1611093947697.jpg",
+        "password": "$2b$10$4wd0NekiTsK6l0MRFlBPde3o2bZyC1gtSexCnJSxhDec2nR7D41xi",
+        "admin": true
     },
     {
-        "first_name": "Barbara Maria",
-        "last_name": "Fuster",
-        "user": "Barbi",
-        "mail": "fbarbaram@gmail.com",
-        "image": "image-1610923597022.jpg",
-        "password": "$2b$10$nC31hpVVydDfl22snEyneOJHrYmFz.H6GPkZdPEQW1ua31mKdZ/2G"
-    },
-    {
-        "first_name": "Ignacio",
-        "last_name": "perez",
-        "user": "nacho",
-        "mail": "nachodiazarg@gmail.com",
-        "image": "image-1610926502578.png",
-        "password": "$2b$10$ToN86nwWzXd07iVLh7uBbO0FaDCMWrnx/jhnLZpfA2GIwqGBhYcsi"
+        "id": 302,
+        "first_name": "noadmin",
+        "last_name": "noadmin",
+        "user": "no",
+        "mail": "no@gmail.com",
+        "image": "image-1611094909946.jpg",
+        "password": "$2b$10$c2WuiNE3MEg2HS2DPpSro.qZxR./GstQ8YS/FEMdzpeeJDKrJ3a5W"
     }
 ]

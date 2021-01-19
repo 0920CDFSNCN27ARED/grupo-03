@@ -4,6 +4,7 @@ const app = express();
 const methodOverride = require("method-override");
 const bcrypt = require("bcrypt");
 const session = require("express-session");
+const authenticate = require("./middlewares/authenticate");
 
 const pathAPublic = path.resolve(__dirname, "public");
 const enrutadorEstaticos = express.static(pathAPublic);
@@ -19,17 +20,22 @@ app.listen(3001, () => {
 });
 
 app.use(methodOverride("_method"));
-
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({ secret: "secreto Cala" }));
 
+app.locals.user = null;
+app.use(authenticate);
+
 const mainRouter = require(__dirname + "/routes/main-routes");
 app.use("/", mainRouter);
+
 const usersRouter = require(__dirname + "/routes/users-routes");
 app.use("/", usersRouter);
+
 const productsRouter = require(__dirname + "/routes/products-routes");
 app.use("/products", productsRouter);
+
 app.use((req, res, next) => {
   res.status(404).render("not-found");
 });

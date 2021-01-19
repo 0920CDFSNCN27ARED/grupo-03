@@ -22,7 +22,9 @@ const controller = {
     if (!user) {
       return res.redirect("login");
     }
-    req.session.loggedUser = user.id;
+
+    req.session.loggedUserId = user.id;
+
     return res.redirect("/");
     // for (let i = 0; i < users.length; i++) {
     // if (
@@ -38,7 +40,10 @@ const controller = {
     res.render("users/register");
   },
   autRegister: (req, res) => {
+    const users = getUsers();
+
     let newUser = {
+      id: users[users.length - 1].id + 1,
       first_name: req.body.first_name,
       last_name: req.body.last_name,
       user: req.body.user,
@@ -52,7 +57,6 @@ const controller = {
     });
 
     if (exist) {
-      let users = getUsers();
       users.push(newUser);
       saveUsers(users);
     } else {

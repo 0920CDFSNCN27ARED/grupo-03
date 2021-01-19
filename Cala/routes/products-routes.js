@@ -3,6 +3,7 @@ const router = express.Router();
 const productController = require("../controller/products-controller");
 const path = require("path");
 const assertSignedIn = require("../middlewares/assert-signed-in");
+const assertIsAdmin = require("../middlewares/assert-is-admin");
 
 //inicio multer
 const multer = require("multer");
@@ -22,8 +23,18 @@ let upload = multer({ storage: storage });
 
 router.get("/", productController.products);
 router.get("/details/:id", assertSignedIn, productController.details);
-router.get("/:id/edit", productController.showEdit);
-router.get("/create", productController.showCreate);
+router.get(
+  "/:id/edit",
+  assertSignedIn,
+  assertIsAdmin,
+  productController.showEdit
+);
+router.get(
+  "/create",
+  assertSignedIn,
+  assertIsAdmin,
+  productController.showCreate
+);
 router.put("/:id", upload.any(), productController.edit);
 router.delete("/:id", productController.delete);
 router.post("/", upload.any(), productController.create);

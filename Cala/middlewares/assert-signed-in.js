@@ -1,6 +1,5 @@
 function assertSignedIn(req, res, next) {
-  const id = req.session.loggedUser;
-  if (!id) {
+  if (!res.locals.user) {
     res.redirect("/login");
   } else {
     next();
