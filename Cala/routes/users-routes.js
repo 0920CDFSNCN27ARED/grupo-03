@@ -55,6 +55,13 @@ router.post(
       .withMessage("La clave debe ser numerica")
       .isLength({ min: 8, max: 16 })
       .withMessage("La clave debe tener entre 8 y 16 caracteres"),
+    body("passConf").custom((value, { req, loc, path }) => {
+      if (value !== req.body.password) {
+        throw new Error("Passwords don't match");
+      } else {
+        return value;
+      }
+    }),
   ],
   usersController.autRegister
 );
