@@ -2,7 +2,7 @@ const path = require("path");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 const cookieParser = require("cookie-parser");
-//const { check, validationResult, body } = require("express-validator");
+const { check, validationResult, body } = require("express-validator");
 
 const getUsers = require("../utils/get-users");
 const saveUsers = require("../utils/save-users");
@@ -35,6 +35,10 @@ const controller = {
 
     return res.redirect("/");
   },
+  logout: (req, res) => {
+    delete req.session.loggedUserId;
+    res.redirect("/");
+  },
 
   register: (req, res) => {
     res.render("users/register");
@@ -63,6 +67,10 @@ const controller = {
       let usersArray = [];
       usersArray.push(newUser);
       saveUsers(users);
+    }
+    let errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("users/register", { errors: errors.array() });
     }
     res.redirect("/");
   },

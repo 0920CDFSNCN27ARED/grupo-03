@@ -53,4 +53,14 @@
   <h1 class="color-primary font-arimo">
     Hola, <%= user ? user.first_name : "Amigo!" %>
   </h1>
+  <% if(user) { %>
+  <form action="/logout" method="POST">
+    <button
+      type="submit"
+      class="no-border center-text font-jura font-size-20lg"
+    >
+      Cerrar Sesión
+    </button>
+  </form>
+  <% } %>
 </header>

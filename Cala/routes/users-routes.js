@@ -19,39 +19,40 @@ let storage = multer.diskStorage({
 let upload = multer({ storage: storage });
 // fin multer
 
-//const { check, validationResult, body } = require("express-validator");
+const { check, validationResult, body } = require("express-validator");
 
 router.get("/login", usersController.login);
+router.post("/logout", usersController.logout);
 router.post("/", usersController.autLogin);
 router.get("/register", usersController.register);
 router.post(
   "/register",
   upload.any(),
-  //[
-  //  check("first_name")
-  //    .isLength({ min: 0, max: 99 })
-  //    .isEmpty()
-  //    .withMessage("El campo nombre debe ser alfabeitco y estar completo"),
-  //  check("last_name")
-  //    .isLength({ min: 0, max: 99 })
-  //    .isEmpty()
-  //    .withMessage("El campo apellido debe ser alfabeitco y estar completo"),
-  //  check("user")
-  //    .isLength({ min: 0, max: 16 })
-  //    .isEmpty()
-  //   .withMessage("El campo usuario debe ser alfabeitco y estar completo"),
-  //  check("email")
-  //    .isEmail()
-  //    .isEmpty()
-  //    .withMessage("El campo email es invalido"),
-  //  check("image").isEmpty().withMessage("Debes cargar una imagen de perfil"),
-  //  check("password")
-  //    .isEmpty()
-  //   .isLength({ min: 8, max: 16 })
-  //   .withMessage(
-  //     "La clave debe ser numerica y tener entre 8 y 16 caracteres"
-  //   ),
-  // ],
+  [
+    body("first_name")
+      .isLength({ min: 0, max: 99 })
+      .isEmpty()
+      .withMessage("El campo nombre debe ser alfabeitco y estar completo"),
+    body("last_name")
+      .isLength({ min: 0, max: 99 })
+      .isEmpty()
+      .withMessage("El campo apellido debe ser alfabeitco y estar completo"),
+    body("user")
+      .isLength({ min: 0, max: 16 })
+      .isEmpty()
+      .withMessage("El campo usuario debe ser alfabeitco y estar completo"),
+    check("email")
+      .isEmail()
+      .isEmpty()
+      .withMessage("El campo email es invalido"),
+    body("image").isEmpty().withMessage("Debes cargar una imagen de perfil"),
+    body("password")
+      .isEmpty()
+      .isLength({ min: 8, max: 16 })
+      .withMessage(
+        "La clave debe ser numerica y tener entre 8 y 16 caracteres"
+      ),
+  ],
   usersController.autRegister
 );
 
