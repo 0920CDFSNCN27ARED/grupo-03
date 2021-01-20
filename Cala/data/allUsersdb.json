@@ -3161,5 +3161,23 @@
         "mail": "martina.garavento@gmail.com",
         "image": "image-1611104630652.jpg",
         "password": "$2b$10$oJ8DFanP0jI/DEnLBvzCWuyhnt..J3pKzhpOOjNFMEage6giJZP.W"
+    },
+    {
+        "id": 319,
+        "first_name": "Martina",
+        "last_name": "Garavento",
+        "user": "martina12",
+        "mail": "martina.garavento@gmail.com",
+        "image": "image-1611150768787.jpg",
+        "password": "$2b$10$n3Z8coLO6t4Yby6YHra8h.4eibEDMg6oJusVRPAITKqoVYapabk5u"
+    },
+    {
+        "id": 320,
+        "first_name": "Martina",
+        "last_name": "Garavento",
+        "user": "martina12",
+        "mail": "martina.garavento@gmail.com",
+        "image": "image-1611150788544.jpg",
+        "password": "$2b$10$vRu0VXTiUF/l.lMjysvzXu9JrveAN645uJ/M.Fu8/kEtRNrH1tkQq"
     }
 ]

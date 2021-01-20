@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const usersController = require("../controller/users-controller");
 const path = require("path");
-const verifyPasswordsMatch = require("../middlewares/verifyPassword");
+
 //inicio multer
 const multer = require("multer");
 let storage = multer.diskStorage({
@@ -49,7 +49,7 @@ router.post(
       .withMessage("Debes ingresa un email valido")
       .isLength()
       .withMessage("El campo email debe estar completo"),
-    body("image").notEmpty().withMessage("Debes cargar una imagen de perfil"),
+    check("image").isLength().withMessage("Debes cargar una imagen de perfil"),
     body("password")
       .isNumeric()
       .withMessage("La clave debe ser numerica")
