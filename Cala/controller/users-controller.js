@@ -44,6 +44,12 @@ const controller = {
     res.render("users/register");
   },
   autRegister: (req, res) => {
+    console.log(validationResult(req));
+    let errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("users/register", { errors: errors.array() });
+    }
+
     const users = getUsers();
 
     let newUser = {
@@ -68,10 +74,7 @@ const controller = {
       usersArray.push(newUser);
       saveUsers(users);
     }
-    let errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.render("users/register", { errors: errors.array() });
-    }
+
     res.redirect("/");
   },
 };

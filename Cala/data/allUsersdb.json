@@ -3116,5 +3116,50 @@
         "mail": "",
         "image": "image-1611103084219.png",
         "password": "$2b$10$/FuxJ8nXhDGs47Zd5jVdQO3Ffq.fcjDgkLGwAtmiTZ.fXBiD5DSoC"
+    },
+    {
+        "id": 314,
+        "first_name": "martina",
+        "last_name": "garavento",
+        "user": "marti",
+        "mail": "martina.garavento@gmail.com",
+        "image": "image-1611103936159.jpg",
+        "password": "$2b$10$FOyKmz/TgpRhFJdO7gc06.Ikk7Ee2TVVOowyAPNOiIrMZqWyTPlIK"
+    },
+    {
+        "id": 315,
+        "first_name": "322",
+        "last_name": "1223",
+        "user": "ngfngfdjgjghjghjhgjgddjhg",
+        "mail": "",
+        "image": "image-1611103990332.jpg",
+        "password": "$2b$10$W4MT8.dgo4QVANYZEtexr.XuXfflU0eiDz74S3O/2jSoF69gWjS7i"
+    },
+    {
+        "id": 316,
+        "first_name": "322",
+        "last_name": "1223",
+        "user": "ngfngfdjgjghjghjhgjgddjhg",
+        "mail": "",
+        "image": "image-1611104495520.jpg",
+        "password": "$2b$10$xMTkrpyB7t40zeEWTCcx/eWBSzFeoXRJPZD05.IsuCPwsU0wExo9m"
+    },
+    {
+        "id": 317,
+        "first_name": "35345",
+        "last_name": "4534534",
+        "user": "ggggggggggggggggggggggggggggggggggggggg",
+        "mail": "",
+        "image": "image-1611104516452.jpg",
+        "password": "$2b$10$X9rzxCStsjKpdmcp/qosGuBb2UPBOyrFcOj5K5VZj89ln.AI3.Fp6"
+    },
+    {
+        "id": 318,
+        "first_name": "Martina",
+        "last_name": "Garavento",
+        "user": "martina12",
+        "mail": "martina.garavento@gmail.com",
+        "image": "image-1611104630652.jpg",
+        "password": "$2b$10$oJ8DFanP0jI/DEnLBvzCWuyhnt..J3pKzhpOOjNFMEage6giJZP.W"
     }
 ]
