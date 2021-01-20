@@ -18,6 +18,13 @@
           <h3 class="font-arimo font-size-25lg color-secondary">
             Ingresa a tu cuenta
           </h3>
+          <% if(typeof errors != "undefined") { %>
+          <ul>
+            <% for (let i = 0; i < errors.length; i ++) { %>
+            <li><%= errors[i].msg %></li>
+            <% } %>
+          </ul>
+          <% } %>
           <form action="/" method="POST" class="flex-column">
             <input
               class="font-bellefair no-border radius-5 center-text font-size-20lg"

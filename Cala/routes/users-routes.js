@@ -20,10 +20,28 @@ let upload = multer({ storage: storage });
 // fin multer
 
 const { check, validationResult, body } = require("express-validator");
-
+const assertUser = require("../middlewares/assert-user");
 router.get("/login", usersController.login);
 router.post("/logout", usersController.logout);
-router.post("/", usersController.autLogin);
+router.post(
+  "/",
+
+  [
+    body("user")
+      .isAlphanumeric()
+      .withMessage("El campo usuario debe ser alfanumerico")
+      .isLength({ min: 1, max: 16 })
+      .withMessage("El campo usuario debe estar completo"),
+    body("password")
+      .isNumeric()
+      .withMessage("La clave debe ser numerica")
+      .isLength({ min: 8, max: 16 })
+      .withMessage("La clave debe tener entre 8 y 16 caracteres"),
+  ],
+  assertUser,
+
+  usersController.autLogin
+);
 router.get("/register", usersController.register);
 router.post(
   "/register",
@@ -57,7 +75,7 @@ router.post(
       .withMessage("La clave debe tener entre 8 y 16 caracteres"),
     body("passConf").custom((value, { req, loc, path }) => {
       if (value !== req.body.password) {
-        throw new Error("Passwords don't match");
+        throw new Error("las contraseñas no coinciden");
       } else {
         return value;
       }

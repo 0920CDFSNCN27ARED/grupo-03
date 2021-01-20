@@ -12,6 +12,11 @@ const controller = {
     res.render("users/login");
   },
   autLogin: (req, res) => {
+    let errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("users/login", { errors: errors.array() });
+    }
+
     const users = getUsers();
     const user = users.find((user) => {
       return (
@@ -19,11 +24,11 @@ const controller = {
         bcrypt.compareSync(req.body.password, user.password)
       );
     });
-    if (!user) {
-      return res.redirect("login");
+    if (user) {
+      req.session.loggedUserId = user.id;
+    } else {
+      res.redirect("login");
     }
-
-    req.session.loggedUserId = user.id;
 
     //if (req.body.remember == "yes") {
     //res.cookie("rememberMe", {
@@ -44,7 +49,7 @@ const controller = {
     res.render("users/register");
   },
   autRegister: (req, res) => {
-    console.log(validationResult(req));
+    // console.log(validationResult(req));
     let errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.render("users/register", { errors: errors.array() });
