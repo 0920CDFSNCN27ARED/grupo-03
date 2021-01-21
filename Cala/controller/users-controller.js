@@ -26,6 +26,7 @@ const controller = {
     });
     if (user) {
       req.session.loggedUserId = user.id;
+      res.redirect("/");
     } else {
       res.redirect("login");
     }
@@ -37,8 +38,6 @@ const controller = {
     // });
     // }
     //console.log(req.cookies.rememberMe);
-
-    return res.redirect("/");
   },
   logout: (req, res) => {
     delete req.session.loggedUserId;
