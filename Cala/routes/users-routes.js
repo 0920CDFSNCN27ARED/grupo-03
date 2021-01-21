@@ -54,7 +54,7 @@ router.post(
       .withMessage("El campo nombre debe estar completo"),
     body("last_name")
       .isAlpha()
-      .withMessage("El campo apellido debe ser alfabeitco")
+      .withMessage("El campo apellido debe ser alfabetico")
       .isLength({ min: 1, max: 99 })
       .withMessage("El campo apellido debe estar completo"),
     body("user")
@@ -73,12 +73,11 @@ router.post(
       .withMessage("La clave debe ser numerica")
       .isLength({ min: 8, max: 16 })
       .withMessage("La clave debe tener entre 8 y 16 caracteres"),
-    body("passConf").custom((value, { req, loc, path }) => {
+    body("passConf").custom((value, { req }) => {
       if (value !== req.body.password) {
-        throw new Error("las contraseñas no coinciden");
-      } else {
-        return value;
+        throw new Error("Las contraseñas no coinciden");
       }
+      return true;
     }),
   ],
   usersController.autRegister

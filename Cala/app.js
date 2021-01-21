@@ -2,7 +2,6 @@ const path = require("path");
 const express = require("express");
 const app = express();
 const methodOverride = require("method-override");
-const bcrypt = require("bcrypt");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const authenticate = require("./middlewares/authenticate");
@@ -10,8 +9,6 @@ const authenticate = require("./middlewares/authenticate");
 const pathAPublic = path.resolve(__dirname, "public");
 const enrutadorEstaticos = express.static(pathAPublic);
 app.use(enrutadorEstaticos);
-//para subida de archivos
-const multer = require("multer");
 
 app.set("view engine", "ejs");
 app.set(("views", __dirname + "/views"));

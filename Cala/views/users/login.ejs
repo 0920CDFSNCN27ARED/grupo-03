@@ -32,14 +32,17 @@
               name="user"
               id="user"
               placeholder="Nombre de usuario"
+              value='<%= loginData ?
+            loginData.user : "" %>'
             />
-
             <input
               class="no-border radius-5 center-text font-bellefair font-size-20lg"
               type="password"
               name="password"
               id="password"
               placeholder="Contrasena"
+              value='<%= loginData ?
+            loginData.password : "" %>'
             />
 
             <button

@@ -1,15 +1,15 @@
 const path = require("path");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
-const cookieParser = require("cookie-parser");
-const { check, validationResult, body } = require("express-validator");
+const { validationResult } = require("express-validator");
 
 const getUsers = require("../utils/get-users");
 const saveUsers = require("../utils/save-users");
 
 const controller = {
   login: (req, res) => {
-    res.render("users/login");
+    console.log("rememberMeCookie", req.cookies.rememberMe);
+    res.render("users/login", { loginData: req.cookies.rememberMe });
   },
   autLogin: (req, res) => {
     let errors = validationResult(req);
@@ -24,20 +24,20 @@ const controller = {
         bcrypt.compareSync(req.body.password, user.password)
       );
     });
+
+    if (req.body.remember == "yes") {
+      res.cookie("rememberMe", {
+        user: req.body.user,
+        password: req.body.password,
+      });
+    }
+
     if (user) {
       req.session.loggedUserId = user.id;
       res.redirect("/");
     } else {
       res.redirect("login");
     }
-
-    //if (req.body.remember == "yes") {
-    //res.cookie("rememberMe", {
-    // user: req.body.user,
-    //password: req.body.password,
-    // });
-    // }
-    //console.log(req.cookies.rememberMe);
   },
   logout: (req, res) => {
     delete req.session.loggedUserId;
