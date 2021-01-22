@@ -47,7 +47,7 @@ const controller = {
       }
     }
 
-    const filename = req.file ? req.files[0].filename : productEdit.image;
+    const filename = req.files ? req.files[0].filename : productEdit.image;
 
     productEdit.name = req.body.name;
     productEdit.price = req.body.price;
@@ -59,7 +59,7 @@ const controller = {
 
     saveProducts(products);
 
-    res.redirect("/products/products");
+    res.redirect("/products");
   },
 
   showCreate: (req, res) => {

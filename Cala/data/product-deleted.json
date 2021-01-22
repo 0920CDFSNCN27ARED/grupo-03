@@ -1,11 +1,11 @@
 [
     {
-        "id": 1,
-        "name": "JABÓN CORPORAL NATURAL",
-        "description": "Jabon corporal natural para pieles que necesitan ser nutridas, hidratadas o para regalarte un placer",
-        "price": 350,
-        "discount": 0,
-        "image": "jabon-cafe.jpg",
-        "category": ""
+        "id": 301,
+        "name": "12315465",
+        "price": "100",
+        "discount": "12",
+        "category": "in-sale",
+        "description": "jhefwiufhwkefsknk",
+        "image": "image-1611328783770.png"
     }
 ]
