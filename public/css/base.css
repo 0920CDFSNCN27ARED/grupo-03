@@ -27,6 +27,9 @@
 .align-self-center {
   align-self: center;
 }
+.align-center {
+  align-items: center;
+}
 .no-border {
   border: none;
 }

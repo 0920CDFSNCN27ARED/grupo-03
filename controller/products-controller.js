@@ -80,20 +80,10 @@ const controller = {
     const productCreate = {
       id: products[products.length - 1].id + 1,
       //Idmayor + 1,
-      // todos los req body seria lo mismo si ponemos ...req.body //
-      name: req.body.name,
-      price: req.body.price,
-      discount: req.body.discount,
-      category: req.body.category,
-      description: req.body.description,
-      image: req.files[0].filename,
-      color: req.body.color,
-    };
 
-    // archivoProducto = fs.readFileSync("product-db.json", {
-    //  encoding: "utf-8",
-    // });
-    // const productsFile = JSON.parse(archivoProducto);
+      ...req.body,
+      image: req.files[0].filename,
+    };
 
     products.push(productCreate);
     saveProducts(products);

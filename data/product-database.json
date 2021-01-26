@@ -2698,5 +2698,14 @@
         "image": "product_300.jpg",
         "category": "piel",
         "color": "Maroon"
+    },
+    {
+        "id": 301,
+        "name": "serum",
+        "price": "1200",
+        "discount": "10",
+        "category": "En oferta",
+        "description": "Serum facial con acido hialurónico al 5%",
+        "image": "image-1611690591163.jpg"
     }
 ]

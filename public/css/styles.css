@@ -24,6 +24,11 @@
   height: 200px;
   object-fit: cover;
 }
+.product-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
 
 .banner-index {
   width: 100%;

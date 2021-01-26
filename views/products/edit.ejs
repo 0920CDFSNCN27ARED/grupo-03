@@ -45,15 +45,16 @@
               <textarea name="description" id="description"
               class="form-input margin-5 width-75 align-self-center"><%= product.description %></textarea>
             </p>  
-            <p>Imagen</p>
+            <div class="flex-column align-center">
+            <p>Imagen actual</p>
+            <img
+     src="/images/products/<%= product.image %>"
+     alt="<%= product.name %> "
+     class="product-img-fit product-img"/> 
          
       <input type="file" name="image" id="image">    
-         <p>Imagen actual</p>
-             <img
-      src="/images/products/<%= product.image %>"
-      alt="<%= product.name %> "
-      class="product-img-fit"
-    />              
+    </div>
+                 
             <button
               type="submit"
               class="no-border center-text font-jura font-size-14 font-size-20lg margin-5"
