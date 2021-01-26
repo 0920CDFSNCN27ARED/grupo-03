@@ -9,3 +9,11 @@
 .justify-flex-end {
   justify-content: flex-end;
 }
+
+.width-50-md {
+  width: 50%;
+}
+.d-flex-md {
+  display: flex;
+  flex-wrap: wrap;
+}

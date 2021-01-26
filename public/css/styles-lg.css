@@ -74,6 +74,11 @@
 .padding-nets-15 {
   padding: 0px 15px;
 }
+
+.product:hover {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
 @media (min-width: 890px) {
   .font-size-25lg {
     font-size: 25px;
@@ -86,5 +91,10 @@
 @media (min-width: 1002px) {
   .font-size-19xlg {
     font-size: 19px;
+  }
+  .product-article img {
+    width: 250px;
+    height: 200px;
+    object-fit: cover;
   }
 }

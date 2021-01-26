@@ -50,17 +50,19 @@
       </ul>
     </nav>
   </div>
-  <h1 class="color-primary font-arimo">
-    Hola, <%= user ? user.first_name : "Amigo!" %>
-  </h1>
-  <% if(user) { %>
-  <form action="/logout" method="POST">
-    <button
-      type="submit"
-      class="no-border center-text font-jura font-size-20lg"
-    >
-      Cerrar Sesión
-    </button>
-  </form>
-  <% } %>
+  <div class="header-user d-flex margin-5">
+    <% if(user) { %>
+    <form action="/logout" method="POST">
+      <button
+        type="submit"
+        class="no-border center-text font-jura font-size-20lg color-primary margin-5"
+      >
+        <i class="fas fa-power-off"></i>
+      </button>
+    </form>
+    <% } %>
+    <h1 class="color-primary font-arimo font-size-14 margin-5">
+      Hola, <%= user ? user.first_name : "Amigo!" %>
+    </h1>
+  </div>
 </header>

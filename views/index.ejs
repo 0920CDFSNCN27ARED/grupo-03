@@ -11,9 +11,9 @@
       Agrego texto real a los parrafos e incluyo etiquetas semanticas-->
       <section class="flex-wrap width-100">
         <img
-          src="images/products/banner3.jpg"
+          src="images/products/lavanda-1.jpg"
           alt="Cosmetica Natural"
-          class="width-100 hide-lg"
+          class="width-100 hide-lg banner-index"
         />
         <section>
           <div class="color-secondary font-arimo hidden d-flex-lg">
@@ -87,7 +87,7 @@
       <section class="index-products">
         <h3 class="font-jura">Productos destacados</h3>
 
-        <div class="d-flex-lg width-100vw justify-center">
+        <div class="d-flex-md d-flex-lg width-100vw justify-center">
           <% for (let i = 0; i < 3; i++) { %> <% let product = products[i]; %>
           <%-include('products/product-card', {product:products[i]}) %> <% } %>
         </div>

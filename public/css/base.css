@@ -112,7 +112,7 @@ li {
 .index-products {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -204,6 +204,9 @@ li {
 }
 .margin-10 {
   margin: 10px;
+}
+.margin-b30 {
+  margin-bottom: 30px;
 }
 
 .price-cart {
