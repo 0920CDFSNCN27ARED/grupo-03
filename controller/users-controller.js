@@ -10,7 +10,9 @@ const controller = {
   login: (req, res) => {
     console.log(req.cookies.rememberMe);
 
-    res.render("users/login", { loginData: req.cookies.rememberMe });
+    res.render("users/login", {
+      loginData: req.cookies.rememberMe,
+    });
   },
   autLogin: (req, res) => {
     const users = getUsers();
