@@ -8,15 +8,11 @@ const saveUsers = require("../utils/save-users");
 
 const controller = {
   login: (req, res) => {
-    console.log("rememberMeCookie", req.cookies.rememberMe);
+    console.log(req.cookies.rememberMe);
+
     res.render("users/login", { loginData: req.cookies.rememberMe });
   },
   autLogin: (req, res) => {
-    let errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.redirect("login", { errors: errors.array() });
-    }
-
     const users = getUsers();
     const user = users.find((user) => {
       return (

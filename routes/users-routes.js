@@ -21,15 +21,13 @@ let upload = multer({ storage: storage });
 
 const { check, validationResult, body } = require("express-validator");
 const assertUser = require("../middlewares/assert-user");
+const validateLogin = require("../middlewares/validate-login");
 router.get("/login", usersController.login);
 router.post("/logout", usersController.logout);
 router.post(
   "/",
-
   [
     body("user")
-      .isAlphanumeric()
-      .withMessage("El campo usuario debe ser alfanumerico")
       .isLength({ min: 1, max: 16 })
       .withMessage("El campo usuario debe estar completo"),
     body("password")
@@ -38,6 +36,7 @@ router.post(
       .isLength({ min: 8, max: 16 })
       .withMessage("La clave debe tener entre 8 y 16 caracteres"),
   ],
+  validateLogin,
   assertUser,
 
   usersController.autLogin
