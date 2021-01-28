@@ -45,7 +45,7 @@ router.post(
 router.get("/register", usersController.register);
 router.post(
   "/register",
-  upload.any(),
+  upload.single("image"),
   [
     body("first_name")
       .isAlpha()

@@ -35,8 +35,8 @@ router.get(
   assertIsAdmin,
   productController.showCreate
 );
-router.put("/:id", upload.any(), productController.edit);
+router.put("/:id", upload.single("image"), productController.edit);
 router.delete("/:id", productController.delete);
-router.post("/", upload.any(), productController.create);
+router.post("/", upload.single("image"), productController.create);
 
 module.exports = router;

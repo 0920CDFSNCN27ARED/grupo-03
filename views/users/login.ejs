@@ -32,8 +32,9 @@
               name="user"
               id="user"
               placeholder="Nombre de usuario"
-              value='<%= loginData ?
-            loginData.user : "" %>'
+              value=' <% if(loginData){ %>
+                <%= loginData.user %> 
+                <%} else { "" } %>'
             />
             <input
               class="no-border radius-5 center-text font-bellefair font-size-20lg"
@@ -41,8 +42,9 @@
               name="password"
               id="password"
               placeholder="Contrasena"
-              value='<%= loginData ?
-            loginData.password : "" %>'
+              value=' <% if(loginData){ %>
+                <%= loginData.user %> 
+                <%} else { "" } %>'
             />
 
             <button

@@ -47,7 +47,7 @@ const controller = {
       }
     }
 
-    const filename = req.files ? req.files[0].filename : productEdit.image;
+    const filename = req.file ? req.file.filename : productEdit.image;
 
     productEdit.name = req.body.name;
     productEdit.price = req.body.price;
@@ -82,7 +82,7 @@ const controller = {
       //Idmayor + 1,
 
       ...req.body,
-      image: req.files[0].filename,
+      image: req.file.filename,
     };
 
     products.push(productCreate);

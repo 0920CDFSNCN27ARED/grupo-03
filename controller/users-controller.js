@@ -14,7 +14,7 @@ const controller = {
   autLogin: (req, res) => {
     let errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.render("users/login", { errors: errors.array() });
+      return res.redirect("login", { errors: errors.array() });
     }
 
     const users = getUsers();
@@ -62,7 +62,7 @@ const controller = {
       last_name: req.body.last_name,
       user: req.body.user,
       mail: req.body.email,
-      image: req.files[0].filename,
+      image: req.file.filename,
       password: bcrypt.hashSync(req.body.password, 10),
     };
 

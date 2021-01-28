@@ -1,12 +1,12 @@
 [
     {
         "id": 1,
-        "name": "Glove - Cutting",
+        "name": "EJEMPLO",
         "description": "libero nullam sit amet turpis elementum ligula vehicula consequat morbi",
-        "price": 4461.4,
-        "image": "product_1.jpg",
-        "category": "piel",
-        "color": "Puce"
+        "price": "1.4",
+        "image": "image-1611791204450.jpg",
+        "category": "in-sale",
+        "discount": "2"
     },
     {
         "id": 2,
@@ -2707,5 +2707,14 @@
         "category": "En oferta",
         "description": "Serum facial con acido hialurónico al 5%",
         "image": "image-1611690591163.jpg"
+    },
+    {
+        "id": 302,
+        "name": "ejemplo",
+        "price": "12345",
+        "discount": "1",
+        "category": "En oferta",
+        "description": "",
+        "image": "image-1611791036157.png"
     }
 ]
