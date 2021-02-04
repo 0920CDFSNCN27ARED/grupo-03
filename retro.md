@@ -57,7 +57,7 @@
 
 -dejar de dilatar el momento de hacer las retros.
 
-## RETROSPECTIVA (Sprint IIII)
+## RETROSPECTIVA (Sprint IV)
 
 1. Comenzar a hacer
 
@@ -89,3 +89,38 @@
 
 - dejar de dilatar el momento de hacer las retros.
 - Querer hacer siempre todo todas juntas.
+
+## RETROSPECTIVA (Sprint V)
+
+1. Comenzar a hacer
+
+- Intentar implementar Bootstrap.
+- Hacer pair programming en sesiones mas cortas pero mas frecuentes.
+
+2. Hacer más
+
+- Separar en tareas menores para resolver solas.
+- Revisar el código.
+- Delegar en el resto del equipo si la tarea es muy compleja
+- División de tareas.
+- Mas investigación sobre funcionalidades de métodos y propiedades que vamos incorporando.
+
+3. Continuar haciendo
+
+- Reuniones periódicas.
+- Pair programming.
+- Continuar con la comunicación fluida.
+- Cumplir con fechas establecidas para las entregas.
+- Trabajar con Trello.
+- Seguir ordenando y achicando el código.
+
+4. Hacer menos
+
+- Tareas muy complejas en vez de separarlas en varias de menor complejidad.
+
+- Dejar lo mas complejo para el final.
+
+5. Dejar de hacer
+
+- Dejar de dilatar el momento de hacer las retros.
+- Depender del grupo en su totalidad para generar nuevo contenido en el proyecto.
