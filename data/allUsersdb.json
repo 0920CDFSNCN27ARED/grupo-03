@@ -3188,5 +3188,14 @@
         "mail": "martina.garavento@gmail.com",
         "image": "image-1611868267504.png",
         "password": "$2b$10$L9elaHyP9GTuAM7VpeuiCewEKgNCeI09OFYX7iNBeVS4l2c5uKE7K"
+    },
+    {
+        "id": 322,
+        "first_name": "martina",
+        "last_name": "garavento",
+        "user": "mg",
+        "mail": "martina.garavento@gmail.com",
+        "image": "image-1612631074965.png",
+        "password": "$2b$10$eTQW/Q8MiT14i3Kj4oviU.m6RFI6hGUJ7b4duuvOAke7/VCdxYR12"
     }
 ]
