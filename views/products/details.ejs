@@ -29,7 +29,7 @@
                 $ <%= product.price %>
               </h4>
             </article>
-
+            <% if(!user.admin) { %>
             <article>
               <form action="/cart" method="GET">
                 <div class="details-form d-flex width-100 no-border-lg">
@@ -52,6 +52,7 @@
                 </p>
               </div>
             </article>
+            <% } %>
           </div>
 
           <article
