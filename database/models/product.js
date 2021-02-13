@@ -37,12 +37,13 @@ module.exports = function (sequelize, dataTypes) {
       as: "productCategory",
       foreignKey: "categoryId",
     });
-    Product.hasMany(models.ProductSale),
-      {
-        as: "ProductsSales",
-        foreignKey: "productId",
-      };
+    Product.belongsToMany(models.Sales, {
+      as: "sales",
+      trhough: "productSale",
+      foreignKey: "productId",
+      otherKey: "saleId",
+      timestamps: false,
+    });
   };
-
   return CategoryUser;
 };
