@@ -5,6 +5,13 @@ const fs = require("fs");
 const { stringify } = require("querystring");
 const getProducts = require("../utils/get-products");
 const saveProducts = require("../utils/save-products");
+const {
+  ProductCategory,
+  Product,
+  ProductSale,
+  Sale,
+} = require("../database/models");
+const productService = require("../services/productService");
 
 const controller = {
   products: (req, res) => {

@@ -5,6 +5,8 @@ const { validationResult } = require("express-validator");
 
 const getUsers = require("../utils/get-users");
 const saveUsers = require("../utils/save-users");
+const { CategoryUser, User, Sale } = require("../database/models");
+const userService = require("../services/userService");
 
 const controller = {
   login: (req, res) => {
