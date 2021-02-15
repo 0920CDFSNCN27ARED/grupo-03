@@ -1,4 +1,4 @@
-
+CREATE DATABASE `cala_db`;
 USE `cala_db`;
 
 CREATE TABLE `category_users`(

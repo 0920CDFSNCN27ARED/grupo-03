@@ -24,6 +24,18 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
     },
   });
+  ProductSale.associate = function (models) {
+    ProductSale.belongsTo(models.Product, {
+      as: "product",
+      foreignKey: "productId",
+    });
+    ProductSale.associate = function (models) {
+      ProductSale.belongsTo(models.Sale, {
+        as: "sale",
+        foreignKey: "saleId",
+      });
+    };
+  };
 
   return ProductSale;
 };
