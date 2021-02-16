@@ -12,14 +12,17 @@ const {
   Sale,
 } = require("../database/models");
 const productService = require("../services/productService");
+const product = require("../database/models/product");
 
 const controller = {
   products: (req, res) => {
     const products = getProducts();
-
     res.render("products/products", { products: products });
   },
-
+  // products: async (req, res) => {
+  //       const products = await productService.findAll();
+  //       res.render("products/products", { products });
+  // },
   details: function (req, res) {
     const products = getProducts();
     let i = products.findIndex((prod) => {
@@ -28,6 +31,10 @@ const controller = {
 
     res.render("products/details", { product: products[i] });
   },
+  // details: async (req, res) => {
+  //   const product = await productService.findOne(req.params.id);
+  //   res.render("products/details", { product });
+  // },
 
   showEdit: (req, res) => {
     const products = getProducts();
@@ -43,7 +50,11 @@ const controller = {
       product: products[i],
     });
   },
-
+  // showEdit: async (req, res) => {
+  //   const products = await productService.findOne(req.params.id);
+  //   ver donde poner if (carpeta component? o en un middelware?)
+  //   res.render("products/edit", { products, title: "Edit Product"});
+  // },
   edit: (req, res) => {
     const products = getProducts();
     let productEdit = {};
@@ -68,10 +79,21 @@ const controller = {
 
     res.redirect("/products");
   },
+  // edit: async (req, res) => {
+  //   const products = await productService.findOne(req.params.id);
+  //   await Product.update({
+  //     ...req.body,
+  //     image: "/images/products/" + req.file.filename,
+  //   });
+  //   res.redirect("/products");
+  // },
 
   showCreate: (req, res) => {
     res.render("products/create");
   },
+  // showCreate: async (req, res) => {
+  //   res.render("products/create", { title: "Create Product" });
+  // },
 
   create: (req, res) => {
     const products = getProducts();
@@ -81,7 +103,6 @@ const controller = {
     //    Idmayor = products[i].id;
     //  }
     //}
-
     //products[products.length-1].id
 
     const productCreate = {
@@ -97,6 +118,13 @@ const controller = {
 
     res.redirect("/products");
   },
+  // create: async (req, res) => {
+  //   const product = await Product.create({
+  //     ...req.body,
+  //     image: req.file.filename,
+  //   });
+  //   res.redirect(`/products/${product.id}`);
+  // },
 
   delete: (req, res) => {
     let products = getProducts();
@@ -116,6 +144,14 @@ const controller = {
 
     res.redirect("/products");
   },
+  // delete: async (req, res) => {
+  //   await Product.destroy({
+  //     where: {
+  //       id: req.params.id,
+  //     },
+  //   });
+  //   res.redirect("/product");
+  // },
 };
 
 module.exports = controller;

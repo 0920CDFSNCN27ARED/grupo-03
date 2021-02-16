@@ -45,5 +45,5 @@ module.exports = function (sequelize, dataTypes) {
       timestamps: false,
     });
   };
-  return CategoryUser;
+  return Product;
 };
