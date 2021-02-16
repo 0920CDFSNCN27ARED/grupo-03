@@ -16,6 +16,7 @@ const controller = {
       loginData: req.cookies.rememberMe,
     });
   },
+
   autLogin: (req, res) => {
     const users = getUsers();
     const user = users.find((user) => {
@@ -47,6 +48,9 @@ const controller = {
   register: (req, res) => {
     res.render("users/register");
   },
+  // register: async (req, res) => {
+  //   res.render("users/register", { title: "Register User" });
+  // },
   autRegister: (req, res) => {
     // console.log(validationResult(req));
     let errors = validationResult(req);
@@ -81,6 +85,14 @@ const controller = {
 
     res.redirect("/");
   },
+  // autRegister: async (req, res) => {
+  //   const users = await User.create({
+  //     ...req.body,
+  //     image: req.file.filename,
+  //     password: bcrypt.hashSync(req.body.password, 10),
+  //   });
+  //   res.redirect("/");
+  // },
 };
 
 module.exports = controller;

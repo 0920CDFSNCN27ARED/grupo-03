@@ -1,3 +1,4 @@
+"use strict";
 module.exports = function (sequelize, dataTypes) {
   const ProductCategory = sequelize.define("ProductCategory", {
     id: {
