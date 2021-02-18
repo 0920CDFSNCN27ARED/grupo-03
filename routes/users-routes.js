@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const usersController = require("../controller/users-controller");
 const path = require("path");
+const assertSignedIn = require("../middlewares/assert-signed-in");
+const assertIsAdmin = require("../middlewares/assert-is-admin");
 
 //inicio multer
 const multer = require("multer");
@@ -81,7 +83,7 @@ router.post(
   ],
   usersController.autRegister
 );
-router.get("/profile/:id", usersController.profile);
+router.get("/profile/:id", assertSignedIn, usersController.profile);
 router.get("/:id/edit", usersController.showEditProf);
 
 router.put("/:id", upload.single("image"), usersController.editProf);

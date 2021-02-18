@@ -49,6 +49,7 @@
   width: 77%;
   margin-top: 20px;
   margin-bottom: 20px;
+  object-fit: cover;
 }
 .product-article-details h4 {
   align-self: center;

@@ -96,8 +96,8 @@ const controller = {
   profile: (req, res) => {
     const users = getUsers();
     let i = users.findIndex((user) => {
-      return user.id == req.params.id;
-    });
+      return user.id == req.params.id; //falta que solamente entre al
+    }); //perfil de usuario logueado(body) y que no cambie el usauario. Mirar trello.
 
     res.render("users/profile", { user: users[i] });
   },
