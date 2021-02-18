@@ -5,7 +5,7 @@ const { validationResult } = require("express-validator");
 
 const getUsers = require("../utils/get-users");
 const saveUsers = require("../utils/save-users");
-const { CategoryUser, User, Sale } = require("../database/models");
+// const { CategoryUser, User, Sale } = require("../database/models");
 const userService = require("../services/userService");
 
 const controller = {
@@ -93,6 +93,55 @@ const controller = {
   //   });
   //   res.redirect("/");
   // },
+  profile: (req, res) => {
+    const users = getUsers();
+    let i = users.findIndex((user) => {
+      return user.id == req.params.id;
+    });
+
+    res.render("users/profile", { user: users[i] });
+  },
+  showEditProf: (req, res) => {
+    const users = getUsers();
+    let i = users.findIndex((user) => {
+      return user.id == req.params.id;
+    });
+
+    res.render("users/editProfile", {
+      user: users[i],
+    });
+  },
+  editProf: (req, res) => {
+    const users = getUsers();
+    let profileEdit = {};
+
+    for (let i = 0; i < users.length; i++) {
+      if (req.params.id == users[i].id) {
+        profileEdit = users[i];
+      }
+    }
+
+    const filename = req.file ? req.file.filename : profileEdit.image;
+
+    profileEdit.name = req.body.name;
+    profileEdit.price = req.body.price;
+    profileEdit.discount = req.body.discount;
+    profileEdit.category = req.body.category;
+    profileEdit.description = req.body.description;
+    profileEdit.image = filename;
+    profileEdit.color = req.body.color;
+
+    saveUsers(users);
+
+    res.redirect("/profile");
+  },
+  delete: (req, res) => {
+    let products = getProducts();
+    let productDelete = products.filter((product) => {
+      return product.id == req.params.id;
+    });
+    let productsDeleted = productDelete;
+  },
 };
 
 module.exports = controller;

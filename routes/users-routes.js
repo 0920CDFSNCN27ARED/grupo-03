@@ -81,5 +81,9 @@ router.post(
   ],
   usersController.autRegister
 );
+router.get("/profile/:id", usersController.profile);
+router.get("/:id/edit", usersController.showEditProf);
 
+router.put("/:id", upload.single("image"), usersController.editProf);
+router.delete("/:id", usersController.delete);
 module.exports = router;

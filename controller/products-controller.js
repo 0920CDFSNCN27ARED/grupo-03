@@ -5,12 +5,12 @@ const fs = require("fs");
 const { stringify } = require("querystring");
 const getProducts = require("../utils/get-products");
 const saveProducts = require("../utils/save-products");
-const {
-  ProductCategory,
-  Product,
-  ProductSale,
-  Sale,
-} = require("../database/models");
+// const {
+//   ProductCategory,
+//   Product,
+//   ProductSale,
+//   Sale,
+// } = require("../database/models");
 const productService = require("../services/productService");
 const product = require("../database/models/product");
 
@@ -52,7 +52,11 @@ const controller = {
   },
   // showEdit: async (req, res) => {
   //   const products = await productService.findOne(req.params.id);
-  //   ver donde poner if (carpeta component? o en un middelware?)
+  //  if (products == null) {
+  //     return res
+  //     .status(404)
+  //     .send("404 not found. <br> ¡Lo siento, no tenemos ese producto!");
+  // }
   //   res.render("products/edit", { products, title: "Edit Product"});
   // },
   edit: (req, res) => {

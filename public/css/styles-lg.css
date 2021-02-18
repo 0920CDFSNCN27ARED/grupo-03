@@ -78,7 +78,10 @@
 .product:hover {
   box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-
+.profile-lg {
+  padding: 53px;
+  margin-top: 25px;
+}
 @media (min-width: 890px) {
   .font-size-25lg {
     font-size: 25px;

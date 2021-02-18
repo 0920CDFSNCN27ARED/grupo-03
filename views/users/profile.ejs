@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("../partials/head-base", { title: user.user}) %>
+  </head>
+
+  <body class="background-main">
+    <%-include("../partials/header") %>
+    <main class="flex-wrap">
+      <section
+        class="seccion-details-conteiner flex-column background-main width-100"
+      >
+        <div class="padding-7 hidden-md">
+          <a href="/"><i class="fas fa-home color-primary"></i></a>
+        </div>
+
+        <div class="d-flex-lg width-100vw">
+          <div class="width-50lg">
+            <div>
+              <h1 class="font-arimo color-primary margin-10 center-text">
+                <%= user.first_name %> <%= user.last_name %>
+              </h1>
+            </div>
+            <article
+              class="product-article-details flex-column no-border radius-5"
+            >
+              <img
+                src="/images/users/<%= user.image %>"
+                alt="<%= user.user %>"
+                class="width-77 product-img"
+              />
+            </article>
+          </div>
+
+          <article
+            class="flex-column text-details-container font-arimo width-50lg profile-lg"
+          >
+            <div class="flex-column">
+              <h1 class="font-arimo color-primary margin-10 center-text">
+                <%= user.email %>
+              </h1>
+              <h1 class="font-arimo color-primary margin-10 center-text">
+                <%= user.user %>
+              </h1>
+            </div>
+            <div class="d-flex">
+              <div class="details-form d-flex width-100 no-border-lg">
+                <a href="/<%= user.id  %>/edit " class="width-100"
+                  ><button type="submit" class="radius-5 border-1">
+                    Editar
+                  </button></a
+                >
+              </div>
+              <div class="details-form d-flex width-100 no-border-lg">
+                <form
+                  action="/users/<%= user.id  %>?_method=DELETE"
+                  method="POST"
+                  class="width-100"
+                >
+                  <button type="submit" class="radius-5 border-1">
+                    Borrar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <%-include("../partials/footer") %>
+  </body>
+</html>

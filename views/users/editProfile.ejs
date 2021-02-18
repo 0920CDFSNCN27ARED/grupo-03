@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%-include("../partials/head-base",{title:"Editar"}) %>
+    <link rel="stylesheet" href="/css/forms.css" />
+  </head>
+
+  <body class="background-main">
+    <%-include("../partials/header") %>
+    <!--Consultar como se hace el captcha-->
+    <main class="background-main main-form-container flex-column wrap forms-lg">
+      <section class="form-container center-text radius-5 width-auto">
+        <h3 class="margin-10 font-arimo font-size-25lg">
+          Estás editando: <i><%= user.user %></i>
+        </h3>
+        <form
+          action="/users/<%= user.id %>?_method=PUT"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <p class="font-jura font-size-14 flex-column font-size-20lg">
+            <label for="first_name" class="font-weight-bold margin-5"
+              >Nombre del Usuarix:</label
+            >
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              placeholder="Ej: Juana "
+              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75"
+              value="<%= user.first_name %>"
+            />
+          </p>
+          <p class="font-jura font-size-14 flex-column font-size-20lg">
+            <label for="last_name" class="font-weight-bold margin-5"
+              >Apellido del Usuarix:</label
+            >
+            <input
+              type="text"
+              id="last_name"
+              name="last_name"
+              placeholder="Ej: de Arco"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75"
+              value="<%= user.last_name %>"
+            />
+          </p>
+          <p class="font-jura font-size-14 flex-column font-size-20lg">
+            <label for="user" class="font-weight-bold margin-5">
+              Usuarix:</label
+            >
+            <input
+              type="text"
+              id="user"
+              name="user"
+              placeholder="Ej: Juanita_laLoca"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75"
+              value="<%= user.user %>"
+            />
+          </p>
+          <p class="font-jura font-size-14 flex-column font-size-20lg">
+            <label for="email" class="font-weight-bold margin-5"> Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Ej: laloquita@gmail.com"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75"
+              value="<%= user.email %>"
+            />
+          </p>
+          <!-- <p class="font-jura font-size-14 flex-column font-size-20lg">
+              <label for="password" class="font-weight-bold margin-5" > Tu contraseña:</label>
+              <textarea name="password" id="password"
+              class="form-input margin-5 width-75 align-self-center"> aca hay que imprimir user.password</textarea>
+            </p>   -->
+          <div class="flex-column align-center">
+            <p>Imagen actual</p>
+            <img
+              src="/images/users/<%= user.image %>"
+              alt="<%= user.name %> "
+              class="product-img-fit product-img"
+            />
+
+            <input type="file" name="image" id="image" />
+          </div>
+
+          <button
+            type="submit"
+            class="no-border center-text font-jura font-size-14 font-size-20lg margin-5"
+          >
+            Editar
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <%-include("../partials/footer") %>
+  </body>
+</html>

@@ -1,9 +1,9 @@
-const {
-  ProductCategory,
-  Product,
-  ProductSale,
-  Sale,
-} = require("../database/models");
+// const {
+//   ProductCategory,
+//   Product,
+//   ProductSale,
+//   Sale,
+// } = require("../database/models");
 
 module.exports = {
   findOne: async (id) => {
