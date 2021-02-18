@@ -38,9 +38,9 @@ module.exports = function (sequelize, dataTypes) {
       as: "productCategory",
       foreignKey: "categoryId",
     });
-    Product.belongsToMany(models.Sales, {
+    Product.belongsToMany(models.Sale, {
       as: "sales",
-      trhough: "productSale",
+      through: models.ProductSale,
       foreignKey: "productId",
       otherKey: "saleId",
       timestamps: false,

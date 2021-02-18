@@ -1,6 +1,6 @@
 "use strict";
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
   const ProductSale = sequelize.define("ProductSale", {
     id: {
       primaryKey: true,

@@ -2,7 +2,7 @@
 
 const productSale = require("./productSale");
 
-module.exports = (sequelize, DataTypes) => {
+module.exports = (sequelize, dataTypes) => {
   const Sale = sequelize.define("Sale", {
     id: {
       primaryKey: true,
@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     date: {
       allowNull: false,
-      type: dataTypes.DATETIME,
+      type: dataTypes.DATE,
     },
     userId: {
       allowNull: false,
@@ -28,13 +28,13 @@ module.exports = (sequelize, DataTypes) => {
       as: "users",
       foreignKey: "userId",
     });
-    Sale.belongsTo(models.paymentMethod, {
+    Sale.belongsTo(models.PaymentMethod, {
       as: "paymentMethods",
       foreignKey: "payMethodId",
     });
-    Sale.belongsToMany(models.Products, {
+    Sale.belongsToMany(models.Product, {
       as: "products",
-      trhough: "productSale",
+      through: models.ProductSale,
       foreignKey: "saleId",
       otherKey: "productId",
       timestamps: false,

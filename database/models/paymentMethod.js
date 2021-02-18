@@ -1,6 +1,6 @@
 "use strict";
-module.exports = (sequelize, DataTypes) => {
-  const paymentMethod = sequelize.define("paymentMethod", {
+module.exports = (sequelize, dataTypes) => {
+  const paymentMethod = sequelize.define("PaymentMethod", {
     id: {
       primaryKey: true,
       autoIncrement: true,
@@ -9,11 +9,11 @@ module.exports = (sequelize, DataTypes) => {
     },
     method: {
       allowNull: false,
-      type: dataTypes.VARCHAR,
+      type: dataTypes.STRING(45),
     },
   });
   paymentMethod.associate = function (models) {
-    paymentMethod.hasMany(models.Sales, {
+    paymentMethod.hasMany(models.Sale, {
       as: "sales",
       foreignKey: "payMethodId",
     });

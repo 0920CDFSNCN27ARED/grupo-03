@@ -43,12 +43,12 @@ module.exports = function (sequelize, dataTypes) {
       as: "categoryUser",
       foreignKey: "categoryId",
     });
-    User.hasMany(models.Sales),
+    User.hasMany(models.Sale),
       {
         as: "sales",
         foreignKey: "userId",
       };
   };
 
-  return CategoryUser;
+  return User;
 };

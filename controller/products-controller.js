@@ -5,24 +5,24 @@ const fs = require("fs");
 const { stringify } = require("querystring");
 const getProducts = require("../utils/get-products");
 const saveProducts = require("../utils/save-products");
-// const {
-//   ProductCategory,
-//   Product,
-//   ProductSale,
-//   Sale,
-// } = require("../database/models");
+const {
+  ProductCategory,
+  Product,
+  ProductSale,
+  Sale,
+} = require("../database/models");
 const productService = require("../services/productService");
 const product = require("../database/models/product");
 
 const controller = {
-  products: (req, res) => {
-    const products = getProducts();
-    res.render("products/products", { products: products });
-  },
-  // products: async (req, res) => {
-  //       const products = await productService.findAll();
-  //       res.render("products/products", { products });
+  // products: (req, res) => {
+  //   const products = getProducts();
+  //  res.render("products/products", { products: products });
   // },
+  products: async (req, res) => {
+    const products = await productService.findAll();
+    res.render("products/products", { products });
+  },
   details: function (req, res) {
     const products = getProducts();
     let i = products.findIndex((prod) => {
