@@ -66,7 +66,10 @@
     </form>
     <% } %>
     <h1 class="color-primary font-arimo font-size-14 margin-5">
-      Hola, <%= user ? user.first_name : "Amigo!" %>
+      Hola, <%= user ? user.firstName : "Amigo!" %>
     </h1>
+    <% if(user) { %>
+    <a href="/profile/<%=user.id%> ">Mi perfil</a>
+    <% } %>
   </div>
 </header>

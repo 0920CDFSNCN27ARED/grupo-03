@@ -1,10 +1,3 @@
-const path = require("path");
-
-const fs = require("fs");
-
-const { stringify } = require("querystring");
-const getProducts = require("../utils/get-products");
-const saveProducts = require("../utils/save-products");
 const {
   ProductCategory,
   Product,
@@ -12,44 +5,16 @@ const {
   Sale,
 } = require("../database/models");
 const productService = require("../services/productService");
-const product = require("../database/models/product");
 
 const controller = {
-  // products: (req, res) => {
-  //   const products = getProducts();
-  //  res.render("products/products", { products: products });
-  // },
   products: async (req, res) => {
     const products = await productService.findAll();
     res.render("products/products", { products });
   },
-  // details: function (req, res) {
-  //   const products = getProducts();
-  //   let i = products.findIndex((prod) => {
-  //     return prod.id == req.params.id;
-  // });
-
-  //  res.render("products/details", { product: products[i] });
-  // },
   details: async (req, res) => {
     const product = await productService.findOne(req.params.id);
     res.render("products/details", { product });
   },
-
-  // showEdit: (req, res) => {
-  //   const products = getProducts();
-  //   const i = products.findIndex((prod) => {
-  //     return prod.id == req.params.id;
-  //   });
-  //   if (i == null) {
-  //     return res
-  //       .status(404)
-  //       .send("404 not found. <br> ¡Lo siento, no tenemos ese producto!");
-  //   }
-  //   res.render("products/edit", {
-  //     product: products[i],
-  //   });
-  // },
   showEdit: async (req, res) => {
     const products = await productService.findOne(req.params.id);
     if (products == null) {
@@ -59,30 +24,6 @@ const controller = {
     }
     res.render("products/edit", { product: products, title: "Edit Product" });
   },
-  //edit: (req, res) => {
-  //  const products = getProducts();
-  //  let productEdit = {};
-
-  //    for (let i = 0; i < products.length; i++) {
-  //    if (req.params.id == products[i].id) {
-  //     productEdit = products[i];
-  //   }
-  //  }
-
-  //    const filename = req.file ? req.file.filename : productEdit.image;
-
-  //  productEdit.name = req.body.name;
-  //  productEdit.price = req.body.price;
-  //  productEdit.discount = req.body.discount;
-  //  productEdit.category = req.body.category;
-  //  productEdit.description = req.body.description;
-  //  productEdit.image = filename;
-  //  productEdit.color = req.body.color;
-
-  //    saveProducts(products);
-
-  //   res.redirect("/products");
-  // },
   edit: async (req, res) => {
     const products = await productService.findOne(req.params.id);
     const filename = req.file ? req.file.filename : products.image;
@@ -95,43 +36,21 @@ const controller = {
     );
     res.redirect("/products");
   },
-
-  //showCreate: (req, res) => {
-  //  res.render("products/create");
-  //},
   showCreate: async (req, res) => {
     res.render("products/create", { title: "Create Product" });
   },
-
-  //create: (req, res) => {
-  //const products = getProducts();
-  //let Idmayor = products[0].id;
-  //for (let i = 0; i < products.length; i++) {
-  //  if (products[i].id > Idmayor) {
-  //    Idmayor = products[i].id;
-  //  }
-  //}
-  //products[products.length-1].id
-
-  //const productCreate = {
-  // id: products[products.length - 1].id + 1,
-  //Idmayor + 1,
-
-  //  ...req.body,
-  //  image: req.file.filename,
-  //};
-
-  // products.push(productCreate);
-  // saveProducts(products);
-
-  // res.redirect("/products");
-  // },
   create: async (req, res) => {
+    console.log(req.body);
     const product = await Product.create({
-      ...req.body,
+      name: req.body.name,
+      description: req.body.description,
+      price: req.body.price,
       image: req.file.filename,
+      categoryId: req.body.category,
+      discount: req.body.discount,
+      color: req.body.color,
     });
-    res.redirect(`/products/${product.id}`);
+    res.redirect(`/products/details/${product.id}`);
   },
 
   //delete: (req, res) => {
@@ -152,6 +71,12 @@ const controller = {
   //    res.redirect("/products");
   //},
   delete: async (req, res) => {
+    await ProductSale.destroy({
+      where: {
+        productId: req.params.id,
+      },
+    });
+
     await Product.destroy({
       where: {
         id: req.params.id,

@@ -57,19 +57,39 @@
             <select name="category" id="category" class="no-border radius-5
             center-text font-bellefair font-size-20lg margin-5 height-5-vh width-75 align-self-center">
             <option value="">Elegí</option>
-            <option>En oferta</option>
-            <option>Últimos agregados</option>
+            <option value='1'>Cabello</option>
+           <option value='2'>Cuerpo</option>
+           <option value='3'>Rostro</option>
+           <option value='4'>Manos</option>
+           <option value='5'>Kits</option>
+           <option value='6'>Higiene</option>
+           <option value='7'>Pies</option>
+           <option value='8'>Accesorios</option>
+           
             />
           </p>
           <p class="font-jura font-size-14 flex-column font-size-20lg">
-            <label for="description" class="font-weight-bold margin-5"
+          
+           <p> <label for="description" class="font-weight-bold margin-5"
               >Descripción:</label
-            >
+            ></p>
             <textarea
               name="description"
               id="description"
               class="form-input margin-5 width-75 align-self-center"
             ></textarea>
+          </p>
+          <p class="font-jura font-size-14 flex-column font-size-20lg">
+            <label for="color" class="font-weight-bold margin-5"
+              >Color del producto:</label
+            >
+            <input
+              type="text"
+              id="color"
+              name="color"
+              placeholder="Ej: celeste"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75"
+            />
           </p>
           <p>Imagen </p>
 			<input type="file" name="image" id="image">

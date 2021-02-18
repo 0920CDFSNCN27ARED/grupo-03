@@ -1,11 +1,12 @@
-const getUsers = require("../utils/get-users");
+const { CategoryUser, User, Sale } = require("../database/models");
+const userService = require("../services/userService");
 
-function authenticate(req, res, next) {
+async function authenticate(req, res, next) {
   const id = req.session.loggedUserId;
 
   if (!id) return next();
 
-  const users = getUsers();
+  const users = await await userService.findAll();
 
   const loggedUser = users.find((user) => {
     return user.id == id;
