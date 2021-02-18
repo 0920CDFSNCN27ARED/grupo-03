@@ -195,7 +195,9 @@ li {
   flex-direction: column;
   padding-left: 5px;
 }
-
+.margin-left {
+  margin-left: 40px;
+}
 .margin-rigth-13 {
   margin-right: 13px;
 }

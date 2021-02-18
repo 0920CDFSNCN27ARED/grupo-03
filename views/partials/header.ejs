@@ -54,22 +54,26 @@
       </ul>
     </nav>
   </div>
-  <div class="header-user d-flex margin-5">
+  <div class="header-user flex-column margin-5">
+    <div class="d-flex">
+      <% if(user) { %>
+      <form action="/logout" method="POST">
+        <button
+          type="submit"
+          class="no-border center-text font-jura font-size-20lg color-primary margin-5"
+        >
+          <i class="fas fa-power-off"></i>
+        </button>
+      </form>
+      <% } %>
+      <h1 class="color-primary font-arimo font-size-14 margin-5">
+        Hola, <%= user ? user.firstName : "Amigo!" %>
+      </h1>
+    </div>
     <% if(user) { %>
-    <form action="/logout" method="POST">
-      <button
-        type="submit"
-        class="no-border center-text font-jura font-size-20lg color-primary margin-5"
-      >
-        <i class="fas fa-power-off"></i>
-      </button>
-    </form>
-    <% } %>
-    <h1 class="color-primary font-arimo font-size-14 margin-5">
-      Hola, <%= user ? user.firstName : "Amigo!" %>
-    </h1>
-    <% if(user) { %>
-    <a href="/profile/<%=user.id%> ">Mi perfil</a>
+    <a href="/profile/<%=user.id%> " class="margin-left font-size-14"
+      >Mi perfil</a
+    >
     <% } %>
   </div>
 </header>
