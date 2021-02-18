@@ -23,139 +23,142 @@ const controller = {
     const products = await productService.findAll();
     res.render("products/products", { products });
   },
-  details: function (req, res) {
-    const products = getProducts();
-    let i = products.findIndex((prod) => {
-      return prod.id == req.params.id;
-    });
+  // details: function (req, res) {
+  //   const products = getProducts();
+  //   let i = products.findIndex((prod) => {
+  //     return prod.id == req.params.id;
+  // });
 
-    res.render("products/details", { product: products[i] });
-  },
-  // details: async (req, res) => {
-  //   const product = await productService.findOne(req.params.id);
-  //   res.render("products/details", { product });
+  //  res.render("products/details", { product: products[i] });
   // },
+  details: async (req, res) => {
+    const product = await productService.findOne(req.params.id);
+    res.render("products/details", { product });
+  },
 
-  showEdit: (req, res) => {
-    const products = getProducts();
-    const i = products.findIndex((prod) => {
-      return prod.id == req.params.id;
-    });
-    if (i == null) {
+  // showEdit: (req, res) => {
+  //   const products = getProducts();
+  //   const i = products.findIndex((prod) => {
+  //     return prod.id == req.params.id;
+  //   });
+  //   if (i == null) {
+  //     return res
+  //       .status(404)
+  //       .send("404 not found. <br> ¡Lo siento, no tenemos ese producto!");
+  //   }
+  //   res.render("products/edit", {
+  //     product: products[i],
+  //   });
+  // },
+  showEdit: async (req, res) => {
+    const products = await productService.findOne(req.params.id);
+    if (products == null) {
       return res
         .status(404)
         .send("404 not found. <br> ¡Lo siento, no tenemos ese producto!");
     }
-    res.render("products/edit", {
-      product: products[i],
-    });
+    res.render("products/edit", { product: products, title: "Edit Product" });
   },
-  // showEdit: async (req, res) => {
-  //   const products = await productService.findOne(req.params.id);
-  //  if (products == null) {
-  //     return res
-  //     .status(404)
-  //     .send("404 not found. <br> ¡Lo siento, no tenemos ese producto!");
-  // }
-  //   res.render("products/edit", { products, title: "Edit Product"});
-  // },
-  edit: (req, res) => {
-    const products = getProducts();
-    let productEdit = {};
+  //edit: (req, res) => {
+  //  const products = getProducts();
+  //  let productEdit = {};
 
-    for (let i = 0; i < products.length; i++) {
-      if (req.params.id == products[i].id) {
-        productEdit = products[i];
-      }
-    }
+  //    for (let i = 0; i < products.length; i++) {
+  //    if (req.params.id == products[i].id) {
+  //     productEdit = products[i];
+  //   }
+  //  }
 
-    const filename = req.file ? req.file.filename : productEdit.image;
+  //    const filename = req.file ? req.file.filename : productEdit.image;
 
-    productEdit.name = req.body.name;
-    productEdit.price = req.body.price;
-    productEdit.discount = req.body.discount;
-    productEdit.category = req.body.category;
-    productEdit.description = req.body.description;
-    productEdit.image = filename;
-    productEdit.color = req.body.color;
+  //  productEdit.name = req.body.name;
+  //  productEdit.price = req.body.price;
+  //  productEdit.discount = req.body.discount;
+  //  productEdit.category = req.body.category;
+  //  productEdit.description = req.body.description;
+  //  productEdit.image = filename;
+  //  productEdit.color = req.body.color;
 
-    saveProducts(products);
+  //    saveProducts(products);
 
-    res.redirect("/products");
-  },
-  // edit: async (req, res) => {
-  //   const products = await productService.findOne(req.params.id);
-  //   await Product.update({
-  //     ...req.body,
-  //     image: "/images/products/" + req.file.filename,
-  //   });
   //   res.redirect("/products");
   // },
-
-  showCreate: (req, res) => {
-    res.render("products/create");
+  edit: async (req, res) => {
+    const products = await productService.findOne(req.params.id);
+    const filename = req.file ? req.file.filename : products.image;
+    await Product.update(
+      {
+        ...req.body,
+        image: filename,
+      },
+      { where: { id: products.id } }
+    );
+    res.redirect("/products");
   },
-  // showCreate: async (req, res) => {
-  //   res.render("products/create", { title: "Create Product" });
+
+  //showCreate: (req, res) => {
+  //  res.render("products/create");
+  //},
+  showCreate: async (req, res) => {
+    res.render("products/create", { title: "Create Product" });
+  },
+
+  //create: (req, res) => {
+  //const products = getProducts();
+  //let Idmayor = products[0].id;
+  //for (let i = 0; i < products.length; i++) {
+  //  if (products[i].id > Idmayor) {
+  //    Idmayor = products[i].id;
+  //  }
+  //}
+  //products[products.length-1].id
+
+  //const productCreate = {
+  // id: products[products.length - 1].id + 1,
+  //Idmayor + 1,
+
+  //  ...req.body,
+  //  image: req.file.filename,
+  //};
+
+  // products.push(productCreate);
+  // saveProducts(products);
+
+  // res.redirect("/products");
   // },
-
-  create: (req, res) => {
-    const products = getProducts();
-    //let Idmayor = products[0].id;
-    //for (let i = 0; i < products.length; i++) {
-    //  if (products[i].id > Idmayor) {
-    //    Idmayor = products[i].id;
-    //  }
-    //}
-    //products[products.length-1].id
-
-    const productCreate = {
-      id: products[products.length - 1].id + 1,
-      //Idmayor + 1,
-
+  create: async (req, res) => {
+    const product = await Product.create({
       ...req.body,
       image: req.file.filename,
-    };
+    });
+    res.redirect(`/products/${product.id}`);
+  },
 
-    products.push(productCreate);
-    saveProducts(products);
+  //delete: (req, res) => {
+  // let products = getProducts();
+  // let productDelete = products.filter((product) => {
+  //   return product.id == req.params.id;
+  // });
+  // let productsDeleted = productDelete;
+  // productsDeletedJson = JSON.stringify(productsDeleted, null, 4);
+  // fs.writeFileSync("data/product-deleted.json", productsDeletedJson);
 
+  // let productList = products.filter((product) => {
+  //  return product.id != req.params.id;
+  //});
+  //products = productList;
+  //    productsJson = JSON.stringify(products, null, 4);  fs.writeFileSync("data/product-database.json", productsJson);
+
+  //    res.redirect("/products");
+  //},
+  delete: async (req, res) => {
+    await Product.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
     res.redirect("/products");
   },
-  // create: async (req, res) => {
-  //   const product = await Product.create({
-  //     ...req.body,
-  //     image: req.file.filename,
-  //   });
-  //   res.redirect(`/products/${product.id}`);
-  // },
-
-  delete: (req, res) => {
-    let products = getProducts();
-    let productDelete = products.filter((product) => {
-      return product.id == req.params.id;
-    });
-    let productsDeleted = productDelete;
-    productsDeletedJson = JSON.stringify(productsDeleted, null, 4);
-    fs.writeFileSync("data/product-deleted.json", productsDeletedJson);
-
-    let productList = products.filter((product) => {
-      return product.id != req.params.id;
-    });
-    products = productList;
-    productsJson = JSON.stringify(products, null, 4);
-    fs.writeFileSync("data/product-database.json", productsJson);
-
-    res.redirect("/products");
-  },
-  // delete: async (req, res) => {
-  //   await Product.destroy({
-  //     where: {
-  //       id: req.params.id,
-  //     },
-  //   });
-  //   res.redirect("/product");
-  // },
 };
 
 module.exports = controller;
