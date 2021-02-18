@@ -1,4 +1,4 @@
-// const { CategoryUser, User, Sale } = require("../database/models");
+const { CategoryUser, User, Sale } = require("../database/models");
 
 module.exports = {
   findOne: async (id) => {

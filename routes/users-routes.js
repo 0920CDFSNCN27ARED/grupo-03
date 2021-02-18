@@ -48,12 +48,12 @@ router.post(
   "/register",
   upload.single("image"),
   [
-    body("first_name")
+    body("firstName")
       .isAlpha()
       .withMessage("El campo nombre debe ser alfabetico")
       .isLength({ min: 1, max: 99 })
       .withMessage("El campo nombre debe estar completo"),
-    body("last_name")
+    body("lastName")
       .isAlpha()
       .withMessage("El campo apellido debe ser alfabetico")
       .isLength({ min: 1, max: 99 })

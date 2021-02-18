@@ -5,7 +5,7 @@ const { validationResult } = require("express-validator");
 
 const getUsers = require("../utils/get-users");
 const saveUsers = require("../utils/save-users");
-// const { CategoryUser, User, Sale } = require("../database/models");
+const { CategoryUser, User, Sale } = require("../database/models");
 const userService = require("../services/userService");
 
 const controller = {
@@ -51,48 +51,53 @@ const controller = {
   // register: async (req, res) => {
   //   res.render("users/register", { title: "Register User" });
   // },
-  autRegister: (req, res) => {
-    // console.log(validationResult(req));
+  // autRegister: (req, res) => {
+  // console.log(validationResult(req));
+  // let errors = validationResult(req);
+  // if (!errors.isEmpty()) {
+  //   return res.render("users/register", { errors: errors.array() });
+  // }
+
+  //  const users = getUsers();
+
+  //    let newUser = {
+  // id: users[users.length - 1].id + 1,
+  // first_name: req.body.first_name,
+  // last_name: req.body.last_name,
+  //user: req.body.user,
+  // mail: req.body.email,
+  // image: req.file.filename,
+  //password: bcrypt.hashSync(req.body.password, 10),
+  //};
+
+  // let exist = fs.existsSync("data/allUsersdb.json", (exist) => {
+  //  return exist;
+  //});
+
+  // if (exist) {
+  // users.push(newUser);
+  // saveUsers(users);
+  //} else {
+  //let usersArray = [];
+  //usersArray.push(newUser);
+  // saveUsers(users);
+  //}
+
+  //  res.redirect("/");
+  //},
+  autRegister: async (req, res) => {
     let errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.render("users/register", { errors: errors.array() });
     }
-
-    const users = getUsers();
-
-    let newUser = {
-      id: users[users.length - 1].id + 1,
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
-      user: req.body.user,
-      mail: req.body.email,
+    console.log(req.body);
+    await User.create({
+      ...req.body,
       image: req.file.filename,
       password: bcrypt.hashSync(req.body.password, 10),
-    };
-
-    let exist = fs.existsSync("data/allUsersdb.json", (exist) => {
-      return exist;
     });
-
-    if (exist) {
-      users.push(newUser);
-      saveUsers(users);
-    } else {
-      let usersArray = [];
-      usersArray.push(newUser);
-      saveUsers(users);
-    }
-
-    res.redirect("/");
+    res.redirect("/login");
   },
-  // autRegister: async (req, res) => {
-  //   const users = await User.create({
-  //     ...req.body,
-  //     image: req.file.filename,
-  //     password: bcrypt.hashSync(req.body.password, 10),
-  //   });
-  //   res.redirect("/");
-  // },
   profile: (req, res) => {
     const users = getUsers();
     let i = users.findIndex((user) => {
