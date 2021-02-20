@@ -18,10 +18,17 @@
     ></a>
 
     <div class="search-container d-flex radius-5">
-      <input class="no-border" type="text" placeholder="Busca tus productos" />
-      <button class="no-border width-10" type="submit">
-        <i class="fas fa-search"></i>
-      </button>
+      <form action="/search" method="GET">
+        <input
+          name="searchquery"
+          class="no-border"
+          type="search"
+          placeholder="Busca tus productos"
+        />
+        <button class="no-border width-10" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
     </div>
   </div>
   <div class="nets-container width-50 flex-end-lg width-lg">

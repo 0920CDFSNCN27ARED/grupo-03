@@ -15,6 +15,22 @@ const controller = {
   cart: (req, res) => {
     res.render("cart");
   },
+  search: async (req, res) => {
+    const products = await productService.findAll();
+    const productsSearch = [];
+    const querys = req.query.searchquery.split(" ");
+    console.log(querys);
+
+    products.forEach((product) => {
+      querys.forEach((query) => {
+        if (product.name.toUpperCase().includes(query.toUpperCase())) {
+          productsSearch.push(product);
+        }
+      });
+    });
+
+    res.render("products/products", { products: productsSearch });
+  },
   //purchaseCart:(req, res)=>{
   //let products = getProducts();
   //const i = products.findIndex((prod) => {
