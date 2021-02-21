@@ -92,6 +92,7 @@ const controller = {
       password: bcrypt.hashSync(req.body.password, 10),
       categoryId: 1,
     });
+
     res.redirect("/login");
   },
 

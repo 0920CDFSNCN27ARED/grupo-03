@@ -4,6 +4,9 @@
 >
   <article class="product-article flex-column no-border radius-5">
     <h4 class="font-arimo color-secondary center-text"><%= product.name %></h4>
+    <h4 class="font-arimo color-secondary center-text">
+      <%= product.productCategory.name %>
+    </h4>
     <img
       src="/images/products/<%= product.image %>"
       alt="<%= product.name %> "

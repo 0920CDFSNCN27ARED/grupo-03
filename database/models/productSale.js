@@ -1,30 +1,36 @@
 "use strict";
 
 module.exports = (sequelize, dataTypes) => {
-  const ProductSale = sequelize.define("ProductSale", {
-    id: {
-      primaryKey: true,
-      autoIncrement: true,
-      type: dataTypes.INTEGER,
-      allowNull: false,
+  const ProductSale = sequelize.define(
+    "ProductSale",
+    {
+      id: {
+        primaryKey: true,
+        autoIncrement: true,
+        type: dataTypes.INTEGER,
+        allowNull: false,
+      },
+      saleId: {
+        allowNull: false,
+        type: dataTypes.INTEGER,
+      },
+      productId: {
+        allowNull: false,
+        type: dataTypes.INTEGER,
+      },
+      quantity: {
+        allowNull: false,
+        type: dataTypes.INTEGER,
+      },
+      salePrice: {
+        type: dataTypes.DECIMAL,
+        allowNull: false,
+      },
     },
-    saleId: {
-      allowNull: false,
-      type: dataTypes.INTEGER,
-    },
-    productId: {
-      allowNull: false,
-      type: dataTypes.INTEGER,
-    },
-    quantity: {
-      allowNull: false,
-      type: dataTypes.INTEGER,
-    },
-    salePrice: {
-      type: dataTypes.DECIMAL,
-      allowNull: false,
-    },
-  });
+    {
+      tableName: "product_sale",
+    }
+  );
   ProductSale.associate = function (models) {
     ProductSale.belongsTo(models.Product, {
       as: "product",
