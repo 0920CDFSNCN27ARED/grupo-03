@@ -1,7 +1,7 @@
-insert into payment_method (id, method) values (1, 'cash');
-insert into payment_method (id, method) values (2, 'debitCard');
-insert into payment_method (id, method) values (3, 'mercadoPago');
-insert into payment_method (id, method) values (4, 'creditCard');
+insert into payment_methods (id, method) values (1, 'cash');
+insert into payment_methods (id, method) values (2, 'debitCard');
+insert into payment_methods (id, method) values (3, 'mercadoPago');
+insert into payment_methods (id, method) values (4, 'creditCard');
 
 insert into category_users (id, type) values (1, 'buyer');
 insert into category_users (id, type) values (2, 'admin');
@@ -22,14 +22,14 @@ insert into users (id, firstName, lastName, email, user, image, password, catego
 insert into users (id, firstName, lastName, email, user, image, password, categoryId) values (14, 'Tobiah', 'Bravington', 'tbravingtond@smugmug.com', 'tbravingtond', 'image', 'KGmiNmT', 1);
 insert into users (id, firstName, lastName, email, user, image, password, categoryId) values (15, 'Trent', 'Orrum', 'torrume@ow.ly', 'torrume', 'image', 'FI3Ek5D1Ru8', 1);
 
-insert into product_category (id, name) values (1, 'Cabello');
-insert into product_category (id, name) values (2, 'Cuerpo');
-insert into product_category (id, name) values (3, 'Rostro');
-insert into product_category (id, name) values (4, 'Manos');
-insert into product_category (id, name) values (5, 'Kits');
-insert into product_category (id, name) values (6, 'Higiene');
-insert into product_category (id, name) values (7, 'Pies');
-insert into product_category (id, name) values (8, 'Accesorios');
+insert into product_categories (id, name) values (1, 'Cabello');
+insert into product_categories (id, name) values (2, 'Cuerpo');
+insert into product_categories (id, name) values (3, 'Rostro');
+insert into product_categories (id, name) values (4, 'Manos');
+insert into product_categories (id, name) values (5, 'Kits');
+insert into product_categories (id, name) values (6, 'Higiene');
+insert into product_categories (id, name) values (7, 'Pies');
+insert into product_categories (id, name) values (8, 'Accesorios');
 
 insert into sales (id, date, userId, payMethodId) values (1, '2020-06-26', 12, 3);
 insert into sales (id, date, userId, payMethodId) values (2, '2020-05-18', 1, 1);

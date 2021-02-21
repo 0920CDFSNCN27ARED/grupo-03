@@ -18,7 +18,7 @@ module.exports = {
   findAll: async () => {
     return await Product
       .findAll //{
-      // include: ["productCategory", "sales"],
+      //     include: ["productCategory", "sales"],
       // }
       ();
   },
