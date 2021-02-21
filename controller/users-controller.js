@@ -82,8 +82,7 @@ const controller = {
     if (!errors.isEmpty()) {
       return res.render("users/register", { errors: errors.array() });
     }
-    console.log(req.body);
-    await User.create({
+    const newUser = await User.create({
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
@@ -92,6 +91,8 @@ const controller = {
       password: bcrypt.hashSync(req.body.password, 10),
       categoryId: 1,
     });
+
+    await newUser.save();
 
     res.redirect("/login");
   },
