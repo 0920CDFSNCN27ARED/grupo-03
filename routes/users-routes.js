@@ -87,5 +87,5 @@ router.get("/profile/:id", assertSignedIn, usersController.profile);
 router.get("/:id/edit", usersController.showEditProf);
 
 router.put("/:id", upload.single("image"), usersController.editProf);
-//router.delete("/:id", usersController.delete);
+router.delete("/:id", usersController.delete);
 module.exports = router;

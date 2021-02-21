@@ -52,24 +52,6 @@ const controller = {
     });
     res.redirect(`/products/details/${product.id}`);
   },
-
-  //delete: (req, res) => {
-  // let products = getProducts();
-  // let productDelete = products.filter((product) => {
-  //   return product.id == req.params.id;
-  // });
-  // let productsDeleted = productDelete;
-  // productsDeletedJson = JSON.stringify(productsDeleted, null, 4);
-  // fs.writeFileSync("data/product-deleted.json", productsDeletedJson);
-
-  // let productList = products.filter((product) => {
-  //  return product.id != req.params.id;
-  //});
-  //products = productList;
-  //    productsJson = JSON.stringify(products, null, 4);  fs.writeFileSync("data/product-database.json", productsJson);
-
-  //    res.redirect("/products");
-  //},
   delete: async (req, res) => {
     await ProductSale.destroy({
       where: {

@@ -64,3 +64,4 @@ insert into product_sale (id, productId, saleId, quantity, salePrice) values (3,
 insert into product_sale (id, productId, saleId, quantity, salePrice) values (4, 18, 4, 2, 534.39);
 insert into product_sale (id, productId, saleId, quantity, salePrice) values (5, 7, 4, 9, 932.14);
 
+select * from users

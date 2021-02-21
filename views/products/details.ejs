@@ -29,7 +29,7 @@
                 $ <%= product.price %>
               </h4>
             </article>
-            <% if(!user.admin) { %>
+            <% if(user.categoryId == 1) { %>
             <article>
               <form action="/cart" method="GET">
                 <div class="details-form d-flex width-100 no-border-lg">
@@ -59,7 +59,7 @@
             class="flex-column text-details-container font-arimo width-50lg"
           >
             <p class="font-size-14"><%= product.description %></p>
-            <% if(user.admin) { %>
+            <% if(user.categoryId == 2) { %>
             <div class="d-flex">
               <div class="details-form d-flex width-100 no-border-lg">
                 <a href="/products/<%= product.id  %>/edit " class="width-100"
