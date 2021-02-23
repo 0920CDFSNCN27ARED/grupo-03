@@ -3,26 +3,32 @@
 const productSale = require("./productSale");
 
 module.exports = (sequelize, dataTypes) => {
-  const Sale = sequelize.define("Sale", {
-    id: {
-      primaryKey: true,
-      autoIncrement: true,
-      type: dataTypes.INTEGER,
-      allowNull: false,
+  const Sale = sequelize.define(
+    "Sale",
+    {
+      id: {
+        primaryKey: true,
+        autoIncrement: true,
+        type: dataTypes.INTEGER,
+        allowNull: false,
+      },
+      date: {
+        allowNull: false,
+        type: dataTypes.DATE,
+      },
+      userId: {
+        allowNull: false,
+        type: dataTypes.INTEGER,
+      },
+      payMethodId: {
+        type: dataTypes.INTEGER,
+        allowNull: false,
+      },
     },
-    date: {
-      allowNull: false,
-      type: dataTypes.DATE,
-    },
-    userId: {
-      allowNull: false,
-      type: dataTypes.INTEGER,
-    },
-    payMethodId: {
-      type: dataTypes.INTEGER,
-      allowNull: false,
-    },
-  });
+    {
+      tableName: "sales",
+    }
+  );
   Sale.associate = function (models) {
     Sale.belongsTo(models.User, {
       as: "users",

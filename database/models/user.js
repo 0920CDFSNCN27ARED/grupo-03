@@ -39,7 +39,10 @@ module.exports = function (sequelize, dataTypes) {
         type: dataTypes.INTEGER,
       },
     },
-    { timestamps: false }
+    {
+      tableName: "users",
+      timestamps: false,
+    }
   );
 
   User.associate = function (models) {
@@ -47,11 +50,10 @@ module.exports = function (sequelize, dataTypes) {
       as: "categoryUser",
       foreignKey: "categoryId",
     });
-    User.hasMany(models.Sale),
-      {
-        as: "sales",
-        foreignKey: "userId",
-      };
+    User.hasMany(models.Sale, {
+      as: "sales",
+      foreignKey: "userId",
+    });
   };
 
   return User;

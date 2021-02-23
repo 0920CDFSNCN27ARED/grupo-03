@@ -6,9 +6,9 @@ async function authenticate(req, res, next) {
 
   if (!id) return next();
 
-  const users = await await userService.findAll();
+  const users = await userService.findAll();
 
-  const loggedUser = users.find((user) => {
+  const loggedUser = await users.find((user) => {
     return user.id == id;
   });
 
