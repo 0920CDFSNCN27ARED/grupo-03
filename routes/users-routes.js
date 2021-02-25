@@ -51,12 +51,12 @@ router.post(
     body("firstName")
       .isAlpha()
       .withMessage("El campo nombre debe ser alfabetico")
-      .isLength({ min: 1, max: 99 })
+      .isLength({ min: 2, max: 99 })
       .withMessage("El campo nombre debe estar completo"),
     body("lastName")
       .isAlpha()
       .withMessage("El campo apellido debe ser alfabetico")
-      .isLength({ min: 1, max: 99 })
+      .isLength({ min: 2, max: 99 })
       .withMessage("El campo apellido debe estar completo"),
     body("user")
       .isAlphanumeric()
