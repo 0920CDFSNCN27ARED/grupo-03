@@ -124,3 +124,39 @@
 
 - Dejar de dilatar el momento de hacer las retros.
 - Depender del grupo en su totalidad para generar nuevo contenido en el proyecto.
+
+## RETROSPECTIVA (Sprint VI)
+
+1. Comenzar a hacer
+
+- Innovaciones en el proyecto,
+- Estas innovaciones deben enfocarse a la lógica el negocio.
+
+2. Hacer más
+
+- Revisar el código.
+- Delegar en el resto del equipo si la tarea es muy compleja
+- celebrar los éxitos por mas pequeños que sean
+- Reconocer el éxito propio
+
+3. Continuar haciendo
+
+- Mas investigación sobre funcionalidades de métodos y propiedades que vamos incorporando.
+- Separar en tareas menores para resolver solas.
+- División de tareas.
+- Reuniones periódicas.
+- Pair programming.
+- Continuar con la comunicación fluida.
+- Cumplir con fechas establecidas para las entregas.
+- Trabajar con Trello.
+- Seguir ordenando y achicando el código.
+
+4. Hacer menos
+
+- Tareas muy complejas pudiendo separarlas en varias de menor complejidad.
+- Dejar lo mas complejo para el final.
+
+5. Dejar de hacer
+
+- Dejar de dilatar el momento de hacer las retros.
+- Dejar de tenerle miedo a generar ramas en gitHub.
