@@ -1,0 +1,38 @@
+{
+  "name": "grupo-03",
+  "version": "1.0.0",
+  "description": "![Cala Cosmetic Logo](Design/logoCala.png)\r ## Cala Cosmetics",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0920CDFSNCN27ARED/grupo-03.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/0920CDFSNCN27ARED/grupo-03/issues"
+  },
+  "homepage": "https://github.com/0920CDFSNCN27ARED/grupo-03#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body": "^5.1.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.9.2",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.2",
+    "mysql2": "^2.2.5",
+    "parser": "^0.1.4",
+    "sequelize": "^6.5.0",
+    "sequelize-cli": "^6.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
