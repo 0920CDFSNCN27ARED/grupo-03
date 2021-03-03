@@ -4,6 +4,8 @@ const productController = require("../controller/products-controller");
 const path = require("path");
 const assertSignedIn = require("../middlewares/assert-signed-in");
 const assertIsAdmin = require("../middlewares/assert-is-admin");
+// const { check, validationResult, body } = require("express-validator");
+// const { Product } = require("../database/models");
 
 //inicio multer
 const multer = require("multer");
@@ -31,6 +33,36 @@ router.get(
 );
 router.get(
   "/create",
+  upload.single("image"),
+  // [
+  //   body("name")
+  //     .isLength({ min: 5 })
+  //     .withMessage("Debe tener al menos 5 caracteres"),
+  //   body("description")
+  //     .isLength({ min: 20 })
+  //     .withMessage("Debe tener al menos 20 caracteres"),
+  //   check("image")
+  //     .custom((value, { req }) => {
+  //       console.log(req.file);
+  //       switch (req.file.mimetype) {
+  //         case "image/jpg":
+  //           return ".jpg";
+  //         case "image/jpeg":
+  //           return ".jpeg";
+  //         case "image/png":
+  //           return ".png";
+  //         case "image/gif":
+  //           return ".gif";
+  //         default:
+  //           return false;
+  //       }
+  //     })
+  //     .withMessage(
+  //       "Solo se aceptan archivos con las siguientes extensiones: .jpg / .gif / .png / .jpeg"
+  //     )
+  //     .isLength()
+  //     .withMessage("Debes cargar una imagen del producto"),
+  // ],
   assertSignedIn,
   assertIsAdmin,
   productController.showCreate

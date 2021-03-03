@@ -68,22 +68,22 @@ router.post(
   [
     body("firstName")
       .isAlpha()
-      .withMessage("El campo nombre debe ser alfabetico")
+      .withMessage("El campo nombre debe ser alfabético")
       .isLength({ min: 2, max: 99 })
       .withMessage("El campo nombre debe estar completo"),
     body("lastName")
       .isAlpha()
-      .withMessage("El campo apellido debe ser alfabetico")
+      .withMessage("El campo apellido debe ser alfabético")
       .isLength({ min: 2, max: 99 })
       .withMessage("El campo apellido debe estar completo"),
     body("user")
       .isAlphanumeric()
-      .withMessage("El campo usuario debe ser alfanumerico")
+      .withMessage("El campo usuario debe ser alfanumérico")
       .isLength({ min: 1, max: 16 })
       .withMessage("El campo usuario debe estar completo"),
     check("email")
       .isEmail()
-      .withMessage("Debes ingresa un email valido")
+      .withMessage("Debes ingresa un email válido")
       .custom(async (value) => {
         const user = await User.findAll({ where: { email: value } });
         if (user.length != 0) {
@@ -117,7 +117,7 @@ router.post(
     body("password")
       .isStrongPassword()
       .withMessage(
-        "La clave no es segura. Debe tener por lo menos 8 carácteres. Entre ellos: 1 número, 1 símbolo, 1 letra en mayúscula y 1 letra en minúscula"
+        "La clave no es segura. Debe tener por lo menos 8 caracteres. Entre ellos: 1 número, 1 símbolo, 1 letra en mayúscula y 1 letra en minúscula"
       ),
     body("passConf").custom((value, { req }) => {
       if (value !== req.body.password) {
