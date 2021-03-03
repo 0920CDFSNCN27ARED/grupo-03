@@ -95,25 +95,28 @@ router.post(
       .withMessage("El campo email debe estar completo"),
     check("image")
       .custom((value, { req }) => {
-        console.log(req.file);
-        switch (req.file.mimetype) {
-          case "image/jpg":
-            return ".jpg";
-          case "image/jpeg":
-            return ".jpeg";
-          case "image/png":
-            return ".png";
-          case "image/gif":
-            return ".gif";
-          default:
-            return false;
+        if (!req.file) throw new Error("El campo imagen es requerido");
+        return true;
+      })
+      .custom((value, { req }) => {
+        if (req.file) {
+          switch (req.file.mimetype) {
+            case "image/jpg":
+              return ".jpg";
+            case "image/jpeg":
+              return ".jpeg";
+            case "image/png":
+              return ".png";
+            case "image/gif":
+              return ".gif";
+            default:
+              return false;
+          }
         }
       })
       .withMessage(
         "Solo se aceptan archivos con las siguientes extensiones: .jpg / .gif / .png / .jpeg"
-      )
-      .isLength()
-      .withMessage("Debes cargar una imagen de perfil"),
+      ),
     body("password")
       .isStrongPassword()
       .withMessage(

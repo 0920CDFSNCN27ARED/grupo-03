@@ -46,6 +46,11 @@ const controller = {
   },
 
   autLogin: async (req, res) => {
+    let errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("users/login", { errors: errors.array() });
+    }
+
     const users = await userService.findAll();
 
     const user = users.find((user) => {

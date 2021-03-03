@@ -5,6 +5,7 @@ const {
   Sale,
 } = require("../database/models");
 const productService = require("../services/productService");
+const { validationResult } = require("express-validator");
 
 const controller = {
   products: async (req, res) => {
@@ -26,6 +27,14 @@ const controller = {
   },
   edit: async (req, res) => {
     const products = await productService.findOne(req.params.id);
+    let errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("products/edit", {
+        errors: errors.array(),
+        product: products,
+      });
+    }
+
     const filename = req.file ? req.file.filename : products.image;
     await Product.update(
       {
@@ -40,6 +49,11 @@ const controller = {
     res.render("products/create", { title: "Create Product" });
   },
   create: async (req, res) => {
+    let errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.render("products/create", { errors: errors.array() });
+    }
+
     console.log(req.body);
     const product = await Product.create({
       name: req.body.name,
