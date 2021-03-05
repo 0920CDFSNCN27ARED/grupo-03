@@ -3,7 +3,10 @@
   <head>
     <%-include("../partials/head-base",{title:"Login"}) %>
     <link rel="stylesheet" href="/css/forms.css" />
-  </head>
+    <link rel="stylesheet" href="/css/validation.css" />
+    
+ <!-- <script type="text/javascript" src="/js/validator.min.js"></script> -->
+ <!-- <script src="/js/validation-register-validator.js"></script> -->
 
   <body class="background-main">
     <%-include("../partials/header") %>
@@ -28,6 +31,7 @@
             method="POST"
             class="flex-column"
             enctype="multipart/form-data"
+            id="registerForm"
           >
             <label
               for="firstName"
@@ -35,62 +39,68 @@
               >Ingresa tu Nombre
             </label>
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
               type="text"
               name="firstName"
+              id="firstName"
               placeholder="Maria"
             />
+            <div id="firstNameFeedback" class="feedback"></div>
             <label
               for="lastName"
               class="font-jura font-size-14 flex-column font-size-20lg"
               >Ingresa tu Apellido
             </label>
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
               type="text"
               name="lastName"
+              id="lastName"
               placeholder="Perez"
             />
+            <div id="lastNameFeedback" class="feedback"></div>
             <label
               for="user"
               class="font-jura font-size-14 flex-column font-size-20lg"
               >Crea un nombre de usuario
             </label>
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
               type="text"
               name="user"
               id="user"
               placeholder="mariaperez"
             />
-
+            <div id="userFeedback" class="feedback"></div>
             <label
               for="email"
               class="font-jura font-size-14 flex-column font-size-20lg"
               >Ingresa tu email</label
             >
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
               type="email"
               name="email"
               id="email"
               placeholder="mariaperez@mail.com"
             />
+            <div id="emailFeedback" class="feedback"></div>
             <p>Imagen</p>
-            <input type="file" name="image" id="image" />
-
+            <input type="file" name="image" id="image" class="validate" />
+            <div id="imageFeedback" class="feedback"></div>
             <label
               for="password"
               class="font-jura font-size-14 flex-column font-size-20lg"
               >Crea una clave</label
             >
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
               type="password"
               name="password"
               id="password"
               placeholder="minimo 8 caracteres"
             />
+            <div id="passwordFeedback" class="feedback"></div>
 
             <label
               for="password"
@@ -101,9 +111,9 @@
               type="password"
               name="passConf"
               id="passConf"
-              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
             />
-
+            <div id="passConfFeedback" class="feedback"></div>
             <button
               type="submit"
               class="no-border center-text font-jura font-size-14 font-size-20lg"

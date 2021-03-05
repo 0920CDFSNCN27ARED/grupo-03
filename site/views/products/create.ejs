@@ -3,6 +3,7 @@
   <head>
     <%-include("../partials/head-base",{title:"Crear producto"}) %>
     <link rel="stylesheet" href="/css/forms.css" />
+    <link rel="stylesheet" href="/css/validation.css" />
   </head>
 
   <body class="background-main">
@@ -20,7 +21,7 @@
             <% } %>
           </ul>
           <% } %>
-        <form action="/products" method="POST" enctype="multipart/form-data">
+        <form action="/products" method="POST" enctype="multipart/form-data" class='createForm'>
           <p class="font-jura font-size-14 flex-column font-size-20lg">
             <label for="name" class="font-weight-bold margin-5"
               >Nombre del producto:</label
@@ -30,11 +31,12 @@
               id="name"
               name="name"
               placeholder="Ej: crema hidratante"
-              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75 validate"
             />
           </p>
+          <div id="nameFeedback" class="feedback"></div>
           <p class="font-jura font-size-14 flex-column font-size-20lg">
-            <label for="email" class="font-weight-bold margin-5"
+            <label for="price" class="font-weight-bold margin-5"
               >Precio del producto:</label
             >
             <input
@@ -42,9 +44,10 @@
               id="price"
               name="price"
               placeholder="Ej: 5678"
-              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75 validate"
             />
           </p>
+           <div id="priceFeedback" class="feedback"></div>
           <p class="font-jura font-size-14 flex-column font-size-20lg">
             <label for="discount" class="font-weight-bold margin-5"
               >Descuento:</label
@@ -54,15 +57,16 @@
               id="discount"
               name="discount"
               placeholder="Ej: 15"
-              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75 validate"
             />
           </p>
+           <div id="discountFeedback" class="feedback"></div>
           <p class="font-jura font-size-14 flex-column font-size-20lg">
             <label for="category" class="font-weight-bold margin-5"
               >Categoría:</label
             >
             <select name="category" id="category" class="no-border radius-5
-            center-text font-bellefair font-size-20lg margin-5 height-5-vh width-75 align-self-center">
+            center-text font-bellefair font-size-20lg margin-5 height-5-vh width-75 align-self-center validate">
             <option value="">Elegí</option>
             <option value='1'>Cabello</option>
            <option value='2'>Cuerpo</option>
@@ -75,6 +79,7 @@
            
             />
           </p>
+           <div id="categoryFeedback" class="feedback"></div>
           <p class="font-jura font-size-14 flex-column font-size-20lg">
           
            <p> <label for="description" class="font-weight-bold margin-5"
@@ -83,9 +88,11 @@
             <textarea
               name="description"
               id="description"
-              class="form-input margin-5 width-75 align-self-center"
+              class="form-input margin-5 width-75 align-self-center validate"
             ></textarea>
           </p>
+          <div id="descriptionFeedback" class="feedback"></div>
+
           <p class="font-jura font-size-14 flex-column font-size-20lg">
             <label for="color" class="font-weight-bold margin-5"
               >Color del producto:</label
@@ -95,11 +102,13 @@
               id="color"
               name="color"
               placeholder="Ej: celeste"
-              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75 validate"
             />
           </p>
+          <div id="colorFeedback" class="feedback"></div>
           <p>Imagen </p>
-			<input type="file" name="image" id="image">
+			<input type="file" name="image" id="image" class="validate">
+      <div id="imageFeedback" class="feedback"></div>
           <button
             type="submit"
             class="no-border center-text font-jura font-size-14 font-size-20lg margin-5"

@@ -3,13 +3,12 @@
   <head>
     <%-include("../partials/head-base",{title:"Login"}) %>
     <link rel="stylesheet" href="/css/forms.css" />
+    <link rel="stylesheet" href="/css/validation.css" />
   </head>
-  <!-- <script src="/js/validation-login.js"></script> -->
+
   <body class="background-main">
     <%-include("../partials/header") %>
-    <!--Creo main con dos section una para el login y otra para register.
-    Consultar si el placeholder en los input va en el html o el css.
-    Consultar como se hace el captcha-->
+
     <main>
       <div
         class="background-main main-form-container flex-column wrap forms-lg"
@@ -27,7 +26,7 @@
           <% } %>
           <form action="/" method="POST" class="flex-column" id="loginForm">
             <input
-              class="font-bellefair no-border radius-5 center-text font-size-20lg"
+              class="font-bellefair no-border radius-5 center-text font-size-20lg validate"
               type="text"
               name="user"
               id="user"
@@ -35,15 +34,16 @@
               value='<%= loginData ?
             loginData.user : "" %>'
             />
+            <div id="userFeedback" class="feedback"></div>
 
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
               type="password"
               name="password"
               id="password"
               placeholder="Contrasena"
             />
-
+            <div id="passwordFeedback" class="feedback"></div>
             <button
               type="submit"
               class="no-border center-text font-jura font-size-20lg"
