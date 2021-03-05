@@ -1,10 +1,10 @@
 let errors = [];
 
 window.addEventListener("load", () => {
-  clearValidations();
   const form = document.getElementById("loginForm");
   form.addEventListener("submit", (event) => {
     errors = [];
+    clearValidations();
 
     validateIsNotEmpty("user", "El campo usuario no puede estar vacío!");
     validateIsNotEmpty("password", "El campo contraseña no puede estar vacío!");

@@ -4,16 +4,14 @@ window.addEventListener("load", () => {
   const form = document.getElementById("registerForm");
 
   form.addEventListener("submit", (event) => {
-    event.preventDefault();
-
     errors = [];
     clearValidations();
 
     validateInput("firstName", [
       [
-        validator.isLength,
+        validator.isLength, ///valitation[0]
         { min: 2 },
-        "El campo nombre debe tener al menos dos caracteres",
+        "El campo nombre debe tener al menos dos caracteres", //validation[validation.length-1]
       ],
     ]);
     validateInput("lastName", [
@@ -85,7 +83,7 @@ function validateInput(inputId, validations) {
 
   let foundErrors = false;
   for (const validation of validations) {
-    const validationFunction = validation[0];
+    const validationFunction = validation[0]; //primer validacion del array de validations
     const errorMsg = validation[validation.length - 1];
     const validationOptions = validation.length > 2 ? validation[1] : undefined;
 
