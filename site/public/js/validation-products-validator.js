@@ -1,68 +1,70 @@
 let errors = [];
 
 window.addEventListener("load", () => {
-  const form = document.getElementById("registerForm");
-
-  form.addEventListener("submit", (event) => {
+  const createForm = document.getElementById("createForm");
+  if(createForm){ 
+  createForm.addEventListener("submit", (event) => {
     errors = [];
     clearValidations();
 
-    validateInput("firstName", [
+    validateInput("name", [
       [
         validator.isLength, ///valitation[0]
-        { min: 2 },
-        "El campo nombre debe tener al menos dos caracteres", //validation[validation.length-1]
+        { min: 5 },
+        "El campo nombre debe tener al menos cinco caracteres", //validation[validation.length-1]
       ],
     ]);
-    validateInput("lastName", [
+    validateInput("description", [
       [
         validator.isLength,
-        { min: 2 },
-        "El campo apellido debe tener al menos dos caracteres",
+        { min: 20 },
+        "La descripción del producto debe tener al menos veinte caracteres",
       ],
     ]);
-    validateInput("email", [
-      [validator.isLength, { min: 1 }, "El campo email debe estar completo"],
-      [validator.isEmail, "Email debe ser un email valido!"],
-      [validator.custom()],
-    ]);
-    validateInput("user", [
-      [validator.isLength, { min: 1 }, "El campo usuario debe estar completo"],
-    ]);
-    validateInput("password", [
-      [validator.isLength, { min: 1 }, "Password es un campo requerido!"],
-      [
-        validator.isLength,
-        { min: 8 },
-        "El campo password debe tener al menos 8 caracteres!",
-      ],
-      [
-        validator.isStrongPassword,
-        "La clave no es segura. Debe tener por lo menos 8 caracteres. Entre ellos: 1 número, 1 símbolo, 1 letra en mayúscula y 1 letra en minúscula",
-      ],
-    ]);
+   
+    
+   
 
     if (checkErrors()) {
       event.preventDefault();
     }
+  
   });
 
-  ///PARA VALIDAR ON CHANGE
-  // const passwordInput = document.getElementById("password");
-  //passwordInput.addEventListener("change", () => {
-  //  validateInput("password", [
-  //    [
-  //      validator.isLength,
-  //     { min: 8 },
-  //     "Tu contraseña tiene que tener al menos 8 caracteres!",
-  //   ],
-  // [validator.isLength, { min: 1 }, "Tiene que tener al menos una letra minuscula!"],
-  // [validator.isLength, { min: 1 }, "Tiene que tener al menos una letra mayuscula!"],
-  // [validator.isLength, { min: 1 }, "Tiene que tener al menos un simbolo!"],
-  // [validator.isLength, { min: 1 }, "Tiene que tener al menos un numero!"],
-  // ]);
-  // checkErrors();
-  // });
+}
+});
+
+window.addEventListener("load", () => {
+  const editForm = document.getElementById("editForm");
+  
+  if(editForm){ 
+  editForm.addEventListener("submit", (event) => {
+    errors = [];
+    clearValidations();
+
+    validateInput("name", [
+        [
+          validator.isLength, ///valitation[0]
+          { min: 5 },
+          "El campo nombre debe tener al menos cinco caracteres", //validation[validation.length-1]
+        ],
+      ]);
+      validateInput("description", [
+        [
+          validator.isLength,
+          { min: 20 },
+          "La descripción del producto debe tener al menos veinte caracteres",
+        ],
+      ]);
+   
+
+    if (checkErrors()) {
+      event.preventDefault();
+    }
+  
+  });
+
+}
 });
 
 function clearValidations() {
