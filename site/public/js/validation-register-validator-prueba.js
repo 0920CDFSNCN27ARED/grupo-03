@@ -24,6 +24,7 @@ window.addEventListener("load", () => {
     validateInput("email", [
       [validator.isLength, { min: 1 }, "El campo email debe estar completo"],
       [validator.isEmail, "Email debe ser un email valido!"],
+      [validator.custom()],
     ]);
     validateInput("user", [
       [validator.isLength, { min: 1 }, "El campo usuario debe estar completo"],

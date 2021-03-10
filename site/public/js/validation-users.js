@@ -1,41 +1,66 @@
 let errors = [];
-
 window.addEventListener("load", () => {
   const formLogin = document.getElementById("loginForm");
-  formLogin.addEventListener("submit", (event) => {
-    errors = [];
-    clearValidations();
+  if (formLogin) {
+    formLogin.addEventListener("submit", (event) => {
+      errors = [];
+      clearValidations();
 
-    validateIsNotEmpty("user", "El campo usuario no puede estar vacío!");
-    validateIsNotEmpty("password", "El campo contraseña no puede estar vacío!");
+      validateIsNotEmpty("user", "El campo usuario no puede estar vacío!");
+      validateIsNotEmpty(
+        "password",
+        "El campo contraseña no puede estar vacío!"
+      );
 
-    if (checkErrors()) {
-      event.preventDefault();
-    }
-  });
+      if (checkErrors()) {
+        event.preventDefault();
+      }
+    });
+  }
 });
 
 window.addEventListener("load", () => {
-const formRegister = document.getElementById("registerForm");
-  formRegister.addEventListener("submit", (event) => {
-    errors = [];
-    clearValidations();
+  const formRegister = document.getElementById("registerForm");
+  if (formRegister) {
+    formRegister.addEventListener("submit", (event) => {
+      errors = [];
+      clearValidations();
 
-    validateIsNotEmpty("firstName", "El campo nombre no puede estar vacío!");
-    validateIsNotEmpty("lastName", "El campo apellido no puede estar vacío!");
-    validateIsNotEmpty("user", "El campo usuario no puede estar vacío!");
-    validateIsNotEmpty("email", "El campo email no puede estar vacío!");
-    validateIsNotEmpty("password", "El campo contraseña no puede estar vacío!");
-    validateLength("firstName", "El campo nombre debe tener al menos dos caracteres!",2);
-    validateLength("lastName", "El campo apellido debe tener al menos dos caracteres!",2);
-    validateLength("password", "La contraseña debe tener al menos ocho caracteres!",8);
-    validateEmail("email", "El formato no es valido")
-    validateImage("image", "Solo se aceptan archivos con las siguientes extensiones: .jpg / .gif / .png / .jpeg")
+      validateIsNotEmpty("firstName", "El campo nombre no puede estar vacío!");
+      validateIsNotEmpty("lastName", "El campo apellido no puede estar vacío!");
+      validateIsNotEmpty("user", "El campo usuario no puede estar vacío!");
+      validateIsNotEmpty("email", "El campo email no puede estar vacío!");
+      validateIsNotEmpty(
+        "password",
+        "El campo contraseña no puede estar vacío!"
+      );
+      validateLength(
+        "firstName",
+        "El campo nombre debe tener al menos dos caracteres!",
+        2
+      );
+      validateLength(
+        "lastName",
+        "El campo apellido debe tener al menos dos caracteres!",
+        2
+      );
+      validateLength(
+        "password",
+        "La contraseña debe tener al menos ocho caracteres!",
+        8
+      );
+      validateEmail("email", "El formato no es valido");
+      validateImage(
+        "image",
+        "Solo se aceptan archivos con las siguientes extensiones: .jpg / .gif / .png / .jpeg"
+      );
+      validateNewEmail("email", "El email ingresado ya se encuentra en uso");
 
-    if (checkErrors()) {
-      event.preventDefault();
-    }
-  });
+      if (checkErrors()) {
+        event.preventDefault();
+      }
+    });
+  }
 });
 
 //ELIMINA LAS CLASES QUE LE AGREGAMOS A CADA INPUT Y FEEDBACK PARA HACER UNA NUEVA VALIDACION
@@ -99,7 +124,7 @@ function validateLength(inputId, errorMsg, minLength) {
 
 function validateEmail(inputId, errorMsg) {
   const input = document.getElementById(inputId);
-  const regExp =  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  const regExp = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
   if (!regExp.test(input.value)) {
     const error = {
       inputId,
@@ -111,7 +136,7 @@ function validateEmail(inputId, errorMsg) {
   }
 }
 
-function validateImage(inputId, errorMsg){
+function validateImage(inputId, errorMsg) {
   const input = document.getElementById(inputId);
   if (!input.value.match(/.(jpg)|(gif)|(png)|(jpeg)$/)) {
     const error = {
@@ -122,7 +147,25 @@ function validateImage(inputId, errorMsg){
   } else {
     input.classList.add("is-valid");
   }
-  
 }
 
+//valida que el email ingresado no este en uso
+async function validateNewEmail(inputId, errorMsg) {
+  const emailsApi = await fetch("http://localhost:3001/api/users/emails");
+  const emailsApiList = await emailsApi.json();
+  const emails = emailsApiList.data;
+  const input = document.getElementById(inputId);
 
+  for (let i = 0; i < emails.length; i++) {
+    const email = emails[i];
+    if (input.value == email) {
+      const error = {
+        inputId,
+        msg: errorMsg,
+      };
+      errors.push(error);
+    } else {
+      input.classList.add("is-valid");
+    }
+  }
+}

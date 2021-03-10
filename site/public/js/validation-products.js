@@ -2,35 +2,61 @@ let errors = [];
 
 window.addEventListener("load", () => {
   const formCreate = document.getElementById("createForm");
-  formCreate.addEventListener("submit", (event) => {
-    errors = [];
-    clearValidations();
+  if (formCreate) {
+    formCreate.addEventListener("submit", (event) => {
+      errors = [];
+      clearValidations();
 
-    validateIsNotEmpty("name", "El campo nombre no puede estar vacío!");
-    validateLength("description", "La descripción debe tener al menos veinte caracteres!",20);
-    validateLength("name", "El nombre debe tener al menos cinco caracteres!",5);
-    validateImage("image", "Solo se aceptan archivos con las siguientes extensiones: .jpg / .gif / .png / .jpeg")
-    if (checkErrors()) {
-      event.preventDefault();
-    }
-  });
+      validateIsNotEmpty("name", "El campo nombre no puede estar vacío!");
+      validateLength(
+        "description",
+        "La descripción debe tener al menos veinte caracteres!",
+        20
+      );
+      validateLength(
+        "name",
+        "El nombre debe tener al menos cinco caracteres!",
+        5
+      );
+      validateImage(
+        "image",
+        "Solo se aceptan archivos con las siguientes extensiones: .jpg / .gif / .png / .jpeg"
+      );
+      if (checkErrors()) {
+        event.preventDefault();
+      }
+    });
+  }
 });
 
 window.addEventListener("load", () => {
-const formEdit = document.getElementById("editForm");
-  formEdit.addEventListener("submit", (event) => {
-    errors = [];
-    clearValidations();
+  const formEdit = document.getElementById("editForm");
+  if (formEdit) {
+    formEdit.addEventListener("submit", (event) => {
+      errors = [];
+      clearValidations();
 
-    validateIsNotEmpty("name", "El campo nombre no puede estar vacío!");
-    validateLength("description", "La descripción debe tener al menos veinte caracteres!",20);
-    validateLength("name", "El nombre debe tener al menos cinco caracteres!",5);
-    validateImage("image", "Solo se aceptan archivos con las siguientes extensiones: .jpg / .gif / .png / .jpeg")
+      validateIsNotEmpty("name", "El campo nombre no puede estar vacío!");
+      validateLength(
+        "description",
+        "La descripción debe tener al menos veinte caracteres!",
+        20
+      );
+      validateLength(
+        "name",
+        "El nombre debe tener al menos cinco caracteres!",
+        5
+      );
+      validateImage(
+        "image",
+        "Solo se aceptan archivos con las siguientes extensiones: .jpg / .gif / .png / .jpeg"
+      );
 
-    if (checkErrors()) {
-      event.preventDefault();
-    }
-  });
+      if (checkErrors()) {
+        event.preventDefault();
+      }
+    });
+  }
 });
 
 //ELIMINA LAS CLASES QUE LE AGREGAMOS A CADA INPUT Y FEEDBACK PARA HACER UNA NUEVA VALIDACION
@@ -92,7 +118,7 @@ function validateLength(inputId, errorMsg, minLength) {
   }
 }
 
-function validateImage(inputId, errorMsg){
+function validateImage(inputId, errorMsg) {
   const input = document.getElementById(inputId);
   if (!input.value.match(/.(jpg)|(gif)|(png)|(jpeg)$/)) {
     const error = {
@@ -103,7 +129,4 @@ function validateImage(inputId, errorMsg){
   } else {
     input.classList.add("is-valid");
   }
-  
 }
-
-

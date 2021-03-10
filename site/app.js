@@ -35,6 +35,9 @@ app.use("/", usersRouter);
 const productsRouter = require(__dirname + "/routes/products-routes");
 app.use("/products", productsRouter);
 
+const apiUsersRouter = require("./routes/api/users-routes");
+app.use("/api/users", apiUsersRouter);
+
 app.use((req, res, next) => {
   res.status(404).render("not-found");
 });
