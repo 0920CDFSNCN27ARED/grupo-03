@@ -1,9 +1,9 @@
 let errors = [];
 
 window.addEventListener("load", () => {
-  const loguinForm = document.getElementById("loguinForm");
-  if(loguinForm){ 
-  loguinForm.addEventListener("submit", (event) => {
+  const registerForm = document.getElementById("registerForm");
+  if(registerForm){ 
+    registerForm.addEventListener("submit", (event) => {
     errors = [];
     clearValidations();
 
@@ -84,6 +84,8 @@ window.addEventListener("load", () => {
 
 }
 });
+
+
 
 function clearValidations() {
   const arrayInputs = document.getElementsByClassName("validate");
