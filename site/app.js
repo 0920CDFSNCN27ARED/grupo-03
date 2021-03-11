@@ -38,6 +38,9 @@ app.use("/products", productsRouter);
 const apiUsersRouter = require("./routes/api/users-routes");
 app.use("/api/users", apiUsersRouter);
 
+const apiProductsRouter = require("./routes/api/products-routes");
+app.use("/api/products", apiProductsRouter);
+
 app.use((req, res, next) => {
   res.status(404).render("not-found");
 });
