@@ -2,8 +2,10 @@
 <html lang="en">
   <head>
     <%-include("../partials/head-base",{title:"Login"}) %>
+
     <link rel="stylesheet" href="/css/forms.css" />
     <link rel="stylesheet" href="/css/validation.css" />
+
     <script type="text/javascript" src="/js/validator.min.js"></script>
     <script src="/js/validation-users-validator.js"></script>
     <!-- <script src="/js/validation-users.js"></script> -->
@@ -28,25 +30,28 @@
           </ul>
           <% } %>
           <form action="/" method="POST" class="flex-column" id="loginForm">
-            <input
-              class="font-bellefair no-border radius-5 center-text font-size-20lg validate"
-              type="text"
-              name="user"
-              id="user"
-              placeholder="Nombre de usuario"
-              value='<%= loginData ?
+            <div>
+              <input
+                class="font-bellefair no-border radius-5 center-text font-size-20lg validate"
+                type="text"
+                name="user"
+                id="user"
+                placeholder="Nombre de usuario"
+                value='<%= loginData ?
             loginData.user : "" %>'
-            />
-            <div id="userFeedback" class="feedback"></div>
-
-            <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Contrasena"
-            />
-            <div id="passwordFeedback" class="feedback"></div>
+              />
+              <div id="userFeedback" class="feedback"></div>
+            </div>
+            <div>
+              <input
+                class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Contrasena"
+              />
+              <div id="passwordFeedback" class="feedback"></div>
+            </div>
             <button
               type="submit"
               class="no-border center-text font-jura font-size-20lg"
