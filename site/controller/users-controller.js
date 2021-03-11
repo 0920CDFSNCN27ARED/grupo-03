@@ -1,8 +1,8 @@
 const bcrypt = require("bcrypt");
 const { validationResult } = require("express-validator");
 
-const getUsers = require("../utils/get-users");
-const saveUsers = require("../utils/save-users");
+//const getUsers = require("../utils/get-users");
+//const saveUsers = require("../utils/save-users");
 const { CategoryUser, User, Sale } = require("../database/models");
 const userService = require("../services/userService");
 

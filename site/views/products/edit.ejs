@@ -24,7 +24,7 @@
             <% } %>
           </ul>
           <% } %>
-        <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="editForm"> 
+        <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="editForm"> 
             <p class="font-jura font-size-14 flex-column font-size-20lg">
               <label for="name" class="font-weight-bold margin-5">Nombre del producto:</label>               
               <input type="text" id="name" name="name" placeholder="Ej: crema hidratante"

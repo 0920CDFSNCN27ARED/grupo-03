@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/css/forms.css" />
     <link rel="stylesheet" href="/css/validation.css" />
     <script type="text/javascript" src="/js/validator.min.js"></script>
-    <script src="/js/validation-products-validator"></script>
+    <script src="/js/validation-products-validator.js"></script>
     <!-- <script src="/js/validation-products.js"></script> -->
   </head>
 
@@ -24,7 +24,7 @@
             <% } %>
           </ul>
           <% } %>
-        <form action="/products" method="POST" enctype="multipart/form-data" class="createForm">
+        <form action="/products" method="POST" enctype="multipart/form-data" id="createForm">
           <p class="font-jura font-size-14 flex-column font-size-20lg">
             <label for="name" class="font-weight-bold margin-5"
               >Nombre del producto:</label
@@ -72,13 +72,13 @@
             center-text font-bellefair font-size-20lg margin-5 height-5-vh width-75 align-self-center validate">
             <option value="">Elegí</option>
             <option value='1'>Cabello</option>
-           <option value='2'>Cuerpo</option>
-           <option value='3'>Rostro</option>
-           <option value='4'>Manos</option>
-           <option value='5'>Kits</option>
-           <option value='6'>Higiene</option>
-           <option value='7'>Pies</option>
-           <option value='8'>Accesorios</option>
+            <option value='2'>Cuerpo</option>
+            <option value='3'>Rostro</option>
+            <option value='4'>Manos</option>
+            <option value='5'>Kits</option>
+            <option value='6'>Higiene</option>
+            <option value='7'>Pies</option>
+            <option value='8'>Accesorios</option>
            
             />
           </p>
@@ -110,8 +110,8 @@
           </p>
           <div id="colorFeedback" class="feedback"></div>
           <p>Imagen </p>
-			<input type="file" name="image" id="image" class="validate">
-      <div id="imageFeedback" class="feedback"></div>
+			    <input type="file" name="image" id="image" class="validate">
+          <div id="imageFeedback" class="feedback"></div>
           <button
             type="submit"
             class="no-border center-text font-jura font-size-14 font-size-20lg margin-5"
