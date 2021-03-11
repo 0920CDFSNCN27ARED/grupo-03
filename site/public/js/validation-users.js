@@ -164,8 +164,6 @@ async function validateNewEmail(inputId, errorMsg) {
         msg: errorMsg,
       };
       errors.push(error);
-    } else {
-      input.classList.add("is-valid");
     }
   }
 }
