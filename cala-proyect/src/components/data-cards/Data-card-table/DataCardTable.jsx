@@ -1,5 +1,44 @@
 import React from "react";
+import CardTableProductDetail from "./data-card-table-productDetail/CardTableProductDetail";
 function DataCardTable(props){
+    const tableProductDetailValue = [
+      {
+        name:"Tiger Nixon",
+        description :" System Architect" ,
+        price: "$320,800",
+        category:
+        {
+            value1: "category 01",
+            value2: "category 02",
+            value3: "category 03",
+        },
+        discount:"245",
+        color: 
+        {
+            valueR: "Red",
+            valueB: "Blue",
+            valueG: "Green",
+        },
+      },
+      {
+        name:"Jane Doe",
+        description :"Fullstack developer" ,
+        price: "$320,800",
+        category:
+        {
+            value1: "category 01",
+            value2: "category 02",
+            value3: "category 03",
+        },
+        discount:"245",
+        color: 
+        {
+            valueR: "Red",
+            valueB: "Blue",
+            valueG: "Green",
+        },
+      },
+    ]
     return( 
         <div class="card shadow mb-4">
             <div class="card-body">
@@ -11,8 +50,8 @@ function DataCardTable(props){
                                 <th>Description</th>
                                 <th>Price</th>
                                 <th>Categories</th>
+                                <th>Discount</th>
                                 <th>Colors</th>
-                                <th>Stock</th>
                             </tr>
                         </thead>
                         <tfoot>
@@ -21,51 +60,25 @@ function DataCardTable(props){
                                 <th>Description</th>
                                 <th>Price</th>
                                 <th>Categories</th>
+                                <th>Discount</th>
                                 <th>Colors</th>
-                                <th>Stock</th>
                             </tr>
                         </tfoot>
                         <tbody>
-                            <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>$320,800</td>
-                                <td>
-                                    <ul>
-                                        <li>Category 01</li>
-                                        <li>Category 02</li>
-                                        <li>Category 03</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li><span class="text-danger">Red</span></li>
-                                        <li><span class="text-primary">Blue</span></li>
-                                        <li><span class="text-success">Green</span></li>
-                                    </ul>
-                                </td>
-                                <td>245</td>
-                            </tr>
-                            <tr>
-                                <td>Jane Doe</td>
-                                <td>Fullstack developer</td>
-                                <td>$320,800</td>
-                                <td>
-                                    <ul>
-                                        <li>Category 01</li>
-                                        <li>Category 02</li>
-                                        <li>Category 03</li>
-                                    </ul>
-                                </td>
-                                <td>
-                                    <ul>
-                                        <li><span class="text-danger">Red</span></li>
-                                        <li><span class="text-primary">Blue</span></li>
-                                        <li><span class="text-success">Green</span></li>
-                                    </ul>
-                                </td>
-                                <td>245</td>
-                            </tr>
+                            {tableProductDetailValue.map((elem, index) => {
+                                return (
+                                <CardTableProductDetail
+                                    key={index}
+                                    name={elem.name}
+                                    description={elem.description}
+                                    price={elem.price}
+                                    category={elem.category}
+                                    discount={elem.discount}
+                                    color={elem.color}
+                                />
+                                )
+                            })}
+                            
                         </tbody>
                     </table>
                 </div>
