@@ -6,9 +6,13 @@ import DataCardBig from "./components/data-cards/data-card-big/DataCardBig";
 import CategoryCard from "./components/category-card/CategoryCard";
 import Footer from "./components/footer/Footer";
 import DataCardTable from './components/data-cards/data-card-table/DataCardTable';
+import React, {Component} from 'react';
 
-function App() {
-  const smallCardsValue = [
+class App extends Component {
+  constructor (props) {
+    super (props);
+    this.state = {
+     smallCardsValue : [
       {
         title:"Products in Data Base",
         icon :" fa-clipboard-list" ,
@@ -27,9 +31,40 @@ function App() {
          value: "38" ,
          color: "warning",
       },
-    ]
- 
-  return (
+    ],
+  };
+}
+async componentDidMount() {
+	const response = await fetch(
+		"http://loclahost:3001/api/products/products"
+	);
+	const countResponse = await response.json();
+  const smallCardsValue = [
+      {
+        title:"Products in Data Base",
+        icon :" fa-clipboard-list" ,
+        value: countResponse.count.toString(),
+        color: "primary", 
+      },
+      {title:"Amount in products",
+       icon :" fa-dollar-sign" ,
+       value: "$546.456", 
+       color: "success" ,
+
+      },
+      {
+        title:"Users quantity" ,
+        icon :" fa-user-check",
+         value: "38" ,
+         color: "warning",
+      },
+    ];
+    this.setState({
+	  smallCardsValue,
+  });
+}
+  render () {
+    return (
 
    <div className="App"> 
       <div id="wrapper">
@@ -43,7 +78,7 @@ function App() {
 				        	</div>
                   <div class="row">
                     
-                  { smallCardsValue.map((elem,index)=>{
+                  { this.state.smallCardsValue.map((elem,index)=>{
                     return <DataCardSmall key={index} title={elem.title} icon={elem.icon} value={elem.value} color={elem.color}/>;
                   })
                   }
@@ -63,12 +98,10 @@ function App() {
           </div>
 
         </div>
-
-
-
       </div>
     </div>
    );
+}
 }
 
 export default App;
