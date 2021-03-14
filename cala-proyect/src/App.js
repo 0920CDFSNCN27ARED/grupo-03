@@ -36,14 +36,16 @@ class App extends Component {
 }
  async componentDidMount() {
 	const response = await fetch (
-    "http://localhost:3001/api/products/count"
+    "http://localhost:3001/api/products/products",
+    
+
 	);
 	const countResponse = await response.json();
   const smallCardsValue = [
       {
         title:"Products in Data Base",
         icon :" fa-clipboard-list" ,
-        value: countResponse.count.toString(),
+        value: countResponse.data.totalCount,
         color: "primary", 
       },
       {title:"Amount in products",
@@ -55,7 +57,7 @@ class App extends Component {
       {
         title:"Users quantity" ,
         icon :" fa-user-check",
-         value: "38" ,
+         value: "38",
          color: "warning",
       },
     ];

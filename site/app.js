@@ -5,6 +5,7 @@ const methodOverride = require("method-override");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
 const authenticate = require("./middlewares/authenticate");
+const cors = require("cors");
 
 const pathAPublic = path.resolve(__dirname, "public");
 const enrutadorEstaticos = express.static(pathAPublic);
@@ -22,6 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(session({ secret: "secreto Cala" }));
 app.use(cookieParser());
+app.use(cors());
 
 app.locals.user = null;
 app.use(authenticate);

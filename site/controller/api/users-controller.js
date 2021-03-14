@@ -9,9 +9,12 @@ module.exports = {
       meta: {
         status: 200,
         url: req.originalUrl,
-        totalCount: count,
+        
       },
-      data: users,
+      data:{
+        count: count,
+        users,
+      } 
     });
   },
 
