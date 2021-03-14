@@ -2,10 +2,10 @@ import React from "react";
 
 function Footer(){
     return(
-        <footer class="sticky-footer bg-white">
+        <footer className="sticky-footer bg-white">
 
-          <div class="container my-auto">
-		    	<div class="copyright text-center my-auto">
+          <div className="container my-auto">
+		    	<div className="copyright text-center my-auto">
 				   <span>Copyright &copy; Dashboard 2020</span>
 		     	</div>
 	      </div>

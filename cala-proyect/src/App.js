@@ -5,7 +5,7 @@ import DataCardSmall from "./components/data-cards/data-card-small/DataCardSmall
 import DataCardBig from "./components/data-cards/data-card-big/DataCardBig";
 import CategoryCard from "./components/category-card/CategoryCard";
 import Footer from "./components/footer/Footer";
-import DataCardTable from './components/data-cards/data-card-table/DataCardTable';
+import DataCardTable from './components/data-cards/Data-card-table/DataCardTable';
 import React, {Component} from 'react';
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
       {
         title:"Products in Data Base",
         icon :" fa-clipboard-list" ,
-        value: "135",
+        value: "n/a",
         color: "primary", 
       },
       {title:"Amount in products",
@@ -34,9 +34,9 @@ class App extends Component {
     ],
   };
 }
-async componentDidMount() {
-	const response = await fetch(
-		"http://loclahost:3001/api/products/products"
+ async componentDidMount() {
+	const response = await fetch (
+    "http://localhost:3001/api/products/count"
 	);
 	const countResponse = await response.json();
   const smallCardsValue = [
@@ -59,10 +59,13 @@ async componentDidMount() {
          color: "warning",
       },
     ];
+   
     this.setState({
 	  smallCardsValue,
   });
-}
+
+ }
+
   render () {
     return (
 
@@ -72,11 +75,11 @@ async componentDidMount() {
         <div id="content-wrapper" className="d-flex flex-column">
           <div id="content">
             <Header/>
-              <div class="container-fluid">
-                  <div class="d-sm-flex align-items-center justify-content-between mb-4">
-						         <h1 class="h3 mb-0 text-gray-800">App Dashboard</h1>
+              <div className="container-fluid">
+                  <div className="d-sm-flex align-items-center justify-content-between mb-4">
+						         <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
 				        	</div>
-                  <div class="row">
+                  <div className="row">
                     
                   { this.state.smallCardsValue.map((elem,index)=>{
                     return <DataCardSmall key={index} title={elem.title} icon={elem.icon} value={elem.value} color={elem.color}/>;
@@ -84,12 +87,12 @@ async componentDidMount() {
                   }
 
                    </div>
-                   <div class="row">
+                   <div className="row">
                      <DataCardBig/>
 
                      <CategoryCard/>
                    </div>
-                   <h1 class="h3 mb-2 text-gray-800">All the products in the Database</h1>
+                   <h1 className="h3 mb-2 text-gray-800">All the products in the Database</h1>
                    <DataCardTable/>
 
                 </div>

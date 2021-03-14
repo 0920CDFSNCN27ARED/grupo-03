@@ -40,10 +40,10 @@ function DataCardTable(props){
       },
     ]
     return( 
-        <div class="card shadow mb-4">
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <div className="card shadow mb-4">
+            <div className="card-body">
+                <div className="table-responsive">
+                    <table className="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
                                 <th>Name</th>

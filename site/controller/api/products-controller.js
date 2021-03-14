@@ -35,6 +35,21 @@ module.exports = {
       data: offers,
     });
   },
+
+  count:async (req, res) => {
+    const count = await Product.count();
+   
+
+    res.send({
+      meta: {
+        status: 200,
+        url: req.originalUrl,
+        totalCount: count,
+      },
+      data: count,
+    });
+  },
+
   //categories: async (req, res) => {
   //  const count = await Product.count();
   //  const admin = await Product.findAll({

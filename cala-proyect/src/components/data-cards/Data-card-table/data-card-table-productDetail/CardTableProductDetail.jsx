@@ -16,9 +16,9 @@ function CardTableProductDetail (props) {
             <td>{props.discount}</td>
             <td>
                 <ul>
-                    <li><span class="text-danger">{props.color.valueR}</span></li>
-                    <li><span class="text-primary">{props.color.valueB}</span></li>
-                    <li><span class="text-success">{props.color.valueG}</span></li>
+                    <li><span className="text-danger">{props.color.valueR}</span></li>
+                    <li><span className="text-primary">{props.color.valueB}</span></li>
+                    <li><span className="text-success">{props.color.valueG}</span></li>
                 </ul>
             </td>
         </tr>
