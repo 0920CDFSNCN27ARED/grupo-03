@@ -4,30 +4,27 @@ module.exports = {
   users: async (req, res) => {
     const count = await User.count();
     const users = await User.findAll();
-    const userList =[]
-    users.forEach(user => {
+    const userList = [];
+    users.forEach((user) => {
+      const oneUser = {
+        id: user.id,
+        name: user.firstName,
+        email: user.email,
+        urlDetail: "localhost:3001/api/users/users/" + user.id,
+      };
 
-    const oneUser = {
-    id: user.id,
-    name: user.firstName,
-    email: user.email,
-    urlDetail: 'localhost:3001/api/users/users/'+ user.id  
-     }
-
-     userList.push(oneUser);
-
-});
+      userList.push(oneUser);
+    });
 
     res.send({
       meta: {
         status: 200,
         url: req.originalUrl,
-        
       },
-      data:{
+      data: {
         totalCount: count,
         userList,
-      } 
+      },
     });
   },
 
@@ -68,17 +65,23 @@ module.exports = {
     });
   },
 
-  detail:async (req, res) => {
+  detail: async (req, res) => {
     const users = await User.findByPk(req.params.id);
-    
+
     res.send({
       meta: {
         status: 200,
         url: req.originalUrl,
-        
       },
-      data:users,
+      data: {
+        usuario: {
+          firstName: users.firstName,
+          lastName: users.lastName,
+          email: users.email,
+          user: users.user,
+          image: "http://localhost:3001/images/users/" + users.image,
+        },
+      },
     });
   },
-
 };
