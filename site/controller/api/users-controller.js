@@ -4,6 +4,19 @@ module.exports = {
   users: async (req, res) => {
     const count = await User.count();
     const users = await User.findAll();
+    const userList =[]
+    users.forEach(user => {
+
+    const oneUser = {
+    id: user.id,
+    name: user.firstName,
+    email: user.email,
+    urlDetail: 'localhost:3001/api/users/users/'+ user.id  
+     }
+
+     userList.push(oneUser);
+
+});
 
     res.send({
       meta: {
@@ -12,8 +25,8 @@ module.exports = {
         
       },
       data:{
-        count: count,
-        users,
+        totalCount: count,
+        userList,
       } 
     });
   },
@@ -54,4 +67,18 @@ module.exports = {
       data: admin,
     });
   },
+
+  detail:async (req, res) => {
+    const users = await User.findByPk(req.params.id);
+    
+    res.send({
+      meta: {
+        status: 200,
+        url: req.originalUrl,
+        
+      },
+      data:users,
+    });
+  },
+
 };

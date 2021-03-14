@@ -12,7 +12,7 @@ module.exports = {
     id: product.id,
     name: product.name,
     description: product.description,
-    url: 'localhost:3001/api/products/products/'+ product.id  
+    urlDetail: 'localhost:3001/api/products/products/'+ product.id  
      }
 
      productList.push(oneProduct);
