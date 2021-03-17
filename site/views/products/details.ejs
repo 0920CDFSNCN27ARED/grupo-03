@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <%-include("../partials/head-base", { title: product.name }) %>
+    <script src="/js/confirm-delete-product.js"></script>
   </head>
 
   <body class="background-main">
@@ -70,13 +71,29 @@
               </div>
               <div class="details-form d-flex width-100 no-border-lg">
                 <form
+                  id="deleteForm"
                   action="/products/<%= product.id  %>?_method=DELETE"
                   method="POST"
                   class="width-100"
                 >
-                  <button type="submit" class="radius-5 border-1">
+                  <button
+                    id="deleteButton"
+                    type="submit"
+                    class="radius-5 border-1"
+                  >
                     Borrar
                   </button>
+                  <div id="confirmDelete" class="hidden">
+                    <form
+                      id="reconfirm"
+                      action="/products/<%= product.id  %>?_method=DELETE"
+                      method="POST"
+                    >
+                      <p>Estas seguro que deseas eliminar el producto?</p>
+                      <button type="submit" id="deleteYes">Si</button>
+                      <button id="deleteNo">No</button>
+                    </form>
+                  </div>
                 </form>
               </div>
             </div>

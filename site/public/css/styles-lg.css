@@ -52,8 +52,8 @@
   padding-left: 15px;
   padding-right: 15px;
 }
-.flex-end-lg {
-  align-self: flex-end;
+.flex-auto-lg {
+  align-self: auto;
 }
 
 .width-30-lg {
