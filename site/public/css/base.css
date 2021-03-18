@@ -268,3 +268,14 @@ li {
 .margin-r-5 {
   margin-right: 5px;
 }
+
+.padding-0-3 {
+  padding: 0px 3px;
+}
+
+.div-nav {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  justify-content: flex-end;
+}

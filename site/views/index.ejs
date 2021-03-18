@@ -84,10 +84,10 @@
 
       <!--Creo section para poner adentro los articulos destacados-->
 
-      <section class="index-products flex-column">
+      <section class="index-products flex-column width-100">
         <h3 class="font-jura">Productos destacados</h3>
 
-        <div class="d-flex-md d-flex-lg width-100vw justify-center">
+        <div class="d-flex-md d-flex-lg width-100 justify-center">
           <% for (let i = 0; i < 3; i++) { %> <% let product = products[i]; %>
           <%-include('products/product-card', {product:products[i]}) %> <% } %>
         </div>

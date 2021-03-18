@@ -8,7 +8,7 @@
   <body class="background-main">
     <%-include("../partials/header") %>
     <main class="flex-wrap">
-      <section class="seccion-details-conteiner flex-column background-main">
+      <section class="flex-column background-main">
         <div class="padding-7 hidden-md">
           <a href="/"><i class="fas fa-home color-primary"></i></a>
         </div>
@@ -59,7 +59,7 @@
           <article
             class="flex-column text-details-container font-arimo width-50lg"
           >
-            <p class="font-size-14"><%= product.description %></p>
+            <p class="font-size-14 color-primary"><%= product.description %></p>
             <% if(user.categoryId == 2) { %>
             <div class="d-flex">
               <div class="details-form d-flex width-100 no-border-lg">

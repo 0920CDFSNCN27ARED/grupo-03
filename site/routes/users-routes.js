@@ -80,7 +80,14 @@ router.post(
       .isAlphanumeric()
       .withMessage("El campo usuario debe ser alfanumérico")
       .isLength({ min: 1, max: 16 })
-      .withMessage("El campo usuario debe estar completo"),
+      .withMessage("El campo usuario debe estar completo")
+      .custom(async (value) => {
+        const user = await User.findAll({ where: { user: value } });
+        if (user.length != 0) {
+          throw new Error("El usuario ingresado ya esta registrado");
+        }
+        return true;
+      }),
     check("email")
       .isEmail()
       .withMessage("Debes ingresa un email válido")

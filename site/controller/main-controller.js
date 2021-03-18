@@ -37,6 +37,9 @@ const controller = {
   contact: (req, res) => {
     res.render("contact");
   },
+  about: (req, res) => {
+    res.render("about");
+  },
   //purchaseCart:(req, res)=>{
   //let products = getProducts();
   //const i = products.findIndex((prod) => {

@@ -9,4 +9,5 @@ router.get("/cart", mainController.cart);
 router.get("/search", mainController.search);
 router.get("/accesDenied", mainController.denied);
 router.get("/contact", mainController.contact);
+router.get("/about", mainController.about);
 module.exports = router;
