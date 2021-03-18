@@ -1,6 +1,6 @@
 function assertIsAdmin(req, res, next) {
   if (res.locals.user.categoryId == 1) {
-    res.redirect("/");
+    res.redirect("/accesDenied");
   } else {
     next();
   }

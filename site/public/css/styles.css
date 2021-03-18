@@ -155,3 +155,11 @@
   align-self: flex-start;
   margin-bottom: 10px;
 }
+
+.flex-end {
+  display: flex;
+  align-self: flex-end;
+}
+.padding-25 {
+  padding-top: 25px;
+}

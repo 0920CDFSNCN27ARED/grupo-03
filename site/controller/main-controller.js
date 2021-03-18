@@ -31,6 +31,12 @@ const controller = {
 
     res.render("products/products", { products: productsSearch });
   },
+  denied: (req, res) => {
+    res.render("acces-denied");
+  },
+  contact: (req, res) => {
+    res.render("contact");
+  },
   //purchaseCart:(req, res)=>{
   //let products = getProducts();
   //const i = products.findIndex((prod) => {

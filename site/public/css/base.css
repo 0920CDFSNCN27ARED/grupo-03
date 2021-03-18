@@ -259,3 +259,12 @@ li {
 .margin-top-20 {
   margin-top: 20px;
 }
+
+.image-header {
+  position: absolute;
+  margin-top: -70px;
+}
+
+.margin-r-5 {
+  margin-right: 5px;
+}

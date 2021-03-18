@@ -7,4 +7,6 @@ const authenticate = require("../middlewares/authenticate");
 router.get("/", authenticate, mainController.home);
 router.get("/cart", mainController.cart);
 router.get("/search", mainController.search);
+router.get("/accesDenied", mainController.denied);
+router.get("/contact", mainController.contact);
 module.exports = router;

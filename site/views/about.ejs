@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cala Home</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arimo&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="css/styles-md.css"
+      media="(min-width: 481px)"
+    />
+    <link
+      rel="stylesheet"
+      href="css/styles-lg.css"
+      media="(min-width: 769px)"
+    />
+  </head>
+
+  <body>
+    <header class="header-container flex-column background-main">
+      <nav class="menu-fixed d-flex width-100 background-main justify-flex-end">
+        <i class="fas fa-bars color-primary hidden-md"></i>
+        <div>
+          <a href="/login"> <i class="fas fa-sign-in-alt color-primary"></i></a>
+
+          <a href="/cart">
+            <i class="fas fa-shopping-cart color-primary"></i
+          ></a>
+        </div>
+      </nav>
+      <div class="margin-top-20">
+        <img src="images/logoCala.jpg" class="logo" alt="Logo Cala" />
+      </div>
+
+      <div class="search-container d-flex radius-5">
+        <input
+          class="no-border"
+          type="text"
+          placeholder="Busca tus productos"
+        />
+        <button class="no-border width-10" type="submit">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
+
+      <!--cambio de nav a div (lo veo en ejerc anterior) con lista de iconos y 
+        cada uno con un enlace aun no determinado-->
+      <div class="nets-container width-50">
+        <ul class="header-menus main-container">
+          <li>
+            <a href="#"><i class="fab fa-twitter-square color-primary"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-facebook-square color-primary"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fab fa-instagram color-primary"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-share-alt color-primary"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="width-100">
+        <!--Creo una section para los menu-->
+        <nav class="hidden show">
+          <ul class="header-menus main-container color-primary font-arimo">
+            <li><a class="color-primary" href="/">Inicio</a></li>
+            <li><a class="color-primary" href="/products">Productos</a></li>
+            <li><a class="color-primary" href="/about">Sobre Nosotras</a></li>
+            <li><a class="color-primary" href="/contact">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="about-us background-main padding-10">
+      <section>
+        <h2 class="font-jura">Sobre Nosotras...</h2>
+        <article>
+          <p class="font-size-14 padding-bottom-5 font-arimo color-secondary">
+            En Cala creemos que un mundo más sustentable, inclusivo y libre de
+            crueldad animal es posible. Por esto es que decidimos crear una gama
+            de productos cosméticos ecológicos, con
+            <em>ingredientes naturales</em>, aceites esenciales, libres de
+            parabenos o fragancias sintéticas, biodegradables y de producción
+            local. También utilizando materiales para su envase biodegradables,
+            renovables y reciclables. Y como estamos comprometidas a ser
+            <strong>libres de crueldad animal</strong>, en nuestros productos no
+            se realizarán pruebas en animales en ninguna etapa de su desarrollo.
+          </p>
+          <p class="font-arimo color-secondary font-size-14 padding-bottom-5">
+            Somos una tienda online de <strong>cosmética natural</strong> y
+            ecológica no testada en animales y respetuosa con el medio ambiente.
+            También podrás encontrar productos de aromaterapia, maquillaje
+            natural apto para veganos… y un amplio catálogo de productos
+            naturales para ti y para toda la familia. Nuestro objetivo es tu
+            bienestar.
+          </p>
+          <p class="font-arimo color-secondary font-size-14 padding-bottom-5">
+            Cala Cosmetic es el resultado de una mágica fusión de pasiones,
+            deseos y sueños compartidos por un grupo de amigas. Así surge el
+            nacimiento de este emprendimiento hecho con mucho amor y compromiso
+            con el medio ambiente y todos los seres que en él convivimos. Hace
+            ya varios años que comenzamos a dar nuestros primeros pasos hacia
+            una vida más consciente, respetuosa y amigable con la naturaleza.
+            Hoy estamos, felices, entusiastas y seguras de que podremos aportar
+            nuestro granito de arena, con nuestros productos 100% naturales,
+            libres de tóxicos y químicos dañinos para nuestro cuerpo y nuestro
+            planeta. Cada producto está hecho a mano, con el cuidado y la
+            dedicación que solo lo artesanal puede brindarte. Atentos a cada
+            detalle, desde las fórmulas, hasta el embalaje está pensado para
+            respetar nuestra filosofía y lleva una parte de nuestra historia.
+            Queremos invitarte a dar los primeros pasos hacia un estilo de vida
+            más saludable.
+          </p>
+        </article>
+      </section>
+      <section>
+        <h2 class="font-jura">Nuestra ideologia</h2>
+        <article>
+          <div>
+            <h6 class="font-arimo color-secondary font-size-16">CONSCIENTE:</h6>
+            <p class="font-arimo color-secondary font-size-14 padding-bottom-5">
+              La cosmética consciente es aquella que escucha lo que necesita la
+              piel y lo que va más allá. En Cala ponemos conciencia en realizar
+              productos respetuosos con tu piel y con la madre tierra.
+            </p>
+          </div>
+          <div>
+            <h6 class="font-arimo color-secondary font-size-16">NATURAL:</h6>
+            <p class="font-arimo color-secondary font-size-14 padding-bottom-5">
+              La naturaleza nos ofrece todo lo que necesitamos. Por ello en Cala
+              aprovechamos su abundancia para elaborar productos con
+              ingredientes naturales.
+            </p>
+          </div>
+          <div>
+            <h6 class="font-arimo color-secondary font-size-16">ARTESANAL:</h6>
+            <p class="font-arimo color-secondary font-size-14 padding-bottom-5">
+              Trabajamos con nuestras manos, es la manera de conectar nuestra
+              esencia con la materia con la que trabajamos. Todo el proceso se
+              realiza de forma tradicional, sin maquinaria industrial.
+            </p>
+          </div>
+          <div>
+            <h6 class="font-arimo color-secondary font-size-16">VEGANA:</h6>
+            <p class="font-arimo color-secondary font-size-14 padding-bottom-5">
+              Nuestra visión tiende a una concepción vegana. La base de nuestros
+              productos es de origen vegetal: arcillas, plantas, aceites, ceras,
+              semillas, etc.
+            </p>
+          </div>
+          <div>
+            <h6 class="font-arimo color-secondary font-size-16">SOSTENIBLE:</h6>
+            <p class="font-arimo color-secondary font-size-14 padding-bottom-5">
+              La línea de productos Cala tiende a una concepción de residuo
+              cero, por lo que hemos eliminado la mayoría de los envases, dando
+              lugar a productos cosméticos sólidos.
+            </p>
+          </div>
+          <div>
+            <h6 class="font-arimo color-secondary font-size-16">CON AMOR:</h6>
+            <p class="font-arimo color-secondary font-size-14 padding-bottom-5">
+              Nos gusta poner todo el cariño del mundo en lo que hacemos,
+              cuidando al máximo cada parte del proceso y cada pequeño detalle.
+              Nos gusta que nuestros productos transmitan este cuidado y este
+              amor por lo que hacemos.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer-container background-main padding-10">
+      <div class="center-text">
+        <section>
+          <nav>
+            <h4>Sumate al cambio</h4>
+            <div class="icons-footer">
+              <a href="https://www.dondereciclo.org.ar/"
+                ><i class="fas fa-recycle color-primary"></i
+              ></a>
+              <a href="https://www.quieroayudar.org/Donar"
+                ><i class="far fa-heart color-primary"></i
+              ></a>
+              <a href="https://www.quieroayudar.org/SerVoluntario"
+                ><i class="far fa-smile color-primary"></i
+              ></a>
+            </div>
+          </nav>
+        </section>
+
+        <section>
+          <nav>
+            <a href="/faq" class="color-primary">Preguntas frecuentes</a>
+          </nav>
+        </section>
+      </div>
+
+      <div class="center-text">
+        <div>
+          <p>Suscribite a nuestro newsletter</p>
+          <div>
+            <input type="text" id="footer-input" />
+            <button type="submit" class="no-border">
+              <i class="fas fa-paper-plane color-primary"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

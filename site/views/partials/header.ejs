@@ -7,12 +7,25 @@
       <a href="/cart"> <i class="fas fa-shopping-cart color-primary"></i></a>
     </div>
   </nav>
+  <div class="flex-end padding-25 flex-column">
+      <div>  <h1 class="color-primary font-arimo font-size-14 margin-5">
+          Hola <%= user ? user.firstName : "" %>
+        </h1>
+    </div>
+    <div class="flex-end">
+      <% if(user) { %>
+      <a href="/profile/<%=user.id%> " class="color-primary font-arimo font-size-14 margin-5"
+        >Mi perfil</a
+      >
+      <% } %>
+    </div>
+    </div>
   <div class="header-lg">
     <a href="/">
       <div class="margin-top-20">
         <img
           src="/images/products/logoCala.jpg"
-          class="logo"
+          class="logo image-header"
           alt="Logo Cala"
         /></div
     ></a>
@@ -77,14 +90,5 @@
         </button>
       </form>
       <% } %>
-      <h1 class="color-primary font-arimo font-size-14 margin-5">
-        Hola, <%= user ? user.firstName : "Amigo!" %>
-      </h1>
-    </div>
-    <% if(user) { %>
-    <a href="/profile/<%=user.id%> " class="margin-left font-size-14"
-      >Mi perfil</a
-    >
-    <% } %>
-  </div>
+     
 </header>
