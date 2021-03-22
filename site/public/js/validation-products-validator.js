@@ -2,47 +2,16 @@ let errors = [];
 
 window.addEventListener("load", () => {
   const createForm = document.getElementById("createForm");
-  if(createForm){ 
-  createForm.addEventListener("submit", (event) => {
-    errors = [];
-    clearValidations();
+  if (createForm) {
+    createForm.addEventListener("submit", (event) => {
+      errors = [];
+      clearValidations();
 
-    validateInput("name", [
-      [
-        validator.isLength, ///valitation[0]
-        { min: 5 },
-        "El campo nombre debe tener al menos cinco caracteres", //validation[validation.length-1]
-      ],
-    ]);
-    validateInput("description", [
-      [
-        validator.isLength,
-        { min: 20 },
-        "La descripción del producto debe tener al menos veinte caracteres",
-      ],
-    ]);
-   
-    
-   
-
-    if (checkErrors()) {
-      event.preventDefault();
-    }
-  
-  });
-
-}
-});
-
-window.addEventListener("load", () => {
-  const editForm = document.getElementById("editForm");
-  
-  if(editForm){ 
-  editForm.addEventListener("submit", (event) => {
-    errors = [];
-    clearValidations();
-
-    validateInput("name", [
+      validateImage(
+        "image",
+        "Solo se aceptan archivos con las siguientes extensiones: .jpg / .gif / .png / .jpeg"
+      );
+      validateInput("name", [
         [
           validator.isLength, ///valitation[0]
           { min: 5 },
@@ -56,15 +25,42 @@ window.addEventListener("load", () => {
           "La descripción del producto debe tener al menos veinte caracteres",
         ],
       ]);
-   
 
-    if (checkErrors()) {
-      event.preventDefault();
-    }
-  
-  });
+      if (checkErrors()) {
+        event.preventDefault();
+      }
+    });
+  }
+});
 
-}
+window.addEventListener("load", () => {
+  const editForm = document.getElementById("editForm");
+
+  if (editForm) {
+    editForm.addEventListener("submit", (event) => {
+      errors = [];
+      clearValidations();
+
+      validateInput("name", [
+        [
+          validator.isLength, ///valitation[0]
+          { min: 5 },
+          "El campo nombre debe tener al menos cinco caracteres", //validation[validation.length-1]
+        ],
+      ]);
+      validateInput("description", [
+        [
+          validator.isLength,
+          { min: 20 },
+          "La descripción del producto debe tener al menos veinte caracteres",
+        ],
+      ]);
+
+      if (checkErrors()) {
+        event.preventDefault();
+      }
+    });
+  }
 });
 
 function clearValidations() {
@@ -77,6 +73,19 @@ function clearValidations() {
   for (const feedback of arrayFeedbacks) {
     feedback.classList.remove("alert", "alert-danger");
     feedback.innerHTML = "";
+  }
+}
+
+function validateImage(inputId, errorMsg) {
+  const input = document.getElementById(inputId);
+  if (!input.value.match(/.(jpg)|(gif)|(png)|(jpeg)$/)) {
+    const error = {
+      inputId,
+      msg: errorMsg,
+    };
+    errors.push(error);
+  } else {
+    input.classList.add("is-valid");
   }
 }
 

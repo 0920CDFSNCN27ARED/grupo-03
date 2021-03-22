@@ -70,12 +70,7 @@
                 >
               </div>
               <div class="details-form d-flex width-100 no-border-lg">
-                <form
-                  id="deleteForm"
-                  action="/products/<%= product.id  %>?_method=DELETE"
-                  method="POST"
-                  class="width-100"
-                >
+                <form id="deleteForm" class="width-100">
                   <button
                     id="deleteButton"
                     type="submit"
@@ -83,18 +78,20 @@
                   >
                     Borrar
                   </button>
-                  <div id="confirmDelete" class="hidden">
-                    <form
-                      id="reconfirm"
-                      action="/products/<%= product.id  %>?_method=DELETE"
-                      method="POST"
-                    >
-                      <p>Estas seguro que deseas eliminar el producto?</p>
-                      <button type="submit" id="deleteYes">Si</button>
-                      <button id="deleteNo">No</button>
-                    </form>
-                  </div>
                 </form>
+                <div id="confirmDelete" class="hidden">
+                  <form
+                    id="reconfirm"
+                    action="/products/<%= product.id  %>?_method=DELETE"
+                    method="POST"
+                  >
+                    <p>Estas seguro que deseas eliminar el producto?</p>
+                    <button type="submit" id="deleteYes">Si</button>
+                  </form>
+                  <a href="/products/details/<%=product.id%>"
+                    >No, volver al detalle del producto</a
+                  >
+                </div>
               </div>
             </div>
             <% } %>
