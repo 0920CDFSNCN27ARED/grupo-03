@@ -39,8 +39,14 @@
 .font-weight-bold {
   font-weight: bold;
 }
+.font-size-medium {
+  font-size: medium;
+}
 .background-white {
   background-color: white;
+}
+.font-black {
+  color:black;
 }
 
 mark {
