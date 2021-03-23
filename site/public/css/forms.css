@@ -25,3 +25,17 @@
   background-color: transparent;
   font-weight: bold;
 }
+
+.background-image-two {
+  background-image: url("/images/main/background-two.jpg");
+  background-size: cover;
+}
+.background-image-one {
+  background-image: url("/images/main/background-one.jpg");
+  background-size: cover;
+}
+
+.background-image-four {
+  background-image: url("/images/main/background-six.jpg");
+  background-size: cover;
+}
