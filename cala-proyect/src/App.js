@@ -5,7 +5,7 @@ import DataCardSmall from "./components/data-cards/data-card-small/DataCardSmall
 import DataCardBig from "./components/data-cards/data-card-big/DataCardBig";
 import CategoryCard from "./components/category-card/CategoryCard";
 import Footer from "./components/footer/Footer";
-import DataCardTable from "./components/data-cards/data-card-table/DataCardTable";
+import DataCardTable from "./components/data-cards/Data-card-table/DataCardTable";
 import React, { Component } from "react";
 
 class App extends Component {
