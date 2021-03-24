@@ -18,6 +18,29 @@ class DataCardTable extends Component {
 		};
 	}
 
+	async componentDidMount() {
+		const response = await fetch(
+			"http://localhost:3001/api/products/allProducts"
+		);
+		const productResponse = await response.json();
+		const data = productResponse.data;
+		const tableProductDetailValue = data.map((elem) => {
+			return {
+				name: elem.name,
+				description: elem.description,
+				price: elem.price,
+				category: elem.categoryId,
+				discount: elem.discount,
+				color: elem.color,
+			};
+		});
+		console.log(tableProductDetailValue);
+
+		this.setState({
+			tableProductDetailValue,
+		});
+	}
+
 	render() {
 		return (
 			<div className="card shadow mb-4">

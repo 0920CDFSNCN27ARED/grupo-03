@@ -136,6 +136,19 @@ module.exports = {
       data: offers,
     });
   },
+  allProducts: async (req, res) => {
+    const count = await Product.count();
+    const products = await Product.findAll();
+
+    res.send({
+      meta: {
+        status: 200,
+        url: req.originalUrl,
+        totalCount: count,
+      },
+      data: products,
+    });
+  },
 
   detail: async (req, res) => {
     const products = await Product.findByPk(req.params.id);

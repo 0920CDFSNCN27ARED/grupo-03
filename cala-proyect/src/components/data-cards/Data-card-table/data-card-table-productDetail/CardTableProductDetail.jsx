@@ -6,7 +6,7 @@ function CardTableProductDetail(props) {
 			<td>{props.name}</td>
 			<td>{props.description}</td>
 			<td>{props.price}</td>
-			<td>{props.categoryId}</td>
+			<td>{props.category}</td>
 			<td>{props.discount}</td>
 			<td>{props.color}</td>
 		</tr>
