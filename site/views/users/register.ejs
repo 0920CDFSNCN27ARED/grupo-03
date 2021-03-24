@@ -16,9 +16,9 @@
         class="background-main main-form-container flex-column wrap forms-lg"
       >
         <section
-          class="form-container form-container center-text radius-5 width-auto background-image-two"
+          class="form-container form-container center-text radius-5 width-auto background-image-seven"
         >
-          <h3 class="font-arimo font-size-25lg">Registrate</h3>
+          <h3 class="font-arimo font-weight-bold color-secondary font-size-25lg">Registrate</h3>
           <% if(typeof errors != "undefined") { %>
           <ul>
             <% for (let i = 0; i < errors.length; i ++) { %>
@@ -35,11 +35,11 @@
           >
             <label
               for="firstName"
-              class="font-jura font-size-14 flex-column font-size-20lg"
+              class="font-jura font-size-medium flex-column font-size-20lg font-weight-bold color-secondary"
               >Ingresa tu Nombre
             </label>
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate background-main"
               type="text"
               name="firstName"
               id="firstName"
@@ -48,11 +48,11 @@
             <div id="firstNameFeedback" class="feedback"></div>
             <label
               for="lastName"
-              class="font-jura font-size-14 flex-column font-size-20lg"
+              class="font-jura font-size-medium flex-column font-size-20lg font-weight-bold color-secondary"
               >Ingresa tu Apellido
             </label>
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate background-main"
               type="text"
               name="lastName"
               id="lastName"
@@ -61,11 +61,11 @@
             <div id="lastNameFeedback" class="feedback"></div>
             <label
               for="user"
-              class="font-jura font-size-14 flex-column font-size-20lg"
+              class="font-jura font-size-medium flex-column font-size-20lg font-weight-bold color-secondary"
               >Crea un nombre de usuario
             </label>
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate background-main"
               type="text"
               name="user"
               id="user"
@@ -74,27 +74,27 @@
             <div id="userFeedback" class="feedback"></div>
             <label
               for="email"
-              class="font-jura font-size-14 flex-column font-size-20lg"
+              class="font-jura font-size-medium flex-column font-size-20lg font-weight-bold color-secondary"
               >Ingresa tu email</label
             >
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate background-main"
               type="email"
               name="email"
               id="email"
               placeholder="mariaperez@mail.com"
             />
             <div id="emailFeedback" class="feedback"></div>
-            <p>Imagen</p>
-            <input type="file" name="image" id="image" class="validate" />
+            <p class="font-jura font-size-medium font-weight-bold color-secondary">Imagen</p>
+            <input type="file" name="image" id="image" class="validate background-main" />
             <div id="imageFeedback" class="feedback"></div>
             <label
               for="password"
-              class="font-jura font-size-14 flex-column font-size-20lg"
+              class="font-jura font-size-medium flex-column font-size-20lg font-weight-bold color-secondary"
               >Crea una clave</label
             >
             <input
-              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate background-main"
               type="password"
               name="password"
               id="password"
@@ -104,19 +104,19 @@
 
             <label
               for="password"
-              class="font-jura font-size-14 flex-column font-size-20lg"
+              class="font-jura font-size-medium flex-column font-size-20lg font-weight-bold color-secondary"
               >Confirma tu clave</label
             >
             <input
               type="password"
               name="passConf"
               id="passConf"
-              class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
+              class="no-border radius-5 center-text font-bellefair font-size-20lg validate background-main"
             />
             <div id="passConfFeedback" class="feedback"></div>
             <button
               type="submit"
-              class="no-border center-text font-jura font-size-14 font-size-20lg"
+              class="no-border center-text font-jura font-size-medium font-size-20lg font-weight-bold color-secondary"
             >
               Registrarme
             </button>

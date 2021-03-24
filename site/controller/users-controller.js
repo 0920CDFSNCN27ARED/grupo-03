@@ -94,7 +94,7 @@ const controller = {
       user: req.body.user,
       image: req.file.filename,
       password: bcrypt.hashSync(req.body.password, 10),
-      categoryId: 1,
+      categoryId: 2,
     });
 
     await newUser.save();

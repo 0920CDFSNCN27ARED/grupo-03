@@ -25,13 +25,23 @@
   background-color: transparent;
   font-weight: bold;
 }
-
+.margin-login {
+  margin: 20px 0px 60px 0px;
+}
 .background-image-two {
   background-image: url("/images/main/background-two.jpg");
   background-size: cover;
 }
+.background-image-seven {
+  background-image: url("/images/main/background-seven.jpg");
+  background-size: cover;
+}
 .background-image-one {
   background-image: url("/images/main/background-one.jpg");
+  background-size: cover;
+}
+.background-image-five {
+  background-image: url("/images/products/lavanda-1.jpg");
   background-size: cover;
 }
 .background-image-four {

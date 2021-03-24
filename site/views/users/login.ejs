@@ -13,14 +13,15 @@
   <body class="background-main">
     <%-include("../partials/header") %>
 
-    <main>
+    <main class="margin-login">
       <div
-        class="background-main main-form-container flex-column wrap forms-lg"
+        class="background-main main-form-container flex-column wrap forms-lg "
       >
         <section
-          class="form-container center-text radius-5 width-auto background-image-two"
+          class="form-container center-text radius-5 width-auto background-image-seven"
         >
-          <h3 class="font-arimo font-size-25lg color-secondary">
+        <div>
+          <h3 class="font-arimo font-size-25lg font-weight-bold color-secondary">
             Ingresa a tu cuenta
           </h3>
           <% if(typeof errors != "undefined") { %>
@@ -33,7 +34,7 @@
           <form action="/" method="POST" class="flex-column" id="loginForm">
             <div>
               <input
-                class="font-bellefair no-border radius-5 center-text font-size-20lg validate"
+                class="font-bellefair no-border radius-5 center-text font-size-20lg validate background-main"
                 type="text"
                 name="user"
                 id="user"
@@ -45,7 +46,7 @@
             </div>
             <div>
               <input
-                class="no-border radius-5 center-text font-bellefair font-size-20lg validate"
+                class="no-border radius-5 center-text font-bellefair font-size-20lg validate background-main"
                 type="password"
                 name="password"
                 id="password"
@@ -55,15 +56,15 @@
             </div>
             <button
               type="submit"
-              class="no-border center-text font-jura font-size-20lg"
+              class="font-size-medium no-border center-text font-jura font-size-20lg font-weight-bold color-secondary"
             >
               Ingresar
             </button>
             <div
-              class="checkbox-form d-flex font-jura font-size-14 color-secondary"
+              class="checkbox-form d-flex font-jura font-size-14"
             >
-              <p class="font-size-20lg">
-                <label for="remember">Recordar usuario </label>
+              <p class="font-size-medium font-size-20lg">
+                <label class="font-weight-bold color-secondary" for="remember">Recordar usuario </label>
               </p>
               <input
                 class="no-border radius-5 center-text width-10 font-size-20lg"
@@ -74,25 +75,25 @@
               />
             </div>
             <div>
-              <a href="#" class="font-jura font-size-14 font-size-20lg"
+              <a href="#" class="font-weight-bold color-secondary font-jura font-size-medium font-size-20lg "
                 >Recuperar contraseña</a
               >
             </div>
           </form>
-          <h2 class="font-arimo color-secondary font-size-14">
+          <h2 class="font-arimo font-weight-bold color-secondary font-size-medium">
             Todavia no te registraste?
           </h2>
           <a href="/register">
             <button
-              class="font-arimo color-secondary font-size-14 no-border width-auto"
+              class="font-arimo font-weight-bold color-secondary font-size-medium no-border width-auto"
             >
               Registrarme
             </button></a
           >
+          </div>
         </section>
       </div>
     </main>
-
     <%-include("../partials/footer") %>
   </body>
 </html>
