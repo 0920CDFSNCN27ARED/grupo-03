@@ -21,6 +21,7 @@ insert into users (id, firstName, lastName, email, user, image, password, catego
 insert into users (id, firstName, lastName, email, user, image, password, categoryId) values (13, 'Bernardo', 'Slayton', 'bslaytonc@opera.com', 'bslaytonc', 'image', 'L7OBXSqYlm', 1);
 insert into users (id, firstName, lastName, email, user, image, password, categoryId) values (14, 'Tobiah', 'Bravington', 'tbravingtond@smugmug.com', 'tbravingtond', 'image', 'KGmiNmT', 1);
 insert into users (id, firstName, lastName, email, user, image, password, categoryId) values (15, 'Trent', 'Orrum', 'torrume@ow.ly', 'torrume', 'image', 'FI3Ek5D1Ru8', 1);
+insert into users (id, firstName, lastName, email, user, image, password, categoryId) values (16, 'admin', 'admin', 'admin@gmail.com', 'admin01', 'image-1616623671707.png', '$2b$10$EO0mXahLfGmbDQXdCvRtyeqvqMjBAefrVdzuSHSq3CnetF6Bu5A6a', 2);
 
 insert into product_categories (id, name) values (1, 'Cabello');
 insert into product_categories (id, name) values (2, 'Cuerpo');

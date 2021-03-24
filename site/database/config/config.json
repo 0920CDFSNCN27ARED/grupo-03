@@ -4,10 +4,7 @@
     "password": null,
     "database": "cala_db",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "define": {
-      "timestamps": true
-    }
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",

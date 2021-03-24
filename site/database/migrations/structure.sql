@@ -4,6 +4,9 @@ USE `cala_db`;
 CREATE TABLE `category_users`(
 `id` int unsigned NOT NULL AUTO_INCREMENT,
 `type` varchar(20) NOT NULL,
+`createdAt` datetime DEFAULT current_timestamp(),
+`updatedAt` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+`deletedAt` datetime DEFAULT NULL,
 PRIMARY KEY (`id`)
 );
 
