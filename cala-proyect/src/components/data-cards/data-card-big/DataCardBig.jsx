@@ -1,7 +1,6 @@
-
 import React from "react";
-import image from "../../../assets/product_dummy.svg";
-function DataCardBig(){
+
+function DataCardBig(props){
  return(
 
 					
@@ -11,10 +10,11 @@ function DataCardBig(){
 									<h6 className="m-0 font-weight-bold text-primary">Last product in Data Dase</h6>
 								</div>
 								<div className="card-body">
+								<p>{props.name}</p>
 									<div className="text-center">
-										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style= {{width: "25rem"}} src={image} alt="imagen dummy"/>
+										<img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style= {{width: "25rem"}} src= {props.image} alt="imagen dummy"/>
 									</div>
-									<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa exercitationem ratione?</p>
+									<p>{props.description}</p>
 									<a target="_blank" rel="nofollow" href="/">View product detail</a>
 								</div>
 							</div>

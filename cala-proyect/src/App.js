@@ -32,6 +32,13 @@ class App extends Component {
 					color: "warning",
 				},
 			],
+			bigDataCardValue:[
+				{
+					name: "n/a",
+					image: "n/a",
+					description:"n/a",
+				}
+			],
 		};
 	}
 	async componentDidMount() {
@@ -62,10 +69,22 @@ class App extends Component {
 				color: "warning",
 			},
 		];
+		const latestApi = await fetch(
+			"http://localhost:3001/api/products/latest");
+		const latest = await latestApi.json();	
+		 console.log(latest);
+        const bigDataCardValue = [
+			{
+				name: latest.data.producto.name,
+				image: latest.data.producto.image,
+				description:latest.data.producto.description,
+			}
+		];
 
 		this.setState({
-			smallCardsValue,
-		});
+			smallCardsValue,bigDataCardValue
+		},
+		);
 	}
 
 	render() {
@@ -94,7 +113,17 @@ class App extends Component {
 									})}
 								</div>
 								<div className="row">
-									<DataCardBig />
+								{this.state.bigDataCardValue.map((elem, index) => {
+										return (
+											<DataCardBig
+												key={index}
+												name={elem.name}
+												image={elem.image}
+												description={elem.description}
+												
+											/>
+										);
+									})}
 
 									<CategoryCard />
 								</div>

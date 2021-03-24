@@ -172,4 +172,23 @@ module.exports = {
       },
     });
   },
+  latest:async (req, res) => {
+    const latest = await Product.findAll({
+      order: [["createdAt", "DESC"]],
+      limit: 1,
+    });
+    res.send({
+      meta: {
+        status: 200,
+        url: req.originalUrl,
+      },
+      data: {
+      producto: {
+       name: latest[0].name,
+        description: latest[0].description,
+        image:  "http://localhost:3001/images/products/" + latest[0].image,
+      },
+    },
+  });
+  },
 };

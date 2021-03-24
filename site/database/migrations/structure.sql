@@ -16,6 +16,9 @@ CREATE TABLE `users`(
 `image` varchar(255) DEFAULT NULL,
 `password` varchar(255),
 `categoryId` int unsigned NOT NULL,
+`createdAt` datetime DEFAULT current_timestamp(),
+`updatedAt` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+`deletedAt` datetime DEFAULT NULL,
 PRIMARY KEY (`id`),
 KEY `users_category_users_id_foreign` (`categoryId`),
 CONSTRAINT `users_category_users_id_foreign` FOREIGN KEY (`categoryId`) REFERENCES `category_users` (`id`)
@@ -24,6 +27,9 @@ CONSTRAINT `users_category_users_id_foreign` FOREIGN KEY (`categoryId`) REFERENC
 CREATE TABLE `product_categories`(
 `id`int unsigned NOT NULL AUTO_INCREMENT,
 `name`varchar(20) NOT NULL,
+`createdAt` datetime DEFAULT current_timestamp(),
+`updatedAt` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+`deletedAt` datetime DEFAULT NULL,
 PRIMARY KEY (`id`)
 );
 
@@ -36,6 +42,9 @@ CREATE TABLE `products`(
 `categoryId`int unsigned NOT NULL,
 `discount` int unsigned DEFAULT NULL,
 `color` varchar(20) DEFAULT NULL,
+`createdAt` datetime DEFAULT current_timestamp(),
+`updatedAt` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+`deletedAt` datetime DEFAULT NULL,
 PRIMARY KEY (`id`),
 KEY `products_product_categories_id_foreign` (`categoryId`),
 CONSTRAINT `products_product_categories_id_foreign` FOREIGN KEY (`categoryId`) REFERENCES `product_categories` (`id`)
@@ -44,6 +53,9 @@ CONSTRAINT `products_product_categories_id_foreign` FOREIGN KEY (`categoryId`) R
 CREATE TABLE `payment_methods`(
 `id`int unsigned NOT NULL AUTO_INCREMENT,
 `method` varchar(20) NOT NULL,
+`createdAt` datetime DEFAULT current_timestamp(),
+`updatedAt` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+`deletedAt` datetime DEFAULT NULL,
 PRIMARY KEY (`id`)
 );
 
@@ -53,6 +65,9 @@ CREATE TABLE `sales`(
 `date` DATETIME NOT NULL , 
 `userId` int unsigned NOT NULL,
 `payMethodId` int unsigned NOT NULL ,
+`createdAt` datetime DEFAULT current_timestamp(),
+`updatedAt` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+`deletedAt` datetime DEFAULT NULL,
 PRIMARY KEY (`id`),
 KEY `sales_users_id_foreign` (`userId`),
 CONSTRAINT `sales_users_id_foreign` FOREIGN KEY (`userId`) REFERENCES `users` (`id`),
@@ -66,6 +81,9 @@ CREATE TABLE `product_sale`(
 `saleId`int unsigned NOT NULL,
 `quantity` int unsigned NOT NULL,
 `salePrice` float unsigned NOT NULL,
+`createdAt` datetime DEFAULT current_timestamp(),
+`updatedAt` datetime DEFAULT NULL ON UPDATE current_timestamp(),
+`deletedAt` datetime DEFAULT NULL,
 PRIMARY KEY (`id`),
 KEY `product_sale_products_id_foreign` (`productId`),
 CONSTRAINT `product_sale_products_id_foreign` FOREIGN KEY (`productId`) REFERENCES `products` (`id`),

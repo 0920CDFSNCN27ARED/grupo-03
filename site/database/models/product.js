@@ -34,7 +34,7 @@ module.exports = function (sequelize, dataTypes) {
         type: dataTypes.STRING(20),
       },
     },
-    { timestamps: false }
+    { timestamps: true }
   );
 
   Product.associate = function (models) {
@@ -47,7 +47,7 @@ module.exports = function (sequelize, dataTypes) {
       through: models.ProductSale,
       foreignKey: "productId",
       otherKey: "saleId",
-      timestamps: false,
+      timestamps: true,
     });
   };
   return Product;
