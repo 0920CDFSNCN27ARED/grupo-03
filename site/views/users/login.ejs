@@ -33,8 +33,12 @@
           <% } %>
           <form action="/" method="POST" class="flex-column" id="loginForm">
             <div>
+              <label for="user"
+                class="font-jura font-size-medium flex-column font-size-20lg font-weight-bold color-secondary margin-5">Ingresa tu
+                Usuarix
+              </label>
               <input
-                class="font-bellefair no-border radius-5 center-text font-size-20lg validate background-main"
+                class="font-bellefair no-border radius-5 center-text font-size-20lg height-5-vh width-button validate background-main"
                 type="text"
                 name="user"
                 id="user"
@@ -45,8 +49,12 @@
               <div id="userFeedback" class="feedback"></div>
             </div>
             <div>
+              <label for="password"
+              class="font-jura font-size-medium flex-column font-size-20lg font-weight-bold color-secondary margin-5">Ingresa tu
+              Contraseña
+              </label>
               <input
-                class="no-border radius-5 center-text font-bellefair font-size-20lg validate background-main"
+                class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-button validate background-main"
                 type="password"
                 name="password"
                 id="password"
@@ -56,7 +64,7 @@
             </div>
             <button
               type="submit"
-              class="font-size-medium no-border center-text font-jura font-size-20lg font-weight-bold color-secondary"
+              class="margin-5 no-border font-size-medium center-text font-jura font-size-20lg font-weight-bold color-secondary"
             >
               Ingresar
             </button>
@@ -85,7 +93,7 @@
           </h2>
           <a href="/register">
             <button
-              class="font-arimo font-weight-bold color-secondary font-size-medium no-border width-auto"
+              class="no-border margin-5 font-arimo font-weight-bold color-secondary font-size-medium width-auto"
             >
               Registrarme
             </button></a

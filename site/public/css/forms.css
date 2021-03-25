@@ -20,13 +20,16 @@
 }
 
 .form-container button {
-  width: 80%;
+  width: 42%;
   align-self: center;
   background-color: transparent;
   font-weight: bold;
 }
 .margin-login {
   margin: 20px 0px 60px 0px;
+}
+.width-button {
+  width: 42%;
 }
 .background-image-two {
   background-image: url("/images/main/background-two.jpg");
