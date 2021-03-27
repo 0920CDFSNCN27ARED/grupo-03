@@ -1,8 +1,6 @@
 <header class="header-container flex-column background-main">
   <nav class="menu-fixed d-flex width-100 background-main justify-flex-end">
-    <button id="bar-button" class="no-border background-main">
-      <i class="fas fa-bars color-primary hidden-md"></i>
-    </button>
+    
     <div class="div-nav">
       <a href="/login" class="padding-0-3">
         <i class="fas fa-sign-in-alt color-primary"></i
@@ -82,18 +80,21 @@
       </li>
     </ul>
   </div>
-  <div id="nav-bar" class="width-100 hidden show">
+  <div class="width-100">
     <nav class="" >
-      <ul id="ul-nav-bar" class="header-menus flex-wrap color-primary font-arimo">
-        <li><a class="color-primary" href="/">Inicio</a></li>
-        <li><a class="color-primary" href="/products">Productos</a></li>
+      <button id="bar-button" class="no-border background-main">
+        <i class="fas fa-bars color-primary hidden-md"></i>
+      </button>
+      <ul id="ul-nav-bar" class="hidden header-menus flex-wrap color-primary font-arimo">
+        <li><a id="nav-bar" class="color-primary"  href="/">Inicio</a></li>
+        <li><a class="color-primary" id="nav-bar" href="/products">Productos</a></li>
         <%if(user){ %> <% if(user.categoryId == 2) { %>
         <li>
-          <a class="color-primary" href="/products/create">Crear Producto</a>
+          <a class="color-primary" id="nav-bar" href="/products/create">Crear Producto</a>
         </li>
         <%}%> <%}%>
-        <li><a class="color-primary" href="/about">Sobre Nosotras</a></li>
-        <li><a class="color-primary" href="/contact">Contacto</a></li>
+        <li><a class="color-primary" id="nav-bar" href="/about">Sobre Nosotras</a></li>
+        <li><a class="color-primary" id="nav-bar" href="/contact">Contacto</a></li>
       </ul>
     </nav>
   </div>
