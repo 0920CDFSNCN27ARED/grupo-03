@@ -1,6 +1,8 @@
 <header class="header-container flex-column background-main">
   <nav class="menu-fixed d-flex width-100 background-main justify-flex-end">
-    <i class="fas fa-bars color-primary hidden-md"></i>
+    <button id="bar-button" class="no-border background-main">
+      <i class="fas fa-bars color-primary hidden-md"></i>
+    </button>
     <div class="div-nav">
       <a href="/login" class="padding-0-3">
         <i class="fas fa-sign-in-alt color-primary"></i
@@ -80,9 +82,9 @@
       </li>
     </ul>
   </div>
-  <div class="width-100">
-    <nav class="hidden show">
-      <ul class="header-menus flex-wrap color-primary font-arimo">
+  <div id="nav-bar" class="width-100 hidden show">
+    <nav class="" >
+      <ul id="ul-nav-bar" class="header-menus flex-wrap color-primary font-arimo">
         <li><a class="color-primary" href="/">Inicio</a></li>
         <li><a class="color-primary" href="/products">Productos</a></li>
         <%if(user){ %> <% if(user.categoryId == 2) { %>
