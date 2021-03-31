@@ -13,22 +13,27 @@
 }
 
 .product-article {
-  background-color: rgba(173, 154, 172, 0.5);
+  
   width: 90%;
   align-items: center;
-  margin-bottom: 15px;
+  margin: 15px;
+  border: solid 10px rgba(173, 154, 172, 0.5);
+  border-radius: 5px;
+  
 }
 
 .product-article img {
   width: 200px;
   height: 200px;
   object-fit: cover;
+
 }
-.product-img {
+/* .product-img {
   width: 200px;
   height: 200px;
   object-fit: cover;
-}
+  
+} */
 
 .banner-index {
   width: 100%;
@@ -70,9 +75,9 @@
 .certifications h3,
 .about-us h2 {
   font-size: 28px;
-  font-weight: bold;
-  color: #ad9aac;
-  opacity: 0, 5;
+  /* font-weight: bold; */
+  color: gray ;
+  opacity: 0, 8;
 }
 
 .delivery-container {
@@ -163,3 +168,20 @@
 .padding-25 {
   padding-top: 25px;
 }
+.li-menu{
+  margin: 10px 0px;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+/* 
+.certifications{
+
+} */
+
+/* #ul-nav-bar{
+ 
+  display: block;
+  width: 80%;
+  height: 100%;
+
+} */

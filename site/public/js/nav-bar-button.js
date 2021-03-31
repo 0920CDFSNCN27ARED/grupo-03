@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
   const barButton = document.getElementById("bar-button");
   barButton.addEventListener("click", (event) => {
+
     const ulNavBar = document.getElementById("ul-nav-bar");
     ulNavBar.classList.toggle("header-menus");
     ulNavBar.classList.toggle("flex-column");

@@ -1,6 +1,24 @@
 <header class="header-container flex-column background-main">
   <nav class="menu-fixed d-flex width-100 background-main justify-flex-end">
-    
+    <div class="width-100 ">
+     
+        <button id="bar-button" class="no-border background-main padding-7">
+          <i class="fas fa-bars color-primary hidden-md"></i>
+        </button> 
+      <nav   >
+        <ul id="ul-nav-bar" class=" header-menus flex-wrap color-primary font-arimo hidden-md ">
+          <li class="li-menu"><a class="nav-bar hidden show color-primary " id="" href="/">Inicio</a></li>
+          <li class="li-menu"><a class="nav-bar hidden show color-primary" id="" href="/products">Productos</a></li>
+          <%if(user){ %> <% if(user.categoryId == 2) { %>
+          <li class="li-menu">
+            <a class="nav-bar hidden show color-primary" id="" href="/products/create">Crear Producto</a>
+          </li>
+          <%}%> <%}%>
+          <li class="li-menu"><a class="nav-bar hidden show color-primary" id="" href="/about">Sobre Nosotras</a></li>
+          <li class="li-menu"><a class="nav-bar hidden show color-primary" id="" href="/contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
     <div class="div-nav">
       <a href="/login" class="padding-0-3">
         <i class="fas fa-sign-in-alt color-primary"></i></a>
@@ -58,7 +76,7 @@
       </div>
     </form>
   </div>
-  <div class="hidden show nets-container flex-auto-lg width-lg">
+  <div class=" nets-container width-50 flex-start-lg width-lg">
     <ul class="header-menus flex-wrap justify-rigth-lg">
       <li class="padding-nets-15">
         <a href="https://twitter.com/CalaCosmetics"
@@ -79,11 +97,9 @@
     </ul>
   </div>
   <div class="width-100">
-    <nav class="padding-7" >
-      <button id="bar-button" class="no-border background-main">
-        <i class="fas fa-bars color-primary hidden-md"></i>
-      </button>
-      <ul id="ul-nav-bar" class="header-menus flex-wrap color-primary font-arimo">
+    <nav class="padding-7 hidden show" >
+    
+      <ul class="header-menus flex-wrap color-primary font-arimo">
         <li><a class="nav-bar hidden show color-primary" id="" href="/">Inicio</a></li>
         <li><a class="nav-bar hidden show color-primary" id="" href="/products">Productos</a></li>
         <%if(user){ %> <% if(user.categoryId == 2) { %>

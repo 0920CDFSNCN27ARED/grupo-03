@@ -3,17 +3,17 @@
   class="d-flex justify-center width-50-md product width-30-lg"
 >
   <article class="product-article flex-column no-border radius-5">
-    <h4 class="font-arimo color-secondary center-text"><%= product.name %></h4>
-    <h4 class="font-arimo color-secondary center-text">
-      <%= product.productCategory.name %>
-    </h4>
+   
+    
     <img
       src="/images/products/<%= product.image %>"
       alt="<%= product.name %> "
       class="width-100"
     />
-    <p class="font-bellefair center-text color-secondary">
-      <%= product.description %>
+    <h4 class="font-arimo color-secondary center-text margin-10"><%= product.name %></h4>
+    <p class="center-text color-secondary font-size-23">
+     $  <%= product.price%>
     </p>
+  
   </article>
 </a>

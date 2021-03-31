@@ -112,12 +112,6 @@ li {
   border: solid 1px #344659;
 }
 
-.index-products {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
 
 .certs {
   display: flex;
@@ -262,11 +256,13 @@ li {
 .margin-top-20 {
   margin-top: 20px;
 }
-
-.image-header {
+.margin-10{
+  margin: 10px;
+}
+/* .image-header {
   position: absolute;
   margin-top: -70px;
-}
+} */
 
 .margin-r-5 {
   margin-right: 5px;
