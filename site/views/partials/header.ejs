@@ -5,7 +5,7 @@
         <button id="bar-button" class="no-border background-main padding-7">
           <i class="fas fa-bars color-primary hidden-md"></i>
         </button> 
-      <nav   >
+      <nav>
         <ul id="ul-nav-bar" class=" header-menus flex-wrap color-primary font-arimo hidden-md ">
           <li class="li-menu"><a class="nav-bar hidden show color-primary " id="" href="/">Inicio</a></li>
           <li class="li-menu"><a class="nav-bar hidden show color-primary" id="" href="/products">Productos</a></li>
@@ -21,7 +21,7 @@
     </div>
     <div class="div-nav">
       <form action="/search" method="GET">
-        <div id="search-div"class=" search-container radius-5 d-flex no-border background-main">
+        <div id="search-div"class=" search-container radius-5 d-flex no-border background-main hide-lg">
           <input id="search-input"name="searchquery" class=" no-border hidden" type="search" placeholder="Busca tus productos" />
           <button id="search-button" class="no-border width-10" type="submit">
             <i class="fas fa-search color-primary"></i>
@@ -47,22 +47,29 @@
       <div align="center">
         <img
           src="/images/main/logoCala1.png"
-          class="logo image-header margin-top-42"
+          class="logo image-header width-40-md width-50lg margin-top-42"
           alt="Logo Cala"
         />
       </div>
     </a>  
-    <div class="flex-justify">
-      
-      <div class="justify-content-flex-end">
-        <a href="/login" class="">
-          Logueate | 
-        <a href="/register" class="">
-          Registrate
+    <div class="flex-justify login-search-lg">
+      <form action="/search" method="GET">
+        <div id="search-div"class=" search-container  radius-5 d-flex border-search background-main hidden-sm show-lg ">
+          <input id="search-input"name="searchquery" class="font-20-lg no-border" type="search" placeholder="Busca tus productos" />
+          <button id="search-button" class="no-border width-10 font-20-lg" type="submit">
+            <i class="fas fa-search color-primary"></i>
+          </button>
+        </div>
+      </form>
+      <div class="justify-content-flex-end log-md position-none-lg login-hi-lg">
+         <a href="/login" class="font-20-lg">
+            Logueate | </a>
+         <a href="/register" class="font-20-lg">
+          Registrate </a>
       </div>
-      <div class="flex-end">
+      <div class="flex-end hi-md position-none-lg">
         <div class="">
-          <h1 class="color-primary font-arimo font-size-14 margin-5">
+          <h1 class="color-primary font-arimo font-size-14 margin-5 font-20-lg">
             Hola <%= user ? user.firstName : "" %>!
           </h1>
         </div>
@@ -75,18 +82,17 @@
     </div>
   </div>
   <div class="width-100">
-    <nav class="padding-7 hidden show" >
-    
+    <nav class=" hidden show" >
       <ul class="header-menus flex-wrap color-primary font-arimo">
-        <li><a class="nav-bar hidden show color-primary" id="" href="/">Inicio</a></li>
-        <li><a class="nav-bar hidden show color-primary" id="" href="/products">Productos</a></li>
+        <li><a class="nav-bar hidden show color-primary font-20-md" id="" href="/">Inicio</a></li>
+        <li><a class="nav-bar hidden show color-primary font-20-md" id="" href="/products">Productos</a></li>
         <%if(user){ %> <% if(user.categoryId == 2) { %>
         <li>
-          <a class="nav-bar hidden show color-primary" id="" href="/products/create">Crear Producto</a>
+          <a class="nav-bar hidden show color-primary font-20-md" id="" href="/products/create">Crear Producto</a>
         </li>
         <%}%> <%}%>
-        <li><a class="nav-bar hidden show color-primary" id="" href="/about">Sobre Nosotras</a></li>
-        <li><a class="nav-bar hidden show color-primary" id="" href="/contact">Contacto</a></li>
+        <li><a class="nav-bar hidden show color-primary font-20-md" id="" href="/about">Sobre Nosotras</a></li>
+        <li><a class="nav-bar hidden show color-primary font-20-md" id="" href="/contact">Contacto</a></li>
       </ul>
     </nav>
   </div>
