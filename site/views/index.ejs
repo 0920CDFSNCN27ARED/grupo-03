@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <%-include("partials/head-base",{title:"Cala Home"}) %>
+    <link rel="stylesheet" href="/css/carrusel1.css" />
+    <link rel="stylesheet" href="/css/carrusel2.css" />
   </head>
 
   <body class="background-main">
@@ -9,13 +11,22 @@
     <main class="flex-wrap justify-center">
       <!--Agrego la imagen central con dos parrafos que van al costado.
       Agrego texto real a los parrafos e incluyo etiquetas semanticas-->
-      <section class="flex-wrap width-100 justify-center">
+      <!--PRUEBA CARRUSEL-->
+      <div id="carrusel-container">
+        <div class="item-carrusel"></div>
+        <div class="item-carrusel"></div>
+        <div class="item-carrusel"></div>
+        <div class="item-carrusel"></div>
+      </div>
+
+      <!--FIN PRUEBA CARRUSEL-->
+      <!--   <section class="flex-wrap width-100 justify-center">
         <img
           src="images/main/cabello-home.jpg"
           alt="Cosmetica Natural"
           class="width-100 photo-index"
         />
-        <section class="width-90">
+         <section class="width-90">
           <div class="color-secondary font-arimo hidden d-flex-lg">
             <img
               src="images/products/image-home.jpg"
@@ -80,7 +91,7 @@
             </p>
           </div>
         </section>
-      </section>
+      </section>-->
 
       <!--Creo section para poner adentro los articulos destacados-->
 
@@ -96,9 +107,14 @@
       <section class="certifications flex-column">
         <h3 class="center-text font-arimo position-relative-lg">
           Nuestras certificaciones
-        </h3><br>
+        </h3>
+        <br />
         <div align="center">
-         <img class="width-50" src="images/main/vegan-cert.jpg" alt="Certificaciones">
+          <img
+            class="width-50"
+            src="images/main/vegan-cert.png"
+            alt="Certificaciones"
+          />
         </div>
       </section>
     </main>

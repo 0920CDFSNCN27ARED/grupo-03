@@ -1,0 +1,31 @@
+.item-carrusel {
+  flex-grow: 1;
+  background-image: url("/images/main/image3.jpg");
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  filter: grayscale(1);
+  transition: flex-grow 0.4s ease, filter 0.3s;
+}
+
+.item-carrusel:not(:last-child) {
+  margin-right: 10px;
+}
+
+.item-carrusel:nth-of-type(2) {
+  background-image: url("/images/main/img-form6.jpg");
+}
+
+.item-carrusel:nth-of-type(3) {
+  background-image: url("/images/main/img-form7.jpg");
+}
+
+.item-carrusel:nth-of-type(4) {
+  background-image: url("/images/main/background-two.jpg");
+}
+
+.item-carrusel:hover {
+  flex-grow: 20;
+  filter: grayscale(0);
+}
