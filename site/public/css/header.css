@@ -1,0 +1,38 @@
+.logo-div {
+  display: flex;
+  align-self: flex-start;
+  margin-left: 20px;
+  position: relative;
+  margin-top: -40px;
+}
+
+.logo-img {
+  width: 160px;
+}
+
+.mt-20 {
+  margin-top: -20px;
+}
+.div-barra-cart {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.padding-3 {
+  padding: 3px;
+}
+
+.div-header-principal {
+  display: flex;
+  align-self: end;
+  flex-direction: column-reverse;
+  align-items: end;
+  margin-right: 5px;
+}
+
+.div-search-bar {
+  display: flex;
+  align-self: center;
+}

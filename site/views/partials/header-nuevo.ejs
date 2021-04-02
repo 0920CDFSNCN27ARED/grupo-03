@@ -1,0 +1,119 @@
+<header class="header-container flex-column background-main">
+  <!--MENU CON CART Y LOGOUT-->
+  <div class="div-barra-cart">
+    <a href="/cart">
+      <i class="fas fa-shopping-cart color-primary padding-3"></i
+    ></a>
+    <% if(!user) { %>
+    <a href="/login">
+      <i class="fas fa-sign-in-alt color-primary padding-3"></i>
+    </a>
+    <% } %> <% if(user) { %>
+    <form action="/logout" method="POST" class="padding-3">
+      <button
+        type="submit"
+        class="no-border font-jura font-size-14 color-primary background-main"
+      >
+        <i class="fas fa-power-off color-primary"></i>
+      </button>
+    </form>
+    <a href="/profile/<%=user.id%>">
+      <i class="fas fa-user-alt color-primary padding-3"></i
+    ></a>
+    <a href="/profile/<%=user.id%>">
+      <h1 class="color-primary font-arimo font-size-14 font-20-lg padding-3">
+        <%= user.firstName %>
+      </h1>
+    </a>
+    <% } %>
+  </div>
+  <!--MENU CON CART Y LOGOUT-->
+
+  <div class="div-header-principal">
+    <!--BARRA DE BUSQUEDA-->
+    <div class="div-search-bar">
+      <form action="/search" method="GET">
+        <div
+          id="search-div"
+          class="search-container radius-5 d-flex no-border background-main"
+        >
+          <input
+            id="search-input"
+            name="searchquery"
+            class="no-border"
+            type="search"
+            placeholder="Busca tus productos"
+          />
+          <button id="search-button" class="no-border width-10" type="submit">
+            <i class="fas fa-search color-primary"></i>
+          </button>
+        </div>
+      </form>
+    </div>
+    <!--FIN BARRA DE BUSQUEDA-->
+  </div>
+
+  <!--LOGO CALA-->
+  <div class="logo-div">
+    <a href="/">
+      <img src="/images/main/logoCala1.png" class="logo-img" alt="Logo Cala" />
+    </a>
+  </div>
+  <!--FIN LOGO CALA-->
+
+  <!--BOTON MENU PARA SMALL-->
+  <div>
+    <button id="bar-button" class="no-border background-main padding-7">
+      <i class="fas fa-bars color-primary hidden-md"></i>
+    </button>
+  </div>
+  <!--FIN BOTON MENU PARA SMALL-->
+
+  <!--MENU-->
+  <div class="width-100 mt-20">
+    <nav class="hidden show">
+      <ul class="header-menus flex-wrap color-primary font-arimo">
+        <li>
+          <a class="nav-bar hidden show color-primary font-20-md" id="" href="/"
+            >Inicio</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-bar hidden show color-primary font-20-md"
+            id=""
+            href="/products"
+            >Productos</a
+          >
+        </li>
+        <%if(user){ %> <% if(user.categoryId == 2) { %>
+        <li>
+          <a
+            class="nav-bar hidden show color-primary font-20-md"
+            id=""
+            href="/products/create"
+            >Crear Producto</a
+          >
+        </li>
+        <%}%> <%}%>
+        <li>
+          <a
+            class="nav-bar hidden show color-primary font-20-md"
+            id=""
+            href="/about"
+            >Sobre Nosotras</a
+          >
+        </li>
+        <li>
+          <a
+            class="nav-bar hidden show color-primary font-20-md"
+            id=""
+            href="/contact"
+            >Contacto</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <!--FIN MENU-->
+</header>
