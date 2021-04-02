@@ -40,6 +40,11 @@
   height: 110px;
   object-fit: cover;
 }
+.photo-index {
+  width: 90%;
+  height: 60vh;
+  object-fit: cover;
+}
 
 /*DETAILS*/
 
@@ -172,6 +177,10 @@
   margin: 10px 0px;
   border-bottom: 1px solid;
   padding-bottom: 5px;
+}
+.flex-justify {
+  display: flex;
+  justify-content: space-between;
 }
 /* 
 .certifications{

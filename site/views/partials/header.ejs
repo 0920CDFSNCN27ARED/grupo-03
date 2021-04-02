@@ -35,7 +35,7 @@
           <form action="/logout" method="POST">
             <button
             type="submit"
-            class="no-border center-text font-jura font-size-14 color-primary padding-0-3 background-main">
+            class="no-border center-text font-jura font-size-14 color-primary padding-5-3 background-main">
             <i class="fas fa-power-off color-primary"></i>
             </button>
           </form>
@@ -46,27 +46,32 @@
     <a href="/">
       <div align="center">
         <img
-          src="/images/main/logoCala2.png"
+          src="/images/main/logoCala1.png"
           class="logo image-header margin-top-42"
           alt="Logo Cala"
         />
       </div>
     </a>  
-    <div>
+    <div class="flex-justify">
+      
+      <div class="justify-content-flex-end">
+        <a href="/login" class="">
+          Logueate | 
+        <a href="/register" class="">
+          Registrate
+      </div>
       <div class="flex-end">
         <div class="">
           <h1 class="color-primary font-arimo font-size-14 margin-5">
-            Hola <%= user ? user.firstName : "" %>
+            Hola <%= user ? user.firstName : "" %>!
           </h1>
         </div>
         <div class="flex-end">
           <% if(user) { %>
-            <a href="/profile/<%=user.id%> " class="color-primary font-arimo font-size-14 margin-5">Mi perfil</a>
+            <a href="/profile/<%=user.id%> " class="color-primary font-arimo font-size-14 margin-5">| Mi perfil</a>
             <% } %>
         </div>
       </div>
-      <a href="/login" class="padding-0-3">
-        <i class="fas fa-sign-in-alt color-primary"></i></a>
     </div>
   </div>
   <div class="width-100">
