@@ -1,3 +1,7 @@
+.font-fam{
+  font-family: -webkit-pictograph;
+    color: #474b47;
+}
 .error-container {
     text-align: center;
     font-size: 100px;
@@ -35,6 +39,10 @@
     transform-origin: 100% 100% 0px;
     transform: rotate(0deg);
     animation: rotatedrop 8s infinite;
+  }
+  .background-image-not-found {
+    background-image: url("/images/main/fondo-notfound.png");
+    background-size: cover;
   }
   @keyframes easyoutelastic {
     0% {
