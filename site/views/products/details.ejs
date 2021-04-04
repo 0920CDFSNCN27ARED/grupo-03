@@ -8,17 +8,17 @@
   <body class="background-main">
     <%-include("../partials/header") %>
     <main class="flex-wrap">
-      <section class="flex-column background-main">
+      <section class="flex-column background-main width-100 margin-top-50-lg">
        
         <div class="d-flex-lg width-100-lg">
-          <div class="width-50-lg">
+          <div class="width-50-lg flex-column justify-center">
             <article
-              class="product-article flex-column no-border radius-5"
+              class="product-article product-article-lg flex-column no-border radius-5"
             >
               <img
                 src="/images/products/<%= product.image %>"
                 alt="<%= product.name %>"
-                class="width-77"
+                class="width-77 zoom "
               />
               
             </article>
@@ -50,15 +50,31 @@
           </div>
 
           <article
-            class="flex-column text-details-container font-arimo width-50-lg"
+            class="flex-column text-details-container font-arimo width-50-lg justify-center"
           >
-          <h3 class="font-arimo font-size-18 color-secondary center-text">
+          <h3 class="margin-5 font-arimo font-size-18 font-25-lg color-secondary center-text">
             <%= product.name %>
           </h3>
-          <h4 class="font-arimo color-secondary center-text">
+          <% if(product.discount> 0) { %>
+          <div class="d-flex width-50-lg align-self-center justify-center">
+          <h4 class="margin-5 price-discount font-arimo color-secondary center-text">
             $ <%= product.price %>
           </h4>
-            <p class="font-size-14 color-primary"><%= product.description %></p>
+          <h4 class=" margin-5 font-arimo color-secondary center-text mark-discount">
+            <%= product.discount %>% OFF
+          </h4>
+          </div>
+          <p class="font-arimo color-secondary margin-5 align-self-center font-25-lg">
+            $<%= (product.price - product.price * product.discount / 100) %>
+          </p>
+          <% } else { %>
+            <p class="font-arimo color-secondary margin-5 align-self-center font-25-lg">
+              $<%= product.price; %>
+            </p>
+            <% } %>
+              
+
+            <p class="font-size-14 color-primary font-20-lg"><%= product.description %></p>
             <% if(user.categoryId == 2) { %>
             <div class="d-flex">
               <div class="details-form d-flex width-100 no-border-lg">

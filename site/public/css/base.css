@@ -52,6 +52,9 @@
 .wrap {
   flex-wrap: wrap;
 }
+.price-discount {
+  text-decoration: line-through;
+}
 
 #justify {
   justify-content: space-between;
@@ -295,6 +298,7 @@ li {
   display: flex;
   align-items: flex-start;
   width: 100%;
+  height: 3vh;
   justify-content: space-between;
 }
 .justify-content-flex-end {

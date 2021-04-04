@@ -143,6 +143,9 @@
 .padding-7 {
   padding: 7px;
 }
+.mark-discount {
+  background-color: whitesmoke;
+}
 .menu-fixed {
   justify-content: space-between;
   padding: 7px;

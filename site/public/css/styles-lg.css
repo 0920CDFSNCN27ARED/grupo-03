@@ -87,6 +87,20 @@
   padding: 53px;
   margin-top: 25px;
 }
+.zoom {
+  transition: transform .2s;
+}
+.zoom:hover {
+  transform: scale(1.2);
+}
+.product-article-lg img{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+.margin-top-50-lg {
+  margin: 50px 0px;
+}
 
 
 
@@ -104,8 +118,8 @@
     font-size: 19px;
   }
   .product-article img {
-    width: 250px;
-    height: 200px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
   }
 }
