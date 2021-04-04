@@ -1,9 +1,10 @@
 .form-container {
-  border: solid 5px #344659;
+  border: solid 3px #344659;
   padding: 5px;
   width: 80%;
   margin: 5px;
 }
+
 
 .main-form-container {
   align-items: center;
@@ -49,5 +50,17 @@
 }
 .background-image-four {
   background-image: url("/images/main/background-six.jpg");
+  background-size: cover;
+}
+.background-image-8 {
+  background-image: url("/images/main/img-form1.jpg");
+  background-size: cover;
+}
+.background-image-9 {
+  background-image: url("/images/main/img-form2.jpg");
+  background-size: cover;
+}
+.background-image-10 {
+  background-image: url("/images/main/img-form4.jpg");
   background-size: cover;
 }
