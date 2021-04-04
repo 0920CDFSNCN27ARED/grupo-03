@@ -1,15 +1,36 @@
-import React from "react";
-function SideMenuHeader(){
-return(
+import React, { Component } from "react";
+import AdminCard from "./AdminCard";
+class SideMenuHeader extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			adminName: [{ name: "n/a" }],
+		};
+	}
 
-    <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
-    <div className="sidebar-brand-icon">
-     <i className="fas fa-chart-line"></i>
-    </div>
-    <div className="sidebar-brand-text mx-3">Admin</div>
-</a>
+	async componentDidMount() {
+		const userApi = await fetch("http://localhost:3001/api/users/admin");
+		const user = await userApi.json();
+		console.log(user);
+		const adminName = [
+			{
+				name: user.data[0].firstName,
+			},
+		];
+		console.log(adminName);
+		this.setState({
+			adminName,
+		});
+	}
 
-);
+	render() {
+		return (
+			<div>
+				{this.state.adminName.map((elem, index) => {
+					return <AdminCard name={elem.name} />;
+				})}
+			</div>
+		);
+	}
 }
-
 export default SideMenuHeader;

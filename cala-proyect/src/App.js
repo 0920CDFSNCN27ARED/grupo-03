@@ -1,4 +1,5 @@
 import "./App.css";
+import "./color-font.css";
 import SideMenu from "./components/side-menu/SideMenu";
 import Header from "./components/header/Header";
 import DataCardSmall from "./components/data-cards/data-card-small/DataCardSmall";
@@ -32,12 +33,12 @@ class App extends Component {
 					color: "warning",
 				},
 			],
-			bigDataCardValue:[
+			bigDataCardValue: [
 				{
 					name: "n/a",
 					image: "n/a",
-					description:"n/a",
-				}
+					description: "n/a",
+				},
 			],
 		};
 	}
@@ -51,40 +52,39 @@ class App extends Component {
 		const countProducts = await productsApi.json();
 		const smallCardsValue = [
 			{
-				title: "Products in Data Base",
+				title: "Total de productos en la base de datos",
 				icon: " fa-clipboard-list",
 				value: countProducts.data.totalCount,
 				color: "primary",
 			},
 			{
-				title: "Amount in products",
+				title: "Importe total en productos",
 				icon: " fa-dollar-sign",
 				value: countProducts.data.totalPrice,
 				color: "success",
 			},
 			{
-				title: "Users quantity",
+				title: "Cantidad de usuarios registrados",
 				icon: "fa-user-check",
 				value: countUsers.data.totalCount,
 				color: "warning",
 			},
 		];
-		const latestApi = await fetch(
-			"http://localhost:3001/api/products/latest");
-		const latest = await latestApi.json();	
-		 console.log(latest);
-        const bigDataCardValue = [
+		const latestApi = await fetch("http://localhost:3001/api/products/latest");
+		const latest = await latestApi.json();
+		console.log(latest);
+		const bigDataCardValue = [
 			{
 				name: latest.data.producto.name,
 				image: latest.data.producto.image,
-				description:latest.data.producto.description,
-			}
+				description: latest.data.producto.description,
+			},
 		];
 
 		this.setState({
-			smallCardsValue,bigDataCardValue
-		},
-		);
+			smallCardsValue,
+			bigDataCardValue,
+		});
 	}
 
 	render() {
@@ -97,7 +97,9 @@ class App extends Component {
 							<Header />
 							<div className="container-fluid">
 								<div className="d-sm-flex align-items-center justify-content-between mb-4">
-									<h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+									<h1 className="h3 mb-0 text-gray-800">
+										Cala Cosmetics Dashboard
+									</h1>
 								</div>
 								<div className="row">
 									{this.state.smallCardsValue.map((elem, index) => {
@@ -113,14 +115,13 @@ class App extends Component {
 									})}
 								</div>
 								<div className="row">
-								{this.state.bigDataCardValue.map((elem, index) => {
+									{this.state.bigDataCardValue.map((elem, index) => {
 										return (
 											<DataCardBig
 												key={index}
 												name={elem.name}
 												image={elem.image}
 												description={elem.description}
-												
 											/>
 										);
 									})}
@@ -128,7 +129,7 @@ class App extends Component {
 									<CategoryCard />
 								</div>
 								<h1 className="h3 mb-2 text-gray-800">
-									All the products in the Database
+									Listado de productos de la base de datos
 								</h1>
 								<DataCardTable />
 							</div>

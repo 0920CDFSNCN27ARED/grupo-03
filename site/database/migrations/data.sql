@@ -1,3 +1,4 @@
+USE `cala_db`;
 insert into payment_methods (id, method) values (1, 'cash');
 insert into payment_methods (id, method) values (2, 'debitCard');
 insert into payment_methods (id, method) values (3, 'mercadoPago');
