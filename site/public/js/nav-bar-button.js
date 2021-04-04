@@ -11,6 +11,8 @@ window.addEventListener("load", () => {
     const navBar = document.getElementsByClassName("nav-bar");
     for(let i = 0; i < navBar.length; i ++){
       navBar[i].classList.toggle("hidden");
+    
+     
       // navBar.classList.add("show-sm");
     }
     console.log("Está funcionando!! :)");

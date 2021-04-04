@@ -11,7 +11,10 @@
 .font-25-lg{
   font-size: 25px;
 }
-.width-50lg {
+.width-20lg {
+  width: 20%;
+}
+.width-50-lg{
   width: 50%;
 }
 
@@ -22,10 +25,7 @@
   width: 165%;
   height: 6vh;
 }
-.login-hi-lg{
-  margin-top: 20px;
-  align-self: flex-end;
-}
+
 .show-lg {
   display: initial;
 }
@@ -87,15 +87,8 @@
   padding: 53px;
   margin-top: 25px;
 }
-.position-none-lg{
-  position: unset;
 
-}
-.login-search-lg{
-  flex-direction: column;
-  display: flex;
-  width: 50%;
-}
+
 
 @media (min-width: 890px) {
   .font-size-25lg {

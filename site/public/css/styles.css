@@ -19,7 +19,9 @@
   /* border: solid 10px rgba(173, 154, 172, 0.5); */
   border-radius: 5px;
 }
-
+.outline{
+ outline: none;
+}
 .product-article img {
   width: 250px;
   height: 250px;

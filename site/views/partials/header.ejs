@@ -3,10 +3,10 @@
     class="menu-fixed d-flex width-100 background-main justify-flex-end z-index-10"
   >
     <div class="div-nav">
-      <div class="d-flex align-self-center hi-md position-none-lg">
+      <div class="d-flex align-self-center">
         <% if(!user) { %>
         <div
-          class="justify-content-flex-end log-md position-none-lg login-hi-lg"
+          class="justify-content-flex-end"
         >
           <a href="/login" class="font-20-lg">
             Ingresar <i class="fas fa-sign-in-alt color-primary padding-3"></i>
@@ -43,36 +43,36 @@
       ></a>
     </div>
   </nav>
-  <div class="header-lg">
+  <div class=" width-100 ">
     <a href="/">
       <div align="center">
         <img
           src="/images/main/logoCala1.png"
-          class="logo image-header width-40-md width-50lg margin-top-42"
+          class="logo image-header width-20lg margin-top-42"
           alt="Logo Cala"
         />
       </div>
     </a>
 
-    <div class="d-flex" id="justify">
+    <div class="d-flex d-flex-revert-md" id="justify">
       <div
-        class="padding-7 order-2 d-flex justify-content-flex-end width-75 login-search-lg"
+        class="padding-7 order-2 d-flex justify-content-flex-end justify-cont-md width-75 width-100-md"
       >
-        <form action="/search" method="GET">
+        <form class="width-75-md" action="/search" method="GET">
           <div
             id="search-div"
-            class="search-container radius-5 d-flex no-border background-main"
+            class="search-container radius-5 d-flex no-border border-search-md background-main width-100-md"
           >
             <input
               id="search-input"
               name="searchquery"
-              class="font-20-lg no-border hidden"
+              class="font-20-lg no-border hidden show outline"
               type="search"
               placeholder="Busca tus productos"
             />
             <button
               id="search-button"
-              class="no-border width-10 font-20-lg"
+              class="no-border width-10 font-20-lg outline"
               type="submit"
             >
               <i class="fas fa-search color-primary"></i>
@@ -83,7 +83,7 @@
       <div class="flex-column align-self-center">
         <button
           id="bar-button"
-          class="baseline no-border font-weight-bold background-main padding-7 color-primary hidden-md"
+          class="baseline outline no-border font-weight-bold background-main padding-7 color-primary hidden-md"
         >
           <i class="fas fa-bars color-primary hidden-md"></i> Menu
         </button>
@@ -92,36 +92,36 @@
             id="ul-nav-bar"
             class="header-menus flex-wrap color-primary font-arimo padding-left-6"
           >
-            <li class="li-menu">
-              <a class="nav-bar hidden show color-primary" id="" href="/"
+            <li class="li-menu li-menu-md">
+              <a class="nav-bar hidden show color-primary font-20-lg" id="" href="/"
                 >Inicio</a
               >
             </li>
-            <li class="li-menu">
+            <li class="li-menu li-menu-md">
               <a
-                class="nav-bar hidden show color-primary"
+                class="nav-bar hidden show color-primary font-20-lg"
                 id=""
                 href="/products"
                 >Productos</a
               >
             </li>
             <%if(user){ %> <% if(user.categoryId==2) { %>
-            <li class="li-menu">
+            <li class="li-menu li-menu-md">
               <a
-                class="nav-bar hidden show color-primary"
+                class="nav-bar hidden show color-primary font-20-lg"
                 id=""
                 href="/products/create"
                 >Crear Producto</a
               >
             </li>
             <%}%> <%}%>
-            <li class="li-menu">
-              <a class="nav-bar hidden show color-primary" id="" href="/about"
+            <li class="li-menu li-menu-md">
+              <a class="nav-bar hidden show color-primary font-20-lg" id="" href="/about"
                 >Sobre Nosotras</a
               >
             </li>
-            <li class="li-menu">
-              <a class="nav-bar hidden show color-primary" id="" href="/contact"
+            <li class="li-menu li-menu-md">
+              <a class="nav-bar hidden show color-primary font-20-lg" id="" href="/contact"
                 >Contacto</a
               >
             </li>

@@ -20,78 +20,7 @@
       </div>
 
       <!--FIN PRUEBA CARRUSEL-->
-      <!--   <section class="flex-wrap width-100 justify-center">
-        <img
-          src="images/main/cabello-home.jpg"
-          alt="Cosmetica Natural"
-          class="width-100 photo-index"
-        />
-         <section class="width-90">
-          <div class="color-secondary font-arimo hidden d-flex-lg">
-            <img
-              src="images/products/image-home.jpg"
-              alt="Beneficios de la cosmetica natural"
-            />
-            <div class="color-secondary font-arimo hidden show-lg">
-              <h3>Beneficios de la cosmetica natural</h3>
-              <p class="font-size-19xlg">
-                Todos los días hacemos uso de cosméticos, ya sean
-                <em>cremas, productos de higiene, maquillaje,</em> etc. por lo
-                que es de vital importancia utilizar productos adecuados para
-                cuidar nuestra piel. Según un estudio, cada persona utiliza un
-                promedio de 10 productos de cosmética diferentes a lo largo del
-                día. La piel es el órgano más extenso que tenemos y funciona
-                como una esponja absorbiendo todos los productos que le
-                aplicamos en la piel y en el cabello. Por esto mismo, hay que
-                tener cuidado con lo que se compra, evitando ingredientes
-                químicos perjudiciales y potencialmente dañinos para nuestra
-                salud, como pueden ser las siliconas, los parabenos, los
-                derivados del petróleo... Aunque se trata de dosis pequeñas, los
-                efectos en un uso prolongado afectan a la salud. Por poner un
-                ejemplo, en algunos maquillajes de cara se encontraron
-                sustancias como el arsénico y el plomo. El uso de
-                <mark class="color-secondary font-arimo"
-                  >ingredientes naturales</mark
-                >
-                para el cuidado de la piel nos aporta muchos beneficios y son
-                aptos para todo tipo de piel, salvo que se padezca alguna
-                intolerancia a algún ingrediente en concreto.
-                <strong
-                  >La cosmética natural es elaborada mediante el uso de plantas
-                  y materias primas renovables. Benefician nuestra piel y
-                  también el medio ambiente.</strong
-                >
-              </p>
-            </div>
-          </div>
-          <div class="color-secondary font-arimo hidden show-lg">
-            <h3>Cosmetica vegana</h3>
-            <p class="font-size-19xlg">
-              La cosmética vegana es un tipo de
-              <em>producto respetuoso con los animales y la naturaleza.</em> El
-              veganismo es una alternativa ética al consumo de productos
-              provenientes de la explotación animal, esta filosofía es aplicada
-              a todos los ámbitos de la vida diaria: alimentación, vestido,
-              cuidado personal, etc. Además de ser respetuosa con el medio
-              ambiente y los animales, la cosmética vegana posee otras
-              características de las que podemos beneficiarnos. Al basar sus
-              formulaciones en ingredientes naturales y
-              <mark class="color-secondary font-arimo"
-                >no usar productos químicos</mark
-              >
-              son adecuados para aquellas pieles más sensibles. Sus resultados
-              son espectaculares, ya que los vegetales tienen un gran poder
-              activo, debido a su gran potencial regenerado y depurativo. Al
-              penetrar en la piel, estos principios activos proporcionan
-              resultados de larga duración y difíciles de obtener con otros
-              cosméticos. Además son productos asequibles, ya que los
-              ingredientes se obtienen directamente de la naturaleza y casi no
-              se procesan. Hoy en día, existen líneas accesibles para todos los
-              bolsillos.
-            </p>
-          </div>
-        </section>
-      </section>-->
+ 
 
       <!--Creo section para poner adentro los articulos destacados-->
 
@@ -99,7 +28,7 @@
         <h3 class="font-arimo margin-5 font-size-18">Productos destacados</h3>
 
         <div class="d-flex-md d-flex-lg width-100 justify-center">
-          <% for (let i = 0; i < 3; i++) { %> <% let product = products[i]; %>
+          <% for (let i = 0; i < 6; i++) { %> <% let product = products[i]; %>
           <%-include('products/product-card', {product:products[i]}) %> <% } %>
         </div>
       </section>

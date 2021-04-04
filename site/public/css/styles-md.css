@@ -13,6 +13,9 @@
 .hidden-md {
   display: none;
 }
+.d-flex-revert-md{
+  display: revert;
+}
 
 .justify-flex-end {
   justify-content: flex-end;
@@ -23,24 +26,29 @@
 .width-50-md {
   width: 50%;
 }
+.width-75-md{
+  width: 75%;
+}
+.width-100-md{
+  width: 100%;
+}
 .d-flex-md {
   display: flex;
   flex-wrap: wrap;
 }
-/* .log-md{
-  position: relative;
-  top: -200px;
-  left: -100px;
-}
 
-.hi-md{
-  position: relative;
-  top: -185px;
-  left: -559px;
-} */
+.justify-cont-md{
+  justify-content: center;
+}
 .index-products {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.li-menu-md { 
+  text-decoration: none;
+}
+.border-search-md {
+  border: solid 1px #344659;
 }

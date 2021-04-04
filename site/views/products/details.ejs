@@ -9,29 +9,22 @@
     <%-include("../partials/header") %>
     <main class="flex-wrap">
       <section class="flex-column background-main">
-        <div class="padding-7 hidden-md">
-          <a href="/"><i class="fas fa-home color-primary"></i></a>
-        </div>
-
-        <div class="d-flex-lg width-100vw">
-          <div class="width-50lg">
+       
+        <div class="d-flex-lg width-100-lg">
+          <div class="width-50-lg">
             <article
-              class="product-article-details flex-column no-border radius-5"
+              class="product-article flex-column no-border radius-5"
             >
               <img
                 src="/images/products/<%= product.image %>"
                 alt="<%= product.name %>"
                 class="width-77"
               />
-              <h3 class="font-arimo font-size-18 color-secondary center-text">
-                <%= product.name %>
-              </h3>
-              <h4 class="font-arimo color-secondary center-text">
-                $ <%= product.price %>
-              </h4>
+              
             </article>
             <% if(user.categoryId == 1) { %>
-            <article>
+            <article >
+
               <form action="/cart" method="GET">
                 <div class="details-form d-flex width-100 no-border-lg">
                   <label class="font-size-18 color-secondary" for="cant"
@@ -57,8 +50,14 @@
           </div>
 
           <article
-            class="flex-column text-details-container font-arimo width-50lg"
+            class="flex-column text-details-container font-arimo width-50-lg"
           >
+          <h3 class="font-arimo font-size-18 color-secondary center-text">
+            <%= product.name %>
+          </h3>
+          <h4 class="font-arimo color-secondary center-text">
+            $ <%= product.price %>
+          </h4>
             <p class="font-size-14 color-primary"><%= product.description %></p>
             <% if(user.categoryId == 2) { %>
             <div class="d-flex">
