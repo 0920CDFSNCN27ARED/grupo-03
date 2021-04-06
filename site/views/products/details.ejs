@@ -9,7 +9,6 @@
     <%-include("../partials/header") %>
     <main class="flex-wrap">
       <section class="flex-column background-main width-100 margin-top-50-lg">
-       
         <div class="d-flex-lg width-100-lg">
           <div class="width-50-lg flex-column justify-center">
             <article
@@ -18,13 +17,11 @@
               <img
                 src="/images/products/<%= product.image %>"
                 alt="<%= product.name %>"
-                class="width-77 zoom "
+                class="width-77 zoom"
               />
-              
             </article>
             <% if(user.categoryId == 1) { %>
-            <article >
-
+            <article>
               <form action="/cart" method="GET">
                 <div class="details-form d-flex width-100 no-border-lg">
                   <label class="font-size-18 color-secondary" for="cant"
@@ -52,29 +49,40 @@
           <article
             class="flex-column text-details-container font-arimo width-50-lg justify-center"
           >
-          <h3 class="margin-5 font-arimo font-size-18 font-25-lg color-secondary center-text">
-            <%= product.name %>
-          </h3>
-          <% if(product.discount> 0) { %>
-          <div class="d-flex width-50-lg align-self-center justify-center">
-          <h4 class="margin-5 price-discount font-arimo color-secondary center-text">
-            $ <%= product.price %>
-          </h4>
-          <h4 class=" margin-5 font-arimo color-secondary center-text mark-discount">
-            <%= product.discount %>% OFF
-          </h4>
-          </div>
-          <p class="font-arimo color-secondary margin-5 align-self-center font-25-lg">
-            $<%= (product.price - product.price * product.discount / 100) %>
-          </p>
-          <% } else { %>
-            <p class="font-arimo color-secondary margin-5 align-self-center font-25-lg">
+            <h3
+              class="margin-5 font-arimo font-size-18 font-25-lg color-secondary center-text"
+            >
+              <%= product.name %>
+            </h3>
+            <% if(product.discount> 0) { %>
+            <div class="d-flex width-50-lg align-self-center justify-center">
+              <h4
+                class="margin-5 price-discount font-arimo color-secondary center-text"
+              >
+                $ <%= product.price %>
+              </h4>
+              <h4
+                class="margin-5 font-arimo color-secondary center-text mark-discount"
+              >
+                <%= product.discount %>% OFF
+              </h4>
+            </div>
+            <p
+              class="font-arimo color-secondary margin-5 align-self-center font-25-lg"
+            >
+              $<%= (product.price - product.price * product.discount / 100) %>
+            </p>
+            <% } else { %>
+            <p
+              class="font-arimo color-secondary margin-5 align-self-center font-25-lg"
+            >
               $<%= product.price; %>
             </p>
             <% } %>
-              
 
-            <p class="font-size-14 color-primary font-20-lg"><%= product.description %></p>
+            <p class="font-size-14 color-primary font-20-lg">
+              <%= product.description %>
+            </p>
             <% if(user.categoryId == 2) { %>
             <div class="d-flex">
               <div class="details-form d-flex width-100 no-border-lg">
@@ -100,7 +108,9 @@
                     action="/products/<%= product.id  %>?_method=DELETE"
                     method="POST"
                   >
-                    <p>Estas seguro que deseas eliminar el producto?</p>
+                    <p class="font-arimo color-primary">
+                      Estas seguro que deseas eliminar el producto?
+                    </p>
                     <button type="submit" id="deleteYes">Si</button>
                   </form>
                   <a href="/products/details/<%=product.id%>"
