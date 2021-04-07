@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <%-include("../partials/head-base", { title: user.user}) %>
+    <script src="/js/confirm-delete-product.js"></script>
   </head>
 
   <body class="background-main">
@@ -33,7 +34,7 @@
           </div>
 
           <article
-            class="flex-column text-details-container font-arimo width-50lg profile-lg"
+            class="flex-column text-details-container font-arimo width-50-lg profile-lg"
           >
             <div class="flex-column">
               <h1 class="font-arimo color-primary margin-10 center-text">
@@ -51,16 +52,45 @@
                   </button></a
                 >
               </div>
+
               <div class="details-form d-flex width-100 no-border-lg">
-                <form
-                  action="/<%= user.id  %>?_method=DELETE"
-                  method="POST"
-                  class="width-100"
-                >
-                  <button type="submit" class="radius-5 border-1">
+                <form id="deleteForm" class="width-100">
+                  <button
+                    id="deleteButton"
+                    type="submit"
+                    class="radius-5 border-1"
+                  >
                     Borrar
                   </button>
                 </form>
+                <div id="confirmDelete" class="hidden">
+                  <p class="font-arimo color-primary">
+                    Estas seguro que quieres dejar de ser usuario?
+                  </p>
+                  <form
+                    id="reconfirm"
+                    action="/<%= user.id  %>?_method=DELETE"
+                    method="POST"
+                  >
+                    <button
+                      type="submit"
+                      id="deleteYes"
+                      class="radius-5 border-1"
+                    >
+                      Si
+                    </button>
+                  </form>
+
+                  <form action="/profile/<%= user.id  %>" method="GET">
+                    <button
+                      type="submit"
+                      id="deleteNo"
+                      class="radius-5 border-1"
+                    >
+                      No
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </article>

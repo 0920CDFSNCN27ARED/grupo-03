@@ -20,9 +20,6 @@
                 class="width-77 zoom"
               />
             </article>
-           
-          
-           
           </div>
 
           <article
@@ -77,15 +74,15 @@
               <a href="/products" id="buying">Ver más productos</a>
             </article>
             <div class="delivery-container flex-wrap font-arimo no-border-lg">
-              <i class="fas fa-truck color-primary margin-rigth-13 margin-top-12"></i>
+              <i
+                class="fas fa-truck color-primary margin-rigth-13 margin-top-12"
+              ></i>
               <p>
                 Con tu compra mayor a 2000$,
                 <strong>envío gratis!</strong>
               </p>
             </div>
-            <% } %>
-            
-            <% if(user.categoryId == 2) { %>
+            <% } %> <% if(user.categoryId == 2) { %>
             <div class="d-flex">
               <div class="details-form d-flex width-100 no-border-lg">
                 <a href="/products/<%= product.id  %>/edit " class="width-100"
@@ -105,19 +102,35 @@
                   </button>
                 </form>
                 <div id="confirmDelete" class="hidden">
+                  <p class="font-arimo color-primary">
+                    Estas seguro que deseas eliminar el producto?
+                  </p>
                   <form
                     id="reconfirm"
                     action="/products/<%= product.id  %>?_method=DELETE"
                     method="POST"
                   >
-                    <p class="font-arimo color-primary">
-                      Estas seguro que deseas eliminar el producto?
-                    </p>
-                    <button type="submit" id="deleteYes">Si</button>
+                    <button
+                      type="submit"
+                      id="deleteYes"
+                      class="radius-5 border-1"
+                    >
+                      Si
+                    </button>
                   </form>
-                  <a href="/products/details/<%=product.id%>"
-                    >No, volver al detalle del producto</a
+
+                  <form
+                    action="/products/details/<%=product.id%>"
+                    method="POST"
                   >
+                    <button
+                      type="submit"
+                      id="deleteNo"
+                      class="radius-5 border-1"
+                    >
+                      No
+                    </button>
+                  </form>
                 </div>
               </div>
             </div>
