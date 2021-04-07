@@ -1,12 +1,14 @@
 .item-carrusel {
   flex-grow: 1;
-  background-image: url("/images/main/image3.jpg");
+  background-image: url("/images/main/carrusel-1.jpg");
   background-position: center;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
   filter: grayscale(1);
   transition: flex-grow 0.4s ease, filter 0.3s;
+  background-size: cover;
+  object-fit: cover;
 }
 
 .item-carrusel:not(:last-child) {
@@ -14,15 +16,15 @@
 }
 
 .item-carrusel:nth-of-type(2) {
-  background-image: url("/images/main/img-form6.jpg");
+  background-image: url("/images/main/carrusel-2.jpg");
 }
 
 .item-carrusel:nth-of-type(3) {
-  background-image: url("/images/main/img-form7.jpg");
+  background-image: url("/images/main/carrusel-3.jpg");
 }
 
 .item-carrusel:nth-of-type(4) {
-  background-image: url("/images/main/background-two.jpg");
+  background-image: url("/images/main/carrusel-4.jpg");
 }
 
 .item-carrusel:hover {

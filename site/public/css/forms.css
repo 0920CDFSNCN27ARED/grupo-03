@@ -5,7 +5,6 @@
   margin: 5px;
 }
 
-
 .main-form-container {
   align-items: center;
 }
@@ -51,14 +50,7 @@
   background-size: cover;
 }
 
-
 .background-image-11 {
   background-image: url("/images/main/img-form11.png");
   background-size: cover;
-}
-.background-image-1 {
-  background-image: url("/images/main/img-us-4.png");
-  background-size: cover;
-  object-fit: cover;
-  
 }
