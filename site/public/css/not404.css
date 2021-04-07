@@ -22,7 +22,7 @@
 .error-container > span:nth-of-type(1) {
   perspective: 1000px;
   perspective-origin: 500% 50%;
-  color: #5a6186;
+  color:  #dbadbd;
 }
 .error-container > span:nth-of-type(1) > span {
   transform-origin: 50% 100% 0px;
@@ -33,7 +33,7 @@
 .error-container > span:nth-of-type(3) {
   perspective: none;
   perspective-origin: 50% 50%;
-  color: #5a6186;
+  color:  #dbadbd;
 }
 .error-container > span:nth-of-type(3) > span {
   transform-origin: 100% 100% 0px;
@@ -41,7 +41,7 @@
   animation: rotatedrop 8s infinite;
 }
 .background-image-not-found {
-  background-image: url("/images/main/fondo-notfound.png");
+  background-image: url("/images/main/img-form6.jpg");
   background-size: cover;
 }
 @keyframes easyoutelastic {
