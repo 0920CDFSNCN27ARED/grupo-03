@@ -14,9 +14,9 @@
     <!--Consultar como se hace el captcha-->
     <main class="background-main main-form-container flex-column wrap forms-lg">
       <section
-          class="form-container center-text radius-5 width-auto background-image-four"
+          class="form-container center-text radius-5 width-auto background-image-11"
         >
-        <h3 class="margin-10 font-arimo font-size-25lg">Estás editando: <i><%=  product.name %></i></h3>
+        <h3 class="margin-10 font-arimo font-size-25lg color-secondary">Estás editando: <i><%=  product.name %></i></h3>
         <% if(typeof errors != "undefined") { %>
           <ul>
             <% for (let i = 0; i < errors.length; i ++) { %>
@@ -26,26 +26,26 @@
           <% } %>
         <form action="/products/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="editForm"> 
             <p class="font-jura font-size-14 flex-column font-size-20lg">
-              <label for="name" class="font-weight-bold margin-5">Nombre del producto:</label>               
+              <label for="name" class="font-weight-bold margin-5 color-secondary">Nombre del producto:</label>               
               <input type="text" id="name" name="name" placeholder="Ej: crema hidratante"
-              class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75 validate background-main" 
+              class="no-border radius-5 center-text color-secondary font-bellefair font-size-20lg height-5-vh width-75 validate background-main" 
               value="<%= product.name %>">
             </p>
             <div id="nameFeedback" class="feedback"></div>
             <p class="font-jura font-size-14 flex-column font-size-20lg">
-              <label for="price" class="font-weight-bold margin-5">Precio del producto:</label>
-              <input type="number" id="price" name="price" placeholder="Ej: 5678" class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75 validate background-main"
+              <label for="price" class="font-weight-bold margin-5 color-secondary">Precio del producto:</label>
+              <input type="number" id="price" name="price" placeholder="Ej: 5678" class="no-border color-secondary radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75 validate background-main"
               value="<%= product.price %>"/>
             </p>
             <div id="priceFeedback" class="feedback"></div>
             <p class="font-jura font-size-14 flex-column font-size-20lg">
-              <label for="discount" class="font-weight-bold margin-5">Descuento:</label>
-              <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="no-border radius-5 center-text font-bellefair font-size-20lg height-5-vh width-75 validate background-main"
+              <label for="discount" class="font-weight-bold margin-5 color-secondary">Descuento:</label>
+              <input type="text" id="discount" name="discount" placeholder="Ej: 15" class="no-border radius-5 center-text color-secondary font-bellefair font-size-20lg height-5-vh width-75 validate background-main"
               value="<%= product.discount %>"/>
             </p>
             <div id="discountFeedback" class="feedback"></div>
             <p class="font-jura font-size-14 flex-column font-size-20lg">
-              <label for="category" class="font-weight-bold margin-5">Categoría:</label>
+              <label for="category" class="font-weight-bold margin-5 color-secondary">Categoría:</label>
               <select name="category" id="category" class="no-border radius-5 center-text font-bellefair font-size-20lg margin-5 height-5-vh width-75 align-self-center validate background-main">
                 <option value="">Elegí</option>
                 <option value='1' <%= product.category == "1" ? "selected" : "" %>>Cabello</option>
@@ -60,13 +60,13 @@
             </p>
             <div id="categoryFeedback" class="feedback"></div>
             <p class="font-jura font-size-14 flex-column font-size-20lg">
-              <label for="description" class="font-weight-bold margin-5" >Descripción:</label>
+              <label for="description" class="font-weight-bold margin-5 color-secondary" >Descripción:</label>
               <textarea name="description" id="description"
               class="form-input margin-5 width-75 align-self-center validate background-main"><%= product.description %></textarea>
             </p> 
             <div id="descriptionFeedback" class="feedback"></div> 
             <div class="flex-column align-center">
-              <p>Imagen actual</p>
+              <p class="color-secondary">Imagen actual</p>
               <img
                 src="/images/products/<%= product.image %>"
                 alt="<%= product.name %> "
@@ -77,7 +77,7 @@
             <div id="imageFeedback" class="feedback"></div>  
               <button
                 type="submit"
-                class="no-border center-text font-jura font-size-14 font-size-20lg margin-5"
+                class="no-border center-text font-jura font-size-14 font-size-20lg margin-5 color-secondary"
                 >
                 Editar
               </button>

@@ -32,26 +32,12 @@
 .width-button {
   width: 42%;
 }
-.background-image-two {
-  background-image: url("/images/main/background-two.jpg");
-  background-size: cover;
-}
-.background-image-seven {
-  background-image: url("/images/main/background-seven.jpg");
-  background-size: cover;
-}
-.background-image-one {
-  background-image: url("/images/main/background-one.jpg");
-  background-size: cover;
-}
+
 .background-image-five {
   background-image: url("/images/products/lavanda-1.jpg");
   background-size: cover;
 }
-.background-image-four {
-  background-image: url("/images/main/background-six.jpg");
-  background-size: cover;
-}
+
 .background-image-8 {
   background-image: url("/images/main/img-form1.jpg");
   background-size: cover;
@@ -63,4 +49,16 @@
 .background-image-10 {
   background-image: url("/images/main/img-form4.jpg");
   background-size: cover;
+}
+
+
+.background-image-11 {
+  background-image: url("/images/main/img-form11.png");
+  background-size: cover;
+}
+.background-image-1 {
+  background-image: url("/images/main/img-us-4.png");
+  background-size: cover;
+  object-fit: cover;
+  
 }

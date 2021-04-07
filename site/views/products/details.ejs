@@ -12,7 +12,7 @@
         <div class="d-flex-lg width-100-lg">
           <div class="width-50-lg flex-column justify-center">
             <article
-              class="product-article product-article-lg flex-column no-border radius-5"
+              class="product-article product-article-lg flex-column no-border radius-5 height"
             >
               <img
                 src="/images/products/<%= product.image %>"
@@ -20,30 +20,9 @@
                 class="width-77 zoom"
               />
             </article>
-            <% if(user.categoryId == 1) { %>
-            <article>
-              <form action="/cart" method="GET">
-                <div class="details-form d-flex width-100 no-border-lg">
-                  <label class="font-size-18 color-secondary" for="cant"
-                    >CANTIDAD</label
-                  >
-                  <input type="number" id="cant" class="radius-5" name="cant" />
-                  <button type="submit" class="radius-5 border-1">
-                    AGREGAR AL CARRITO
-                  </button>
-                </div>
-              </form>
-
-              <a href="/products" id="buying">Ver más productos</a>
-              <div class="delivery-container flex-wrap font-arimo no-border-lg">
-                <i class="fas fa-truck color-primary margin-rigth-13"></i>
-                <p>
-                  Con tu compra mayor a 2000$,
-                  <strong>envío gratis!</strong>
-                </p>
-              </div>
-            </article>
-            <% } %>
+           
+          
+           
           </div>
 
           <article
@@ -79,10 +58,33 @@
               $<%= product.price; %>
             </p>
             <% } %>
-
             <p class="font-size-14 color-primary font-20-lg">
               <%= product.description %>
             </p>
+            <% if(user.categoryId == 1) { %>
+            <article>
+              <form action="/cart" method="GET">
+                <div class="details-form d-flex width-100 no-border-lg">
+                  <label class="font-size-18 color-secondary" for="cant"
+                    >CANTIDAD</label
+                  >
+                  <input type="number" id="cant" class="radius-5" name="cant" />
+                  <button type="submit" class="radius-5 border-1">
+                    AGREGAR AL CARRITO
+                  </button>
+                </div>
+              </form>
+              <a href="/products" id="buying">Ver más productos</a>
+            </article>
+            <div class="delivery-container flex-wrap font-arimo no-border-lg">
+              <i class="fas fa-truck color-primary margin-rigth-13 margin-top-12"></i>
+              <p>
+                Con tu compra mayor a 2000$,
+                <strong>envío gratis!</strong>
+              </p>
+            </div>
+            <% } %>
+            
             <% if(user.categoryId == 2) { %>
             <div class="d-flex">
               <div class="details-form d-flex width-100 no-border-lg">

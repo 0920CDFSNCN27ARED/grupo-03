@@ -11,6 +11,9 @@
 .font-25-lg{
   font-size: 25px;
 }
+.width-15-lg{
+  width: 15%;
+}
 .width-20lg {
   width: 20%;
 }
@@ -18,6 +21,9 @@
   width: 50%;
 }
 
+.width-70-lg{
+  width: 70%;
+}
 .no-border-lg {
   border: 0px;
 }
