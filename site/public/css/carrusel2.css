@@ -1,6 +1,6 @@
 .item-carrusel {
-  flex-grow: 1;
-  background-image: url("/images/main/image1.jpg");
+  flex-grow: 10;
+  background-image: url("/images/main/image2.jpg");
   background-position: center;
   border-radius: 10px;
   overflow: hidden;
@@ -20,11 +20,11 @@
 }
 
 .item-carrusel:nth-of-type(3) {
-  background-image: url("/images/main/carrusel-3.jpg");
+  background-image: url("/images/main/image4.jpg");
 }
 
 .item-carrusel:nth-of-type(4) {
-  background-image: url("/images/main/carrusel-4.jpg");
+  background-image: url("/images/main/image5.jpg");
 }
 
 .item-carrusel:hover {
