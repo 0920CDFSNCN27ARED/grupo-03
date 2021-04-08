@@ -7,6 +7,7 @@
     <!-- <script src="/js/validation-products.js"></script> -->
     <script type="text/javascript" src="/js/validator.min.js"></script>
     <script src="/js/validation-products-validator.js"></script>
+    <script src="/js/change-photo-form.js"></script>
   </head>
 
   <body class="background-main">
@@ -68,9 +69,11 @@
             <div class="flex-column align-center">
               <p class="color-secondary">Imagen actual</p>
               <img
+                id="output"
                 src="/images/products/<%= product.image %>"
                 alt="<%= product.name %> "
                 class="product-img-fit product-img"/> 
+                
          
               <input type="file" name="image" id="image" class="validate background-main">    
             </div>
