@@ -10,27 +10,23 @@ const { validationResult } = require("express-validator");
 const controller = {
   products: async (req, res) => {
     if (Number(req.params.page)) {
-    const products = await productService.findAll(
-      {
-          limit: 6,
-          offset: (req.params.page - 1) * 6,
-        } );
-   const nextProducts = await productService.findAll(
-     {
-      limit: 6,
-      offset: req.params.page * 6,
-      } );
-
-    if (products.length > 0) { 
-      return res.render("products/products", {
-      products,
-      nextProducts,
-      page: req.params.page,
+      const products = await Product.findAll({
+        limit: 6,
+        offset: (req.params.page - 1) * 6,
       });
-      }
-      
-    } 
+      const nextProducts = await Product.findAll({
+        limit: 6,
+        offset: req.params.page * 6,
+      });
 
+      if (products.length > 0) {
+        return res.render("products/products", {
+          products,
+          nextProducts,
+          page: req.params.page,
+        });
+      }
+    }
   },
   details: async (req, res) => {
     const product = await productService.findOne(req.params.id);
