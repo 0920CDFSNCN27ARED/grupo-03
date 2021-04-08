@@ -19,10 +19,10 @@
   /* border: solid 10px rgba(173, 154, 172, 0.5); */
   border-radius: 5px;
 }
-.outline{
- outline: none;
+.outline {
+  outline: none;
 }
-.outline input{
+.outline input {
   outline: none;
 }
 .product-article img {
@@ -151,7 +151,7 @@
 }
 .menu-fixed {
   justify-content: space-between;
-  padding: 7px;
+  padding: 0px 7px;
   position: fixed;
 }
 .error404 {
@@ -190,16 +190,16 @@
   display: flex;
   justify-content: space-between;
 }
-.height{
+.height {
   height: 100%;
 }
-.paged{
+.paged {
   display: flex;
   justify-content: space-around;
   margin-bottom: 10px;
   font-size: 16px;
 }
-.product-img-fit{
+.product-img-fit {
   object-fit: cover;
   width: 45%;
   height: 45%;

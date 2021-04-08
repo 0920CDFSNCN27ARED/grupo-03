@@ -28,8 +28,8 @@ const controller = {
         }
       });
     });
-
-    res.render("products/products", { products: productsSearch });
+    const page = undefined;
+    res.render("products/products", { products: productsSearch, page: page });
   },
   denied: (req, res) => {
     res.render("acces-denied");

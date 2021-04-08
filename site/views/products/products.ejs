@@ -8,46 +8,50 @@
     <%-include("../partials/header") %>
     <!--mantengo el estilo de section para los menu-->
     <main>
-    	<% if (products.length > 0) { %>
-      
-        <section>
-          <div class="d-flex-lg width-100-lg index-products">
-            <% for (let i = 0; i < products.length ; i++) { %> 
-            <%-include('../products/product-card',
-            {product:products[i]}) %> <% } %>
-          </div>
-        </section>
+      <% if (products.length < 1) { %>
 
-        <div class="paged">
+      <div class="col-12">
+        <h2 class="noproducts color-primary font-arimo">
+          No se encontraron productos
+        </h2>
+      </div>
 
-					<% if (page > 1) { %>
-						<div class="">
-							<a href="/products/page/<%= page == 1 ? 1 : page - 1%> ">
-                <p><i class="fas fa-caret-square-left color-primary"></i> Pagina anterior</p>
-							</a>
-						</div>
-					<% } else { %>
-						<div class="">
-						</div>
-					<% } %> 
-					<% if (nextProducts.length > 0) { %>
-						<div class="">
-							<a href="/products/page/<%= Number(page) + 1 %> ">
-                <p>Pagina siguiente <i class="fas fa-caret-square-right color-primary"></i></p>
-							</a>
-						</div>
-					<% } %>
-				 </div>
+      <% } %> <% if (products.length > 0) { %>
 
+      <section>
+        <div class="d-flex-lg width-100-lg index-products">
+          <% for (let i = 0; i < products.length ; i++) { %>
+          <%-include('../products/product-card', {product:products[i]}) %> <% }
+          %>
+        </div>
+      </section>
 
-
-      <% } else { %>
-
-              <div class="col-12">
-                <h2 class="noproducts">No se encontraron productos</h2>
-              </div>
-              
+      <% if(page != undefined){ %>
+      <div class="paged">
+        <% if (page > 1) { %>
+        <div class="">
+          <a href="/products/page/<%= page == 1 ? 1 : page - 1%> ">
+            <p>
+              <i class="fas fa-caret-square-left color-primary"></i> Pagina
+              anterior
+            </p>
+          </a>
+        </div>
+        <% } else { %>
+        <div class=""></div>
+        <% } %> <% if (nextProducts.length > 0) { %>
+        <div class="">
+          <a href="/products/page/<%= Number(page) + 1 %> ">
+            <p>
+              Pagina siguiente
+              <i class="fas fa-caret-square-right color-primary"></i>
+            </p>
+          </a>
+        </div>
         <% } %>
+      </div>
+
+      <% } %> <% }%>
     </main>
 
     <%-include("../partials/footer") %>

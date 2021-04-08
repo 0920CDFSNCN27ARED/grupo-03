@@ -279,14 +279,14 @@ li {
 /* .margin-top-42 {
   margin-top: 42px;
 } */
-.margin-top-31{
+.margin-top-31 {
   margin-top: 31px;
 }
 .margin-10 {
   margin: 10px;
 }
-.margin-top-12{
- margin-top: 12px;
+.margin-top-12 {
+  margin-top: 12px;
 }
 .image-header {
   width: 30%;
@@ -304,7 +304,7 @@ li {
   display: flex;
   align-items: flex-start;
   width: 100%;
-  height: 3vh;
+
   justify-content: space-between;
 }
 .justify-content-flex-end {
