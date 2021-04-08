@@ -193,3 +193,14 @@
 .height{
   height: 100%;
 }
+.paged{
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+.product-img-fit{
+  object-fit: cover;
+  width: 45%;
+  height: 45%;
+}

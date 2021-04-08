@@ -8,34 +8,46 @@
     <%-include("../partials/header") %>
     <!--mantengo el estilo de section para los menu-->
     <main>
-      <!-- <section class="flex-wrap width-100">
-        <img
-          src="images/products/lavanda-1.jpg"
-          alt="Cosmetica Natural"
-          class="width-100 banner-index banner-index-md margin-b30"
-        />
-        <section class="width-100"> -->
-          
-      <!--<section>
-        <h3>Productos</h3>
-       <ul> 
-          <li><a href="#">Shampoo Sólido</a></li>
-          <li><a href="#">Acondicionador Sólido</a></li>
-          <li><a href="#">Pasta Dental</a></li>
-          <li><a href="#">Jabones</a></li>
-          <li><a href="#">Otros Productos</a></li>
-          <li><a href="#">Accesorios</a></li>
-          <li><a href="#">Kits y Promociones</a></li>
-        </ul>
-      </section>-->
+    	<% if (products.length > 0) { %>
+      
+        <section>
+          <div class="d-flex-lg width-100-lg index-products">
+            <% for (let i = 0; i < products.length ; i++) { %> 
+            <%-include('../products/product-card',
+            {product:products[i]}) %> <% } %>
+          </div>
+        </section>
 
-      <section>
-        <div class="d-flex-lg width-100-lg index-products">
-          <% for (let i = 0; i < products.length; i++) { %> 
-           <%-include('../products/product-card',
-          {product:products[i]}) %> <% } %>
-        </div>
-      </section>
+        <div class="paged">
+
+					<% if (page > 1) { %>
+						<div class="">
+							<a href="/products/page/<%= page == 1 ? 1 : page - 1%> ">
+                <p><i class="fas fa-caret-square-left color-primary"></i> Pagina anterior</p>
+							</a>
+						</div>
+					<% } else { %>
+						<div class="">
+						</div>
+					<% } %> 
+					<% if (nextProducts.length > 0) { %>
+						<div class="">
+							<a href="/products/page/<%= Number(page) + 1 %> ">
+                <p>Pagina siguiente <i class="fas fa-caret-square-right color-primary"></i></p>
+							</a>
+						</div>
+					<% } %>
+				 </div>
+
+
+
+      <% } else { %>
+
+              <div class="col-12">
+                <h2 class="noproducts">No se encontraron productos</h2>
+              </div>
+              
+        <% } %>
     </main>
 
     <%-include("../partials/footer") %>
