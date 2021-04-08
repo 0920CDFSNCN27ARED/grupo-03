@@ -20,9 +20,6 @@ function DataCardBig(props) {
 						/>
 					</div>
 					<p>{props.description}</p>
-					<a target="_blank" rel="nofollow" href="/">
-						View product detail
-					</a>
 				</div>
 			</div>
 		</div>
