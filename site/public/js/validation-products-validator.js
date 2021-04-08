@@ -78,14 +78,16 @@ function clearValidations() {
 
 function validateImage(inputId, errorMsg) {
   const input = document.getElementById(inputId);
-  if (!input.value.match(/.(jpg)|(gif)|(png)|(jpeg)$/)) {
-    const error = {
-      inputId,
-      msg: errorMsg,
-    };
-    errors.push(error);
-  } else {
-    input.classList.add("is-valid");
+  if (input != "") {
+    if (!input.value.match(/.(jpg)|(gif)|(png)|(jpeg)$/)) {
+      const error = {
+        inputId,
+        msg: errorMsg,
+      };
+      errors.push(error);
+    } else {
+      input.classList.add("is-valid");
+    }
   }
 }
 

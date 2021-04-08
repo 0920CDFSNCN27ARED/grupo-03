@@ -49,10 +49,10 @@ router.put(
       .isLength({ min: 20 })
       .withMessage("La descripcion debe tener al menos 20 caracteres"),
     body("image")
-      .custom((value, { req }) => {
-        if (!req.file) throw new Error("El campo imagen es requerido");
-        return true;
-      })
+      //.custom((value, { req }) => {
+      //  if (!req.file) throw new Error("El campo imagen es requerido");
+      //  return true;
+      //})
       .custom((value, { req }) => {
         if (req.file) {
           switch (req.file.mimetype) {
@@ -67,6 +67,8 @@ router.put(
             default:
               return false;
           }
+        } else {
+          return true;
         }
       })
       .withMessage(

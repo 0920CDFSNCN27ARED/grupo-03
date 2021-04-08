@@ -1,6 +1,6 @@
 .item-carrusel {
   flex-grow: 1;
-  background-image: url("/images/main/carrusel-1.jpg");
+  background-image: url("/images/main/image1.jpg");
   background-position: center;
   border-radius: 10px;
   overflow: hidden;
@@ -16,7 +16,7 @@
 }
 
 .item-carrusel:nth-of-type(2) {
-  background-image: url("/images/main/carrusel-2.jpg");
+  background-image: url("/images/main/image3.jpg");
 }
 
 .item-carrusel:nth-of-type(3) {
